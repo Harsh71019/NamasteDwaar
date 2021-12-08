@@ -45,6 +45,14 @@ a {
   color: var(--secondary-color);
 }
 
+.primary-text {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /* End of utilities */
 
 /* .ml-* and .mr-* to .ms-* and .me-* */
@@ -150,7 +158,41 @@ a {
   line-height: 36px;
   color: var(--secondary-color);
 }
+
 /* End of section 2 */
+
+/* Start of section 3 */
+.section-3 {
+  background: var(--primary-background);
+}
+
+.section3-card {
+  background: #fff;
+}
+
+.section-3__button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  background: var(--secondary-color);
+  border: none;
+  padding: 8px 10px;
+  width: 128px;
+  justify-content: center;
+}
+
+.col-overlap {
+  z-index: 3;
+  margin-top: -120px;
+}
+/* End of section 3 */
 
 /* Start of media queries */
 
