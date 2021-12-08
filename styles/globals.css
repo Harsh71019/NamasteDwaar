@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +14,173 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Start of utilities */
+
+:root {
+  --primary-color: #c09209;
+  --secondary-color: #a64f02;
+  --tertiary-color: #f2c1a3;
+  --footer-brown: #a7896f;
+  --primary-background: #faf4ef;
+}
+
+.hbs {
+  display: block;
+}
+.sss {
+  display: none;
+}
+
+.primary-heading {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 24px;
+  color: var(--secondary-color);
+}
+
+/* End of utilities */
+
+/* .ml-* and .mr-* to .ms-* and .me-* */
+
+/* Start of navbar styles */
+
+.nav-container {
+  background: var(--primary-background);
+}
+
+.primary-button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  background: var(--primary-color);
+  border: none;
+  padding: 5px 10px;
+  width: 128px;
+  justify-content: center;
+}
+
+.nav-links {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  color: #000000 !important;
+}
+
+.main-nav {
+  height: 100%;
+  display: flex;
+  background: var(--primary-background);
+  align-items: center;
+}
+
+.logo-brand-nav {
+  width: 158.67px;
+  height: 68px;
+}
+
+.nav-toggle-button {
+  border: none;
+}
+
+.nav-toggle-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-drop-links {
+  background: var(--primary-background);
+  width: 100% !important;
+  padding: 10px 0px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 28px;
+  height: 2px;
+  background-color: var(--footer-brown);
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+/* End of navbar styles */
+
+/* Start of section 1 */
+/* End of section 1 */
+/* Start of section 2 */
+
+.section-2 {
+  padding: 100px 100px;
+}
+
+.section-2-para {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.section-2-para__span {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--secondary-color);
+}
+/* End of section 2 */
+
+/* Start of media queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logo-brand-nav {
+    width: 132px;
+    height: 56px;
+  }
+
+  .hbs {
+    display: none;
+  }
+  .sss {
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
