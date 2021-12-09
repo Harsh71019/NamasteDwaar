@@ -60,7 +60,7 @@ a {
 /* Start of navbar styles */
 
 .dropdown-button-nav {
-  color: #000;
+  color: #000 !important;
   background: transparent;
   font-family: Montserrat;
   font-size: 16px;
@@ -83,23 +83,26 @@ a {
 }
 
 .dropdown-button-nav:hover {
-  color: #000;
+  color: #000 !important;
   background: none;
   outline: none;
   background-color: transparent;
   border-radius: 0px !important;
   border-bottom: 2px solid var(--secondary-color) !important;
+  box-shadow: none;
 }
 .dropdown-button-nav:focus {
   color: #000;
   background: none;
   outline: none !important;
   border-bottom: 2px solid var(--secondary-color) !important;
+  box-shadow: none !important;
 }
 .dropdown-button-nav-menu {
   margin-top: 0px !important;
   border-radius: 0px;
   background: rgba(250, 244, 239, 0.9);
+  border: none;
 }
 
 .nav-container-drop {
@@ -460,8 +463,12 @@ a {
   .overlay-card {
     margin-top: -63%;
   }
-  .overlay-reverse {
-    margin-top: -63%;
+  .overlay-card-reverse {
+    margin-bottom: -63%;
+    z-index: 3;
+  }
+  .overlay-reverse-image {
+    width: 100%;
   }
 
   /* End of section-3 */
