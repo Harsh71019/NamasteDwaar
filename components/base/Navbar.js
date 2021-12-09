@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import Image from 'next/image';
 import Logo from '../../public/images/logo.png';
+import Phone from '../../public/images/phone.svg';
 
 const NavbarTop = () => {
   return (
@@ -13,8 +14,21 @@ const NavbarTop = () => {
             <div class='bar2'></div>
             <div class='bar3'></div>
           </Navbar.Toggle>
-          <Navbar.Brand href='#' className='logo-brand-nav'>
-            <Image src={Logo} height='68px' width='158.67px' />
+          <Navbar.Brand
+            href='#'
+            className='logo-brand-nav mx-auto d-flex align-items-center justify-content-center'
+          >
+            <div className='d-flex align-items-center justify-content-center'>
+              <div className='sss logo-phone-nav'>
+                <Image src={Phone} height='24' width='24' />
+              </div>
+              <div className='logo-main-nav'>
+                <Image src={Logo} height='68' width='158' />
+              </div>
+              <div className='sss'>
+                <button className='primary-button '>Book Now</button>
+              </div>
+            </div>
           </Navbar.Brand>
           <Navbar.Collapse className=''>
             <Nav className='ms-lg-auto my-lg-0'>

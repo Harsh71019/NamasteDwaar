@@ -1,19 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
 import HomeImage from '../../public/images/section-3.png';
+import HomeImageMobile from '../../public/images/section-3-mobile.png';
 
 const Section3 = () => {
   return (
     <section className='section-3'>
       <div className='px-0 py-5 container'>
         <div className='row w-100'>
-          <div className='col-md-8 col-6'>
-            <div>
-              <Image src={HomeImage} layout='responsive' alt='spa day' />
+          <div className='col-md-8 col-10 d-flex align-items-center justify-content-center'>
+            <div className='sss'>
+              <Image src={HomeImageMobile} className='hbs' alt='spa day' />
+            </div>
+            <div className='hbs'>
+              <Image src={HomeImage} className='hbs' alt='spa day' />
             </div>
           </div>
-          <div className='col-md-4 col-6  d-flex column flex-column justify-content-center px-0 '>
-            <div className='section3-card p-3'>
+          <div className='col-md-4 col-6  overlay-card align-items-center offset-md-0 offset-6 d-flex column flex-column justify-content-center px-0 '>
+            <div className='section3-card p-md-3 p-2'>
               <h1 className='primary-heading my-2'>Natural Healing</h1>
               <p className='my-2 primary-text'>
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -24,10 +28,20 @@ const Section3 = () => {
           </div>
         </div>
       </div>
+      {/* Reverse Start */}
+
       <div className='px-0 py-5 container'>
         <div className='row w-100'>
-          <div className='col-md-4 col-6  d-flex column flex-column justify-content-center px-0 '>
-            <div className='section3-card p-3'>
+          <div className='col-md-8 col-10 d-flex align-items-center justify-content-center'>
+            <div className='sss'>
+              <Image src={HomeImageMobile} className='hbs' alt='spa day' />
+            </div>
+            <div className='hbs'>
+              <Image src={HomeImage} className='hbs' alt='spa day' />
+            </div>
+          </div>
+          <div className='col-md-4 col-6  overlay-card align-items-center offset-md-0 offset-6 d-flex column flex-column justify-content-center px-0 '>
+            <div className='section3-card p-md-3 p-2'>
               <h1 className='primary-heading my-2'>Natural Healing</h1>
               <p className='my-2 primary-text'>
                 Lorem Ipsum has been the industry's standard dummy text ever
@@ -36,22 +50,22 @@ const Section3 = () => {
               <button className='my-2 section-3__button'>Explore Now</button>
             </div>
           </div>
-          <div className='col-md-8 col-6'>
-            <div>
-              <Image src={HomeImage} layout='responsive' alt='spa day' />
-            </div>
-          </div>
         </div>
       </div>
+
+      {/* Reverse end */}
       <div className='px-0 py-5 container'>
         <div className='row w-100'>
-          <div className='col-md-8 col-6'>
-            <div>
-              <Image src={HomeImage} layout='responsive' alt='spa day' />
+          <div className='col-md-8 col-10 d-flex align-items-center justify-content-center'>
+            <div className='sss'>
+              <Image src={HomeImageMobile} className='hbs' alt='spa day' />
+            </div>
+            <div className='hbs'>
+              <Image src={HomeImage} className='hbs' alt='spa day' />
             </div>
           </div>
-          <div className='col-md-4 col-6  d-flex column flex-column justify-content-center px-0 '>
-            <div className='section3-card p-3'>
+          <div className='col-md-4 col-6  overlay-card align-items-center offset-md-0 offset-6 d-flex column flex-column justify-content-center px-0 '>
+            <div className='section3-card p-md-3 p-2'>
               <h1 className='primary-heading my-2'>Natural Healing</h1>
               <p className='my-2 primary-text'>
                 Lorem Ipsum has been the industry's standard dummy text ever

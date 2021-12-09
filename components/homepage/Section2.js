@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section2 = () => {
   return (
-    <section className='container px-0'>
+    <section className='container px-0 d-flex justify-content-center pt-md-5 pt-xs-1'>
       <div className='section-2'>
         <p className='section-2-para'>
           <span className='section-2-para__span'>Namaste Dwaar </span> is simply

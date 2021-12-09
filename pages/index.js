@@ -15,8 +15,9 @@ export default function Home() {
       <Section2 />
       <Heading title='Experiences' />
       <Section3 />
+      <Heading title='Testimonials' />
       <Section4 />
-      <Heading title='Patnered Brands' />
+      <Heading title='Partnered Brands' />
       <Section5 />
       <Footer />
     </>

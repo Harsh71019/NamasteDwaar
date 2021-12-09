@@ -137,7 +137,7 @@ a {
 /* Start of section 2 */
 
 .section-2 {
-  padding: 100px 100px;
+  max-width: 800px;
 }
 
 .section-2-para {
@@ -188,27 +188,186 @@ a {
   justify-content: center;
 }
 
-.col-overlap {
+.overlay-card {
+  margin-top: 0%;
   z-index: 3;
-  margin-top: -120px;
 }
+.overlay-reverse {
+  margin-top: 0%;
+}
+
 /* End of section 3 */
+
+/* Start of section 4 */
+.section-4-image-container {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.section-4-review {
+  font-family: Playfair Display;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.section-4-name {
+  font-family: Playfair Display;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.section-4-row {
+  max-width: 800px;
+}
+.border-section-4 {
+  border: 0.5px solid #a64f02;
+}
+.border-section-4-outer {
+  border: 1px solid #a64f02;
+}
+/* End of section 4 */
+
+/* Start of footer */
+.footer {
+  background: var(--footer-brown);
+}
+
+.footer-container {
+  max-width: 600px;
+}
+
+.footer-hr {
+  border: 1px solid #f2c1a3;
+}
+
+.footer-bold {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+.footer-para {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-link {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* End of footer */
 
 /* Start of media queries */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .logo-brand-nav {
-    width: 132px;
-    height: 56px;
-  }
-
+  /*Start of  Utilities */
   .hbs {
     display: none;
   }
   .sss {
     display: block;
   }
+
+  .primary-heading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--secondary-color);
+  }
+
+  .primary-text {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  /*End of Utilities */
+
+  /* Start of Nav */
+  .logo-brand-nav {
+  }
+
+  .logo-main-nav {
+    width: 132px;
+    height: 56px;
+    margin-right: 20px;
+  }
+  .logo-phone-nav {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+  }
+  /*End of Nav */
+
+  /* Start of section 1 */
+  .section-2 {
+    padding: 50px 30px;
+  }
+  .section-2-para {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .section-2-para__span {
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--secondary-color);
+  }
+
+  /* End of section 2 */
+
+  /* Start of section-3  */
+  .overlay-card {
+    margin-top: -63%;
+  }
+  .overlay-reverse {
+    margin-top: -63%;
+  }
+
+  /* End of section-3 */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
