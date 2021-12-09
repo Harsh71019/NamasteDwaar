@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav, Dropdown } from 'react-bootstrap';
 import Image from 'next/image';
 import Logo from '../../public/images/logo.png';
 import Phone from '../../public/images/phone.svg';
@@ -26,19 +26,104 @@ const NavbarTop = () => {
                 <Image src={Logo} height='68' width='158' />
               </div>
               <div className='sss'>
-                <button className='primary-button '>Book Now</button>
+                <button className='primary-button-nav'>Book Now</button>
               </div>
             </div>
           </Navbar.Brand>
           <Navbar.Collapse className=''>
             <Nav className='ms-lg-auto my-lg-0'>
-              <Nav.Link className='nav-links'>About Us</Nav.Link>
-              <Nav.Link className='nav-links'>Wellness</Nav.Link>
-              <Nav.Link className='nav-links'>Experiences</Nav.Link>
-              <Nav.Link className='nav-links'>Events</Nav.Link>
-              <Nav.Link className='nav-links'>Acommodation</Nav.Link>
-              <Nav.Link className='nav-links sss'>Contact Us</Nav.Link>
-              <button className='primary-button hbs'>Book Now</button>
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav'
+                  id='dropdown-basic'
+                >
+                  About Us
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
+                  <Dropdown.Item href='#/action-2'>
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href='#/action-3'>
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav'
+                  id='dropdown-basic'
+                >
+                  Wellness
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
+                  <Dropdown.Item href='#/action-2'>
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href='#/action-3'>
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav'
+                  id='dropdown-basic'
+                >
+                  Experiences
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
+                  <Dropdown.Item href='#/action-2'>
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href='#/action-3'>
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav'
+                  id='dropdown-basic'
+                >
+                  Events
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
+                  <Dropdown.Item href='#/action-2'>
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href='#/action-3'>
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav'
+                  id='dropdown-basic'
+                >
+                  Acommodation
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
+                  <Dropdown.Item href='#/action-2'>
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href='#/action-3'>
+                    Something else
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+
+              <button className='primary-button hbs ms-3'>Book Now</button>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -59,6 +59,88 @@ a {
 
 /* Start of navbar styles */
 
+.dropdown-button-nav {
+  color: #000;
+  background: transparent;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  border-radius: 0px !important;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-button-nav.btn-primary.dropdown-toggle {
+  background-color: transparent;
+  border: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.dropdown-button-nav:hover {
+  color: #000;
+  background: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0px !important;
+  border-bottom: 2px solid var(--secondary-color) !important;
+}
+.dropdown-button-nav:focus {
+  color: #000;
+  background: none;
+  outline: none !important;
+  border-bottom: 2px solid var(--secondary-color) !important;
+}
+.dropdown-button-nav-menu {
+  margin-top: 0px !important;
+  border-radius: 0px;
+  background: rgba(250, 244, 239, 0.9);
+}
+
+.nav-container-drop {
+  position: relative;
+  width: 100%;
+}
+
+.nav-main-drop > ul > li {
+  display: inline-block;
+  position: relative;
+  padding: 3px 10px 3px 0;
+  z-index: 100;
+}
+
+/* SECOND LEVEL */
+
+.nav-main-drop > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 0 100%;
+  margin: 0 -100%;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(255, 240, 240, 0.8);
+}
+
+.nav-main-drop > ul > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-main-drop > ul > li > ul > li {
+  padding: 3px 0;
+}
+
+.nav-main-drop > ul > li:hover .drop {
+  font-weight: bold;
+}
+
 .nav-container {
   background: var(--primary-background);
 }
@@ -323,12 +405,27 @@ a {
   .logo-main-nav {
     width: 132px;
     height: 56px;
-    margin-right: 20px;
   }
   .logo-phone-nav {
     width: 24px;
     height: 24px;
-    margin-right: 20px;
+  }
+
+  .primary-button-nav {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.07em;
+    color: #ffffff;
+    background: var(--primary-color);
+    border: none;
+    padding: 10px 10px;
+    justify-content: center;
   }
   /*End of Nav */
 
