@@ -4,6 +4,7 @@ import Section2 from '../components/homepage/Section2';
 import Section3 from '../components/homepage/Section3';
 import Section4 from '../components/homepage/Section4';
 import Section5 from '../components/homepage/Section5';
+import Section6 from '../components/homepage/Section6';
 import Heading from '../components/homepage/Heading';
 import Footer from '../components/base/Footer';
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Section2 />
       <Heading title='Experiences' />
       <Section3 />
+      <Section6 />
       <Heading title='Testimonials' />
       <Section4 />
       <Heading title='Partnered Brands' />

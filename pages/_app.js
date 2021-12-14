@@ -1,10 +1,14 @@
 import '../styles/globals.css';
+import '../styles/navbar.css';
 import Head from 'next/head';
+import SSRProvider from 'react-bootstrap/SSRProvider';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <SSRProvider>
+        <Component {...pageProps} />
+      </SSRProvider>
     </>
   );
 }

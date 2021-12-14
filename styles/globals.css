@@ -57,166 +57,6 @@ a {
 
 /* .ml-* and .mr-* to .ms-* and .me-* */
 
-/* Start of navbar styles */
-
-.dropdown-button-nav {
-  color: #000 !important;
-  background: transparent;
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: center;
-  border-radius: 0px !important;
-}
-.dropdown-toggle::after {
-  display: none;
-}
-
-.dropdown-button-nav.btn-primary.dropdown-toggle {
-  background-color: transparent;
-  border: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.dropdown-button-nav:hover {
-  color: #000 !important;
-  background: none;
-  outline: none;
-  background-color: transparent;
-  border-radius: 0px !important;
-  border-bottom: 2px solid var(--secondary-color) !important;
-  box-shadow: none;
-}
-.dropdown-button-nav:focus {
-  color: #000;
-  background: none;
-  outline: none !important;
-  border-bottom: 2px solid var(--secondary-color) !important;
-  box-shadow: none !important;
-}
-.dropdown-button-nav-menu {
-  margin-top: 0px !important;
-  border-radius: 0px;
-  background: rgba(250, 244, 239, 0.9);
-  border: none;
-}
-
-.nav-container-drop {
-  position: relative;
-  width: 100%;
-}
-
-.nav-main-drop > ul > li {
-  display: inline-block;
-  position: relative;
-  padding: 3px 10px 3px 0;
-  z-index: 100;
-}
-
-/* SECOND LEVEL */
-
-.nav-main-drop > ul > li > ul {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  padding: 0 100%;
-  margin: 0 -100%;
-  z-index: 101;
-  visibility: hidden;
-  opacity: 0;
-  background: rgba(255, 240, 240, 0.8);
-}
-
-.nav-main-drop > ul > li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-}
-
-.nav-main-drop > ul > li > ul > li {
-  padding: 3px 0;
-}
-
-.nav-main-drop > ul > li:hover .drop {
-  font-weight: bold;
-}
-
-.nav-container {
-  background: var(--primary-background);
-}
-
-.primary-button {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.07em;
-  color: #ffffff;
-  background: var(--primary-color);
-  border: none;
-  padding: 5px 10px;
-  width: 128px;
-  justify-content: center;
-}
-
-.nav-links {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  align-items: center;
-  text-align: center;
-  color: #000000 !important;
-}
-
-.main-nav {
-  height: 100%;
-  display: flex;
-  background: var(--primary-background);
-  align-items: center;
-}
-
-.logo-brand-nav {
-  width: 158.67px;
-  height: 68px;
-}
-
-.nav-toggle-button {
-  border: none;
-}
-
-.nav-toggle-button:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.nav-drop-links {
-  background: var(--primary-background);
-  width: 100% !important;
-  padding: 10px 0px;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 28px;
-  height: 2px;
-  background-color: var(--footer-brown);
-  margin: 6px 0;
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-/* End of navbar styles */
-
 /* Start of section 1 */
 /* End of section 1 */
 /* Start of section 2 */
@@ -320,6 +160,45 @@ a {
 }
 /* End of section 4 */
 
+/* Start of section 5  */
+.section-5-image-container {
+  position: relative;
+}
+
+.section-5-form-container {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+
+.input-white {
+  width: 100%;
+  padding: 5px;
+}
+
+.input-white::placeholder {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--footer-brown);
+}
+
+.input-white__label {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* End of  section 5 */
 /* Start of footer */
 .footer {
   background: var(--footer-brown);
@@ -472,6 +351,15 @@ a {
   }
 
   /* End of section-3 */
+
+  /* Start of section-6 */
+  .section-5-form-container {
+    top: 34%;
+    width: 82%;
+    padding: 10px;
+    left: 0%;
+  }
+  /* end of section-6  */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
