@@ -12,16 +12,18 @@ export default function Home() {
   return (
     <>
       <NavbarTop />
-      <Section1 />
-      <Section2 />
-      <Heading title='Experiences' />
-      <Section3 />
-      <Section6 />
-      <Heading title='Testimonials' />
-      <Section4 />
-      <Heading title='Partnered Brands' />
-      <Section5 />
-      <Footer />
+      <div className='home-body'>
+        <Section1 />
+        <Section2 />
+        <Heading title='Experiences' />
+        <Section3 />
+        <Section6 />
+        <Heading title='Testimonials' />
+        <Section4 />
+        <Heading title='Partnered Brands' />
+        <Section5 />
+        <Footer />
+      </div>
     </>
   );
 }
