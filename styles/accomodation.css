@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Start of utilities */
+
+:root {
+  --primary-color: #c09209;
+  --secondary-color: #a64f02;
+  --tertiary-color: #f2c1a3;
+  --footer-brown: #a7896f;
+  --primary-background: #faf4ef;
+}
+
+.hbs {
+  display: block;
+}
+.sss {
+  display: none;
+}
+
+.primary-heading {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 24px;
+  color: var(--secondary-color);
+  margin-top: 96px;
+  margin-bottom: 60px;
+}
+
+.primary-text {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* End of utilities */
+
+/* Start of Section 1 */
+.section2-acc {
+  margin-top: 72px;
+}
+
+.section-1-imagecontainer {
+  position: relative;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.section-1-text-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Playfair Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section-acc-button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  background: var(--primary-color);
+  border: none;
+  padding: 8px 16px;
+  width: 128px;
+  justify-content: center;
+}
+
+.section-acc-button__container {
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+/* End of Section 1 */
+/* Start of Section 2*/
+
+/* End of Section 2*/
+
+/* .ml-* and .mr-* to .ms-* and .me-* */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /*Start of  Utilities */
+  .hbs {
+    display: none;
+  }
+  .sss {
+    display: block;
+  }
+
+  .section-1-text-centered {
+    position: absolute;
+    top: 90%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
