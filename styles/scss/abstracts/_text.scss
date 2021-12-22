@@ -1,0 +1,30 @@
+@use 'index' as *;
+
+.room-details-heading {
+  @include heading(
+    $family: Playfair Display,
+    $size: 2.4rem,
+    $style: normal,
+    $weight: 400,
+    $height: 3.4rem,
+    $letterSpacing: 0,
+    $align: left,
+    $color: #000
+  );
+}
+
+.room-details-text {
+  @include heading(
+    $family: Montserrat,
+    $size: 1.4rem,
+    $style: normal,
+    $weight: 400,
+    $height: 2.4rem,
+    $letterSpacing: 0,
+    $align: left,
+    $color: #000
+  );
+  //   @include responsive(xsmall) {
+  //     @include button($main1, $main2, $white, 4rem, 1.3rem, 0.2rem, 0, 2rem);
+  //   }
+}

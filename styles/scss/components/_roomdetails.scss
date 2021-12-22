@@ -1,0 +1,153 @@
+@use '../abstracts';
+
+.room-details {
+  &__image {
+    position: relative;
+    margin-bottom: 54px;
+
+    &-image {
+      width: 100%;
+    }
+
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 3.6rem,
+        $style: normal,
+        $weight: 700,
+        $height: 4.4,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #fff
+      );
+      position: absolute;
+      top: 70%;
+      left: 3%;
+    }
+  }
+
+  &__desc1 {
+    &-description {
+      margin-top: 24px;
+    }
+
+    &-para {
+      padding: 0 100px;
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-sizeTitle {
+      @include abstracts.heading(
+        $family: Montserrat,
+        $size: 1.4rem,
+        $style: normal,
+        $weight: 500,
+        $height: 1.5,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #000
+      );
+      margin-bottom: 0;
+    }
+  }
+
+  &__desc2 {
+    margin-top: 4.8rem;
+
+    &-description {
+      padding: 0 100px;
+    }
+
+    &-image {
+      width: 100%;
+    }
+  }
+
+  &__desc3 {
+    margin-top: 4.8rem;
+
+    &-description {
+      padding: 0 100px;
+    }
+    &-image {
+      width: 100%;
+      margin-top: 4.8rem;
+    }
+
+    &-li {
+      @include abstracts.heading(
+        $family: Montserrat,
+        $size: 1.4rem,
+        $style: normal,
+        $weight: 400,
+        $height: 4rem,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #000
+      );
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .room-details {
+    &__desc1 {
+      &-description {
+        margin-top: 24px;
+      }
+
+      &-para {
+        padding: 0 30px;
+      }
+
+      &-image {
+        margin-top: 4.8rem;
+      }
+    }
+
+    &__desc2 {
+      margin-top: 4.8rem;
+
+      &-description {
+        padding: 0 30px;
+      }
+
+      &-image {
+        margin-top: 4.8rem;
+      }
+    }
+    &__desc3 {
+      margin-top: 4.8rem;
+
+      &-description {
+        padding: 0 3rem;
+      }
+
+      &-image {
+        margin-top: 4.8rem;
+      }
+      font-family: Montserrat;
+    }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

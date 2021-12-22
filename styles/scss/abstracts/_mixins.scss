@@ -1,0 +1,52 @@
+@use 'breakpoints' as *;
+
+@mixin button(
+  $backgroundColor,
+  $textColor,
+  $fontSize,
+  $bdr,
+  $paddingVertical,
+  $paddingHorizontal,
+  $height,
+  $width,
+  $margintop,
+  $marginbottom
+) {
+  background: $backgroundColor;
+  color: $textColor;
+  text-decoration: none;
+  line-height: $height;
+  display: inline-block;
+  font-size: $fontSize;
+  font-weight: 400;
+  border-radius: $bdr;
+  padding: $paddingVertical $paddingHorizontal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: $width;
+  font-family: Montserrat;
+  margin-top: $margintop;
+  margin-bottom: $marginbottom;
+}
+
+@mixin heading(
+  $family,
+  $size,
+  $style,
+  $weight,
+  $height,
+  $letterSpacing,
+  $align,
+  $color
+) {
+  font-family: $family;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $letterSpacing;
+  text-align: $align;
+  color: $color;
+}

@@ -1,16 +1,19 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Footer from '../../components/base/Footer';
+import NavbarTop from '../../components/base/Navbar';
+import RoomDetails from '../../components/accomodation/RoomDetails';
 
-const roomDetails = () => {
+const rooms = () => {
   const router = useRouter();
   const { id } = router.query;
   return (
-    <section>
-      <div className='container'>
-        <h1>{id}</h1>
-      </div>
-    </section>
+    <>
+      <NavbarTop />
+      <RoomDetails roomID={id} />
+      <Footer />
+    </>
   );
 };
 
-export default roomDetails;
+export default rooms;

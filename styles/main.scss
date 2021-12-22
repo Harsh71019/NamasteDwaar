@@ -1,0 +1,15 @@
+@use 'scss/base/base';
+// import utils
+@use 'scss/utils/utils';
+// import components
+@use 'scss/components/nav';
+
+@use 'scss/components/footer';
+
+@use 'scss/components/roomdetails';
+
+@use 'scss/layout/layout';
+// import abstracts file
+@use 'scss/abstracts/buttons';
+
+@use 'scss/abstracts/text';

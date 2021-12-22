@@ -1,0 +1,19 @@
+@use 'index' as *;
+
+.btn-default {
+  @include button(
+    $main1,
+    $white,
+    1.2rem,
+    0,
+    0.4rem,
+    0.8rem,
+    2.4rem,
+    12.8rem,
+    none,
+    none
+  );
+  //   @include responsive(xsmall) {
+  //     @include button($main1, $main2, $white, 4rem, 1.3rem, 0.2rem, 0, 2rem);
+  //   }
+}

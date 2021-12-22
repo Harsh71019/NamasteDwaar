@@ -11,7 +11,7 @@ const Section2 = () => {
             {roomDetails.map((room) => (
               <Link href={`/accomodation/${room.id}`}>
                 <div
-                  className='col-md-4 col-12  section-1-imagecontainer'
+                  className='col-md-4 col-12 section-1-imagecontainer'
                   key={room.id}
                 >
                   <img
@@ -19,7 +19,9 @@ const Section2 = () => {
                     alt={room.name}
                     className='w-100'
                   />
-                  <h1 className='section-1-text-centered'>{room.name}</h1>
+                  <div className='section-1-text-acc-container'>
+                    <h1 className='section-1-text-acc'>{room.name}</h1>
+                  </div>
                 </div>
               </Link>
             ))}

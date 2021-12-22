@@ -68,11 +68,16 @@ a {
   margin-top: 48px;
 }
 
-.section-1-text-centered {
+.section-1-text-acc-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.section-1-text-acc {
+  white-space: nowrap;
   font-family: Playfair Display;
   font-size: 20px;
   font-style: normal;
@@ -122,9 +127,7 @@ a {
     display: block;
   }
 
-  .section-1-text-centered {
-    position: absolute;
-    top: 90%;
+  .section-1-text-acc {
   }
 }
 

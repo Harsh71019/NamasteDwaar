@@ -21,7 +21,7 @@ export const roomDetails = [
     tv: true,
     swimmingPool: true,
     teacoffeeSet: true,
-    hairDryer: true,
+    hairDryer: false,
     gallery: {
       panorama:
         'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roompano_pgheeg.png',
