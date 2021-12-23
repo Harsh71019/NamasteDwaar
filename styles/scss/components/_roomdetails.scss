@@ -126,6 +126,14 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .room-details {
+    &__image {
+      &-image {
+        width: 100%;
+        object-fit: cover;
+        height: 70vh;
+      }
+    }
+
     &__desc1 {
       &-description {
         margin-top: 24px;

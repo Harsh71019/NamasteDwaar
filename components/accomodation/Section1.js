@@ -28,8 +28,8 @@ const Section1 = () => {
           </div>
         </div>
         <div className='container px-0 sss'>
-          <div className='d-flex flex-column'>
-            <div className='col-12'>
+          <div className='d-flex flex-column '>
+            <div className='col-12 accomodation-top__container'>
               <Image
                 src={Mobile}
                 priority
@@ -37,10 +37,13 @@ const Section1 = () => {
                 layout='responsive'
               />
             </div>
-            <div className='col-12 px-5'>
+
+            <div className='col-12'>
               <div className='accomodation-top__mobile'>
-                <h1 className='text-center'>Accomodation</h1>
-                <p className='accomodation-top__container-desc room-details-text'>
+                <h1 className='text-center accomodation-top__mobile-heading'>
+                  Accomodation
+                </h1>
+                <p className='accomodation-top__mobile-desc room-details-text'>
                   Our private living spaces have been carefully designed to
                   integrate luxury with wellness. Our rustic interiors have been
                   crafted with natural materials and thoughtful lighting,

@@ -20,7 +20,27 @@ const Section2 = () => {
                     className='w-100'
                   />
                   <div className='section-1-text-acc-container'>
-                    <h1 className='section-1-text-acc'>{room.name}</h1>
+                    {/* Desktop */}
+                    <div className='hbs'>
+                      <h1 className='section-1-text-acc'>{room.name}</h1>
+                    </div>
+                    {/* Mobile */}
+                    <div className='sss'>
+                      <div className='section-1-acc-textcont row d-flex justify-content-between'>
+                        <div className='col-9 d-flex  justify-content-start align-items-center'>
+                          <span className='section-1-text-acc'>
+                            {room.name}
+                            <br />
+                            <span className='section-1-acc-sqmt'>
+                              {room.roomSize} Sq.mt.
+                            </span>
+                          </span>
+                        </div>
+                        <div className=' col-3 d-flex justify-content-end align-items-center'>
+                          <i class='section-1-acc-icon fas fa-chevron-right'></i>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>

@@ -33,38 +33,15 @@ a {
   display: none;
 }
 
-.primary-heading {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 24px;
-  color: var(--secondary-color);
-  margin-top: 96px;
-  margin-bottom: 60px;
-}
-
-.primary-text {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-}
-
 /* End of utilities */
 
 /* Start of Section 1 */
 .section2-acc {
-  margin-top: 72px;
+  margin-top: 7.2rem;
 }
 
 .section-1-imagecontainer {
   position: relative;
-  text-align: center;
   margin-top: 48px;
 }
 
@@ -73,11 +50,9 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
 }
 
 .section-1-text-acc {
-  white-space: nowrap;
   font-family: Playfair Display;
   font-size: 20px;
   font-style: normal;
@@ -126,8 +101,42 @@ a {
   .sss {
     display: block;
   }
+  .section2-acc {
+    margin-top: 26.5rem;
+  }
+
+  .section-1-text-acc-container {
+    top: 75%;
+    left: 50%;
+  }
 
   .section-1-text-acc {
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .section-1-acc-textcont {
+    width: 85vw;
+  }
+
+  .section-1-acc-sqmt {
+    font-family: Playfair Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .section-1-acc-icon {
+    font-size: 24px;
+    color: #fff;
   }
 }
 

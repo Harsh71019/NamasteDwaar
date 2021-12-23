@@ -27,7 +27,7 @@ class MyDocument extends Document {
           <NextScript />
           <script
             src='https://kit.fontawesome.com/60a0a6cbb9.js'
-            crossorigin='anonymous'
+            crossOrigin='anonymous'
           ></script>
         </body>
       </Html>
