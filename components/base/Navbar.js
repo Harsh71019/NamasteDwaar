@@ -3,6 +3,7 @@ import { Container, Navbar, Nav, Dropdown } from 'react-bootstrap';
 import Image from 'next/image';
 import Logo from '../../public/images/logo.png';
 import Phone from '../../public/images/phone.svg';
+import Link from 'next/link';
 
 const NavbarTop = () => {
   return (
@@ -22,9 +23,11 @@ const NavbarTop = () => {
               <div className='sss logo-phone-nav'>
                 <Image src={Phone} height='24' width='24' />
               </div>
-              <div className='logo-main-nav'>
-                <Image src={Logo} height='68' width='158' />
-              </div>
+              <Link href='/'>
+                <div className='logo-main-nav'>
+                  <Image src={Logo} height='68' width='158' />
+                </div>
+              </Link>
               <div className='sss'>
                 <button className='primary-button-nav'>Book Now</button>
               </div>
@@ -32,47 +35,11 @@ const NavbarTop = () => {
           </Navbar.Brand>
           <Navbar.Collapse className=''>
             <Nav className='ms-lg-auto my-lg-0'>
-              <Dropdown className='position-static ms-md-3 ms-0'>
-                <Dropdown.Toggle
-                  className='dropdown-button-nav w-100'
-                  id='dropdown-basic'
-                >
+              <Link href='/aboutus'>
+                <a className='d-flex justify-content-center align-items-center dropdown-button-nav'>
                   About Us
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi1'
-                    href='#/action-1'
-                  >
-                    Countryside Getaways
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi1'
-                    href='#/action-2'
-                  >
-                    Signature Dining
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi1'
-                    href='#/action-3'
-                  >
-                    Fitness & Recreation
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi1'
-                    href='#/action-3'
-                  >
-                    Art at Dwaar
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi1'
-                    href='#/action-3'
-                  >
-                    Workshops
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+                </a>
+              </Link>
               <Dropdown className='position-static ms-md-3 ms-0'>
                 <Dropdown.Toggle
                   className='dropdown-button-nav w-100'
@@ -160,7 +127,12 @@ const NavbarTop = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <Dropdown className='position-static ms-md-3 ms-0'>
+              <Link href='/accomodation'>
+                <a className=' ms-md-3 ms-0 d-flex justify-content-center align-items-center dropdown-button-nav'>
+                  Acommodation
+                </a>
+              </Link>
+              {/* <Dropdown className='position-static ms-md-3 ms-0'>
                 <Dropdown.Toggle
                   className='dropdown-button-nav w-100'
                   id='dropdown-basic'
@@ -188,7 +160,7 @@ const NavbarTop = () => {
                     Something else
                   </Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown> */}
 
               <button className='primary-button hbs ms-3'>Book Now</button>
             </Nav>

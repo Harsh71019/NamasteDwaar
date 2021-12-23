@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { roomDetails } from '../../data/roomDetails';
-import Image from 'next/image';
 import Loader from '../base/Loader';
 
 const RoomDetails = ({ roomID }) => {
@@ -121,13 +120,13 @@ const RoomDetails = ({ roomID }) => {
               </div>
             </div>
             <div className='w-100 row d-flex justify-content-center align-items-center'>
-              <p className='text-center'>
-                <span>Starting at </span>
-                <span>₹{rooms.price}</span>
+              <p className='room-details__price-container text-center'>
+                <span className='room-details__start'>Starting at </span>
+                <span className='room-details__price'>₹{rooms.price}</span>
               </p>
             </div>
             <div className='row d-flex justify-content-center align-items-center'>
-              <button className='btn-default'>Book Now</button>
+              <button className='btn-default mb-5'>Book Now</button>
             </div>
           </div>
         </section>

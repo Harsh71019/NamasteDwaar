@@ -25,6 +25,10 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script
+            src='https://kit.fontawesome.com/60a0a6cbb9.js'
+            crossorigin='anonymous'
+          ></script>
         </body>
       </Html>
     );

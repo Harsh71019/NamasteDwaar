@@ -1,0 +1,32 @@
+.accomodation-top {
+  &__container {
+    position: relative;
+
+    &-text {
+      position: absolute;
+      top: 42.1%;
+      left: 13.1%;
+      max-width: 50rem;
+    }
+
+    &-heading {
+      font-family: Playfair Display;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 44px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff !important;
+    }
+
+    &-desc {
+      color: #fff !important;
+      margin-top: 2rem;
+    }
+  }
+
+  &__mobile {
+    background: #a7896f;
+  }
+}
