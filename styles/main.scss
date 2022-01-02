@@ -6,10 +6,18 @@
 
 @use 'scss/components/footer';
 
+// Base Components
+
+@use 'scss/components/enquiryform';
+
 // Accomodation Pages
 @use 'scss/components/roomdetails';
 @use 'scss/components/accomodation';
+
 // End of Accomodation Pages
+
+// Start of contact page
+@use 'scss/components/contactus';
 
 @use 'scss/layout/layout';
 // import abstracts file

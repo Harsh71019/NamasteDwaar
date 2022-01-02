@@ -1,0 +1,92 @@
+@use '../abstracts';
+
+.contact-top {
+  &__image {
+    position: relative;
+
+    &-image {
+      width: 100%;
+    }
+
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 3.6rem,
+        $style: normal,
+        $weight: 700,
+        $height: 4.4,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #fff
+      );
+      position: absolute;
+      top: 70%;
+      left: 3%;
+    }
+  }
+}
+
+.contact-form {
+  margin-top: 6.4rem;
+
+  &__para {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #a64f02;
+    max-width: 44.4rem;
+    margin-bottom: 24px;
+  }
+
+  &__heading {
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #a64f02;
+    margin-top: 6.4rem;
+  }
+
+  &__social {
+    max-width: 250px;
+    margin-top: 1.6rem;
+
+    &-link {
+      margin-right: 2.2rem;
+    }
+
+    &-icon {
+      font-size: 2.5rem;
+      color: #a64f02;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .contact-top {
+    &__image {
+      position: relative;
+
+      &-image {
+        width: 100%;
+        object-fit: cover !important;
+        height: 70vh !important;
+      }
+
+      &-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

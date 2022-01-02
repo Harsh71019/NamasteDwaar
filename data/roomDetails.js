@@ -1,7 +1,7 @@
 export const roomDetails = [
   {
     id: '1',
-    name: 'Premium Rooms',
+    name: 'Harsh',
     roomSize: '20',
     occupancy: '2',
     description:
@@ -13,7 +13,7 @@ export const roomDetails = [
       'Various versions have evolved over the years, sometimes by accident.',
     ],
     price: '8000',
-    breakfast: true,
+    breakfast: false,
     airConditioning: true,
     wifi: true,
     shower: true,
