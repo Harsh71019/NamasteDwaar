@@ -273,6 +273,10 @@
     width: 100% !important;
   }
 
+  .nav-toggle-button {
+    margin: 0 !important;
+  }
+
   /*End of Nav */
 }
 

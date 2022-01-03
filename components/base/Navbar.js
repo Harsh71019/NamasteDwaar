@@ -17,10 +17,10 @@ const NavbarTop = () => {
           </Navbar.Toggle>
           <Navbar.Brand
             href='#'
-            className='logo-brand-nav mx-auto d-flex align-items-center justify-content-center'
+            className='logo-brand-nav  mx-auto d-flex align-items-center justify-content-around'
           >
-            <div className='d-flex align-items-center justify-content-between'>
-              <div className='sss logo-phone-nav'>
+            <div className='d-flex  align-items-center justify-content-center'>
+              <div className='sss logo-phone-nav '>
                 <Image src={Phone} height='24' width='24' />
               </div>
               <Link href='/'>
