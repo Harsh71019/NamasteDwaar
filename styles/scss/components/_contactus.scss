@@ -44,10 +44,10 @@
 
   &__heading {
     font-family: Playfair Display;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 3.2rem;
     letter-spacing: 0em;
     text-align: left;
     color: #a64f02;
@@ -87,6 +87,24 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  .contact-form {
+    &__para {
+      text-align: center;
+    }
+
+    &__heading {
+      text-align: center;
+      margin-top: 4.8rem;
+    }
+
+    &__social {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 7.2rem;
     }
   }
 }

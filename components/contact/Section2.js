@@ -33,6 +33,7 @@ const Section2 = () => {
               </div>
             </div>
           </div>
+
           <div className='col-md-6 col-12 d-flex justify-content-center flex-column'>
             <EnquiryForm />
           </div>
