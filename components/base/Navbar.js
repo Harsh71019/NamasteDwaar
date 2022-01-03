@@ -36,7 +36,7 @@ const NavbarTop = () => {
           <Navbar.Collapse className=''>
             <Nav className='ms-lg-auto my-lg-0'>
               <Link href='/aboutus'>
-                <a className='d-flex justify-content-center align-items-center dropdown-button-nav'>
+                <a className='d-flex justify-content-md-center justify-content-md-start align-items-center dropdown-button-nav'>
                   About Us
                 </a>
               </Link>
@@ -128,7 +128,7 @@ const NavbarTop = () => {
                 </Dropdown.Menu>
               </Dropdown>
               <Link href='/accomodation'>
-                <a className=' ms-md-3 ms-0 d-flex justify-content-center align-items-center dropdown-button-nav'>
+                <a className=' ms-md-3 ms-0 d-flex justify-content-md-center justify-content-md-start align-items-center dropdown-button-nav'>
                   Acommodation
                 </a>
               </Link>
