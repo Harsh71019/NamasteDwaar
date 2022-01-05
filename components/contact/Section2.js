@@ -1,5 +1,5 @@
 import React from 'react';
-import EnquiryForm from '../base/EnquiryForm';
+import ContactUsEnquiry from '../base/ContactUsEnquiry';
 
 const Section2 = () => {
   return (
@@ -35,7 +35,7 @@ const Section2 = () => {
           </div>
 
           <div className='col-md-6 col-12 d-flex justify-content-center flex-column'>
-            <EnquiryForm />
+            <ContactUsEnquiry />
           </div>
         </div>
       </div>

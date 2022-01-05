@@ -1,0 +1,159 @@
+@use '../abstracts';
+
+.experiences-types {
+  margin-bottom: 14.8rem;
+
+  &__col {
+    margin-top: 11.6rem;
+  }
+
+  &__card {
+    padding: 0 180px;
+
+    &-body {
+      background: #fff;
+      padding-bottom: 3.2rem;
+    }
+
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 2.4rem,
+        $style: normal,
+        $weight: 400,
+        $height: 3.2rem,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #a64f02
+      );
+      margin-top: 2.4rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &-desc {
+      @include abstracts.heading(
+        $family: Montserrat,
+        $size: 1.4rem,
+        $style: normal,
+        $weight: 400,
+        $height: 2.4rem,
+        $letterSpacing: 0,
+        $align: justified,
+        $color: #000
+      );
+      margin-bottom: 1.2rem;
+    }
+
+    &-link {
+      @include abstracts.heading(
+        $family: Montserrat,
+        $size: 1.2rem,
+        $style: normal,
+        $weight: 600,
+        $height: 1.6rem,
+        $letterSpacing: 0.1em,
+        $align: left,
+        $color: #a64f02
+      );
+      text-decoration: underline;
+    }
+  }
+}
+
+.experience-top {
+  &__image {
+    position: relative;
+
+    &-image {
+      width: 100%;
+    }
+
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 3.6rem,
+        $style: normal,
+        $weight: 700,
+        $height: 4.4rem,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #fff
+      );
+      position: absolute;
+      top: 30%;
+      left: 23%;
+    }
+
+    &-desc {
+      @include abstracts.heading(
+        $family: Montserrat,
+        $size: 1.4rem,
+        $style: normal,
+        $weight: 500,
+        $height: 2.4rem,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #fff
+      );
+
+      position: absolute;
+      top: 37%;
+      left: 23%;
+      max-width: 757px;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .experiences-types {
+    &__card {
+      padding: 0 0;
+    }
+
+    &__col {
+      margin-top: 3rem;
+      padding: 0;
+    }
+
+    &__card {
+      padding: 0;
+
+      &-body {
+        background: transparent;
+        padding-bottom: 3.2rem;
+      }
+
+      &-heading {
+        margin-top: 0;
+      }
+
+      &-image {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .experience-top {
+    &__image {
+      position: relative;
+
+      &-image {
+        width: 100%;
+        object-fit: cover !important;
+        height: 70vh !important;
+      }
+
+      &-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &-desc {
+        display: none;
+      }
+    }
+  }
+}
