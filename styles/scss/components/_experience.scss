@@ -10,6 +10,11 @@
   &__card {
     padding: 0 180px;
 
+    &-image {
+      height: 42.3rem;
+      object-fit: cover;
+    }
+
     &-body {
       background: #fff;
       padding-bottom: 3.2rem;
@@ -61,11 +66,62 @@
 }
 
 .experience-top {
+  &__margin {
+    margin-top: 10.4rem;
+  }
+
+  &__row {
+    padding: 0 70px;
+  }
+
+  &__col {
+    position: relative;
+
+    &-image {
+      height: 40rem;
+    }
+  }
+
+  &__card {
+    background: #fff;
+    height: 22.4rem;
+    padding: 3rem 3.5rem;
+    z-index: 2;
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 2.4rem,
+        $style: normal,
+        $weight: 400,
+        $height: 3.2rem,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #a64f02
+      );
+    }
+
+    &-desc {
+      width: 26.8rem;
+
+      @include abstracts.heading(
+        $family: Montserrat,
+        $size: 1.4rem,
+        $style: normal,
+        $weight: 400,
+        $height: 2.4rem,
+        $letterSpacing: 0,
+        $align: justified,
+        $color: #000
+      );
+    }
+  }
+
   &__image {
     position: relative;
 
     &-image {
       width: 100%;
+      height: 520px;
     }
 
     &-heading {
@@ -80,7 +136,7 @@
         $color: #fff
       );
       position: absolute;
-      top: 30%;
+      top: 45%;
       left: 23%;
     }
 
@@ -97,7 +153,7 @@
       );
 
       position: absolute;
-      top: 37%;
+      top: 54%;
       left: 23%;
       max-width: 757px;
     }
@@ -135,6 +191,34 @@
   }
 
   .experience-top {
+    &__margin {
+      margin-top: 4rem;
+    }
+
+    &__col {
+      position: relative;
+
+      &-image {
+        height: 40rem;
+      }
+    }
+
+    &__card {
+      background: #fff;
+      height: 22.4rem;
+      padding: 3rem 3.5rem;
+      margin-top: -15rem;
+      z-index: 2;
+
+      &-desc {
+        margin-top: 1.2rem;
+      }
+    }
+
+    &__row {
+      padding: 0 0;
+      display: flex;
+    }
     &__image {
       position: relative;
 

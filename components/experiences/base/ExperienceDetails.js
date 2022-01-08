@@ -32,30 +32,48 @@ const ExperienceDetails = ({ expId }) => {
             {exp &&
               exp.cards.map((card) => {
                 return Number(card.id) % 2 === 0 ? (
-                  <div className='mt-5'>
-                    <div className='row '>
-                      <div className='col-md-8 col-12'>
-                        <img src={card.image} className='w-100' />
+                  <div className='experience-top__margin'>
+                    <div className='row experience-top__row'>
+                      <div className='col-md-9 col-12 order-md-1 order-1 experience-top__col'>
+                        <img
+                          src={card.image}
+                          className='w-100 experience-top__col-image'
+                        />
                       </div>
-                      <div className='col-md-4 col-12 d-flex justify-content-center align-items-center'>
-                        <div>
-                          <h1>{card.title}</h1>
-                          <p>{card.description}</p>
+                      <div className='experience-top__col order-md-2 order-2 col-md-3 col-12 d-flex justify-content-center align-items-center'>
+                        <div className='experience-top__card d-flex justify-content-center align-items-center'>
+                          <div>
+                            <h1 className='experience-top__card-heading'>
+                              {card.title}
+                            </h1>
+                            <p className='experience-top__card-desc'>
+                              {card.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <div className='mt-5'>
-                    <div className='row '>
-                      <div className='col-md-4 col-12 d-flex justify-content-center align-items-center'>
-                        <div>
-                          <h1>{card.title}</h1>
-                          <p>{card.description}</p>
+                  <div className='experience-top__margin'>
+                    <div className='row experience-top__row'>
+                      <div className='experience-top__col order-md-1 order-2 col-md-3 col-12 d-flex justify-content-center align-items-center'>
+                        <div className='experience-top__card d-flex justify-content-center align-items-center'>
+                          <div>
+                            <h1 className='experience-top__card-heading'>
+                              {card.title}
+                            </h1>
+                            <p className='experience-top__card-desc'>
+                              {card.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className='col-md-8 col-12'>
-                        <img src={card.image} className='w-100' />
+                      <div className='col-md-9 col-12 order-md-2 order-1 experience-top__col'>
+                        <img
+                          src={card.image}
+                          className='w-100 experience-top__col-image'
+                        />
                       </div>
                     </div>
                   </div>
