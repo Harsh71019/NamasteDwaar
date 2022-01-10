@@ -67,7 +67,6 @@ const Section6 = () => {
                     max='2022-12-12'
                     className='input-white'
                     type='date'
-                    onfocus="(this.type='date')"
                     placeholder='Check out date'
                   />
                 </div>

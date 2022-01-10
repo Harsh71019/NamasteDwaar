@@ -9,7 +9,10 @@ const Section2 = () => {
         <div className='container'>
           <div className='row experiences-types__card'>
             {experiencesDetails.map((exp) => (
-              <div className='col-12 col-md-6 experiences-types__col'>
+              <div
+                key={exp.id}
+                className='col-12 col-md-6 experiences-types__col'
+              >
                 <div className='experiences-types__card-body '>
                   <div className='px-3 sss'>
                     <h1 className='experiences-types__card-heading'>

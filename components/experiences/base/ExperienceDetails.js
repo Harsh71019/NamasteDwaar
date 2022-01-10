@@ -14,7 +14,7 @@ const ExperienceDetails = ({ expId }) => {
     getExpDetails();
   }, [expId]);
 
-  console.log(exp);
+  exp;
   return (
     <>
       {exp && exp ? (
@@ -32,7 +32,7 @@ const ExperienceDetails = ({ expId }) => {
             {exp &&
               exp.cards.map((card) => {
                 return Number(card.id) % 2 === 0 ? (
-                  <div className='experience-top__margin'>
+                  <div key={card.id} className='experience-top__margin'>
                     <div className='row experience-top__row'>
                       <div className='col-md-9 col-12 order-md-1 order-1 experience-top__col'>
                         <img
@@ -55,7 +55,7 @@ const ExperienceDetails = ({ expId }) => {
                     </div>
                   </div>
                 ) : (
-                  <div className='experience-top__margin'>
+                  <div key={card.id} className='experience-top__margin'>
                     <div className='row experience-top__row'>
                       <div className='experience-top__col order-md-1 order-2 col-md-3 col-12 d-flex justify-content-center align-items-center'>
                         <div className='experience-top__card d-flex justify-content-center align-items-center'>

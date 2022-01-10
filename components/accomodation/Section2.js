@@ -9,11 +9,8 @@ const Section2 = () => {
         <div className='container'>
           <div className='row d-flex justify-content-center align-items-center'>
             {roomDetails.map((room) => (
-              <Link href={`/accomodation/${room.id}`}>
-                <div
-                  className='col-md-4 col-12 section-1-imagecontainer'
-                  key={room.id}
-                >
+              <Link key={room.id} href={`/accomodation/${room.id}`}>
+                <div className='col-md-4 col-12 section-1-imagecontainer'>
                   <img
                     src={room.gallery.mobile}
                     alt={room.name}
@@ -37,7 +34,10 @@ const Section2 = () => {
                           </span>
                         </div>
                         <div className=' col-3 d-flex justify-content-end align-items-center'>
-                          <i class='section-1-acc-icon fas fa-chevron-right'></i>
+                          <i
+                            aria-hidden
+                            className='section-1-acc-icon fas fa-chevron-right'
+                          ></i>
                         </div>
                       </div>
                     </div>

@@ -67,7 +67,9 @@ const RoomDetails = ({ roomID }) => {
                       {rooms &&
                         rooms.highlights &&
                         rooms.highlights.map((room) => (
-                          <li className='room-details-text'>{room}</li>
+                          <li key={room} className='room-details-text'>
+                            {room}
+                          </li>
                         ))}
                     </ul>
                   </div>

@@ -19,16 +19,28 @@ const Section2 = () => {
 
               <div className='contact-form__social'>
                 <a className='contact-form__social-link'>
-                  <i className='fab contact-form__social-icon fa-facebook'></i>
+                  <i
+                    aria-hidden
+                    className='fab contact-form__social-icon fa-facebook'
+                  ></i>
                 </a>
                 <a className='contact-form__social-link'>
-                  <i className='fab contact-form__social-icon fa-linkedin-in'></i>{' '}
+                  <i
+                    aria-hidden
+                    className='fab contact-form__social-icon fa-linkedin-in'
+                  ></i>{' '}
                 </a>
                 <a className='contact-form__social-link'>
-                  <i className='fab contact-form__social-icon fa-whatsapp'></i>
+                  <i
+                    aria-hidden
+                    className='fab contact-form__social-icon fa-whatsapp'
+                  ></i>
                 </a>
                 <a className='contact-form__social-link'>
-                  <i className='fab contact-form__social-icon fa-instagram'></i>
+                  <i
+                    aria-hidden
+                    className='fab contact-form__social-icon fa-instagram'
+                  ></i>
                 </a>
               </div>
             </div>

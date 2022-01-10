@@ -170,17 +170,28 @@
   width: auto;
 }
 
+.dropdown-item:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: transparent !important;
+}
+
+.dropdown-item:active {
+  color: #000;
+  text-decoration: none;
+  background-color: transparent !important;
+}
 .ddi1 {
-  margin-left: 29vw;
+  margin-left: calc(29% + 100px);
 }
 .ddi2 {
-  margin-left: 35vw;
+  margin-left: calc(65% - 100px);
 }
 .ddi3 {
-  margin-left: 41vw;
+  margin-left: calc(72% - 100px);
 }
 .ddi4 {
-  margin-left: 48vw;
+  margin-left: calc(81% - 100px);
 }
 .ddi5 {
   margin-left: 53vw;
@@ -263,6 +274,7 @@
     border-bottom: 1px solid #a7896f !important;
     padding: 10px 0px;
   }
+
   .dropdown-button-nav:focus {
     color: #a7896f !important;
   }

@@ -55,16 +55,10 @@ const NavbarTop = () => {
                   >
                     Action
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi2'
-                    href='#/action-2'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
                     Another action
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi2'
-                    href='#/action-3'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
                     Something else
                   </Dropdown.Item>
                 </Dropdown.Menu>
@@ -78,22 +72,13 @@ const NavbarTop = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi3'
-                    href='#/action-1'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
                     <Link href='/experiences'>Experiences</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi3'
-                    href='#/action-2'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
                     Another action
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi3'
-                    href='#/action-3'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
                     Something else
                   </Dropdown.Item>
                 </Dropdown.Menu>
@@ -113,16 +98,10 @@ const NavbarTop = () => {
                   >
                     Action
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi4'
-                    href='#/action-2'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi4'>
                     Another action
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi4'
-                    href='#/action-3'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi4'>
                     Something else
                   </Dropdown.Item>
                 </Dropdown.Menu>
@@ -149,13 +128,13 @@ const NavbarTop = () => {
                   </Dropdown.Item>
                   <Dropdown.Item
                     className='dropdown-item-position ddi5'
-                    href='#/action-2'
+                    
                   >
                     Another action
                   </Dropdown.Item>
                   <Dropdown.Item
                     className='dropdown-item-position ddi5'
-                    href='#/action-3'
+                   
                   >
                     Something else
                   </Dropdown.Item>
