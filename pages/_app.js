@@ -2,8 +2,8 @@ import '../styles/globals.css';
 import '../styles/navbar.css';
 import '../styles/accomodation.css';
 import '../styles/main.css';
-import Head from 'next/head';
 import SSRProvider from 'react-bootstrap/SSRProvider';
+import { wrapper } from '../redux/store';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,4 +15,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

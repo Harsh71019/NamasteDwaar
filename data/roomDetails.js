@@ -1,9 +1,10 @@
 export const roomDetails = [
   {
-    id: '1',
-    name: 'Harsh',
-    roomSize: '20',
-    occupancy: '2',
+    id: '1', //
+    name: 'Harsh', //
+    roomSize: '20', //
+    occupancy: '2', //
+    //
     description:
       'Our private living spaces have been carefully designed to integrate luxury with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. ',
     highlights: [
@@ -12,7 +13,7 @@ export const roomDetails = [
       'Many desktop publishing packages and web page editors now use Lorem Ipsum. ',
       'Various versions have evolved over the years, sometimes by accident.',
     ],
-    price: '8000',
+    price: '8000', //
     breakfast: false,
     airConditioning: true,
     wifi: true,
