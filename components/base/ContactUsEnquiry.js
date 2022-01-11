@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 
 const ContactUsEnquiry = () => {
   const [name, setName] = useState('');
@@ -8,15 +10,20 @@ const ContactUsEnquiry = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    alert(
-      `name, email, mobile, message: ${name}, ${email}, ${mobile}, ${message}`
-    );
+    dispatch(enquiryUserAction(name, email, mobile, message));
+    setName('');
+    setEmail('');
+    setMobile('');
+    setMessage('');
   };
 
   return (
     <div className='enquiry-form'>
       <h1 className='enquiry-form__heading'>Enquiry Form</h1>
-      <form className='d-flex justify-content-center align-items-center'>
+      <form
+        onSubmit={submitForm}
+        className='d-flex justify-content-center align-items-center'
+      >
         <div className='row '>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
@@ -30,6 +37,7 @@ const ContactUsEnquiry = () => {
               value={name}
               placeholder='Enter your name'
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className='col-12 d-flex flex-column'>
@@ -46,6 +54,7 @@ const ContactUsEnquiry = () => {
               name='mobile'
               placeholder='Enter your mobile number here'
               onChange={(e) => setMobile(e.target.value)}
+              required
             />
           </div>
           <div className='col-12 d-flex flex-column'>
@@ -59,6 +68,7 @@ const ContactUsEnquiry = () => {
               name='email'
               value={email}
               placeholder='Enter your email Id here'
+              required
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -76,6 +86,7 @@ const ContactUsEnquiry = () => {
               cols='50'
               placeholder='Enter your message here*'
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </div>
           <div className='col-12 enquiry-form__button'>

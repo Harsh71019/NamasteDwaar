@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 
 const EnquiryForm = () => {
   const [name, setName] = useState('');
@@ -6,11 +8,15 @@ const EnquiryForm = () => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
+  const dispatch = useDispatch();
+
   const submitForm = (e) => {
     e.preventDefault();
-    alert(
-      `name, email, mobile, message: ${name}, ${email}, ${mobile}, ${message}`
-    );
+    dispatch(enquiryUserAction(name, email, mobile, message));
+    setName('');
+    setEmail('');
+    setMobile('');
+    setMessage('');
   };
 
   return (
@@ -33,6 +39,7 @@ const EnquiryForm = () => {
                 value={name}
                 placeholder='Enter your name'
                 onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
             <div className='col-12 d-flex flex-column'>
@@ -49,6 +56,7 @@ const EnquiryForm = () => {
                 name='mobile'
                 placeholder='Enter your mobile number here'
                 onChange={(e) => setMobile(e.target.value)}
+                required
               />
             </div>
             <div className='col-12 d-flex flex-column'>
@@ -63,6 +71,7 @@ const EnquiryForm = () => {
                 value={email}
                 placeholder='Enter your email Id here'
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
           </div>
@@ -79,6 +88,7 @@ const EnquiryForm = () => {
                 value={message}
                 rows='6'
                 cols='50'
+                required
                 placeholder='Enter your message here*'
                 onChange={(e) => setMessage(e.target.value)}
               />
