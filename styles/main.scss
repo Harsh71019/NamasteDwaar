@@ -20,6 +20,9 @@
 @use 'scss/components/experience';
 // end of experiences pages
 
+// Start of aboutus pages
+@use 'scss/components/aboutus';
+// end of aboutus pages
 // Start of contact page
 @use 'scss/components/contactus';
 
@@ -28,3 +31,9 @@
 @use 'scss/abstracts/buttons';
 
 @use 'scss/abstracts/text';
+
+// Start of event pages
+@use 'scss/components/events';
+@use 'scss/components/personal';
+@use 'scss/components/corporate';
+// end of event pages

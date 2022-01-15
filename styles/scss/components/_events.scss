@@ -1,0 +1,161 @@
+.events-section1 {
+  &__container {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__desktop {
+    position: absolute;
+    top: 42.1%;
+    left: 13.1%;
+    max-width: 50rem;
+  }
+
+  &__title {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+  }
+
+  &__desc {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+  }
+
+  &__card {
+    background: #a7896f;
+    max-width: 1080px;
+    margin-top: -7rem;
+
+    &-body {
+      padding: 0 110px;
+    }
+  }
+}
+
+.events-section2 {
+  &__row {
+    margin-top: 11.1rem;
+  }
+
+  &__card {
+    &-img {
+      height: 41.2rem;
+      width: 100%;
+    }
+
+    &-heading {
+      font-family: Playfair Display;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #a64f02;
+    }
+
+    &-para {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: justified;
+      color: #000000;
+    }
+
+    &-link {
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-align: left;
+      text-decoration: underline;
+      color: #a64f02;
+      cursor: pointer;
+    }
+  }
+}
+
+.events-section3 {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .events-section1 {
+    &__img {
+      width: 100%;
+      object-fit: cover !important;
+      height: 70vh !important;
+    }
+
+    &__title {
+      font-family: Playfair Display;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 44px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 2.4rem;
+    }
+
+    &__desc {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #fff;
+    }
+
+    &__card {
+      background: #a7896f;
+      max-width: 85%;
+      margin-top: -10rem;
+      padding-top: 32px;
+      padding-bottom: 24px;
+
+      &-body {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .events-section2 {
+    &__row {
+      margin-top: 2rem;
+    }
+
+    &__card {
+      &-img {
+        height: 29.1rem !important;
+        width: 100% !important;
+        object-fit: cover;
+        margin-top: 3.2rem;
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../../components/base/Navbar';
 import Footer from '../../components/base/Footer';
-import Section1 from '../../components/experiences/Section1';
-import Section2 from '../../components/experiences/Section2';
-import Section3 from '../../components/experiences/Section3';
+import Section1 from '../../components/events/personal/Section1';
+import Section2 from '../../components/events/personal/Section2';
+import Section3 from '../../components/events/personal/Section3';
 
-const experiences = () => {
+const personal = () => {
   return (
     <>
       <Navbar />
@@ -13,10 +13,10 @@ const experiences = () => {
         <Section1 />
         <Section2 />
         <Section3 />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };
 
-export default experiences;
+export default personal;

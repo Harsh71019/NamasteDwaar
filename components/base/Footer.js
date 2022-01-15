@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='footer mt-5'>
+    <footer className='footer '>
       <div className='container d-flex justify-content-center pt-5'>
         <div className='footer-container'>
           <div className='row '>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../../components/base/Navbar';
 import Footer from '../../components/base/Footer';
-import Section1 from '../../components/experiences/Section1';
-import Section2 from '../../components/experiences/Section2';
-import Section3 from '../../components/experiences/Section3';
+import Section1 from '../../components/events/corporate/Section1';
+import Section2 from '../../components/events/corporate/Section2';
+import Section3 from '../../components/events/corporate/Section3';
 
-const experiences = () => {
+const corporate = () => {
   return (
     <>
       <Navbar />
@@ -19,4 +19,4 @@ const experiences = () => {
   );
 };
 
-export default experiences;
+export default corporate;

@@ -86,7 +86,7 @@ const EnquiryForm = () => {
                 type='text'
                 name='Message'
                 value={message}
-                rows='6'
+                rows='8'
                 cols='50'
                 required
                 placeholder='Enter your message here*'

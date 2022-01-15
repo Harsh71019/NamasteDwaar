@@ -96,7 +96,7 @@ const NavbarTop = () => {
                     className='dropdown-item-position ddi4'
                     href='#/action-1'
                   >
-                    Action
+                    <Link href='/events'>Events</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi4'>
                     Another action

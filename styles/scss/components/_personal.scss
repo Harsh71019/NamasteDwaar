@@ -1,0 +1,171 @@
+@use '../abstracts';
+.personal-section1 {
+  &__image {
+    position: relative;
+
+    &-image {
+      width: 100%;
+      height: 52rem;
+      object-fit: cover;
+    }
+
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 3.6rem,
+        $style: normal,
+        $weight: 700,
+        $height: 4.4,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #fff
+      );
+      position: absolute;
+      top: 70%;
+      left: 3%;
+    }
+  }
+}
+
+.personal-section2 {
+  &__para {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+    padding: 0 15rem;
+
+    &-desc {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: justified;
+    }
+  }
+
+  &__img {
+    padding: 0 3rem;
+    &-img {
+      width: 100%;
+      height: 41.2rem;
+      object-fit: cover;
+    }
+  }
+
+  &__points {
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0 3rem;
+
+    &-heading {
+      margin-bottom: 1.2rem;
+      margin-top: 7.6rem;
+    }
+
+    &-text {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
+
+.personal-section3 {
+  margin-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .personal-section1 {
+    &__image {
+      position: relative;
+
+      &-image {
+        width: 100%;
+        object-fit: cover !important;
+        height: 70vh !important;
+      }
+
+      &-heading {
+        width: 100%;
+        @include abstracts.heading(
+          $family: Playfair Display,
+          $size: 3rem,
+          $style: normal,
+          $weight: 700,
+          $height: 4.4,
+          $letterSpacing: 0,
+          $align: center,
+          $color: #fff
+        );
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .personal-section2 {
+    &__para {
+      margin-top: 9rem;
+      margin-bottom: 9rem;
+      padding: 0 1rem;
+
+      &-desc {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: justified;
+      }
+    }
+
+    &__img {
+      padding: 0 1rem;
+      &-img {
+        width: 100%;
+        height: 41.2rem;
+        object-fit: cover;
+      }
+    }
+
+    &__points {
+      font-family: Playfair Display;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+      padding: 0 3rem;
+
+      &-heading {
+        margin-bottom: 1.2rem;
+        margin-top: 7.6rem;
+      }
+
+      &-text {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+  }
+}
