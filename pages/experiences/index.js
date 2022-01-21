@@ -9,7 +9,7 @@ const experiences = () => {
   return (
     <>
       <Navbar />
-      <div style={{ background: '#FAF4EF' }}>
+      <div>
         <Section1 />
         <Section2 />
         <Section3 />

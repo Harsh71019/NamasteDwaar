@@ -1,59 +1,88 @@
 import React, { useEffect, useState } from 'react';
-import { roomDetails } from '../../data/roomDetails';
+import { getAccomodationDetailsAction } from '../../redux/actions/accomodationActions';
 import Loader from '../base/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
-const RoomDetails = ({ roomID }) => {
-  const [rooms, setRooms] = useState({});
+const RoomDetails = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  // const [accomodation, setaccomodation] = useState({});
 
-  function getRoomDetails() {
-    const room = roomDetails.find((x) => x.id === roomID);
-    setRooms(room);
-  }
+  // function getRoomDetails() {
+  //   const room = roomDetails.find((x) => x.id === roomID);
+  //   setaccomodation(room);
+  // }
+
+  const dispatch = useDispatch();
+  const {
+    loading,
+    error,
+    accomodationDetails: { accomodation },
+  } = useSelector((state) => state.accomodationDetailsReducer);
 
   useEffect(() => {
-    getRoomDetails();
-  }, [roomID]);
+    if (id) {
+      dispatch(getAccomodationDetailsAction(id));
+    }
+  }, [id]);
+
+  // useEffect(() => {
+  //   getRoomDetails();
+  // }, [roomID]);
 
   return (
     <>
-      {rooms && rooms ? (
+      {accomodation && accomodation ? (
         <section className='room-details'>
           <div className='container'>
             <div className='row'>
               <div className='col-12'>
                 <div className='room-details__image'>
                   <img
-                    src={rooms && rooms.gallery && rooms.gallery.panorama}
+                    src={
+                      accomodation &&
+                      accomodation.gallery &&
+                      accomodation.gallery.panorama.url
+                    }
                     className='room-details__image-image'
                   />
-                  <h1 className='room-details__image-heading'>{rooms.name}</h1>
+                  <h1 className='room-details__image-heading'>
+                    {accomodation.name}
+                  </h1>
                 </div>
               </div>
             </div>
             <div className='row flex-column-reverse flex-md-row'>
               <div className='room-details__desc1 col-md-6 col-12'>
                 <img
-                  src={rooms && rooms.gallery && rooms.gallery.roomdetails1}
+                  src={
+                    accomodation &&
+                    accomodation.gallery &&
+                    accomodation.gallery.roomdetails1.url
+                  }
                   className='room-details__desc1-image'
                 />
               </div>
 
               <div className='room-details__desc1-para col-md-6 col-12 d-flex justify-content-center align-items-center'>
                 <div>
-                  <h1 className='room-details-heading '>{rooms.name}</h1>
+                  <h1 className='room-details-heading '>{accomodation.name}</h1>
                   <div>
                     <span className='room-details__desc1-sizeTitle '>
                       <span>Room Size-</span>
-                      <span>{rooms.roomSize}</span>
+                      <span>{accomodation.roomSize}</span>
                     </span>
                   </div>
                   <div>
                     <span className='room-details__desc1-sizeTitle'>
                       <span> Occupancy-</span>
-                      <span>{rooms.occupancy}</span>
+                      <span>{accomodation.occupancy}</span>
                     </span>
                   </div>
-                  <p className='room-details-text'>{rooms.description}</p>
+                  <p className='room-details-text'>
+                    {accomodation.description}
+                  </p>
                 </div>
               </div>
             </div>
@@ -64,9 +93,9 @@ const RoomDetails = ({ roomID }) => {
                   <div className='room-details__desc2-description'>
                     <h1 className='room-details-heading'>Key Highlights</h1>
                     <ul className='room-details__desc2-ul'>
-                      {rooms &&
-                        rooms.highlights &&
-                        rooms.highlights.map((room) => (
+                      {accomodation &&
+                        accomodation.highlights &&
+                        accomodation.highlights.map((room) => (
                           <li key={room} className='room-details-text'>
                             {room}
                           </li>
@@ -76,18 +105,25 @@ const RoomDetails = ({ roomID }) => {
                 </div>
                 <div className='col-md-6 col-12'>
                   <img
-                    src={rooms && rooms.gallery && rooms.gallery.roomdetails2}
+                    src={
+                      accomodation &&
+                      accomodation.gallery &&
+                      accomodation.gallery.roomdetails2.url
+                    }
                     className='room-details__desc2-image'
                   />
                 </div>
               </div>
             </div>
-            {/* end of desc2 */}
             <div className='room-details__desc3'>
               <div className='row flex-column-reverse flex-md-row'>
                 <div className='col-md-6 col-12'>
                   <img
-                    src={rooms && rooms.gallery && rooms.gallery.roomdetails1}
+                    src={
+                      accomodation &&
+                      accomodation.gallery &&
+                      accomodation.gallery.roomdetails1.url
+                    }
                     className='room-details__desc3-image'
                   />
                 </div>
@@ -97,23 +133,31 @@ const RoomDetails = ({ roomID }) => {
                     <div className='row d-flex justify-content-between'>
                       <div className='col-6'>
                         <ul className='room-details__desc3-li'>
-                          {rooms.breakfast ? <li>Breakfast</li> : ''}
-                          {rooms.tv ? <li>TV</li> : ''}
-                          {rooms.wifi ? <li>Wifi</li> : ''}
-                          {rooms.shower ? <li>Shower</li> : ''}
-                          {rooms.swimmingPool ? <li>Swimming Pool</li> : ''}
+                          {accomodation.breakfast ? <li>Breakfast</li> : ''}
+                          {accomodation.tv ? <li>TV</li> : ''}
+                          {accomodation.wifi ? <li>Wifi</li> : ''}
+                          {accomodation.shower ? <li>Shower</li> : ''}
+                          {accomodation.swimmingPool ? (
+                            <li>Swimming Pool</li>
+                          ) : (
+                            ''
+                          )}
                         </ul>
                       </div>
                       <div className='col-6'>
                         <ul className='room-details__desc3-li'>
-                          {rooms.airConditioning ? (
+                          {accomodation.airConditioning ? (
                             <li>airConditioning</li>
                           ) : (
                             ''
                           )}
-                          {rooms.hairDryer ? <li>hair Dryer</li> : ''}
-                          {rooms.teacoffeeSet ? <li>tea coffee Set</li> : ''}
-                          {rooms.minibar ? <li>minibar</li> : ''}
+                          {accomodation.hairDryer ? <li>hair Dryer</li> : ''}
+                          {accomodation.teacoffeeSet ? (
+                            <li>tea coffee Set</li>
+                          ) : (
+                            ''
+                          )}
+                          {accomodation.minibar ? <li>minibar</li> : ''}
                         </ul>
                       </div>
                     </div>
@@ -124,7 +168,9 @@ const RoomDetails = ({ roomID }) => {
             <div className='w-100 row d-flex justify-content-center align-items-center'>
               <p className='room-details__price-container text-center'>
                 <span className='room-details__start'>Starting at </span>
-                <span className='room-details__price'>₹{rooms.price}</span>
+                <span className='room-details__price'>
+                  ₹{accomodation.pricePerNight}
+                </span>
               </p>
             </div>
             <div className='row d-flex justify-content-center align-items-center'>

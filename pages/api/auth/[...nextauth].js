@@ -1,20 +1,15 @@
 import NextAuth from 'next-auth';
-import Providers from 'next-auth/providers';
-
-import User from '../../../models/user';
-import dbConnect from '../../../config/dbConnect';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import User from '../../../backend/models/user';
+import dbConnect from '../../../backend/config/dbConnect';
 
 export default NextAuth({
-  session: {
-    jwt: true,
-  },
   providers: [
-    Providers.Credentials({
-      async authorize(credentials) {
+    CredentialsProvider({
+      name: 'credentials',
+      authorize: async (credentials) => {
         dbConnect();
-
         const { email, password } = credentials;
-
         // Check if email and password is entered
         if (!email || !password) {
           throw new Error('Please enter email or password');
@@ -38,14 +33,32 @@ export default NextAuth({
       },
     }),
   ],
+  // callbacks: {
+  //   jwt: async (token, user) => {
+  //     user && (token.user = user);
+  //     return Promise.resolve(token);
+  //   },
+  //   session: async (session, user) => {
+  //     session.user = user.user;
+  //     return Promise.resolve(session);
+  //   },
+  // },
   callbacks: {
-    jwt: async (token, user) => {
+    jwt: async ({ token, user }) => {
       user && (token.user = user);
-      return Promise.resolve(token);
+      return token;
     },
-    session: async (session, user) => {
-      session.user = user.user;
-      return Promise.resolve(session);
+    session: async ({ session, token }) => {
+      session.user = token.user;
+      return session;
     },
+  },
+  secret: 'test',
+  jwt: {
+    secret: 'test',
+    encryption: true,
+  },
+  pages: {
+    signIn: '/admin/login',
   },
 });

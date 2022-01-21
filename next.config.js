@@ -12,6 +12,7 @@ module.exports = {
     SMTP_PASSWORD: 'sunita7101996',
     STMP_FROM_NAME: 'Harsh Patel',
     STMP_FROM_EMAIL: 'harrshprojects@gmail.com',
+    JWT_SECRET: 'HJRFEIOhfreiohfioehf9ohf9oehiofhw89f9wth9ght90',
   },
   images: {
     domains: ['res.cloudinary.com'],

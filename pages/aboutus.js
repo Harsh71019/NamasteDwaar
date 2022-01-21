@@ -12,7 +12,7 @@ const aboutus = () => {
   return (
     <>
       <NavbarTop />
-      <div style={{ background: ' #E5E5E5;' }}>
+      <div>
         <Section1 />
         <Section2 />
         <Section3 />

@@ -3,8 +3,22 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { boilerReducer } from '../redux/reducers/boilerReducer';
 import { HYDRATE, createWrapper } from 'next-redux-wrapper';
+import {
+  getAccomodationReducer,
+  getAccomodationDetailsReducer,
+} from './reducers/accomodationReducer';
 
-const reducerCombined = combineReducers({ boilerListReducer: boilerReducer });
+// Start of Admin Routes
+import { getAllAccomodationAdminReducer } from './reducers/admin/accomodationAdminReducer';
+
+const reducerCombined = combineReducers({
+  boilerListReducer: boilerReducer,
+  accomodationReducer: getAccomodationReducer,
+  accomodationDetailsReducer: getAccomodationDetailsReducer,
+  // Start of admin reducers
+  accomodationAdminReducer: getAllAccomodationAdminReducer,
+  // End of admin reducers
+});
 
 const reducer = (state, action) => {
   if (action.type === HYDRATE) {

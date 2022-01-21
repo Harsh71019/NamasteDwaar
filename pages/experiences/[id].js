@@ -9,7 +9,7 @@ const rooms = () => {
   const { id } = router.query;
   return (
     <>
-      <div style={{ background: '#FAF4EF' }}>
+      <div>
         <NavbarTop />
         <ExperienceDetails expId={id} />
         <Footer />

@@ -1,61 +1,169 @@
 import Accomodation from '../models/accomodation';
+import ErrorHandler from '../utils/errorHandler';
+import catchAsyncErrors from '../middlewares/catchAsyncErrors';
+import cloudinary from 'cloudinary';
+import absoluteUrl from 'next-absolute-url';
+import crypto from 'crypto';
 
-const getAllAccomodation = async (req, res) => {
-  try {
-    const accomodation = await Accomodation.find();
-    res.status(200).json({
-      success: true,
-      message: 'All rooms retrieved successfully',
-      accomodation: accomodation,
-      count: accomodation.length,
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
+// Setting up cloudinary config
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const getAllAccomodation = catchAsyncErrors(async (req, res) => {
+  const accomodation = await Accomodation.find();
+  res.status(200).json({
+    success: true,
+    message: 'All  retrieved successfully',
+    accomodation: accomodation,
+    count: accomodation.length,
+  });
+});
 
 // New accomodation route
 
-const newAccomodation = async (req, res) => {
-  try {
-    const accomodation = await Accomodation.create(req.body);
-    res.status(200).json({
-      success: true,
-      message: 'Accomodation created successfully',
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
+const newAccomodation = catchAsyncErrors(async (req, res) => {
+  const {
+    name,
+    roomSize,
+    occupancy,
+    description,
+    highlights,
+    price,
+    breakfast,
+    airConditioning,
+    wifi,
+    shower,
+    minibar,
+    tv,
+    teacoffeeSet,
+    swimmingPool,
+    hairDryer,
+    gallery: { panorama, mobile, roomdetails1, roomdetails2 },
+  } = req.body;
+
+  const panoramaResult = await cloudinary.v2.uploader.upload(panorama, {
+    folder: 'nd/accomodation',
+  });
+  const mobileResult = await cloudinary.v2.uploader.upload(mobile, {
+    folder: 'nd/accomodation',
+  });
+  const roomdetails1Result = await cloudinary.v2.uploader.upload(roomdetails1, {
+    folder: 'nd/accomodation',
+  });
+  const roomdetails2Result = await cloudinary.v2.uploader.upload(roomdetails2, {
+    folder: 'nd/accomodation',
+  });
+
+  const newAccomodation = await Accomodation.create({
+    name: name,
+    roomSize: roomSize,
+    occupancy: occupancy,
+    description: description,
+    highlights: highlights,
+    price: price,
+    breakfast: breakfast,
+    airConditioning: airConditioning,
+    wifi: wifi,
+    shower: shower,
+    minibar: minibar,
+    tv: tv,
+    teacoffeeSet: teacoffeeSet,
+    swimmingPool: swimmingPool,
+    hairDryer: hairDryer,
+    gallery: {
+      panorama: {
+        public_id: panoramaResult.public_id,
+        url: panoramaResult.secure_url,
+      },
+      mobile: {
+        public_id: mobileResult.public_id,
+        url: mobileResult.secure_url,
+      },
+      roomdetails1: {
+        public_id: roomdetails1Result.public_id,
+        url: roomdetails1Result.secure_url,
+      },
+      roomdetails2: {
+        public_id: roomdetails2Result.public_id,
+        url: roomdetails2Result.secure_url,
+      },
+    },
+  });
+  res.status(200).json({
+    success: true,
+    message: 'Accomodation created successfully',
+    accomodation: newAccomodation,
+  });
+});
 
 // Get a single accomodation
 
-const getSingleAccomodation = async (req, res) => {
-  try {
-    const accomodation = await Accomodation.findById(req.query.id);
-    if (!accomodation) {
-      res.status(400).json({
-        success: false,
-        message: 'Room not found with this ID',
-      });
-    }
-    res.status(200).json({
-      success: true,
-      message: 'All rooms retrieved successfully',
-      accomodation: accomodation,
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message,
-    });
+const getSingleAccomodation = catchAsyncErrors(async (req, res, next) => {
+  const accomodation = await Accomodation.findById(req.query.id);
+  if (!accomodation) {
+    return next(new ErrorHandler('Accomodation not found with this ID', 404));
   }
-};
+  res.status(200).json({
+    success: true,
+    message: 'All Accomodation retrieved successfully',
+    accomodation: accomodation,
+  });
+});
 
-export { getAllAccomodation, newAccomodation, getSingleAccomodation };
+// Update Room
+
+const updateAccomodation = catchAsyncErrors(async (req, res, next) => {
+  let accomodation = await Accomodation.findById(req.query.id);
+  if (!accomodation) {
+    return next(new ErrorHandler('Accomodation not found with this ID', 404));
+  }
+
+  accomodation = await Accomodation.findByIdAndUpdate(req.query.id, req.body, {
+    new: true,
+    runValidators: true,
+    useFindAndModify: false,
+  });
+
+  res.status(200).json({
+    success: true,
+    message: 'All Accomodation updated successfully',
+    accomodation: accomodation,
+  });
+});
+// Update Room
+
+const deleteAccomodation = catchAsyncErrors(async (req, res, next) => {
+  const accomodation = await Accomodation.findById(req.query.id);
+  if (!accomodation) {
+    return next(new ErrorHandler('Accomodation not found with this ID', 404));
+  }
+
+  await accomodation.remove();
+
+  res.status(200).json({
+    success: true,
+    message: 'Accomodation Deleted Successfully',
+  });
+});
+
+const getAllAccomodationAdmin = catchAsyncErrors(async (req, res) => {
+  const accomodation = await Accomodation.find();
+  res.status(200).json({
+    success: true,
+    message: 'All  retrieved successfully',
+    accomodation: accomodation,
+    count: accomodation.length,
+  });
+});
+
+export {
+  getAllAccomodation,
+  newAccomodation,
+  getSingleAccomodation,
+  updateAccomodation,
+  deleteAccomodation,
+  getAllAccomodationAdmin,
+};

@@ -2,8 +2,8 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 const Section4 = () => {
   return (
-    <section classNameName='aboutus-section4'>
-      <div classNameName='container'>
+    <section className='aboutus-section4'>
+      <div className='container'>
         <div className='d-flex justify-content-center'>
           <div className='aboutus-section4__container'>
             <div

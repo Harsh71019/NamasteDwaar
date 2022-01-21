@@ -4,8 +4,9 @@ import {
   newEnquiry,
 } from '../../../backend/controllers/enquiryController.js';
 import dbConnect from '../../../backend/config/dbConnect';
+import onError from '../../../backend/middlewares/errors';
 
-const handler = nc();
+const handler = nc({ onError });
 
 dbConnect();
 

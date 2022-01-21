@@ -4,8 +4,9 @@ import {
   newAccomodation,
 } from '../../../backend/controllers/accomodationController';
 import dbConnect from '../../../backend/config/dbConnect';
+import onError from '../../../backend/middlewares/errors';
 
-const handler = nc();
+const handler = nc({ onError });
 
 dbConnect();
 
