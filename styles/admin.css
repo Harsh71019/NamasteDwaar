@@ -1,0 +1,24 @@
+.fs16 {
+  font-size: 1.6rem;
+}
+
+.adminform_label {
+  font-size: 1.6rem;
+}
+
+.adminform_input {
+  height: 3rem;
+  font-size: 1.6rem;
+}
+
+.adminform-img {
+  width: 100%;
+  height: 5rem;
+  object-fit: contain;
+}
+
+.adminform_checkbox {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  margin-right: 1rem;
+}

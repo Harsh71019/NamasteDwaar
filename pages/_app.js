@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import '../styles/navbar.css';
 import '../styles/accomodation.css';
 import '../styles/main.css';
+import '../styles/admin.css';
 import SSRProvider from 'react-bootstrap/SSRProvider';
 import { wrapper } from '../redux/store';
 import { Toaster } from 'react-hot-toast';

@@ -25,6 +25,7 @@ export const getAllAccomodationsAdminAction = () => async (dispatch) => {
     dispatch({ type: ADMIN_GET_ALL_ACCOMODATIONS_REQUEST });
     const { data } = await axios.get('/api/admin/accomodation');
     dispatch({ type: ADMIN_GET_ALL_ACCOMODATIONS_SUCCESS, payload: data });
+    toast.success('Got all accomodation successfully');
   } catch (error) {
     dispatch({
       type: ADMIN_GET_ALL_ACCOMODATIONS_FAIL,
@@ -33,6 +34,7 @@ export const getAllAccomodationsAdminAction = () => async (dispatch) => {
           ? error.response.data.message
           : error.message,
     });
+    toast.error('Internal Server Error');
   }
 };
 export const getAllAccomodationsDetailsAdminAction =
@@ -44,7 +46,10 @@ export const getAllAccomodationsDetailsAdminAction =
         type: ADMIN_GET_DETAILS_ACCOMODATIONS_SUCCESS,
         payload: data,
       });
+      toast.success('Got all accomodation details successfully');
     } catch (error) {
+      toast.error('Internal Server Error');
+
       dispatch({
         type: ADMIN_GET_DETAILS_ACCOMODATIONS_FAIL,
         payload:
@@ -76,7 +81,11 @@ export const createAccomodationsAdminAction =
         type: ADMIN_CREATE_ACCOMODATIONS_SUCCESS,
         payload: data,
       });
+
+      toast.success('Created accomodation successfully');
     } catch (error) {
+      toast.error('Internal Server Error');
+
       dispatch({
         type: ADMIN_CREATE_ACCOMODATIONS_FAIL,
         payload: error.response.data.message,
@@ -85,6 +94,7 @@ export const createAccomodationsAdminAction =
   };
 
 export const deleteAccomodationsAdminAction = (id) => async (dispatch) => {
+  console.log(id);
   try {
     dispatch({ type: ADMIN_DELETE_ACCOMODATIONS_REQUEST });
     const { data } = await axios.delete(`/api/admin/accomodation/${id}`);
@@ -92,7 +102,10 @@ export const deleteAccomodationsAdminAction = (id) => async (dispatch) => {
       type: ADMIN_DELETE_ACCOMODATIONS_SUCCESS,
       payload: data.success,
     });
+    toast.success('Deleted accomodation successfully');
   } catch (error) {
+    toast.error('Internal Server Error');
+
     dispatch({
       type: ADMIN_DELETE_ACCOMODATIONS_FAIL,
       payload: error.response.data.message,
@@ -120,7 +133,10 @@ export const updateRoom = (id, accomodationData) => async (dispatch) => {
       type: ADMIN_EDIT_ACCOMODATIONS_SUCCESS,
       payload: data.success,
     });
+    toast.success('Updated accomodation successfully');
   } catch (error) {
+    toast.error('Internal Server Error');
+
     dispatch({
       type: ADMIN_EDIT_ACCOMODATIONS_FAIL,
       payload: error.response.data.message,

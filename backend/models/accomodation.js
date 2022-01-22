@@ -26,7 +26,7 @@ const accomodationSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please enter room description'],
   },
-  highlights: Array,
+  highlights: [String],
   breakfast: {
     type: Boolean,
     default: false,

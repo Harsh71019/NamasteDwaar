@@ -3,9 +3,9 @@ import {
   getSingleAccomodation,
   updateAccomodation,
   deleteAccomodation,
-} from '../../../backend/controllers/accomodationController';
-import dbConnect from '../../../backend/config/dbConnect';
-import onError from '../../../backend/middlewares/errors';
+} from '../../../../backend/controllers/accomodationController';
+import dbConnect from '../../../../backend/config/dbConnect';
+import onError from '../../../../backend/middlewares/errors';
 import {
   isAuthenticatedUser,
   authorizeRoles,

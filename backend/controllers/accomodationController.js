@@ -4,12 +4,14 @@ import catchAsyncErrors from '../middlewares/catchAsyncErrors';
 import cloudinary from 'cloudinary';
 import absoluteUrl from 'next-absolute-url';
 import crypto from 'crypto';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Setting up cloudinary config
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  api_key: process.env.CLOUDINARY_CLOUD_API_KEY,
+  api_secret: process.env.CLOUDINARY_CLOUD_SECRET_KEY,
 });
 
 const getAllAccomodation = catchAsyncErrors(async (req, res) => {
@@ -44,6 +46,8 @@ const newAccomodation = catchAsyncErrors(async (req, res) => {
     gallery: { panorama, mobile, roomdetails1, roomdetails2 },
   } = req.body;
 
+  let splitHighlights = highlights.split(',').map((skill) => skill.trim());
+
   const panoramaResult = await cloudinary.v2.uploader.upload(panorama, {
     folder: 'nd/accomodation',
   });
@@ -62,7 +66,7 @@ const newAccomodation = catchAsyncErrors(async (req, res) => {
     roomSize: roomSize,
     occupancy: occupancy,
     description: description,
-    highlights: highlights,
+    highlights: splitHighlights,
     price: price,
     breakfast: breakfast,
     airConditioning: airConditioning,

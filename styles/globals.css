@@ -20,6 +20,10 @@ a {
   display: none;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .primary-heading {
   display: flex;
   align-items: center;

@@ -9,7 +9,11 @@ import {
 } from './reducers/accomodationReducer';
 
 // Start of Admin Routes
-import { getAllAccomodationAdminReducer } from './reducers/admin/accomodationAdminReducer';
+import {
+  getAllAccomodationAdminReducer,
+  createAccomodationAdminReducer,
+  deleteAccomodationAdminReducer,
+} from './reducers/admin/accomodationAdminReducer';
 
 const reducerCombined = combineReducers({
   boilerListReducer: boilerReducer,
@@ -17,6 +21,8 @@ const reducerCombined = combineReducers({
   accomodationDetailsReducer: getAccomodationDetailsReducer,
   // Start of admin reducers
   accomodationAdminReducer: getAllAccomodationAdminReducer,
+  createAccomodationAdmin: createAccomodationAdminReducer,
+  deleteAccomodationAdmin: deleteAccomodationAdminReducer,
   // End of admin reducers
 });
 
