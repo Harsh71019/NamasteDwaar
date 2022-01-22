@@ -41,6 +41,16 @@ const EditAccomodation = () => {
   const [roomdetails2, setRoomdetails2] = useState('');
   const [roomdetails2Preview, setRoomdetails2Preview] = useState('');
 
+  const { loading, error, success } = useSelector(
+    (state) => state.editAccomodationAdmin
+  );
+
+  const {
+    loading: loadingDetails,
+    error: errorDetails,
+    accomodation: { accomodation },
+  } = useSelector((state) => state.getAllAccomodationDetailsAdmin);
+
   useEffect(() => {
     if (id) {
       dispatch(getAllAccomodationsDetailsAdminAction(id));
@@ -55,17 +65,7 @@ const EditAccomodation = () => {
       router.push('/admin/accomodation');
       dispatch({ type: ADMIN_CREATE_ACCOMODATIONS_RESET });
     }
-  }, [id, dispatch, error, success, accomodation]);
-
-  const { loading, error, success } = useSelector(
-    (state) => state.editAccomodationAdmin
-  );
-
-  const {
-    loading: loadingDetails,
-    error: errorDetails,
-    accomodation: { accomodation },
-  } = useSelector((state) => state.getAllAccomodationDetailsAdmin);
+  }, [id, dispatch, error, success]);
 
   const onChange = (e) => {
     if (e.target.name === 'panorama') {
@@ -138,7 +138,7 @@ const EditAccomodation = () => {
       gallery,
     };
 
-    dispatch(editAccomodationsAdminAction(accomodationData));
+    dispatch(editAccomodationsAdminAction(id, accomodationData));
   };
 
   return (
@@ -146,7 +146,7 @@ const EditAccomodation = () => {
       <NavbarAdmin />
       <div className='container'>
         <div className='d-flex justify-content-between mt-5'>
-          <h1 className='text-center'>Create New Accomodation</h1>
+          <h1 className='text-center'>Edit Accomodation</h1>
           <button className='btn btn-primary fs16'>
             <Link href='/admin/accomodation'>Go Back</Link>
           </button>
@@ -167,7 +167,6 @@ const EditAccomodation = () => {
                     className='form-control adminform_input'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    required
                   />
                 </div>
                 <div className='form-group mt-3'>
@@ -180,7 +179,6 @@ const EditAccomodation = () => {
                     className='form-control adminform_input'
                     value={pricePerNight}
                     onChange={(e) => setPricePerNight(e.target.value)}
-                    required
                   />
                 </div>
                 <div className='form-group mt-3'>
@@ -193,7 +191,6 @@ const EditAccomodation = () => {
                     className='form-control adminform_input'
                     value={roomSize}
                     onChange={(e) => setRoomSize(e.target.value)}
-                    required
                   />
                 </div>
                 <div className='form-group mt-3'>
@@ -206,7 +203,6 @@ const EditAccomodation = () => {
                     className='form-control adminform_input'
                     value={occupancy}
                     onChange={(e) => setOccupancy(e.target.value)}
-                    required
                   />
                 </div>
                 <div className='form-group mt-3'>
@@ -220,7 +216,6 @@ const EditAccomodation = () => {
                     value={description}
                     rows={5}
                     onChange={(e) => setDescription(e.target.value)}
-                    required
                   />
                 </div>
                 <div className='form-group mt-3'>
@@ -235,7 +230,6 @@ const EditAccomodation = () => {
                     className='form-control adminform_textarea fs16'
                     value={highlights}
                     onChange={(e) => setHighlights(e.target.value)}
-                    required
                   />
                 </div>
                 <div className='form-check mt-3'>
@@ -374,7 +368,6 @@ const EditAccomodation = () => {
                         id='customFile'
                         accept='images/*'
                         onChange={onChange}
-                        required
                       />
                       <label
                         className='custom-file-label fs16'
@@ -401,7 +394,6 @@ const EditAccomodation = () => {
                       <input
                         type='file'
                         name='mobile'
-                        required
                         className='custom-file-input fs16'
                         id='customFile'
                         accept='images/*'
@@ -436,7 +428,6 @@ const EditAccomodation = () => {
                         id='customFile'
                         accept='images/*'
                         onChange={onChange}
-                        required
                       />
                       <label
                         className='custom-file-label fs16'
@@ -467,7 +458,6 @@ const EditAccomodation = () => {
                         id='customFile'
                         accept='images/*'
                         onChange={onChange}
-                        required
                       />
                       <label
                         className='custom-file-label fs16'
