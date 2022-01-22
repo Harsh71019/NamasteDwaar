@@ -1,6 +1,11 @@
 import React from 'react';
+import { signOut } from 'next-auth/react';
 
 const NavbarAdmin = () => {
+  const logOut = () => {
+    signOut();
+  };
+
   return (
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
       <div className='container'>
@@ -19,17 +24,18 @@ const NavbarAdmin = () => {
           <span className='navbar-toggler-icon'></span>
         </button>
         <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
-          <div className='navbar-nav fs-4'>
-            <a className='nav-link active' aria-current='page' href='#'>
-              Home
-            </a>
-            <a className='nav-link' href='/admin/accomodation'>
+          <div className='navbar-nav fs-4 ms-auto'>
+            <a className='nav-link ms-5'>Home</a>
+            <a className='nav-link ms-5' href='/admin/accomodation'>
               Accomodation
             </a>
-            <a className='nav-link' href='#'>
+            <a className='nav-link ms-5' href='#'>
               Wellness
             </a>
-            <a className='nav-link disabled'>Disabled</a>
+            <a className='nav-link ms-5'>Enquiries</a>
+            <a className='nav-link ms-5 cursor-pointer' onClick={logOut}>
+              Logout
+            </a>
           </div>
         </div>
       </div>

@@ -43,8 +43,6 @@ const CreateAccomodation = () => {
     (state) => state.createAccomodationAdmin
   );
 
-  console.log(loading, error, success);
-
   useEffect(() => {
     if (error) {
       toast.error(error);
@@ -139,7 +137,7 @@ const CreateAccomodation = () => {
           <div className='d-flex justify-content-between mt-5'>
             <h1 className='text-center'>Create New Accomodation</h1>
             <button className='btn btn-primary fs16'>
-              <Link href='/admin/acccomodation'>Go Back</Link>
+              <Link href='/admin/accomodation'>Go Back</Link>
             </button>
           </div>
           <form onSubmit={submitHandler}>
@@ -155,6 +153,19 @@ const CreateAccomodation = () => {
                     className='form-control adminform_input'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Room Price
+                  </label>
+                  <input
+                    type='text'
+                    id='name_field'
+                    className='form-control adminform_input'
+                    value={pricePerNight}
+                    onChange={(e) => setPricePerNight(e.target.value)}
                     required
                   />
                 </div>

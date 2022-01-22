@@ -113,36 +113,37 @@ export const deleteAccomodationsAdminAction = (id) => async (dispatch) => {
   }
 };
 
-export const updateRoom = (id, accomodationData) => async (dispatch) => {
-  try {
-    dispatch({ type: ADMIN_EDIT_ACCOMODATIONS_REQUEST });
+export const editAccomodationsAdminAction =
+  (id, accomodationData) => async (dispatch) => {
+    try {
+      dispatch({ type: ADMIN_EDIT_ACCOMODATIONS_REQUEST });
 
-    const config = {
-      header: {
-        'Content-Type': 'application/json',
-      },
-    };
+      const config = {
+        header: {
+          'Content-Type': 'application/json',
+        },
+      };
 
-    const { data } = await axios.put(
-      `/api/admin/accomodation/${id}`,
-      accomodationData,
-      config
-    );
+      const { data } = await axios.put(
+        `/api/admin/accomodation/${id}`,
+        accomodationData,
+        config
+      );
 
-    dispatch({
-      type: ADMIN_EDIT_ACCOMODATIONS_SUCCESS,
-      payload: data.success,
-    });
-    toast.success('Updated accomodation successfully');
-  } catch (error) {
-    toast.error('Internal Server Error');
+      dispatch({
+        type: ADMIN_EDIT_ACCOMODATIONS_SUCCESS,
+        payload: data.success,
+      });
+      toast.success('Updated accomodation successfully');
+    } catch (error) {
+      toast.error('Internal Server Error');
 
-    dispatch({
-      type: ADMIN_EDIT_ACCOMODATIONS_FAIL,
-      payload: error.response.data.message,
-    });
-  }
-};
+      dispatch({
+        type: ADMIN_EDIT_ACCOMODATIONS_FAIL,
+        payload: error.response.data.message,
+      });
+    }
+  };
 
 // Clear Errors
 export const clearErrors = () => async (dispatch) => {

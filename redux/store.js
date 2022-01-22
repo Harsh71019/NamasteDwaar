@@ -13,6 +13,8 @@ import {
   getAllAccomodationAdminReducer,
   createAccomodationAdminReducer,
   deleteAccomodationAdminReducer,
+  editAccomodationAdminReducer,
+  getAllAccomodationDetailsAdminReducer,
 } from './reducers/admin/accomodationAdminReducer';
 
 const reducerCombined = combineReducers({
@@ -23,6 +25,8 @@ const reducerCombined = combineReducers({
   accomodationAdminReducer: getAllAccomodationAdminReducer,
   createAccomodationAdmin: createAccomodationAdminReducer,
   deleteAccomodationAdmin: deleteAccomodationAdminReducer,
+  editAccomodationAdmin: editAccomodationAdminReducer,
+  getAllAccomodationDetailsAdmin: getAllAccomodationDetailsAdminReducer,
   // End of admin reducers
 });
 
