@@ -8,6 +8,8 @@ const ContactUsEnquiry = () => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
+  const dispatch = useDispatch();
+
   const submitForm = (e) => {
     e.preventDefault();
     dispatch(enquiryUserAction(name, email, mobile, message));

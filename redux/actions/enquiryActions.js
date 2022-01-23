@@ -5,15 +5,16 @@ import {
   USER_ENQUIRY_REQUEST,
   USER_ENQUIRY_SUCCESS,
   USER_ENQUIRY_FAIL,
-} from '../constants/enquiryConstants';
+} from '../constants/enquiryConstants.js';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 export const getEnquiriesAction = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_GET_ALL_ENQUIRIES_REQUEST });
-    const { data } = await axios.get('http://localhost:3000/api/enquiry');
-    dispatch({ type: ADMIN_GET_ALL_ENQUIRIES_SUCCESS, payload: data });
+    const res = await axios.get('/api/admin/enquiries');
+    dispatch({ type: ADMIN_GET_ALL_ENQUIRIES_SUCCESS, payload: res.data });
+    toast.success('Fetched Enquiries Successfully');
   } catch (error) {
     dispatch({
       type: ADMIN_GET_ALL_ENQUIRIES_FAIL,

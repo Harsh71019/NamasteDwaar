@@ -5,7 +5,7 @@ import {
   ADMIN_GET_ALL_ENQUIRIES_REQUEST,
   ADMIN_GET_ALL_ENQUIRIES_SUCCESS,
   ADMIN_GET_ALL_ENQUIRIES_FAIL,
-} from '../constants/feedbackConstants';
+} from '../constants/enquiryConstants';
 
 export const userEnquiryReducer = (state = {}, action) => {
   switch (action.type) {
@@ -20,14 +20,14 @@ export const userEnquiryReducer = (state = {}, action) => {
   }
 };
 
-export const enquiryList = (state = { enquiries: [] }, action) => {
+export const enquiryListReducer = (state = { enquiries: [] }, action) => {
   switch (action.type) {
     case ADMIN_GET_ALL_ENQUIRIES_REQUEST:
       return { loading: true, enquiries: [] };
     case ADMIN_GET_ALL_ENQUIRIES_SUCCESS:
       return {
         loading: false,
-        feedbacks: action.payload,
+        enquiries: action.payload,
       };
     case ADMIN_GET_ALL_ENQUIRIES_FAIL:
       return { loading: false, error: action.payload };

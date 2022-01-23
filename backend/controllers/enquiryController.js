@@ -4,7 +4,7 @@ import Enquiry from '../models/enquiry';
 
 const getAllEnquiry = async (req, res) => {
   try {
-    const enquiry = await Enquiry.find();
+    const enquiry = await Enquiry.find().sort({ _id: -1 });
     res.status(200).json({
       success: true,
       message: 'All enquiries retrieved successfully',

@@ -20,10 +20,10 @@ const Dashboard = () => {
               </Link>
             </div>
             <div className='shrink'>
-              <Link href='admin/accomodation'>
+              <Link href='admin/enquiries'>
                 <div className='card dashboard-card shadow-lg border-0 p-5 m-5 '>
                   <div className='card-body'>
-                    <h1>Accomodation</h1>
+                    <h1>Enquiries</h1>
                   </div>
                 </div>
               </Link>

@@ -1,4 +1,0 @@
-AboutUs = https://res.cloudinary.com/harsh710/image/upload/v1642226484/namastedwaar/aboutus_wz6fmj.png
-
-
-AboutUs (Section1 ) =https://res.cloudinary.com/harsh710/image/upload/v1642229724/namastedwaar/auarchitect_uu1upx.png

@@ -17,16 +17,26 @@ import {
   getAllAccomodationDetailsAdminReducer,
 } from './reducers/admin/accomodationAdminReducer';
 
+import {
+  enquiryListReducer,
+  userEnquiryReducer,
+} from './reducers/enquiryReducers';
+
 const reducerCombined = combineReducers({
   boilerListReducer: boilerReducer,
   accomodationReducer: getAccomodationReducer,
   accomodationDetailsReducer: getAccomodationDetailsReducer,
+  userEnquiry: userEnquiryReducer,
   // Start of admin reducers
+
+  // ******* for accomodation ********** //
   accomodationAdminReducer: getAllAccomodationAdminReducer,
   createAccomodationAdmin: createAccomodationAdminReducer,
   deleteAccomodationAdmin: deleteAccomodationAdminReducer,
   editAccomodationAdmin: editAccomodationAdminReducer,
   getAllAccomodationDetailsAdmin: getAllAccomodationDetailsAdminReducer,
+  // ******* for enquiry ********** //
+  enquiryList: enquiryListReducer,
   // End of admin reducers
 });
 
