@@ -1,7 +1,11 @@
-import mongoose from 'mongoose';
-import validator from 'validator';
-import bcrypt from 'bcryptjs';
-import crypto from 'crypto';
+const mongoose = require('mongoose');
+const validator = require('validator');
+const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
+// import mongoose from 'mongoose';
+// import validator from 'validator';
+// import bcrypt from 'bcryptjs';
+// import crypto from 'crypto';
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -65,4 +69,6 @@ userSchema.methods.getResetPasswordToken = function () {
   return resetToken;
 };
 
-export default mongoose.models.User || mongoose.model('User', userSchema);
+// export default mongoose.models.User || mongoose.model('User', userSchema);
+
+module.exports = mongoose.models.User || mongoose.model('User', userSchema);

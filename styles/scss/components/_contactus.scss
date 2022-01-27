@@ -1,31 +1,5 @@
 @use '../abstracts';
 
-.contact-top {
-  &__image {
-    position: relative;
-
-    &-image {
-      width: 100%;
-    }
-
-    &-heading {
-      @include abstracts.heading(
-        $family: Playfair Display,
-        $size: 3.6rem,
-        $style: normal,
-        $weight: 700,
-        $height: 4.4,
-        $letterSpacing: 0,
-        $align: left,
-        $color: #fff
-      );
-      position: absolute;
-      top: 70%;
-      left: 3%;
-    }
-  }
-}
-
 .contact-form {
   margin-top: 6.4rem;
 
@@ -71,25 +45,6 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .contact-top {
-    &__image {
-      position: relative;
-
-      &-image {
-        width: 100%;
-        object-fit: cover !important;
-        height: 70vh !important;
-      }
-
-      &-heading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
   .contact-form {
     &__para {
       text-align: center;

@@ -12,7 +12,6 @@
 
 // Accomodation Pages
 @use 'scss/components/roomdetails';
-@use 'scss/components/accomodation';
 
 // End of Accomodation Pages
 
@@ -37,3 +36,7 @@
 @use 'scss/components/personal';
 @use 'scss/components/corporate';
 // end of event pages
+
+// Start of custom components
+
+@use 'scss/components/basecomponents';

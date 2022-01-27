@@ -1,19 +1,13 @@
 import React from 'react';
-
+import HeroHeading from '../../base/HeroHeading';
 const Section1 = () => {
   return (
-    <section className='personal-section1'>
-      <div className='container'>
-        <div className='personal-section1__image'>
-          <img
-            src='https://res.cloudinary.com/harsh710/image/upload/v1642236364/namastedwaar/eventsp1_tsat22.png'
-            className='personal-section1__image-image'
-            alt='personal'
-          />
-          <p className='personal-section1__image-heading'>Personal Events</p>
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroHeading
+        image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643286652/static/events/personal/personal_fujmtb.png'
+        heading='Personal Events'
+      />
+    </>
   );
 };
 

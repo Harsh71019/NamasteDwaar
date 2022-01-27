@@ -1,19 +1,14 @@
 import React from 'react';
-import contact from '../../public/images/contactus.png';
+import HeroHeading from '../base/HeroHeading';
 
 const Section1 = () => {
   return (
-    <section className='contact-top'>
-      <div className='container'>
-        <div className='contact-top__image'>
-          <img
-            src='https://res.cloudinary.com/harsh710/image/upload/v1641109916/namastedwaar/contactus_hx9koi.png'
-            className='contact-top__image-image'
-          />
-          <h1 className='contact-top__image-heading'>Contact Us</h1>
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroHeading
+        image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643286428/static/contactus/contactus_iq3i3a.png'
+        heading='Contact Us'
+      />
+    </>
   );
 };
 

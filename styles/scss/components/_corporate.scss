@@ -1,31 +1,4 @@
 @use '../abstracts';
-.corporate-section1 {
-  &__image {
-    position: relative;
-
-    &-image {
-      width: 100%;
-      height: 52rem;
-      object-fit: cover;
-    }
-
-    &-heading {
-      @include abstracts.heading(
-        $family: Playfair Display,
-        $size: 3.6rem,
-        $style: normal,
-        $weight: 700,
-        $height: 4.4,
-        $letterSpacing: 0,
-        $align: left,
-        $color: #fff
-      );
-      position: absolute;
-      top: 70%;
-      left: 3%;
-    }
-  }
-}
 
 .corporate-section2 {
   &__para {
@@ -86,36 +59,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .corporate-section1 {
-    &__image {
-      position: relative;
-
-      &-image {
-        width: 100%;
-        object-fit: cover !important;
-        height: 70vh !important;
-      }
-
-      &-heading {
-        width: 100%;
-        @include abstracts.heading(
-          $family: Playfair Display,
-          $size: 3rem,
-          $style: normal,
-          $weight: 700,
-          $height: 4.4,
-          $letterSpacing: 0,
-          $align: center,
-          $color: #fff
-        );
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
   .corporate-section2 {
     &__para {
       margin-top: 9rem;

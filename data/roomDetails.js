@@ -1,173 +1,45 @@
-export const roomDetails = [
+const roomDetails = [
   {
-    id: '1', //
-    name: 'Harsh', //
-    roomSize: '20', //
-    occupancy: '2', //
-    //
-    description:
-      'Our private living spaces have been carefully designed to integrate luxury with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. ',
-    highlights: [
-      'It is a long established fact that a reader will be distracted by the readable content.',
-      'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum. ',
-      'Various versions have evolved over the years, sometimes by accident.',
-    ],
-    price: '8000', //
-    breakfast: false,
-    airConditioning: true,
-    wifi: true,
-    shower: true,
-    minibar: true,
-    tv: true,
-    swimmingPool: true,
-    teacoffeeSet: true,
-    hairDryer: false,
     gallery: {
-      panorama:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roompano_pgheeg.png',
-      mobile:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/room1_fd9ifw.png',
-      roomdetails1:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/roomd1_cn5fn6.png',
-      roomdetails2:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roomd2_jmigza.png',
+      panorama: {
+        public_id: 'nd/accomodation/wjrndtpckmolz1gcfntr',
+        url: 'https://res.cloudinary.com/harsh710/image/upload/v1642841181/nd/accomodation/wjrndtpckmolz1gcfntr.png',
+      },
+      mobile: {
+        public_id: 'nd/accomodation/mtnsrxrhfqcnopu3m5dn',
+        url: 'https://res.cloudinary.com/harsh710/image/upload/v1642841184/nd/accomodation/mtnsrxrhfqcnopu3m5dn.png',
+      },
+      roomdetails1: {
+        public_id: 'nd/accomodation/jgzoxkfbyn5fe0le2lav',
+        url: 'https://res.cloudinary.com/harsh710/image/upload/v1642841186/nd/accomodation/jgzoxkfbyn5fe0le2lav.png',
+      },
+      roomdetails2: {
+        public_id: 'nd/accomodation/gnf2nyfkf85pfvy3upap',
+        url: 'https://res.cloudinary.com/harsh710/image/upload/v1642841188/nd/accomodation/gnf2nyfkf85pfvy3upap.png',
+      },
     },
-  },
-  {
-    id: '2',
-    name: 'Heritage Suites',
-    roomSize: '20',
-    occupancy: '2',
+    _id: '61eb9b617ed298f0845a4f10',
+    name: 'Harsh Vinod Patel',
+    roomSize: 0,
+    pricePerNight: 0,
+    occupancy: 0,
     description:
-      'Our private living spaces have been carefully designed to integrate luxury with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. ',
+      'Hearfeiofho Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
     highlights: [
-      'It is a long established fact that a reader will be distracted by the readable content.',
-      'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum. ',
-      'Various versions have evolved over the years, sometimes by accident.',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,Lorem Ipsum is simply dummy text of the printing and typesetting industry. ,Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
     ],
-    price: '8000',
     breakfast: true,
-    airConditioning: true,
+    airConditioning: false,
     wifi: true,
     shower: true,
-    minibar: true,
+    minibar: false,
     tv: true,
-    swimmingPool: true,
-    teacoffeeSet: true,
+    swimmingPool: false,
+    teacoffeeSet: false,
     hairDryer: true,
-    gallery: {
-      panorama:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roompano_pgheeg.png',
-      mobile:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/room1_fd9ifw.png',
-      roomdetails1:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/roomd1_cn5fn6.png',
-      roomdetails2:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roomd2_jmigza.png',
-    },
-  },
-  {
-    id: '3',
-    name: 'Deluxe Wellness Garden Rooms',
-    roomSize: '20',
-    occupancy: '2',
-    description:
-      'Our private living spaces have been carefully designed to integrate luxury with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. ',
-    highlights: [
-      'It is a long established fact that a reader will be distracted by the readable content.',
-      'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum. ',
-      'Various versions have evolved over the years, sometimes by accident.',
-    ],
-    price: '8000',
-    breakfast: true,
-    airConditioning: true,
-    wifi: true,
-    shower: true,
-    minibar: true,
-    tv: true,
-    swimmingPool: true,
-    teacoffeeSet: true,
-    hairDryer: true,
-    gallery: {
-      panorama:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roompano_pgheeg.png',
-      mobile:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/room1_fd9ifw.png',
-      roomdetails1:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/roomd1_cn5fn6.png',
-      roomdetails2:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roomd2_jmigza.png',
-    },
-  },
-  {
-    id: '4',
-    name: 'Premium Ayurveda Rooms',
-    roomSize: '20',
-    occupancy: '2',
-    description:
-      'Our private living spaces have been carefully designed to integrate luxury with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. ',
-    highlights: [
-      'It is a long established fact that a reader will be distracted by the readable content.',
-      'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum. ',
-      'Various versions have evolved over the years, sometimes by accident.',
-    ],
-    price: '8000',
-    breakfast: true,
-    airConditioning: true,
-    wifi: true,
-    shower: true,
-    minibar: true,
-    tv: true,
-    swimmingPool: true,
-    teacoffeeSet: true,
-    hairDryer: true,
-    gallery: {
-      panorama:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roompano_pgheeg.png',
-      mobile:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/room1_fd9ifw.png',
-      roomdetails1:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/roomd1_cn5fn6.png',
-      roomdetails2:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roomd2_jmigza.png',
-    },
-  },
-  {
-    id: '5',
-    name: 'Ayurveda Suites',
-    roomSize: '20',
-    occupancy: '2',
-    description:
-      'Our private living spaces have been carefully designed to integrate luxury with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. ',
-    highlights: [
-      'It is a long established fact that a reader will be distracted by the readable content.',
-      'The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum. ',
-      'Various versions have evolved over the years, sometimes by accident.',
-    ],
-    price: '8000',
-    breakfast: true,
-    airConditioning: true,
-    wifi: true,
-    shower: true,
-    minibar: true,
-    tv: true,
-    swimmingPool: true,
-    teacoffeeSet: true,
-    hairDryer: true,
-    gallery: {
-      panorama:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roompano_pgheeg.png',
-      mobile:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/room1_fd9ifw.png',
-      roomdetails1:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114177/namastedwaar/roomd1_cn5fn6.png',
-      roomdetails2:
-        'https://res.cloudinary.com/harsh710/image/upload/v1640114178/namastedwaar/roomd2_jmigza.png',
-    },
+    createdAt: '2022-01-22T05:51:29.463Z',
+    __v: 0,
   },
 ];
+
+module.exports = roomDetails;
