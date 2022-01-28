@@ -1,0 +1,185 @@
+.booking-accomodation {
+  &__img {
+    width: 100%;
+  }
+
+  &__heading {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #a7896f;
+  }
+
+  &__label {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__input {
+    height: 35px;
+    border-radius: 0 !important;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__card {
+    margin-top: -50px;
+  }
+}
+
+.booking-accroomid {
+  &__cardtop {
+    background: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    &-header {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    &-text {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  &__rooms {
+    background: #fff;
+    word-wrap: break-word;
+
+    &-btn {
+      background: #098a9b;
+    }
+
+    &-btn-disabled {
+      background: #c4c4c4;
+    }
+
+    &-textbold {
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0em;
+    }
+
+    &-select-header {
+      font-family: Playfair Display;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    &-hr {
+      border: 0.5px solid #a7896f;
+      width: 80%;
+    }
+
+    &-image {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &-header {
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #a64f02;
+    }
+
+    &-desc {
+      overflow: hidden !important;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+    }
+
+    &-features {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    &-size {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    &-price {
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: right;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .booking-accomodation {
+    &__img {
+      width: 100%;
+      object-fit: cover !important;
+      height: 70vh !important;
+    }
+
+    &__heading {
+      font-family: Playfair Display;
+      font-size: 25px;
+    }
+
+    &__card {
+      margin-top: -50px;
+    }
+  }
+
+  .booking-accroomid {
+  }
+}

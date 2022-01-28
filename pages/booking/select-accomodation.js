@@ -39,96 +39,224 @@ const selectaccomodation = () => {
   return (
     <>
       <NavbarTop />
-      <h1>Accomodation Select</h1>
       {error && <p>Something went wrong. Please try again later</p>}
       {loading ? (
         <Loader />
       ) : (
-        <section className='section2-acc mb-5 mt-5'>
+        <section className='mb-5 mt-5'>
           <div className='container'>
-            <div className='row'>
+            <div className='row booking-accroomid'>
               <div className='col-md-8 col-12'>
-                <div className='row'>
-                  <div className='col-2'>
+                <div className='row booking-accroomid__cardtop'>
+                  <div className='col-md-2 mt-2 col-6  d-flex justify-content-center'>
                     <div className='d-flex flex-column'>
-                      <p>Check In</p>
-                      <p>{bookingDetails && bookingDetails.checkin}</p>
-                    </div>
-                  </div>
-                  <div className='col-2'>
-                    <div className='d-flex flex-column'>
-                      <p>Check Out</p>
-                      <p>{bookingDetails && bookingDetails.checkout}</p>
-                    </div>
-                  </div>
-                  <div className='col-4'>
-                    <div className='d-flex flex-column'>
-                      <p>No of Guest</p>
-                      <p>
-                        {bookingDetails && bookingDetails.adult} Adult's,
-                        {bookingDetails && bookingDetails.child}Children
+                      <p className='booking-accroomid__cardtop-header'>
+                        Check In
+                      </p>
+                      <p className='booking-accroomid__cardtop-text'>
+                        {bookingDetails && bookingDetails.checkin}
                       </p>
                     </div>
                   </div>
-                  <div className='col-4'>
+                  <div className='col-md-2  mt-2 col-6 d-flex justify-content-center'>
                     <div className='d-flex flex-column'>
-                      <p>Check In</p>
-                      <p>27-02-2022</p>
+                      <p className='booking-accroomid__cardtop-header'>
+                        Check Out
+                      </p>
+                      <p className='booking-accroomid__cardtop-text'>
+                        {bookingDetails && bookingDetails.checkout}
+                      </p>
+                    </div>
+                  </div>
+                  <div className='col-md-3 col-12 mt-2 d-flex justify-content-md-start justify-content-center'>
+                    <div className='d-flex flex-column'>
+                      <p className='booking-accroomid__cardtop-header'>
+                        No of Guest
+                      </p>
+                      <p className='booking-accroomid__cardtop-text'>
+                        {bookingDetails && bookingDetails.adult}&nbsp;
+                        Adult's,&nbsp;&nbsp;
+                        {bookingDetails && bookingDetails.child}&nbsp;Children
+                      </p>
+                    </div>
+                  </div>
+                  <div className='col-md-3 col-12 mt-2  d-flex justify-content-md-start justify-content-center'>
+                    <div className='d-flex flex-column '>
+                      <p className='booking-accroomid__cardtop-header'>
+                        Number of Rooms
+                      </p>
+                      <p className='booking-accroomid__cardtop-text'>
+                        {bookingDetails && bookingDetails.roomCount} room
+                      </p>
                     </div>
                   </div>
                 </div>
-                <div className='row d-flex justify-content-center align-items-center'>
-                  <h1>Select Stay</h1>
+                <div className='booking-accroomid__rooms mt-5 row d-flex justify-content-center align-items-center'>
+                  <h1 className='booking-accroomid__rooms-select-header'>
+                    Select Stay
+                  </h1>
                   {accomodationList &&
                     accomodationList.map((accomodate) => (
-                      <div className='card'>
-                        <div className='card-body'>
-                          <h1>{accomodate.name}</h1>
-                          <p>Room size-{accomodate.roomSize} Sq.mt.</p>
-                          <p>{accomodate.description}</p>
-                          <div className='d-flex justify-content-between'>
-                            <p>
-                              Includes: Complimentary breakfast , welcome drinks
-                              and one spa session
-                            </p>
-                            <p>
-                              <span>Rate for 1 night</span> <br />
-                              <span>₹{accomodate.pricePerNight}</span>
-                            </p>
+                      <>
+                        <div className='card border-0'>
+                          <div className='card-body'>
+                            <div className='row'>
+                              <div className='col-md-5 col-12 d-flex align-items-center'>
+                                <img
+                                  src={accomodate?.gallery?.mobile?.url}
+                                  alt={accomodate?.name}
+                                  className='w-100 booking-accroomid__rooms-image'
+                                />
+                              </div>
+                              <div className='col-md-7 col-12 d-flex align-items-center'>
+                                <div>
+                                  <h1 className='booking-accroomid__rooms-header'>
+                                    {accomodate?.name}
+                                  </h1>
+                                  <p className='booking-accroomid__rooms-size'>
+                                    Room size-{accomodate?.roomSize} Sq.mt.
+                                  </p>
+                                  <p className='booking-accroomid__rooms-desc'>
+                                    {accomodate?.description}
+                                  </p>
+
+                                  <div className='row'>
+                                    <div className='col-7'>
+                                      <p className='booking-accroomid__rooms-features'>
+                                        Includes: Complimentary breakfast ,
+                                        welcome
+                                        <br />
+                                        drinks and one spa session
+                                      </p>
+                                    </div>
+                                    <div className='col-5 d-flex justify-content-end'>
+                                      <p>
+                                        <span className='booking-accroomid__rooms-features'>
+                                          Rate for 1 night
+                                        </span>{' '}
+                                        <br />
+                                        <p className='booking-accroomid__rooms-price'>
+                                          ₹{accomodate.pricePerNight}
+                                        </p>
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  <div className='d-flex justify-content-end'>
+                                    {' '}
+                                    <button
+                                      onClick={() => {
+                                        selectRoom(accomodate._id);
+                                      }}
+                                      className={
+                                        accomodate?._id !== room
+                                          ? 'btn-default'
+                                          : 'btn-default booking-accroomid__rooms-btn'
+                                      }
+                                    >
+                                      Select
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <button
-                            onClick={() => {
-                              selectRoom(accomodate._id);
-                            }}
-                          >
-                            Select
-                          </button>
                         </div>
-                      </div>
+                        <hr className='booking-accroomid__rooms-hr' />
+                      </>
                     ))}
                 </div>
               </div>
               <div className='col-md-4 col-12'>
                 <div className='card border-0'>
                   <div className='card-body'>
-                    <h3>Total</h3>
-                    <div className='row'>
-                      <div className='col-6'>Check In</div>
-                      <div className='col-6'>Check Out</div>
-                      <div className='col-6'>After 12:00 am</div>
-                      <div className='col-6'>Before 11:00 am</div>
-                    </div>
-                    <h3>Booking Details</h3>
-                    <h3>
-                      <span>{bookingDetails && bookingDetails.checkin}</span>-
-                      <span> {bookingDetails && bookingDetails.checkout}</span>
+                    <h3 className='booking-accroomid__rooms-select-header mb-4'>
+                      Total
                     </h3>
-                    <h3>{bookingDetails && bookingDetails.adult} Adults</h3>
+                    <div className='row'>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__cardtop-header mb-0'>
+                          Check In
+                        </p>
+                      </div>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__cardtop-header mb-0'>
+                          Check Out
+                        </p>
+                      </div>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__cardtop-text'>
+                          After 12:00 am
+                        </p>
+                      </div>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__cardtop-text'>
+                          Before 11:00 am
+                        </p>
+                      </div>
+                    </div>
+                    <h3 className='booking-accroomid__cardtop-header mb-0'>
+                      Booking Details
+                    </h3>
+                    <p className='mb-0'>
+                      <span className='booking-accroomid__cardtop-text'>
+                        {bookingDetails && bookingDetails.checkin}
+                      </span>
+                      &nbsp;&nbsp;-&nbsp;&nbsp;
+                      <span className='booking-accroomid__cardtop-text'>
+                        {bookingDetails && bookingDetails.checkout}
+                      </span>
+                    </p>
+
+                    <p className='booking-accroomid__cardtop-text'>
+                      {bookingDetails && bookingDetails.adult} Adults
+                    </p>
+                    <div className='row'>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__cardtop-text'>
+                          Premium Room X 3 nights
+                        </p>
+                      </div>
+                      <div className='col-6 d-flex justify-content-end'>
+                        <p className='booking-accroomid__cardtop-text'>
+                          15,999.00
+                        </p>
+                      </div>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__cardtop-text'>
+                          GST (18%)
+                        </p>
+                      </div>
+                      <div className='col-6 d-flex justify-content-end'>
+                        <p className='booking-accroomid__cardtop-text'>
+                          2,320.00
+                        </p>
+                      </div>
+                      <div className='col-6'>
+                        <p className='booking-accroomid__rooms-textbold'>
+                          Total
+                        </p>
+                      </div>
+                      <div className='col-6 d-flex justify-content-end'>
+                        <p className='booking-accroomid__rooms-textbold'>
+                          2,320.00
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
+                <div className='d-flex justify-content-end mt-3'>
                   <Link href='/booking/details'>
-                    <button>Continue</button>
+                    <button
+                      disabled={!room}
+                      className={
+                        room
+                          ? 'btn-default'
+                          : 'btn-default booking-accroomid__rooms-btn-disabled '
+                      }
+                    >
+                      Continue
+                    </button>
                   </Link>
                 </div>
               </div>

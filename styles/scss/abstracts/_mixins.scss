@@ -29,6 +29,8 @@
   font-family: Montserrat;
   margin-top: $margintop;
   margin-bottom: $marginbottom;
+  white-space: nowrap;
+  text-align: center;
 }
 
 @mixin heading(
