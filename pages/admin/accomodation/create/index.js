@@ -469,7 +469,14 @@ const CreateAccomodation = () => {
                   className='btn btn-primary fs16  mt-5'
                   disabled={loading ? true : false}
                 >
-                  {loading ? <ButtonLoader /> : 'Create Accomodation'}
+                  {loading ? (
+                    <div className='d-flex justify-content-center align-items-center'>
+                      <ButtonLoader />
+                      Creating.....
+                    </div>
+                  ) : (
+                    <>Create Accomodation</>
+                  )}
                 </button>
               </div>
             </div>

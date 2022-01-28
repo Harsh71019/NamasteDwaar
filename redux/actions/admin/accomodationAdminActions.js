@@ -94,7 +94,6 @@ export const createAccomodationsAdminAction =
   };
 
 export const deleteAccomodationsAdminAction = (id) => async (dispatch) => {
-  console.log(id);
   try {
     dispatch({ type: ADMIN_DELETE_ACCOMODATIONS_REQUEST });
     const { data } = await axios.delete(`/api/admin/accomodation/${id}`);
@@ -105,7 +104,6 @@ export const deleteAccomodationsAdminAction = (id) => async (dispatch) => {
     toast.success('Deleted accomodation successfully');
   } catch (error) {
     toast.error('Internal Server Error');
-
     dispatch({
       type: ADMIN_DELETE_ACCOMODATIONS_FAIL,
       payload: error.response.data.message,

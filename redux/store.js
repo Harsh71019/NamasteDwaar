@@ -22,6 +22,10 @@ import {
   userEnquiryReducer,
 } from './reducers/enquiryReducers';
 
+// Start of Booking Reducers
+import { bookingAccomodationReducer } from './reducers/bookingAccomodationReducer';
+// End of Booking Reducers
+
 const reducerCombined = combineReducers({
   boilerListReducer: boilerReducer,
   accomodationReducer: getAccomodationReducer,
@@ -38,6 +42,10 @@ const reducerCombined = combineReducers({
   // ******* for enquiry ********** //
   enquiryList: enquiryListReducer,
   // End of admin reducers
+
+  // Start of Booking Accomodation
+  bookingAccomodation: bookingAccomodationReducer,
+  // End of Booking Accomodation
 });
 
 const reducer = (state, action) => {

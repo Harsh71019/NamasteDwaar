@@ -33,7 +33,7 @@ const newAccomodation = catchAsyncErrors(async (req, res) => {
     occupancy,
     description,
     highlights,
-    price,
+    pricePerNight,
     breakfast,
     airConditioning,
     wifi,
@@ -63,11 +63,11 @@ const newAccomodation = catchAsyncErrors(async (req, res) => {
 
   const newAccomodation = await Accomodation.create({
     name: name,
-    roomSize: roomSize,
-    occupancy: occupancy,
+    roomSize: Number(roomSize),
+    occupancy: Number(occupancy),
     description: description,
     highlights: splitHighlights,
-    price: price,
+    pricePerNight: Number(pricePerNight),
     breakfast: breakfast,
     airConditioning: airConditioning,
     wifi: wifi,

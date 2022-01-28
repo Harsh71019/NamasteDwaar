@@ -141,7 +141,9 @@ const NavbarTop = () => {
                 </Dropdown.Menu>
               </Dropdown> */}
 
-              <button className='primary-button hbs ms-3'>Book Now</button>
+              <Link href='/booking'>
+                <button className='primary-button hbs ms-3'>Book Now</button>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
