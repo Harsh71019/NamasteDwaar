@@ -23,7 +23,12 @@ import {
 } from './reducers/enquiryReducers';
 
 // Start of Booking Reducers
-import { bookingAccomodationReducer } from './reducers/bookingAccomodationReducer';
+import {
+  bookingAccomodationReducer,
+  bookingRoomIDetailsAccomodationReducer,
+  bookingPersonalDetailsAccomodationReducer,
+  razorpayBookAccomodationReducer,
+} from './reducers/bookingAccomodationReducer';
 // End of Booking Reducers
 
 const reducerCombined = combineReducers({
@@ -45,6 +50,9 @@ const reducerCombined = combineReducers({
 
   // Start of Booking Accomodation
   bookingAccomodation: bookingAccomodationReducer,
+  bookingRoomIDetailsAccomodation: bookingRoomIDetailsAccomodationReducer,
+  bookingPersonalDetailsAccomodation: bookingPersonalDetailsAccomodationReducer,
+  razorpayBookAccomodation: razorpayBookAccomodationReducer,
   // End of Booking Accomodation
 });
 

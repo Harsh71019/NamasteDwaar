@@ -6,6 +6,9 @@ const bookingSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  orderID: {
+    type: String,
+  },
   lastName: {
     type: String,
     required: true,
@@ -19,6 +22,10 @@ const bookingSchema = new mongoose.Schema({
     default: 0,
   },
   child: {
+    type: Number,
+    default: 0,
+  },
+  totalPrice: {
     type: Number,
     default: 0,
   },

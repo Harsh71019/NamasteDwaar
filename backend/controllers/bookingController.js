@@ -45,13 +45,15 @@ const newBooking = catchAsyncErrors(async (req, res) => {
     key_secret: process.env.RAZORPAY_API_SECRET,
   });
   const id = crypto.randomBytes(16).toString('hex');
+
+  const finalPrice = totalPriceAfterGST * 100;
   const options = {
-    amount: totalPriceAfterGST, // amount in smallest currency unit
+    amount: finalPrice, // amount in smallest currency unit
     currency: 'INR',
     receipt: id,
   };
   const order = await instance.orders.create(options);
-
+  const orderID = order.id;
   const booking = await Booking.create({
     accomodation,
     checkInDate,
@@ -62,12 +64,13 @@ const newBooking = catchAsyncErrors(async (req, res) => {
     mobile,
     email,
     amountGenerated: amountGenerated,
-    totalPrice: totalPriceAfterGST,
+    totalPrice: finalPrice,
     gst: gstPrice,
     razorPayOrderGenerate: order,
     roomCount,
     adult,
     child,
+    orderID,
   });
 
   res.status(200).json({
@@ -78,37 +81,42 @@ const newBooking = catchAsyncErrors(async (req, res) => {
 
 const verifyPaymentAccomodation = catchAsyncErrors(async (req, res, next) => {
   const {
+    id,
     orderCreationId,
     razorpayPaymentId,
     razorpayOrderId,
     razorpaySignature,
   } = req.body;
 
+  const booking = await Booking.findById(id);
+
+  console.log(booking);
+
+  if (booking) {
+    booking.paymentResultRazor.orderCreationId = orderCreationId;
+    booking.paymentResultRazor.razorpayPaymentId = razorpayPaymentId;
+    booking.paymentResultRazor.razorpayOrderId = razorpayOrderId;
+    booking.paymentResultRazor.razorpaySignature = razorpaySignature;
+  }
+
+  const updatedBooking = await booking.save();
+
   // Creating our own digest
   // The format should be like this:
   // digest = hmac_sha256(orderCreationId + "|" + razorpayPaymentId, secret);
-  const shasum = crypto.createHmac('sha256', 'w2lBtgmeuDUfnJVp43UpcaiT');
+  // const shasum = crypto.createHmac('sha256', 'w2lBtgmeuDUfnJVp43UpcaiT');
 
-  shasum.update(`${orderCreationId}|${razorpayPaymentId}`);
+  // shasum.update(`${orderCreationId}|${razorpayPaymentId}`);
 
-  const digest = shasum.digest('hex');
+  // const digest = shasum.digest('hex');
 
-  // comaparing our digest with the actual signature
-  if (digest !== razorpaySignature)
-    return next(new ErrorHandler('Transaction is not legit.', 400));
-
-  const booking = await Booking.create({
-    paymentResultRazor: {
-      orderCreationId,
-      razorpayPaymentId,
-      razorpayOrderId,
-      razorpaySignature,
-    },
-  });
+  // // comaparing our digest with the actual signature
+  // if (digest !== razorpaySignature)
+  //   return next(new ErrorHandler('Transaction is not legit.', 400));
 
   res.status(200).json({
     success: true,
-    booking,
+    updatedBooking,
   });
 
   // THE PAYMENT IS LEGIT & VERIFIED

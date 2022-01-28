@@ -40,7 +40,7 @@ const selectaccomodation = () => {
     <>
       <NavbarTop />
       <h1>Accomodation Select</h1>
-      {error && <p>Something went wrong. Please try again later</p>}{' '}
+      {error && <p>Something went wrong. Please try again later</p>}
       {loading ? (
         <Loader />
       ) : (

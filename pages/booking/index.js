@@ -6,10 +6,10 @@ import { useDispatch } from 'react-redux';
 import { addDetailsAccomodationBookingAction } from '../../redux/actions/bookingAccomodationActions';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/router';
+import moment from 'moment';
 
 const booking = () => {
   const [checkin, setCheckin] = useState('');
-  const [accomodation, setAccomodation] = useState('');
   const [checkout, setCheckout] = useState('');
   const [adult, setAdult] = useState('');
   const [child, setChild] = useState('');
@@ -24,8 +24,28 @@ const booking = () => {
     date.getMonth() + 1
   }-${date.getDate()}-${date.getFullYear()}`;
 
+  const accomodation = '';
+  const lastname = '';
+  const firstname = '';
+  const email = '';
+  const mobile = '';
+
+  function checkDate(start, end) {
+    var mStart = moment(start, 'YYYY-MM-DD');
+    var mEnd = moment(end, 'YYYY-MM-DD');
+    return mStart.isBefore(mEnd);
+  }
+
   const submitForm = (e) => {
     e.preventDefault();
+
+    const formatCheckin = moment(checkin, 'YYYY-MM-DD').format('MM-DD-YYYY');
+    const formatCheckout = moment(checkout, 'YYYY-MM-DD').format('MM-DD-YYYY');
+
+    const date1 = new Date(formatCheckin);
+    const date2 = new Date(formatCheckout);
+    const Difference_In_Time = date2.getTime() - date1.getTime();
+    const Difference_In_Days = Number(Difference_In_Time / (1000 * 3600 * 24));
 
     if (
       checkin === '' ||
@@ -49,22 +69,35 @@ const booking = () => {
       if (roomCount === '' || null || undefined) {
         toast.error('Please select no of Rooms');
       }
+      checkDate(checkin, checkout);
+      if (!checkDate) {
+        toast.error('Please select valid dates');
+      }
     } else {
-      const data = {
-        checkin,
-        checkout,
-        adult,
-        child,
-        roomCount,
-        accomodation,
-      };
-      dispatch(addDetailsAccomodationBookingAction(data));
-      setCheckin('');
-      setCheckout('');
-      setAdult('');
-      setChild('');
-      setRoomCount('');
-      router.push('booking/select-accomodation');
+      if (Difference_In_Days < 1) {
+        console.log(Difference_In_Days);
+        toast.error('Please select Check In Date', Difference_In_Days);
+      } else {
+        const data = {
+          checkin: formatCheckin,
+          checkout: formatCheckout,
+          adult,
+          child,
+          roomCount,
+          accomodation,
+          firstname,
+          lastname,
+          email,
+          mobile,
+        };
+        dispatch(addDetailsAccomodationBookingAction(data));
+        setCheckin('');
+        setCheckout('');
+        setAdult('');
+        setChild('');
+        setRoomCount('');
+        // router.push('booking/select-accomodation');
+      }
     }
   };
 
@@ -130,12 +163,12 @@ const booking = () => {
                       onChange={(e) => setAdult(e.target.value)}
                       required
                     >
-                      <option selected value=''>
+                      <option defaultValue='' value=''>
                         Adult
                       </option>
                       {adultsArray.map((count) => {
                         return (
-                          <option key={count} value={count}>
+                          <option key={count + 'adult'} value={count}>
                             {count}
                           </option>
                         );
@@ -154,13 +187,13 @@ const booking = () => {
                       onChange={(e) => setChild(e.target.value)}
                       required
                     >
-                      <option selected value=''>
+                      <option defaultValue='' value=''>
                         Child
                       </option>
                       {childrenArray.map((count) => {
                         return (
                           <>
-                            <option key={count} value={count}>
+                            <option key={count + 'child'} value={count}>
                               {count}
                             </option>
                           </>
@@ -181,13 +214,13 @@ const booking = () => {
                       required
                     >
                       {' '}
-                      <option selected value=''>
+                      <option defaultValue='' value=''>
                         Room
                       </option>
                       {roomsArray.map((count) => {
                         return (
                           <>
-                            <option key={count} value={count}>
+                            <option key={count + 'room'} value={count}>
                               {count}
                             </option>
                           </>
