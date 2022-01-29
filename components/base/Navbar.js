@@ -35,34 +35,33 @@ const NavbarTop = () => {
           </Navbar.Brand>
           <Navbar.Collapse className=''>
             <Nav className='ms-lg-auto my-lg-0'>
-              <Link href='/aboutus'>
-                <a className='d-flex justify-content-md-center justify-content-md-start align-items-center dropdown-button-nav'>
-                  About Us
-                </a>
-              </Link>
               <Dropdown className='position-static ms-md-3 ms-0'>
                 <Dropdown.Toggle
                   className='dropdown-button-nav w-100'
                   id='dropdown-basic'
                 >
-                  Wellness
+                  About Us
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi2'
-                    href='#/action-1'
-                  >
-                    Action
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus'>Our Vision </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi2'>
-                    Another action
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus'>Our Philosophy </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi2'>
-                    Something else
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus'>Our Partners </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus'>About the Architect </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus'>Awards and Recognition </Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
+
               <Dropdown className='position-static ms-md-3 ms-0'>
                 <Dropdown.Toggle
                   className='dropdown-button-nav w-100'
@@ -72,17 +71,57 @@ const NavbarTop = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/experiences'>Experiences</Link>
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
+                    <Link href='/experiences'>Fitness & Recreation </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Another action
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
+                    <Link href='/experiences'>Countryside Getaway </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Something else
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
+                    <Link href='/experiences'>Signature Dining </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
+                    <Link href='/experiences'>Art at Dwaar </Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
+
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav w-100'
+                  id='dropdown-basic'
+                >
+                  Programmes
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    All Treatments
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    Ayurvedic Treatments
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    Ayurvedic Treatments
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    Pain Management
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    Weight Management
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    De-stress & Relaxation Packages
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    Arthritis Management
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi3'>
+                    Diabetes Management
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+
               <Dropdown className='position-static ms-md-3 ms-0'>
                 <Dropdown.Toggle
                   className='dropdown-button-nav w-100'
@@ -92,23 +131,53 @@ const NavbarTop = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi4'
-                    href='#/action-1'
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi4'>
                     <Link href='/events'>Events</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi4'>
-                    Another action
+                    <Link href='/events/personal'>Personal</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi4'>
-                    Something else
+                    <Link href='/events/corporate'>Corporate</Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <Link href='/accomodation'>
-                <a className=' ms-md-3 ms-0 d-flex justify-content-md-center justify-content-md-start align-items-center dropdown-button-nav'>
-                  Acommodation
+              <Dropdown className='position-static ms-md-3 ms-0'>
+                <Dropdown.Toggle
+                  className='dropdown-button-nav w-100'
+                  id='dropdown-basic'
+                >
+                  Accomodation
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>All Rooms </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>Premium Rooms </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>Deluxe Wellness </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>Ayurveda Rooms </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>Ayurveda Suites </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>Heritage Suite </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi5'>
+                    <Link href='/accomodation'>Guest House </Link>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+
+              <Link href='/contactus'>
+                <a className='d-flex justify-content-md-center justify-content-md-start align-items-center dropdown-button-nav'>
+                  Contact Us
                 </a>
               </Link>
               {/* <Dropdown className='position-static ms-md-3 ms-0'>
@@ -122,7 +191,7 @@ const NavbarTop = () => {
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item
                     className='dropdown-item-position ddi5'
-                    href='#/action-1'
+                    
                   >
                     Action
                   </Dropdown.Item>
@@ -140,7 +209,6 @@ const NavbarTop = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown> */}
-
               <Link href='/booking'>
                 <button className='primary-button hbs ms-3'>Book Now</button>
               </Link>

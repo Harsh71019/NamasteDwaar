@@ -17,6 +17,9 @@ import {
   GET_ALL_ADMIN_ACCOMODATION_BOOKING_REQUEST,
   GET_ALL_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
   GET_ALL_ADMIN_ACCOMODATION_BOOKING_FAIL,
+  GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_REQUEST,
+  GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
+  GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_FAIL,
 } from '../constants/bookingAccomdationConstants';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
@@ -168,15 +171,36 @@ export const getSingleAccomodationBookingAction = (id) => async (dispatch) => {
   }
 };
 
+export const getSingleAdminAccomodationBookingAction =
+  (id) => async (dispatch) => {
+    try {
+      dispatch({ type: GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_REQUEST });
+      const { data } = await axios.get(`/api/booking/${id}`);
+      dispatch({
+        type: GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
+        payload: data,
+      });
+      toast.success('Got booking details successfully');
+    } catch (error) {
+      dispatch({
+        type: GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_FAIL,
+        payload:
+          error.response && error.response.data && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+    }
+  };
+
 export const getAllAccomodationBookingAdminAction = () => async (dispatch) => {
   try {
     dispatch({ type: GET_ALL_ADMIN_ACCOMODATION_BOOKING_REQUEST });
-    const { data } = await axios.get(`/api/booking`);
+    const { data } = await axios.get(`/api/admin/booking`);
     dispatch({
       type: GET_ALL_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
       payload: data,
     });
-    toast.success('Got booking details successfully');
+    toast.success('Got all bookings successfully');
   } catch (error) {
     dispatch({
       type: GET_ALL_ADMIN_ACCOMODATION_BOOKING_FAIL,

@@ -11,7 +11,8 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.get(getAllBookingsAdmin);
-//   .use(isAuthenticatedUser, authorizeRoles('admin'))
+handler
+  .use(isAuthenticatedUser, authorizeRoles('admin'))
+  .get(getAllBookingsAdmin);
 
 export default handler;

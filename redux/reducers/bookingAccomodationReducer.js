@@ -17,6 +17,9 @@ import {
   GET_ALL_ADMIN_ACCOMODATION_BOOKING_REQUEST,
   GET_ALL_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
   GET_ALL_ADMIN_ACCOMODATION_BOOKING_FAIL,
+  GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_REQUEST,
+  GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
+  GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_FAIL,
 } from '../constants/bookingAccomdationConstants';
 
 export const bookingAccomodationReducer = (
@@ -132,6 +135,29 @@ export const getSingleBookAccomodationReducer = (
       };
 
     case GET_SINGLE_ACCOMODATION_BOOKING_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+export const getSingleBookAdminAccomodationReducer = (
+  state = {
+    bookingAccomodationDetails: {},
+  },
+  action
+) => {
+  switch (action.type) {
+    case GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_REQUEST:
+      return { loading: true };
+
+    case GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_SUCCESS:
+      return {
+        loading: false,
+        success: true,
+        bookingAccomodationDetails: action.payload,
+      };
+
+    case GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;

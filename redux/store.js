@@ -30,6 +30,7 @@ import {
   razorpayBookAccomodationReducer,
   getSingleBookAccomodationReducer,
   getAllAdminAccomodationBookingsReducer,
+  getSingleBookAdminAccomodationReducer,
 } from './reducers/bookingAccomodationReducer';
 // End of Booking Reducers
 
@@ -57,6 +58,7 @@ const reducerCombined = combineReducers({
   razorpayBookAccomodation: razorpayBookAccomodationReducer,
   getSingleBookAccomodation: getSingleBookAccomodationReducer,
   getAllAdminAccomodationBookings: getAllAdminAccomodationBookingsReducer,
+  getSingleBookAdminAccomodation: getSingleBookAdminAccomodationReducer,
   // End of Booking Accomodation
 });
 

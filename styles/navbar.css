@@ -182,19 +182,19 @@
   background-color: transparent !important;
 }
 .ddi1 {
-  margin-left: calc(29% + 100px);
+  margin-left: calc(32% + 100px);
 }
 .ddi2 {
-  margin-left: calc(65% - 100px);
+  margin-left: calc(55% - 100px);
 }
 .ddi3 {
-  margin-left: calc(72% - 100px);
+  margin-left: calc(64% - 100px);
 }
 .ddi4 {
-  margin-left: calc(81% - 100px);
+  margin-left: calc(74% - 100px);
 }
 .ddi5 {
-  margin-left: 53vw;
+  margin-left: calc(80% - 100px);
 }
 
 /* Extra small devices (phones, 600px and down) */
