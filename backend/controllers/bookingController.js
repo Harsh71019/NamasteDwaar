@@ -26,7 +26,7 @@ const newBooking = catchAsyncErrors(async (req, res) => {
   } = req.body;
 
   const accomodationDetails = await Accomodation.findById(accomodation);
-  const { pricePerNight } = accomodationDetails;
+  const { pricePerNight, name } = accomodationDetails;
 
   const date1 = new Date(checkInDate);
   const date2 = new Date(checkOutDate);
@@ -71,6 +71,8 @@ const newBooking = catchAsyncErrors(async (req, res) => {
     adult,
     child,
     orderID,
+    roomName: name,
+    roomPrice: pricePerNight,
   });
 
   res.status(200).json({
@@ -90,13 +92,12 @@ const verifyPaymentAccomodation = catchAsyncErrors(async (req, res, next) => {
 
   const booking = await Booking.findById(id);
 
-  console.log(booking);
-
   if (booking) {
     booking.paymentResultRazor.orderCreationId = orderCreationId;
     booking.paymentResultRazor.razorpayPaymentId = razorpayPaymentId;
     booking.paymentResultRazor.razorpayOrderId = razorpayOrderId;
     booking.paymentResultRazor.razorpaySignature = razorpaySignature;
+    booking.isPaid = true;
   }
 
   const updatedBooking = await booking.save();
@@ -125,6 +126,7 @@ const verifyPaymentAccomodation = catchAsyncErrors(async (req, res, next) => {
 
 const getAllBookingsAdmin = catchAsyncErrors(async (req, res) => {
   const booking = await Booking.find();
+
   res.status(200).json({
     success: true,
     message: 'All Accomodation Bookings retrieved successfully',
@@ -133,4 +135,24 @@ const getAllBookingsAdmin = catchAsyncErrors(async (req, res) => {
   });
 });
 
-export { newBooking, getAllBookingsAdmin, verifyPaymentAccomodation };
+const getSingleBookingAccomodation = catchAsyncErrors(
+  async (req, res, next) => {
+    const booking = await Booking.findById(req.query.id);
+    if (!booking) {
+      return next(new ErrorHandler('Accomodation not found with this ID', 404));
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'All Accomodation retrieved successfully',
+      booking: booking,
+    });
+  }
+);
+
+export {
+  newBooking,
+  getAllBookingsAdmin,
+  verifyPaymentAccomodation,
+  getSingleBookingAccomodation,
+};

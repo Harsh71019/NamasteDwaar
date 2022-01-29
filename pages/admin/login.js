@@ -38,7 +38,6 @@ const login = () => {
           fontSize: '16px',
         },
       });
-      console.log('I am running');
       window.location.href = '/admin';
     }
   };
@@ -53,8 +52,8 @@ const login = () => {
               className='login-page__container py-5'
               style={{ maxWidth: '600px' }}
             >
-              <div className='py-5'>
-                <form className='py-5' onSubmit={submitHandler}>
+              <div className='py-5 '>
+                <form className='py-5 bg-white p-5' onSubmit={submitHandler}>
                   <div className='mb-3 fs-3'>
                     <label
                       htmlFor='exampleFormControlInput1'

@@ -11,6 +11,12 @@ import {
   RAZORPAY_BOOKING_ACCOMODATION_REQUEST,
   RAZORPAY_BOOKING_ACCOMODATION_SUCCESS,
   RAZORPAY_BOOKING_ACCOMODATION_FAIL,
+  GET_SINGLE_ACCOMODATION_BOOKING_REQUEST,
+  GET_SINGLE_ACCOMODATION_BOOKING_SUCCESS,
+  GET_SINGLE_ACCOMODATION_BOOKING_FAIL,
+  GET_ALL_ADMIN_ACCOMODATION_BOOKING_REQUEST,
+  GET_ALL_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
+  GET_ALL_ADMIN_ACCOMODATION_BOOKING_FAIL,
 } from '../constants/bookingAccomdationConstants';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
@@ -94,7 +100,7 @@ export const addPersonalDetailsAccomodationBookingAction =
       obj.email = data.email;
       localStorage.setItem('accomodationBooking', JSON.stringify(obj));
 
-      toast.success('Selected Room Successfully');
+      toast.success('Added Booking details Successfully');
     } catch (error) {
       dispatch({
         type: BOOKING_USERDETAILS_ACCOMODATION_FAIL,
@@ -113,7 +119,7 @@ export const razorpayAccomodationBookingAction = (data) => async (dispatch) => {
       type: USER_ENQUIRY_REQUEST,
     });
 
-    const { data } = await axios.post(`/api/enquiry`, {
+    const { data } = await axios.post(`/api/booking`, {
       name,
       email,
       mobile,
@@ -139,5 +145,45 @@ export const razorpayAccomodationBookingAction = (data) => async (dispatch) => {
         ? error.response.data.message
         : error.message
     );
+  }
+};
+
+export const getSingleAccomodationBookingAction = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: GET_SINGLE_ACCOMODATION_BOOKING_REQUEST });
+    const { data } = await axios.get(`/api/booking/${id}`);
+    dispatch({
+      type: GET_SINGLE_ACCOMODATION_BOOKING_SUCCESS,
+      payload: data,
+    });
+    toast.success('Got booking details successfully');
+  } catch (error) {
+    dispatch({
+      type: GET_SINGLE_ACCOMODATION_BOOKING_FAIL,
+      payload:
+        error.response && error.response.data && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const getAllAccomodationBookingAdminAction = () => async (dispatch) => {
+  try {
+    dispatch({ type: GET_ALL_ADMIN_ACCOMODATION_BOOKING_REQUEST });
+    const { data } = await axios.get(`/api/booking`);
+    dispatch({
+      type: GET_ALL_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
+      payload: data,
+    });
+    toast.success('Got booking details successfully');
+  } catch (error) {
+    dispatch({
+      type: GET_ALL_ADMIN_ACCOMODATION_BOOKING_FAIL,
+      payload:
+        error.response && error.response.data && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
   }
 };

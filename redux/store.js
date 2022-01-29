@@ -28,6 +28,8 @@ import {
   bookingRoomIDetailsAccomodationReducer,
   bookingPersonalDetailsAccomodationReducer,
   razorpayBookAccomodationReducer,
+  getSingleBookAccomodationReducer,
+  getAllAdminAccomodationBookingsReducer,
 } from './reducers/bookingAccomodationReducer';
 // End of Booking Reducers
 
@@ -53,6 +55,8 @@ const reducerCombined = combineReducers({
   bookingRoomIDetailsAccomodation: bookingRoomIDetailsAccomodationReducer,
   bookingPersonalDetailsAccomodation: bookingPersonalDetailsAccomodationReducer,
   razorpayBookAccomodation: razorpayBookAccomodationReducer,
+  getSingleBookAccomodation: getSingleBookAccomodationReducer,
+  getAllAdminAccomodationBookings: getAllAdminAccomodationBookingsReducer,
   // End of Booking Accomodation
 });
 

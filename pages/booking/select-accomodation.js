@@ -11,7 +11,12 @@ const selectaccomodation = () => {
   const dispatch = useDispatch();
   const [room, setRoom] = useState(undefined);
   const [bookingDetails, setBookingDetails] = useState(undefined);
+  const [gst, setGst] = useState(0);
+  const [price, setPrice] = useState(0);
+  const [finalAmount, setFinalAmount] = useState(0);
+  const [daysOfStay, setDaysOfStay] = useState(0);
   const accomodationReducer = useSelector((state) => state.accomodationReducer);
+
   const {
     loading,
     error,
@@ -21,6 +26,26 @@ const selectaccomodation = () => {
   const selectRoom = (id) => {
     dispatch(addRoomIDAccomodationBookingAction(id));
     setRoom(id);
+    let roomDetails = accomodationList.find((rd) => rd._id === id);
+    const pricePerNight = roomDetails?.pricePerNight;
+    const tax = 0.18;
+    const date1 = new Date(bookingDetails.checkin);
+    const date2 = new Date(bookingDetails.checkout);
+    const Difference_In_Time = date2.getTime() - date1.getTime();
+    const Difference_In_Days = Number(Difference_In_Time / (1000 * 3600 * 24));
+
+    setDaysOfStay(Difference_In_Days);
+    const roomCount = bookingDetails?.roomCount;
+    const amountGenerated =
+      Number(Difference_In_Days * pricePerNight) * Number(roomCount);
+
+    const gstPrice = amountGenerated * tax;
+    const totalPriceAfterGST = Math.round(
+      amountGenerated + amountGenerated * tax
+    );
+    setPrice(amountGenerated);
+    setFinalAmount(totalPriceAfterGST);
+    setGst(gstPrice);
   };
 
   useEffect(() => {
@@ -31,10 +56,6 @@ const selectaccomodation = () => {
       setBookingDetails(JSON.parse(data));
     }
   }, [dispatch]);
-
-  const proceedForm = () => {
-    console.log('hety');
-  };
 
   return (
     <>
@@ -214,12 +235,12 @@ const selectaccomodation = () => {
                     <div className='row'>
                       <div className='col-6'>
                         <p className='booking-accroomid__cardtop-text'>
-                          Premium Room X 3 nights
+                          Premium Room X {daysOfStay} nights
                         </p>
                       </div>
                       <div className='col-6 d-flex justify-content-end'>
                         <p className='booking-accroomid__cardtop-text'>
-                          15,999.00
+                          {price.toFixed(2)}
                         </p>
                       </div>
                       <div className='col-6'>
@@ -229,7 +250,7 @@ const selectaccomodation = () => {
                       </div>
                       <div className='col-6 d-flex justify-content-end'>
                         <p className='booking-accroomid__cardtop-text'>
-                          2,320.00
+                          {gst.toFixed(2)}
                         </p>
                       </div>
                       <div className='col-6'>
@@ -239,7 +260,7 @@ const selectaccomodation = () => {
                       </div>
                       <div className='col-6 d-flex justify-content-end'>
                         <p className='booking-accroomid__rooms-textbold'>
-                          2,320.00
+                          {finalAmount.toFixed(2)}
                         </p>
                       </div>
                     </div>

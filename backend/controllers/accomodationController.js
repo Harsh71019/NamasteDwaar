@@ -179,13 +179,6 @@ const updateAccomodation = catchAsyncErrors(async (req, res, next) => {
     );
   }
 
-  console.log(
-    panoramaResult,
-    mobileResult,
-    roomdetails1Result,
-    roomdetails2Result
-  );
-
   req.body.gallery.panorama = {
     public_id: panoramaResult.public_id,
     url: panoramaResult.secure_url,

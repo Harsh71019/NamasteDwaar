@@ -13,7 +13,6 @@ import { useRouter } from 'next/router';
 function Auth({ children }) {
   const router = useRouter();
   const { data: session, status, token } = useSession();
-  console.log(session);
   const isAdmin = session?.user?.role;
   useEffect(() => {
     if (status === 'loading') return; // Do nothing while loading

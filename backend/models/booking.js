@@ -17,6 +17,12 @@ const bookingSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  roomName: {
+    type: String,
+  },
+  roomPrice: {
+    type: String,
+  },
   adult: {
     type: Number,
     default: 0,
@@ -71,6 +77,9 @@ const bookingSchema = new mongoose.Schema({
   gst: {
     type: Number,
     required: true,
+  },
+  isPaid: {
+    type: Boolean,
   },
   paymentResultRazor: {
     orderCreationId: { type: String },

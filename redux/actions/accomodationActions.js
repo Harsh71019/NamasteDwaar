@@ -23,7 +23,6 @@ export const getAccomodationsAction = () => async (dispatch) => {
           ? error.response.data.message
           : error.message,
     });
-    console.log(error);
   }
 };
 
