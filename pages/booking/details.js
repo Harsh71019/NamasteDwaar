@@ -312,11 +312,11 @@ const details = () => {
                       </p>
                     </div>
                   </div>
-                  <p className='booking-accroomid__cardtop-header ms-5'>
+                  <p className='booking-accroomid__cardtop-header'>
                     Room Details
                   </p>
 
-                  <p className='ms-5'>
+                  <p className=''>
                     <span className='booking-accroomid__cardtop-text'>
                       Premium room{' '}
                     </span>{' '}
@@ -385,7 +385,8 @@ const details = () => {
                             <input
                               className='bookad-details__input'
                               id='mobile'
-                              type='phone'
+                              type='tel'
+                              pattern='[789][0-9]{9}'
                               min={10}
                               max={10}
                               value={mobile}
