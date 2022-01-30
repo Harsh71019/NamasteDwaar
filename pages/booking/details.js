@@ -208,7 +208,8 @@ const details = () => {
         return;
       }
     } catch (error) {
-      router.push(`/booking/failure`);
+      router.push(`/booking/fail`);
+      console.log(error);
       toast.error('Internal server error');
     }
   }
