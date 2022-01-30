@@ -185,7 +185,7 @@ const details = () => {
             localStorage.removeItem('accomodationBooking');
           }
           if (successPay.status !== 200) {
-            router.push(`/booking/failure`);
+            router.push(`/booking/fail`);
             localStorage.removeItem('accomodationBooking');
           }
         },
