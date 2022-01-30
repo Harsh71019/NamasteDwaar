@@ -10,6 +10,14 @@ import {
   authorizeRoles,
 } from '../../../../backend/middlewares/auth';
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '5mb',
+    },
+  },
+};
+
 const handler = nc({ onError });
 
 dbConnect();

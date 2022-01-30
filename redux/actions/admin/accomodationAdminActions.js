@@ -69,11 +69,6 @@ export const createAccomodationsAdminAction =
         header: {
           'Content-Type': 'application/json',
         },
-        api: {
-          bodyParser: {
-            sizeLimit: '2mb', // Set desired value here
-          },
-        },
       };
 
       const { data } = await axios.post(

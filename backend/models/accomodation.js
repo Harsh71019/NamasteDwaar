@@ -63,6 +63,9 @@ const accomodationSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  pdfBrochure: {
+    type: String,
+  },
   // address: {
   //   type: String,
   //   required: [true, 'Please enter room address'],

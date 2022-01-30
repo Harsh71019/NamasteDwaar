@@ -15,24 +15,24 @@ import { useRouter } from 'next/router';
 import moment from 'moment';
 import * as yup from 'yup';
 
-let schema = yup.object().shape({
-  firstname: yup
-    .string('This field is mandatory')
-    .required('This field is mandatory'),
-  lastname: yup
-    .string('This field is mandatory')
-    .required('This field is mandatory'),
-  mobile: yup
-    .number('This field is mandatory')
-    .required('This field is mandatory')
-    .positive()
-    .integer()
-    .max(10)
-    .min(10),
-  email: yup
-    .string('This field is mandatory')
-    .email('Please enter valid email'),
-});
+// let schema = yup.object().shape({
+//   firstname: yup
+//     .string('This field is mandatory')
+//     .required('This field is mandatory'),
+//   lastname: yup
+//     .string('This field is mandatory')
+//     .required('This field is mandatory'),
+//   mobile: yup
+//     .number('This field is mandatory')
+//     .required('This field is mandatory')
+//     .positive()
+//     .integer()
+//     .max(10)
+//     .min(10),
+//   email: yup
+//     .string('This field is mandatory')
+//     .email('Please enter valid email'),
+// });
 
 const details = () => {
   const [firstname, setFirstname] = useState('');
@@ -67,38 +67,37 @@ const details = () => {
   }
 
   function checkForm() {
-    schema
-      .isValid({
-        firstname: firstname,
-        lastname: lastname,
-        mobile: mobile,
-        email: email,
-      })
-      .then({});
+    // schema
+    //   .isValid({
+    //     firstname: firstname,
+    //     lastname: lastname,
+    //     mobile: mobile,
+    //     email: email,
+    //   })
+    //   .then({});
 
-    // if (firstname === '' || null || undefined) {
-    //   toast.error('Please select firstname');
-    //   return false;
-    // }
-    // if (lastname === '' || null || undefined) {
-    //   toast.error('Please lastname');
-    //   return false;
-    // }
-    // if (email === '' || null || undefined) {
-    //   toast.error('Please select email');
-    //   return false;
-    // }
-    // if (mobile === '' || null || undefined || mobile.length !== 10) {
-    //   toast.error('Please input mobile exactly 10 digits');
-    //   return false;
-    // }
-    // return true;
+    if (firstname === '' || null || undefined) {
+      toast.error('Please select firstname');
+      return false;
+    }
+    if (lastname === '' || null || undefined) {
+      toast.error('Please lastname');
+      return false;
+    }
+    if (email === '' || null || undefined) {
+      toast.error('Please select email');
+      return false;
+    }
+    if (mobile === '' || null || undefined || mobile.length !== 10) {
+      toast.error('Please input mobile exactly 10 digits');
+      return false;
+    }
+    return true;
   }
 
   const submitForm = (e) => {
     e.preventDefault();
     const validation = checkForm();
-
     if (validation) {
       let data = {
         firstname,
