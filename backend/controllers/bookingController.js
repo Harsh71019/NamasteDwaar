@@ -11,7 +11,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 function getMaxRooms(adults, roomOccupancy) {
-  let room = numberOfAdults / maxOccupancy;
+  let room = adults / roomOccupancy;
   if (Number.isInteger(room)) {
     return room;
   }
@@ -30,7 +30,6 @@ const newBooking = catchAsyncErrors(async (req, res) => {
     lastName,
     mobile,
     email,
-    roomCount,
     adult,
     child,
   } = req.body;

@@ -16,12 +16,23 @@ const selectaccomodation = () => {
   const [finalAmount, setFinalAmount] = useState(0);
   const [daysOfStay, setDaysOfStay] = useState(0);
   const accomodationReducer = useSelector((state) => state.accomodationReducer);
+  const [roomCount, setRoomCount] = useState(0);
 
   const {
     loading,
     error,
     accomodation: { accomodation: accomodationList },
   } = accomodationReducer;
+
+  function getMaxRooms(adults, roomOccupancy) {
+    let room = adults / roomOccupancy;
+    if (Number.isInteger(room)) {
+      return room;
+    }
+    if (!Number.isInteger(room)) {
+      return Math.ceil(room);
+    }
+  }
 
   const selectRoom = (id) => {
     dispatch(addRoomIDAccomodationBookingAction(id));
@@ -35,9 +46,13 @@ const selectaccomodation = () => {
     const Difference_In_Days = Number(Difference_In_Time / (1000 * 3600 * 24));
 
     setDaysOfStay(Difference_In_Days);
-    const roomCount = bookingDetails?.roomCount;
+    const roomCountMax = getMaxRooms(
+      bookingDetails.adult,
+      roomDetails?.occupancy
+    );
+    setRoomCount(roomCountMax);
     const amountGenerated =
-      Number(Difference_In_Days * pricePerNight) * Number(roomCount);
+      Number(Difference_In_Days * pricePerNight) * Number(roomCountMax);
 
     const gstPrice = amountGenerated * tax;
     const totalPriceAfterGST = Math.round(
@@ -107,7 +122,7 @@ const selectaccomodation = () => {
                         Number of Rooms
                       </p>
                       <p className='booking-accroomid__cardtop-text'>
-                        {bookingDetails && bookingDetails.roomCount} room
+                        {roomCount} room
                       </p>
                     </div>
                   </div>

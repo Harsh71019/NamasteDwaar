@@ -13,7 +13,6 @@ const booking = () => {
   const [checkout, setCheckout] = useState('');
   const [adult, setAdult] = useState('');
   const [child, setChild] = useState('');
-  const [roomCount, setRoomCount] = useState('');
 
   const adultsArray = [1, 2, 3, 4, 5];
   const childrenArray = [1, 2, 3, 4, 5];
@@ -55,10 +54,6 @@ const booking = () => {
       toast.error('Please select no of Children');
       return false;
     }
-    if (roomCount === '' || null || undefined) {
-      toast.error('Please select no of Rooms');
-      return false;
-    }
 
     if (Difference_In_Days < 1) {
       toast.error('Please select valid dates', Difference_In_Days);
@@ -77,7 +72,6 @@ const booking = () => {
         checkout: formatCheckout,
         adult,
         child,
-        roomCount,
         accomodation,
         firstname,
         lastname,
@@ -89,7 +83,6 @@ const booking = () => {
       setCheckout('');
       setAdult('');
       setChild('');
-      setRoomCount('');
       router.push('booking/select-accomodation');
     }
   };
@@ -157,7 +150,7 @@ const booking = () => {
                         />
                       </div>
                     </div>{' '}
-                    <div className='col-md-2 col-12 px-md-5 px-1'>
+                    <div className='col-md-3 col-12 px-md-5 px-1'>
                       <div className='d-flex flex-column'>
                         {' '}
                         <div></div>
@@ -188,7 +181,7 @@ const booking = () => {
                         </select>
                       </div>{' '}
                     </div>{' '}
-                    <div className='col-md-2 col-12 px-md-5 px-1'>
+                    <div className='col-md-3 col-12 px-md-5 px-1'>
                       <div className='d-flex flex-column'>
                         {' '}
                         <label
@@ -220,7 +213,7 @@ const booking = () => {
                         </select>
                       </div>{' '}
                     </div>{' '}
-                    <div className='col-md-2 col-12 px-md-5 px-1'>
+                    {/* <div className='col-md-2 col-12 px-md-5 px-1'>
                       <div className='d-flex flex-column'>
                         {' '}
                         <div></div>
@@ -253,7 +246,7 @@ const booking = () => {
                           })}
                         </select>
                       </div>{' '}
-                    </div>
+                    </div> */}
                   </div>
                   <div className='d-flex justify-content-center mt-5'>
                     <button onClick={submitForm} className=' mx-3 btn-default '>
