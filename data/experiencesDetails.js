@@ -9,7 +9,7 @@ export const experiencesDetails = [
     cards: [
       {
         id: 1,
-        title: 'The Machaan Lounge	',
+        title: 'The Machaan Lounge',
         description:
           'The soothing ambiance, the exceptional service, the elegant arrangements, partnered with an unparalleled view guarantees that this will become your go-to place to wind down after a hectic week. Enjoy mindful meals from the Wellness Kitchen or flavorful delights from Chakra. ',
         image:
@@ -17,7 +17,7 @@ export const experiencesDetails = [
       },
       {
         id: 2,
-        title: 'Chakra - All Day Diner	',
+        title: 'Chakra - All Day Diner',
         description:
           '	Chakra specializes in delicious Indian and Italian delicacies served in a comfortable and relaxed atmosphere - the indulgent food paired with our quick service makes this the perfect place for dining with friends and family.',
         image:

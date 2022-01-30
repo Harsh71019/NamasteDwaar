@@ -1,0 +1,42 @@
+.wellness-lp {
+  &__image {
+    width: 100%;
+  }
+
+  &__card {
+    margin-top: -10rem;
+
+    &-title {
+      font-family: Playfair Display;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #a64f02;
+      margin-bottom: 2.4rem;
+    }
+
+    &-desc {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 3.6rem;
+    }
+
+    &-duration {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
