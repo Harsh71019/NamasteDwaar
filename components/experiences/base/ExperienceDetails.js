@@ -19,7 +19,7 @@ const ExperienceDetails = ({ expId }) => {
   return (
     <>
       {exp && exp ? (
-        <section className='experience-top container'>
+        <section className='experience-top container mb-5'>
           <div className=''>
             <Hero
               image={exp.image}

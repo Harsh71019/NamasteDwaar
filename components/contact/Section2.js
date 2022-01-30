@@ -3,7 +3,7 @@ import ContactUsEnquiry from '../base/ContactUsEnquiry';
 
 const Section2 = () => {
   return (
-    <section className='contact-form'>
+    <section className='contact-form  mb-5'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-6 col-12'>

@@ -50,7 +50,14 @@ const Section4 = () => {
                         <div className='col-md-6 col-12 d-flex align-items-center'>
                           <div>
                             <h1 className='aboutus-section4__card-subtitle'>
-                              Award for Best New Hospitality
+                              Awarded ‘Best New Hospitality Product’ at IITM -
+                              India International Travel Mart 2019
+                            </h1>
+                            <h1 className='aboutus-section4__card-subtitle'>
+                              Accredited by NABH
+                            </h1>
+                            <h1 className='aboutus-section4__card-subtitle'>
+                              Accredited by Incredible India Initiative
                             </h1>
                             <p className='aboutus-section4__card-desc'>
                               -IITM, 2019

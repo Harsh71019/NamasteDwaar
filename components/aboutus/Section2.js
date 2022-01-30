@@ -15,6 +15,9 @@ const Section2 = () => {
                     className='aboutus-section2__card-img'
                   />
                 </div>
+                <h1 className='text-center mt-3 aboutus-section2__title fs16'>
+                  Namaste Kairali{' '}
+                </h1>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc'>
                     Namaste Group is proud to partner with Kairali Ayurvedic
@@ -42,7 +45,10 @@ const Section2 = () => {
                     src='https://res.cloudinary.com/harsh710/image/upload/v1642228840/namastedwaar/aupartners_dszd1k.png'
                     className='aboutus-section2__card-img'
                   />
-                </div>
+                </div>{' '}
+                <h1 className='text-center mt-3 aboutus-section2__title fs16'>
+                  The Art of Living by DSVV
+                </h1>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc'>
                     At Namaste Dwaar, one can learn pure yoga from one of
@@ -69,7 +75,10 @@ const Section2 = () => {
                     src='https://res.cloudinary.com/harsh710/image/upload/v1642228840/namastedwaar/aupartners_dszd1k.png'
                     className='aboutus-section2__card-img'
                   />
-                </div>
+                </div>{' '}
+                <h1 className='text-center mt-3 aboutus-section2__title fs16'>
+                  Uttar Pradesh Government
+                </h1>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc'>
                     Namaste Dwaar is dedicated to the preservation of the
