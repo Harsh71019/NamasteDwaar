@@ -3,7 +3,7 @@ import EnquiryForm from '../../components/base/EnquiryForm';
 
 const Section3 = () => {
   return (
-    <div className='container'>
+    <div className='container mb-5'>
       <div className='d-flex justify-content-center'>
         <EnquiryForm />
       </div>

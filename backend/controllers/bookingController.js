@@ -10,6 +10,16 @@ const Razorpay = require('razorpay');
 import dotenv from 'dotenv';
 dotenv.config();
 
+function getMaxRooms(adults, roomOccupancy) {
+  let room = numberOfAdults / maxOccupancy;
+  if (Number.isInteger(room)) {
+    return room;
+  }
+  if (!Number.isInteger(room)) {
+    return Math.ceil(room);
+  }
+}
+
 // Create new Booking   =>   /api/bookings
 const newBooking = catchAsyncErrors(async (req, res) => {
   const {
@@ -26,7 +36,9 @@ const newBooking = catchAsyncErrors(async (req, res) => {
   } = req.body;
 
   const accomodationDetails = await Accomodation.findById(accomodation);
-  const { pricePerNight, name } = accomodationDetails;
+  const { pricePerNight, name, maxOccupancy } = accomodationDetails;
+
+  const noOfRooms = getMaxRooms(adult, occupancy);
 
   const date1 = new Date(checkInDate);
   const date2 = new Date(checkOutDate);
@@ -34,7 +46,7 @@ const newBooking = catchAsyncErrors(async (req, res) => {
   const Difference_In_Days = Number(Difference_In_Time / (1000 * 3600 * 24));
 
   const amountGenerated =
-    Number(Difference_In_Days * pricePerNight) * Number(roomCount);
+    Number(Difference_In_Days * pricePerNight) * Number(noOfRooms);
   const gst = 0.18;
   const gstPrice = amountGenerated * gst;
   const totalPriceAfterGST = Math.round(
@@ -67,7 +79,7 @@ const newBooking = catchAsyncErrors(async (req, res) => {
     totalPrice: finalPrice,
     gst: gstPrice,
     razorPayOrderGenerate: order,
-    roomCount,
+    roomCount: noOfRooms,
     adult,
     child,
     orderID,

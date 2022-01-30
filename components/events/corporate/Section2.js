@@ -6,19 +6,16 @@ const Section2 = () => {
       <div className='container'>
         <div className='corporate-section2__para'>
           <p className='corporate-section2__para-desc'>
-            Our private living spaces have been carefully designed to integrate
-            luxury with wellness. Our rustic interiors have been crafted with
-            natural materials and thoughtful lighting, adorned with handcrafted
-            objects, and set with furniture and bedding of exceptional comfort.
-            Our private living spaces have been carefully designed to integrate
-            luxury with wellness. Our rustic interiors have been crafted with
-            natural materials and thoughtful lighting, adorned with handcrafted
-            objects, and set with furniture and bedding of exceptional comfort.{' '}
+            We have the flexibility to accommodate a wide range of meetings such
+            as: conferences, management meetings, board meetings, award
+            ceremonies, product launches, team-building events, meditation
+            sessions, as well as corporate & executive retreats, seminars and
+            corporate training workshops.
           </p>
         </div>
         <div className='corporate-section2__img'>
           <img
-            src='https://res.cloudinary.com/harsh710/image/upload/v1642236365/namastedwaar/eventsp2_vpycnq.png'
+            src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643486766/static/events/Events_Corporate_PDP_Amenities_kyhhh2.jpg'
             alt='corporate'
             className='corporate-section2__img-img'
           />
@@ -29,32 +26,30 @@ const Section2 = () => {
             <div className='col-md-6 col-12'>
               <ul>
                 <li className='corporate-section2__points-text'>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content.
+                  Our board rooms provide ample sunlight, are air-conditioned
+                  and tea and coffee can be served inside, all of which
+                  encourage productive work. Then, when one needs a break,
+                  individuals can walk through the farmlands to release stress
+                  and overcome mental blocks.
                 </li>
                 <li className='corporate-section2__points-text'>
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters.
-                </li>
-                <li className='corporate-section2__points-text'>
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum.{' '}
+                  We also offer exclusive Ayurveda treatments and wellness
+                  packages catering to the needs of our Corporate guests.
                 </li>
               </ul>
             </div>
             <div className='col-md-6 col-12'>
               <ul>
                 <li className='corporate-section2__points-text'>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content.
+                  Team Building done Right. Participate in team building
+                  activities that are fun, effective and are able to turn any
+                  distant group into a close-knit unit.
                 </li>
                 <li className='corporate-section2__points-text'>
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters.
-                </li>
-                <li className='corporate-section2__points-text'>
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum.{' '}
+                  For team building, in addition to our trust-based exercises,
+                  we have rope activities, various types of races, tug-of-war,
+                  scavenger hunts, map and compass readings, which are all great
+                  for encouraging productive working within groups.
                 </li>
               </ul>
             </div>

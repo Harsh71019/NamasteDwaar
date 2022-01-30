@@ -5,13 +5,10 @@ const Section1 = () => {
   return (
     <>
       <Hero
-        image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643285217/static/events/events_d3mufm.png'
+        image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643486766/static/events/Events_LP_Header_Banner_fm3wsp.jpg'
         heading='Events'
-        para='Our private living spaces have been carefully designed to
-                integrate luxury with wellness. Our rustic interiors have been
-                crafted with natural materials and thoughtful lighting, adorned
-                with handcrafted objects, and set with furniture and bedding of
-                exceptional comfort.'
+        para='	Namaste Dwaar presents a wide range of settings renowned for their space, privacy and service. Each event is carefully crafted by our team—whether intimate in scale or a large celebration — we can coordinate board meetings, conferences and retreats, arranging team-building activities and facilitating whatever is required by you.
+        Host your own truly unforgettable gathering and let us take care of every detail of your event’s progression—from conception to execution.'
       />
     </>
   );

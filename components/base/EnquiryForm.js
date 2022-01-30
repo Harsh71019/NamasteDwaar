@@ -22,7 +22,7 @@ const EnquiryForm = () => {
   return (
     <div className='enquiry-form'>
       <h1 className='enquiry-form__heading d-flex justify-content-center'>
-        Enquiry Form
+        Get in touch with us
       </h1>
       <form>
         <div className='row'>

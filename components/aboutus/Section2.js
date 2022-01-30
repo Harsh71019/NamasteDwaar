@@ -17,12 +17,18 @@ const Section2 = () => {
                 </div>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s. Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.{' '}
+                    Namaste Group is proud to partner with Kairali Ayurvedic
+                    Group (Estd. 1908), one of the most reputed wellness
+                    practitioners across India. Their award-winning Ayurvedic
+                    Healing Village in Palakkad has set the standard for
+                    wellness retreats worldwide, and now, with this new
+                    destination, the Healing Village at Namaste Dwaar offers a
+                    novel focus on relieving the negative ailments associated
+                    with modern-day living – some of the main areas of focus
+                    are: stress and its related illnesses, stomach conditions,
+                    migraines, knee pain, back pain, weight issues, and skin
+                    problems, all of which can be properly addressed with
+                    natural methods.
                   </p>
                 </div>
               </div>
@@ -39,12 +45,17 @@ const Section2 = () => {
                 </div>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s. Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.{' '}
+                    At Namaste Dwaar, one can learn pure yoga from one of
+                    India’s most esteemed institutions for preserving ancient
+                    Indian culture: Dev Sanskriti Vishwavidyalaya (DSVV). DSVV
+                    has created a powerful educational system based on
+                    scientific spirituality which aims to cultivate a culture of
+                    ethical, moral and spiritual transformation for its
+                    students. The programmes for Yoga and Ayurveda at Namaste
+                    Dwaar are taught by the DSVV faculty to ensure that all of
+                    our students acquire genuine knowledge and complete
+                    understanding of the true tenets and principles of these
+                    ancient bodies of wisdom.
                   </p>
                 </div>
               </div>
@@ -61,12 +72,12 @@ const Section2 = () => {
                 </div>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc'>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s. Lorem Ipsum is
-                    simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever
-                    since the 1500s.{' '}
+                    Namaste Dwaar is dedicated to the preservation of the
+                    environment and communities where it operates. With a
+                    personal mission to create and sustain livelihoods, our
+                    property ensures minimum exploitation of the ecosystem and
+                    maximum involvement of locals to encourage the prosperity of
+                    the rural sectors of Northern India.
                   </p>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import BookImage from '../../public/images/book.png';
 import BookImageMobile from '../../public/images/book-mobile.png';
 import Image from 'next/image';
+import EnquiryForm from '../base/EnquiryForm';
 
 const Section6 = () => {
   var date = new Date();
@@ -11,7 +12,12 @@ const Section6 = () => {
 
   return (
     <section className='py-5'>
-      <div className='container px-0'>
+      <div className='container px-2'>
+        <div className='d-flex justify-content-center'>
+          <EnquiryForm />
+        </div>
+      </div>
+      {/* <div className='container px-0'>
         <div className='section-5-image-container'>
           <div className='hbs'>
             <Image src={BookImage} layout='responsive' alt='book now' />
@@ -77,7 +83,7 @@ const Section6 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

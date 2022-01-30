@@ -15,17 +15,13 @@ const Section1 = () => {
               <div className='aboutus-section1__card-body'>
                 <h1 className='aboutus-section1__title'>About Us</h1>
                 <p className='aboutus-section1__desc'>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s. Lorem Ipsum is
-                  simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s. Lorem
-                  Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry's standard dummy
-                  text ever since the 1500s.{' '}
+                  Created with a purpose, Namaste Dwaar reconnects you back to
+                  the natural world and takes you to the setting where your
+                  wellness, personal growth, and happiness can re-emerge. Our
+                  mission is to preserve the authenticity of India’s most
+                  powerful healing components: Village life, Ayurveda and Yoga,
+                  and to allow for these strengths to be used for the benefit of
+                  all.
                 </p>
                 <h2 className='aboutus-section1__subtitle'>Our Pillars</h2>
                 <p className='aboutus-section1__tag'>Ayurveda</p>

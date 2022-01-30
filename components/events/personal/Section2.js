@@ -6,19 +6,17 @@ const Section2 = () => {
       <div className='container'>
         <div className='personal-section2__para'>
           <p className='personal-section2__para-desc'>
-            Our private living spaces have been carefully designed to integrate
-            luxury with wellness. Our rustic interiors have been crafted with
-            natural materials and thoughtful lighting, adorned with handcrafted
-            objects, and set with furniture and bedding of exceptional comfort.
-            Our private living spaces have been carefully designed to integrate
-            luxury with wellness. Our rustic interiors have been crafted with
-            natural materials and thoughtful lighting, adorned with handcrafted
-            objects, and set with furniture and bedding of exceptional comfort.{' '}
+            Make use of the picturesque view and our open banquet spaces to
+            create picture-perfect functions for up to 130 guests. There are a
+            variety of options available for private dining, social gatherings,
+            and personal events. For smaller events you can either take over the
+            whole lounge, a section of it or have private dining set up in your
+            room.
           </p>
         </div>
         <div className='personal-section2__img'>
           <img
-            src='https://res.cloudinary.com/harsh710/image/upload/v1642236364/namastedwaar/eventsp1_tsat22.png'
+            src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643486766/static/events/Events_Personal_PDP_2jpg_rlc8qg.jpg'
             alt='personal'
             className='personal-section2__img-img'
           />
@@ -29,32 +27,21 @@ const Section2 = () => {
             <div className='col-md-6 col-12'>
               <ul>
                 <li className='personal-section2__points-text'>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content.
+                  Utsav Banquet Hall - 3250 square feet
                 </li>
                 <li className='personal-section2__points-text'>
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters.
+                  Machaan Lounge - 4300 square feet
                 </li>
-                <li className='personal-section2__points-text'>
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum.{' '}
-                </li>
+                <li className='personal-section2__points-text'>Fursat Bar</li>
               </ul>
             </div>
             <div className='col-md-6 col-12'>
               <ul>
                 <li className='personal-section2__points-text'>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content.
+                  Prakriti Yoga Hall - 1450 square feet
                 </li>
                 <li className='personal-section2__points-text'>
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters.
-                </li>
-                <li className='personal-section2__points-text'>
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum.{' '}
+                  Outdoor banquet space
                 </li>
               </ul>
             </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { experiencesDetails } from '../../../data/experiencesDetails';
 import Loader from '../../base/Loader';
+import Hero from '../../base/Hero';
 
 const ExperienceDetails = ({ expId }) => {
   const [exp, setExp] = useState(undefined);
@@ -20,13 +21,18 @@ const ExperienceDetails = ({ expId }) => {
       {exp && exp ? (
         <section className='experience-top container'>
           <div className=''>
-            <div className='experiences-top__image'>
+            <Hero
+              image={exp.image}
+              heading={exp.mainTitle}
+              para={exp.mainDescription}
+            />
+            {/* <div className='experiences-top__image'>
               <img src={exp.image} className='experience-top__image-image' />
               <h1 className='experience-top__image-heading'>{exp.mainTitle}</h1>
               <p className='experience-top__image-desc'>
                 {exp.mainDescription}
               </p>
-            </div>
+            </div> */}
           </div>
           <div>
             {exp &&

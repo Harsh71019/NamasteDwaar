@@ -72,16 +72,16 @@ const NavbarTop = () => {
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
-                    <Link href='/experiences'>Fitness & Recreation </Link>
+                    <Link href='/experiences/2'>Fitness & Recreation </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
-                    <Link href='/experiences'>Countryside Getaway </Link>
+                    <Link href='/experiences/4'>Countryside Getaway </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
-                    <Link href='/experiences'>Signature Dining </Link>
+                    <Link href='/experiences/1'>Signature Dining </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
-                    <Link href='/experiences'>Art at Dwaar </Link>
+                    <Link href='/experiences/3'>Art at Dwaar </Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
