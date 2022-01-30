@@ -13,7 +13,7 @@ import Loader from '../../components/base/Loader';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/router';
 import moment from 'moment';
-
+import dotenv from 'dotenv';
 const details = () => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
@@ -33,6 +33,8 @@ const details = () => {
     error,
     accomodationDetails: { accomodation },
   } = useSelector((state) => state.accomodationDetailsReducer);
+
+  dotenv.config();
 
   function checkForm() {
     if (firstname === '' || null || undefined) {
@@ -157,7 +159,7 @@ const details = () => {
       } = result.data.booking;
 
       const options = {
-        key: 'rzp_test_ZbqY6ZWkV1MZxD', // Enter the Key ID generated from the Dashboard
+        key: process.env.RAZORPAY_API_KEYID, // Enter the Key ID generated from the Dashboard
         amount: totalPrice.toString(),
         currency: currency,
         name: 'Namaste Dwaar',
