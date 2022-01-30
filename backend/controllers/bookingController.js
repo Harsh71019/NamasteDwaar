@@ -35,9 +35,9 @@ const newBooking = catchAsyncErrors(async (req, res) => {
   } = req.body;
 
   const accomodationDetails = await Accomodation.findById(accomodation);
-  const { pricePerNight, name, maxOccupancy } = accomodationDetails;
+  const { pricePerNight, name, occupancy } = accomodationDetails;
 
-  const noOfRooms = getMaxRooms(adult, maxOccupancy);
+  const noOfRooms = getMaxRooms(adult, occupancy);
 
   const date1 = new Date(checkInDate);
   const date2 = new Date(checkOutDate);
@@ -136,7 +136,7 @@ const verifyPaymentAccomodation = catchAsyncErrors(async (req, res, next) => {
 });
 
 const getAllBookingsAdmin = catchAsyncErrors(async (req, res) => {
-  const booking = await Booking.find();
+  const booking = await Booking.find().sort({ _id: -1 });
 
   res.status(200).json({
     success: true,

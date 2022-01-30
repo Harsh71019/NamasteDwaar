@@ -17,11 +17,12 @@ export default function Home() {
         <Section2 />
         <Heading title='Experiences' />
         <Section3 />
-        <Section6 />
         <Heading title='Testimonials' />
         <Section4 />
-        <Heading title='Partnered Brands' />
-        <Section5 />
+        <Section6 />
+
+        {/* <Heading title='Partnered Brands' />
+        <Section5 /> */}
         <Footer />
       </div>
     </>
