@@ -96,28 +96,29 @@ const NavbarTop = () => {
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    All Treatments
+                    <Link href='/wellness'>All Treatments</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Ayurvedic Treatments
+                    <Link href='/wellness'>Ayurvedic Treatments</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Ayurvedic Treatments
+                    <Link href='/wellness'>Ayurvedic Treatments</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Pain Management
+                    <Link href='/wellness'>Pain Management</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Weight Management
+                    <Link href='/wellness'>Weight Management</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    De-stress & Relaxation Packages
+                    <Link href='/wellness'> De-stress & Relaxation</Link>
+                    Packages
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Arthritis Management
+                    <Link href='/wellness'> Arthritis Management</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi3'>
-                    Diabetes Management
+                    <Link href='/wellness'>Diabetes Management</Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
