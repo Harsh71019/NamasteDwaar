@@ -38,7 +38,7 @@ const newBooking = catchAsyncErrors(async (req, res) => {
   const accomodationDetails = await Accomodation.findById(accomodation);
   const { pricePerNight, name, maxOccupancy } = accomodationDetails;
 
-  const noOfRooms = getMaxRooms(adult, occupancy);
+  const noOfRooms = getMaxRooms(adult, maxOccupancy);
 
   const date1 = new Date(checkInDate);
   const date2 = new Date(checkOutDate);
