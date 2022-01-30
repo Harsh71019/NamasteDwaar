@@ -3,13 +3,13 @@ import React from 'react';
 
 const Section2 = () => {
   return (
-    <section className='events-section2'>
+    <section className='events-section2' style={{ marginTop: '7rem' }}>
       <div className='container'>
         <div className='row  events-section2__row'>
           <div className='col-md-4 col-12  d-flex justify-content-center align-items-center'>
             <div className='events-section2__card'>
               <div className='events-section2__card-body '>
-                <div className=''>
+                <div>
                   <h1 className='events-section2__card-heading'>Personal</h1>
                   <p className='events-section2__card-para '>
                     Relish every moment spent with your friends and family. We

@@ -15,7 +15,7 @@
         $size: 3.6rem,
         $style: normal,
         $weight: 700,
-        $height: 4.4,
+        $height: 4.4rem,
         $letterSpacing: 0,
         $align: left,
         $color: #fff
@@ -28,6 +28,16 @@
 }
 
 .personal-section2 {
+  &__heading {
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
   &__para {
     margin-top: 9rem;
     margin-bottom: 9rem;

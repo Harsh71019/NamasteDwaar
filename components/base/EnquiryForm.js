@@ -21,10 +21,16 @@ const EnquiryForm = () => {
 
   return (
     <div className='enquiry-form'>
-      <h1 className='enquiry-form__heading d-flex justify-content-center'>
+      <div className='d-flex justify-content-center'>
+        <hr className='booking-accroomid__rooms-hr' />
+      </div>
+      <h1
+        className='enquiry-form__heading d-flex justify-content-center'
+        style={{ marginTop: '72px', marginBottom: '67px' }}
+      >
         Get in touch with us
       </h1>
-      <form>
+      <form className='p-md-1 p-5'>
         <div className='row'>
           <div className='col-md-6 col-12'>
             <div className='col-12 d-flex flex-column'>

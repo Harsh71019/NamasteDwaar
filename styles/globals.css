@@ -185,6 +185,11 @@ a {
 
 /* End */
 /* Start of section 2 */
+
+.homesection-2 {
+  margin-top: 13.2rem;
+}
+
 .section-2 {
   max-width: 800px;
 }
@@ -238,6 +243,8 @@ a {
   padding: 8px 10px;
   width: 128px;
   justify-content: center;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .overlay-card {
@@ -494,10 +501,17 @@ a {
     border: none;
     padding: 10px 10px;
     justify-content: center;
+    height: 36px;
+    width: 128px;
   }
   /*End of Nav */
 
   /* Start of section 1 */
+
+  .homesection-2 {
+    margin-top: 7.7rem;
+  }
+
   .section-2 {
     padding: 50px 30px;
   }

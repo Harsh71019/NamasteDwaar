@@ -23,7 +23,9 @@ const Section3 = () => {
                 is interconnected, hence our wellness approach comprises of
                 Naturopathy, massage, Ayurveda, Yoga and more.
               </p>
-              <button className='my-4 section-3__button'>Explore Now</button>
+              <button className='my-4 section-3__button text-uppercase'>
+                Explore Now
+              </button>
             </div>
           </div>
         </div>
@@ -41,7 +43,9 @@ const Section3 = () => {
                 experiences such as Yoga, Meditation and more programmes that
                 are guaranteed to melt away your everyday stress.
               </p>
-              <button className='my-4 section-3__button'>Explore Now</button>
+              <button className='my-4 section-3__button text-uppercase'>
+                Explore Now
+              </button>
             </div>
           </div>
           <div className='col-md-8 col-12 order-0 order-md-1 d-flex align-items-center justify-content-md-center justify-content-end '>
@@ -73,7 +77,9 @@ const Section3 = () => {
                 to provide our guests with the most comfortable and pleasurable
                 stay away from the city.
               </p>
-              <button className='my-4 section-3__button'>Explore Now</button>
+              <button className='my-4 section-3__button text-uppercase'>
+                Explore Now
+              </button>
             </div>
           </div>
         </div>{' '}

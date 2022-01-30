@@ -5,6 +5,7 @@ const Section2 = () => {
     <section className='personal-section2'>
       <div className='container'>
         <div className='personal-section2__para'>
+          <h1 className='personal-section2__heading sss'>Personal</h1>
           <p className='personal-section2__para-desc'>
             Make use of the picturesque view and our open banquet spaces to
             create picture-perfect functions for up to 130 guests. There are a

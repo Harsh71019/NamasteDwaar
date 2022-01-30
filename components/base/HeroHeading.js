@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeroHeading = ({ image, heading }) => {
+const HeroHeading = ({ image, heading, isHeading }) => {
   return (
     <>
       <section className='hero-heading'>

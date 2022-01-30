@@ -2,12 +2,12 @@ import React from 'react';
 
 const Section2 = () => {
   return (
-    <section className='aboutus-section2'>
+    <section className='aboutus-section2' id='our-partners'>
       <div className='container'>
         <h1 className='aboutus-section2__title'>Our Partners</h1>
         <div className='row d-flex justify-content-center'>
           <div className='col-md-4 col-12 aboutus-section2__row'>
-            <div className='aboutus-section2__card'>
+            <div className='aboutus-section2__card h-100'>
               <div className='aboutus-section2__card-body'>
                 <div className='aboutus-section2__card-imgcont d-flex justify-content-center'>
                   <img
@@ -38,11 +38,11 @@ const Section2 = () => {
             </div>
           </div>
           <div className='col-md-4 col-12 aboutus-section2__row'>
-            <div className='aboutus-section2__card'>
+            <div className='aboutus-section2__card h-100'>
               <div className='aboutus-section2__card-body'>
                 <div className='aboutus-section2__card-imgcont d-flex justify-content-center'>
                   <img
-                    src='https://res.cloudinary.com/harsh710/image/upload/v1642228840/namastedwaar/aupartners_dszd1k.png'
+                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563400/static/About%20us/About_Us_Our_Partners_DSVV_Logo_bdj6rs.jpg'
                     className='aboutus-section2__card-img'
                   />
                 </div>{' '}
@@ -68,11 +68,11 @@ const Section2 = () => {
             </div>
           </div>
           <div className='col-md-4 col-12 aboutus-section2__row'>
-            <div className='aboutus-section2__card'>
+            <div className='aboutus-section2__card h-100'>
               <div className='aboutus-section2__card-body'>
                 <div className='aboutus-section2__card-imgcont d-flex justify-content-center'>
                   <img
-                    src='https://res.cloudinary.com/harsh710/image/upload/v1642228840/namastedwaar/aupartners_dszd1k.png'
+                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563400/static/About%20us/About_Us_Our_Partners_UP_Logo_ijo2z0.jpg'
                     className='aboutus-section2__card-img'
                   />
                 </div>{' '}

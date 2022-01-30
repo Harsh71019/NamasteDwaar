@@ -11,9 +11,9 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className='footer '>
-      <div className='container d-flex justify-content-center pt-5'>
+      <div className='container d-flex justify-content-center'>
         <div className='footer-container'>
-          <div className='row '>
+          <div className='row' style={{ marginTop: '38px' }}>
             <div className='col-6 d-flex justify-content-center'>
               <div>
                 <Image src={Logo1} alt='logo' />
@@ -25,13 +25,16 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className='row mt-5'>
             <span className='text-center footer-bold my-2'>Namaste Dwaar</span>
             <p className='text-center footer-para'>
               NH-58, Delhi - Haridwar Highway, Mansurpur, Uttar Pradesh 251203
             </p>
-            <hr className='footer-hr' />
-            <div className='footer-links d-flex flex-column'>
+            <hr className='footer-hr' style={{ marginTop: '19px' }} />
+            <div
+              className='footer-links d-flex flex-column'
+              style={{ marginTop: '19px' }}
+            >
               <Link href='/'>
                 <a className='footer-link'>About Us</a>
               </Link>
@@ -53,7 +56,12 @@ const Footer = () => {
               </Link>
             </div>
 
-            <span className='text-center footer-bold my-2'>Contact Us</span>
+            <span
+              className='text-center footer-bold mb-2'
+              style={{ marginTop: '20px' }}
+            >
+              Contact Us
+            </span>
             <span className='text-center footer-para my-1'>
               +91 98184 380001
             </span>
@@ -81,7 +89,10 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className='text-center footer-para mt-3'>
+            <p
+              className='text-center footer-para'
+              style={{ marginTop: '35px' }}
+            >
               <span className='me-3'> 2021 © Copyright Namaste Dwaar </span>
               <span>Site by didyousayonline</span>
             </p>

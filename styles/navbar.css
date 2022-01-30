@@ -16,6 +16,15 @@
   display: none;
 }
 
+.nav-item:hover .dropdown-menu {
+  display: block !important;
+}
+
+.position-static {
+  display: flex;
+  justify-content: center;
+}
+
 .dropdown-button-nav.btn-primary.dropdown-toggle {
   background-color: transparent;
   border: none;
@@ -88,6 +97,10 @@
   background: var(--primary-background);
 }
 
+.position-static {
+  margin-right: 2.4rem;
+}
+
 .primary-button {
   font-family: Montserrat;
   font-style: normal;
@@ -101,9 +114,10 @@
   color: #ffffff;
   background: var(--primary-color);
   border: none;
-  padding: 5px 10px;
-  width: 128px;
+  padding: 10px 10px;
   justify-content: center;
+  height: 36px;
+  width: 128px;
 }
 
 .nav-links {
@@ -165,9 +179,10 @@
   line-height: 17px;
   letter-spacing: 0em;
   text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: auto;
+  margin-top: 8px;
 }
 
 .dropdown-item:hover {
@@ -182,19 +197,37 @@
   background-color: transparent !important;
 }
 .ddi1 {
-  margin-left: calc(32% + 100px);
+  margin-left: calc(21% + 100px);
 }
 .ddi2 {
-  margin-left: calc(55% - 100px);
+  margin-left: calc(46% - 100px);
 }
 .ddi3 {
-  margin-left: calc(64% - 100px);
+  margin-left: calc(57% - 100px);
 }
 .ddi4 {
-  margin-left: calc(74% - 100px);
+  margin-left: calc(68.5% - 100px);
 }
 .ddi5 {
-  margin-left: calc(80% - 100px);
+  margin-left: calc(77% - 100px);
+}
+
+@media only screen and (max-width: 1400px) {
+  .ddi1 {
+    margin-left: calc(9% + 100px);
+  }
+  .ddi2 {
+    margin-left: calc(37% - 100px);
+  }
+  .ddi3 {
+    margin-left: calc(50% - 100px);
+  }
+  .ddi4 {
+    margin-left: calc(63.5% - 100px);
+  }
+  .ddi5 {
+    margin-left: calc(73% - 100px);
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -290,6 +323,11 @@
   }
 
   /*End of Nav */
+
+  .position-static {
+    display: block;
+    justify-content: center;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
