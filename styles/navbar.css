@@ -327,6 +327,7 @@
   .position-static {
     display: block;
     justify-content: center;
+    margin-right: 0;
   }
 }
 

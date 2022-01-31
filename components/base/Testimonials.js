@@ -10,7 +10,7 @@ const Testimonials = () => {
           <div className='border-section-4 p-2'>
             <div className='section-4-row'>
               <div className='section-4-row row'>
-                <div className='section-4-image-container d-flex justify-content-center w-100 my-4'>
+                <div className='section-4-image-container d-flex justify-content-center w-100'>
                   <Image src={Person} layout='fixed' alt='review' />
                 </div>
                 <p className='text-center section-4-review'>

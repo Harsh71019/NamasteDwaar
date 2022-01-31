@@ -9,7 +9,7 @@ const Section3 = () => {
         <div className='row'>
           <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
             <img
-              className='w-100'
+              className='w-100 section-3-home-image'
               src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643489615/static/home/Homepage_Experiences_Wellness_Programmes_gmkixx.jpg'
             />
           </div>
@@ -50,7 +50,7 @@ const Section3 = () => {
           </div>
           <div className='col-md-8 col-12 order-0 order-md-1 d-flex align-items-center justify-content-md-center justify-content-end '>
             <img
-              className='w-100'
+              className='w-100 section-3-home-image'
               src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643489615/static/home/Homepage_Experiences_Natural_Healing_g2pa8e.jpg'
             />
           </div>
@@ -62,7 +62,7 @@ const Section3 = () => {
         <div className='row'>
           <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
             <img
-              className='w-100'
+              className='w-100 section-3-home-image'
               src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643489615/static/home/Homepage_Experiences_Countryside_Getaway_k4nhn3.jpg'
             />
           </div>

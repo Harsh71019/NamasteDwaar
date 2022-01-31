@@ -63,7 +63,7 @@ export const experiencesDetails = [
     mainDescription:
       'Embracing the personalised physical movement as an essential part of a wellness lifestyle, where we can live a long, active life, truly living in the body, and reaching our potential in every way. We have a range of Indoor and Outdoor activities ready to boost your energy and vitality during your stay.	',
     image:
-      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643525325/static/Experiences/Experiences_LP_Fitness_avwlhy.jpg',
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643485839/static/Experiences/Experiences_LP_Fitness_avwlhy.jpg',
     cards: [
       {
         id: 1,

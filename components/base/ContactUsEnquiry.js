@@ -24,9 +24,9 @@ const ContactUsEnquiry = () => {
       <h1 className='enquiry-form__heading'>Enquiry Form</h1>
       <form
         onSubmit={submitForm}
-        className='d-flex justify-content-center align-items-center'
+        className='d-flex justify-content-center align-items-center p-md-1 p-5'
       >
-        <div className='row '>
+        <div className='row'>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
               Name*

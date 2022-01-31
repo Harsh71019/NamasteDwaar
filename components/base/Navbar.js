@@ -193,7 +193,7 @@ const NavbarTop = () => {
               </Dropdown>
 
               <Link href='/contactus'>
-                <a className='d-flex position-static justify-content-md-center justify-content-md-start align-items-center dropdown-button-nav'>
+                <a className='d-flex position-static justify-content-md-center justify-content-start align-items-center dropdown-button-nav'>
                   Contact Us
                 </a>
               </Link>
@@ -227,7 +227,9 @@ const NavbarTop = () => {
                 </Dropdown.Menu>
               </Dropdown> */}
               <Link href='/booking'>
-                <button className='primary-button hbs ms-3'>Book Now</button>
+                <button className='primary-button hbs ms-0 ms-md-3'>
+                  Book Now
+                </button>
               </Link>
             </Nav>
           </Navbar.Collapse>
