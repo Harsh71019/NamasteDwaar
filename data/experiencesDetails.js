@@ -6,6 +6,10 @@ export const experiencesDetails = [
       'Authentic Flavours with the Finest Ingredients The Wellness Kitchen is our special undertaking which promotes mindful eating. It is the healing wisdom from our Motherland, the traditions of our villages, combined with the culinary experience of our world-travelled chefs, which have brought into existence something unique and profound for your enjoyment. Our menu will satisfy your taste buds while completely nourishing you from within.',
     image:
       'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643485839/static/Experiences/Experiences_PDP_Signature_Dining_Header_gumg0y.jpg',
+
+    imageDetails:
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643568915/static/Experiences/Signature%20Dining/Experiences_PDP_Signature_Dining_Header_r3ndcs.jpg',
+
     cards: [
       {
         id: 1,
@@ -64,6 +68,9 @@ export const experiencesDetails = [
       'Embracing the personalised physical movement as an essential part of a wellness lifestyle, where we can live a long, active life, truly living in the body, and reaching our potential in every way. We have a range of Indoor and Outdoor activities ready to boost your energy and vitality during your stay.	',
     image:
       'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643525325/static/Experiences/Experiences_LP_Fitness_avwlhy.jpg',
+    imageDetails:
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643565535/static/Experiences/Fitness%20and%20Recreation/Experiences_PDP_Fitness_header_juqiij.jpg',
+
     cards: [
       {
         id: 1,
@@ -106,6 +113,9 @@ export const experiencesDetails = [
       'Immerse yourself in inspiring surroundings inside and outside. From beautiful architecture to picturesque outdoors to creative painting, pottery, weaving workshops, connect with your inner artist at Namaste Dwaar.	',
     image:
       'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643485838/static/Experiences/Experiences_PDP_Art_at_Dwaar_Namaste_Haat_ajspru.jpg',
+    imageDetails:
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643569360/static/Experiences/Art%20at%20Dwaar/Experiences_PDP_Art_at_Dwaar_Namaste_Haat_rawoxw.jpg',
+
     cards: [
       {
         id: 1,
@@ -147,6 +157,9 @@ export const experiencesDetails = [
       'Disconnect from the daily humdrum and drive out to Namaste Dwaar which is tucked in the middle of lush greenlands amongst the locals rich in Indian culture and heritage.    ',
     image:
       'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643485840/static/Experiences/Experiences_LP_Countryside_getaway_lrocae.jpg',
+    imageDetails:
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643565934/static/Experiences/Countryside%20Getaway/Experiences_PDP_Countryside_Getaway_Header_gqggq0.jpg',
+
     cards: [
       {
         id: 1,
