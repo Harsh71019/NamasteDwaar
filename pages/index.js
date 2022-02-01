@@ -17,8 +17,10 @@ export default function Home() {
         <Section1 />
         <Section2 />
         <Section3 />
-        <Heading title='Testimonials' />
-        <Section4 />
+        {/* <Heading title='Testimonials' /> */}
+        <div className='testimonials' style={{ marginTop: '10rem' }}>
+          <Section4 />
+        </div>
         <CovidSection />
         <Section6 />
 
