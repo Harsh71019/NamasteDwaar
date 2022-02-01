@@ -14,36 +14,36 @@ const Section3 = () => {
             />
           </div>
           <div className='col-md-4 col-12 align-items-center d-flex column flex-column justify-content-center '>
-            <div className='section3-card p-md-3 p-2'>
-              <h1 className='section-3-heading my-2'>Wellness Programmes </h1>
-              <p className='my-2 primary-text'>
+            <div className='section3-card'>
+              <h1 className='section-3-heading'>Wellness Programmes </h1>
+              <p className='primary-text'>
                 Experience our unique approach to wellness which combines
                 ancient traditions with Western medical research to achieve
                 life-enhancing results. We believe that every aspect of health
                 is interconnected, hence our wellness approach comprises of
                 Naturopathy, massage, Ayurveda, Yoga and more.
               </p>
-              <button className='my-4 section-3__button text-uppercase'>
+              <button className='section-3__button text-uppercase'>
                 Explore Now
               </button>
             </div>
           </div>
         </div>
-        <div className='d-flex justify-content-center w-100 my-md-1 my-5'>
+        <div className='d-flex justify-content-center w-100'>
           <hr className='hr-section-3' />
         </div>{' '}
         {/* Reverse Start */}
         <div className='row '>
           <div className='col-md-4 col-12 align-items-center d-flex flex-column justify-content-center order-1 order-md-0'>
-            <div className='section3-card p-md-3 p-2'>
-              <h1 className='section-3-heading my-2'>Relax and Rejuvenate </h1>
-              <p className='my-2 primary-text'>
+            <div className='section3-card'>
+              <h1 className='section-3-heading'>Relax and Rejuvenate </h1>
+              <p className='primary-text'>
                 Indulge in exclusive experiences for complete relaxation and
                 rejuvenation. Namaste Dwaar offers many multi-sensory
                 experiences such as Yoga, Meditation and more programmes that
                 are guaranteed to melt away your everyday stress.
               </p>
-              <button className='my-4 section-3__button text-uppercase'>
+              <button className='section-3__button text-uppercase'>
                 Explore Now
               </button>
             </div>
@@ -55,9 +55,9 @@ const Section3 = () => {
             />
           </div>
         </div>
-        <div className='d-flex justify-content-center w-100 my-md-1 my-5'>
+        <div className='d-flex justify-content-center w-100'>
           <hr className='hr-section-3' />
-        </div>{' '}
+        </div>
         {/* Reverse end */}
         <div className='row'>
           <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
@@ -67,9 +67,9 @@ const Section3 = () => {
             />
           </div>
           <div className='col-md-4 col-12 align-items-center d-flex column flex-column justify-content-center '>
-            <div className='section3-card p-md-3 p-2'>
-              <h1 className='section-3-heading my-2'>Countryside Getaway </h1>
-              <p className='my-2 primary-text'>
+            <div className='section3-card'>
+              <h1 className='section-3-heading'>Countryside Getaway </h1>
+              <p className='primary-text'>
                 Experience the rich Indian heritage and culture in this premium
                 retreat located in the heart of the village. Every corner at the
                 property is adorned with handcrafted objects and decorations,
@@ -77,7 +77,7 @@ const Section3 = () => {
                 to provide our guests with the most comfortable and pleasurable
                 stay away from the city.
               </p>
-              <button className='my-4 section-3__button text-uppercase'>
+              <button className='section-3__button text-uppercase'>
                 Explore Now
               </button>
             </div>

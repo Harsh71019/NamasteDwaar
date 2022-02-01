@@ -28,14 +28,14 @@ const EnquiryForm = () => {
         className='enquiry-form__heading d-flex justify-content-center'
         style={{ marginTop: '72px', marginBottom: '67px' }}
       >
-        Get in touch with us
+        Make an enquiry
       </h1>
       <form className='p-md-1 p-5'>
         <div className='row'>
           <div className='col-md-6 col-12'>
             <div className='col-12 d-flex flex-column'>
               <label className='enquiry-form__label' htmlFor='name'>
-                Name*
+                Name <span className='text-danger'>* </span>
               </label>
               <input
                 className='enquiry-form__input'
@@ -50,7 +50,7 @@ const EnquiryForm = () => {
             </div>
             <div className='col-12 d-flex flex-column'>
               <label className='enquiry-form__label' htmlFor='name'>
-                Mobile Number*
+                Mobile Number <span className='text-danger'>* </span>
               </label>
               <input
                 className='enquiry-form__input'
@@ -67,7 +67,7 @@ const EnquiryForm = () => {
             </div>
             <div className='col-12 d-flex flex-column'>
               <label className='enquiry-form__label' htmlFor='name'>
-                Email Id*
+                Email Id <span className='text-danger'>* </span>
               </label>
               <input
                 className='enquiry-form__input'
@@ -84,7 +84,7 @@ const EnquiryForm = () => {
           <div className='col-md-6 col-12'>
             <div className='col-12 d-flex flex-column'>
               <label className='enquiry-form__label' htmlFor='name'>
-                Message*
+                Message <span className='text-danger'>* </span>
               </label>
               <textarea
                 className='enquiry-form__textarea'
@@ -95,7 +95,7 @@ const EnquiryForm = () => {
                 rows='8'
                 cols='50'
                 required
-                placeholder='Enter your message here*'
+                placeholder='Enter your message here <span>* </span>'
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>

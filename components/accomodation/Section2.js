@@ -23,7 +23,7 @@ const Section2 = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className='section2-acc'>
+        <section className='section2-acc mb-5'>
           <div className='container'>
             <div className='row d-flex justify-content-center align-items-center'>
               {accomodationList &&
@@ -53,7 +53,7 @@ const Section2 = () => {
                                 {accomodate.name}
                                 <br />
                                 <span className='section-1-acc-sqmt'>
-                                  {accomodate.roomSize} Sq.mt.
+                                  {accomodate.roomSize} Sq.ft.
                                 </span>
                               </span>
                             </div>
@@ -69,9 +69,6 @@ const Section2 = () => {
                     </div>
                   </Link>
                 ))}
-            </div>
-            <div className='section-acc-button__container row d-flex justify-content-center align-items-center'>
-              <button className='section-acc-button'>Book Now</button>
             </div>
           </div>
         </section>

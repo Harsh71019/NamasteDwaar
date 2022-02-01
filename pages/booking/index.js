@@ -15,7 +15,7 @@ const booking = () => {
   const [child, setChild] = useState('');
 
   const adultsArray = [1, 2, 3, 4, 5];
-  const childrenArray = [1, 2, 3, 4, 5];
+  const childrenArray = [0, 1, 2, 3, 4, 5];
   const roomsArray = [1, 2, 3, 4, 5];
   const dispatch = useDispatch();
   const router = useRouter();

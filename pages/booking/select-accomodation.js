@@ -150,7 +150,7 @@ const selectaccomodation = () => {
                                     {accomodate?.name}
                                   </h1>
                                   <p className='booking-accroomid__rooms-size'>
-                                    Room size-{accomodate?.roomSize} Sq.mt.
+                                    Room size-{accomodate?.roomSize} Sq.ft.
                                   </p>
                                   <p className='booking-accroomid__rooms-desc'>
                                     {accomodate?.description}

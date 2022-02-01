@@ -221,30 +221,28 @@ a {
   border: 1px solid #a64f02;
   width: 45%;
   text-align: center;
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
 }
 
 .section3-card {
   background: #fff;
+  padding: 4rem 9rem 6.4rem 3rem;
 }
 
 .section-3__button {
   font-family: Montserrat;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
   line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.07em;
+  text-align: center;
   color: #ffffff;
   background: var(--secondary-color);
+  padding: 0.4rem 1.6rem;
   border: none;
-  padding: 8px 10px;
-  width: 128px;
-  justify-content: center;
-  white-space: nowrap;
-  text-align: center;
+  margin-top: 1.6rem;
 }
 
 .overlay-card {
@@ -264,6 +262,7 @@ a {
   letter-spacing: 0.055em;
   text-align: left;
   color: var(--secondary-color);
+  margin-bottom: 1.2rem;
 }
 
 .section-3-home-image {
@@ -561,6 +560,11 @@ a {
   .section-3-home-image {
     height: 224px;
     object-fit: cover;
+  }
+
+  .hr-section-3 {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
   }
 
   /* End of section-3 */

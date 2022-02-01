@@ -1,6 +1,7 @@
 import React from 'react';
 import { wellnessDetails } from '../../data/wellnessDetails';
 import Link from 'next/link';
+import EnquiryForm from '../base/EnquiryForm';
 
 const Section1 = () => {
   return (
@@ -48,6 +49,9 @@ const Section1 = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className='d-flex justify-content-center'>
+          <EnquiryForm />
         </div>
       </section>
     </>

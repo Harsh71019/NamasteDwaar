@@ -16,12 +16,18 @@ const Footer = () => {
           <div className='row' style={{ marginTop: '38px' }}>
             <div className='col-6 d-flex justify-content-center'>
               <div>
-                <Image src={Logo1} alt='logo' />
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/Namaste_Kairali_yizpwt.png'
+                  alt='Namaste Kairali'
+                />
               </div>
             </div>
             <div className='col-6 d-flex justify-content-center'>
               <div>
-                <Image src={Logo2} alt='logo' />
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/UP_Logo_liotpc.png'
+                  alt='Uttar Pradesh Government'
+                />
               </div>
             </div>
           </div>
@@ -35,11 +41,11 @@ const Footer = () => {
               className='footer-links d-flex flex-column'
               style={{ marginTop: '19px' }}
             >
-              <Link href='/'>
+              <Link href='/aboutus'>
                 <a className='footer-link'>About Us</a>
               </Link>
 
-              <Link href='/'>
+              <Link href='/aboutus#aboutus-gallery'>
                 <a className='footer-link'>gallery</a>
               </Link>
 
@@ -71,21 +77,37 @@ const Footer = () => {
             <div className='footer-socials my-3'>
               <div className='d-flex justify-content-center'>
                 <div className='mx-3'>
-                  <Image src={Facebook} alt='linkedin' width='24' height='24' />
+                  <Link href='/'>
+                    <img
+                      src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/facebook_ojo3na.png'
+                      alt='linkedin'
+                    />
+                  </Link>
                 </div>
                 <div className='mx-3'>
-                  <Image src={Whatsapp} alt='linkedin' width='24' height='24' />
+                  <Link href='/'>
+                    <img
+                      src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/watsapp_vwgauj.png'
+                      alt='linkedin'
+                    />
+                  </Link>
                 </div>
                 <div className='mx-3'>
-                  <Image
-                    src={Instagram}
-                    alt='linkedin'
-                    width='24'
-                    height='24'
-                  />
+                  <Link href='/'>
+                    <img
+                      src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/instagramm_nqu4je.png'
+                      alt='linkedin'
+                    />
+                  </Link>
                 </div>
+
                 <div className='mx-3'>
-                  <Image src={Linkedin} alt='linkedin' width='24' height='24' />
+                  <Link href='/'>
+                    <img
+                      src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/linkedin_w8hmpp.png'
+                      alt='linkedin'
+                    />
+                  </Link>
                 </div>
               </div>
             </div>

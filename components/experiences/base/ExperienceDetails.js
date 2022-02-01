@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { experiencesDetails } from '../../../data/experiencesDetails';
 import Loader from '../../base/Loader';
 import Hero from '../../base/Hero';
+import EnquiryForm from '../../../components/base/EnquiryForm';
 
 const ExperienceDetails = ({ expId }) => {
   const [exp, setExp] = useState(undefined);
@@ -85,6 +86,9 @@ const ExperienceDetails = ({ expId }) => {
                   </div>
                 );
               })}
+          </div>
+          <div className='d-flex justify-content-center'>
+            <EnquiryForm />
           </div>
         </section>
       ) : (
