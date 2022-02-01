@@ -21,7 +21,9 @@ const ContactUsEnquiry = () => {
 
   return (
     <div className='enquiry-form'>
-      <h1 className='enquiry-form__heading'>Enquiry Form</h1>
+      <h1 className='enquiry-form__heading'>
+        The Time for Wellness is Now. Redeem Your Free Wellness Consultation
+      </h1>
       <form
         onSubmit={submitForm}
         className='d-flex justify-content-center align-items-center p-md-1 p-5'

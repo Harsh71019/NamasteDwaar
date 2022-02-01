@@ -17,6 +17,13 @@ const Section2 = () => {
           </p>
         </div>
       </div>
+      <div className='w-100 d-flex justify-content-center'>
+        <div className='hero-homepage__container'>
+          <p className='hero-homepage__container-heading text-center'>
+            Your Wellness Journey begins here, Which path is best for you?
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

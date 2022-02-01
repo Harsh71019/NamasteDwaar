@@ -1,6 +1,5 @@
 import React from 'react';
 import { wellnessDetails } from '../../data/wellnessDetails';
-import Link from 'next/link';
 import EnquiryForm from '../base/EnquiryForm';
 
 const Section1 = () => {

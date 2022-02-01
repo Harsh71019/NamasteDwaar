@@ -1,0 +1,104 @@
+.hero-homepage {
+  &__container {
+    max-width: 640px;
+    display: flex;
+    justify-content: center;
+    &-heading {
+      font-family: Playfair Display;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #a64f02;
+      margin-top: 7.6rem;
+      margin-bottom: 5.5rem;
+    }
+  }
+}
+
+.covid-protocol {
+  margin-top: 15rem;
+
+  &__containerimage {
+    &-image {
+      width: 100%;
+    }
+  }
+
+  &__containerpara {
+    background: #a7896f;
+    padding-left: 3.3rem;
+    padding-right: 6.6rem;
+
+    &-heading1 {
+      font-family: Playfair Display;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+    &-heading2 {
+      font-family: Playfair Display;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 42px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+
+    &-para1 {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+      margin-top: 2.6rem;
+    }
+
+    &-para2 {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+      text-decoration: underline;
+      margin-top: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-homepage {
+    &__container {
+      max-width: 100%;
+
+      &-heading {
+        margin-top: 4.5rem;
+        margin-bottom: 8.5rem;
+      }
+    }
+  }
+
+  .covid-protocol {
+    margin-top: 6rem;
+
+    &__containerpara {
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+      padding-left: 3.6rem;
+      padding-right: 3.6rem;
+    }
+  }
+}

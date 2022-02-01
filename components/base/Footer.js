@@ -1,11 +1,4 @@
 import React from 'react';
-import Logo1 from '../../public/images/footer-logo-1.png';
-import Logo2 from '../../public/images/footer-logo-2.png';
-import Linkedin from '../../public/images/linkedin.png';
-import Instagram from '../../public/images/instagram.png';
-import Facebook from '../../public/images/facebook.png';
-import Whatsapp from '../../public/images/whatsapp.png';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -17,8 +10,8 @@ const Footer = () => {
             <div className='col-6 d-flex justify-content-center'>
               <div>
                 <img
-                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/Namaste_Kairali_yizpwt.png'
-                  alt='Namaste Kairali'
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643709253/static/Footer/Healing_Desa_Logo_iemodc.png'
+                  alt='Healing Desa'
                 />
               </div>
             </div>
@@ -34,7 +27,8 @@ const Footer = () => {
           <div className='row mt-5'>
             <span className='text-center footer-bold my-2'>Namaste Dwaar</span>
             <p className='text-center footer-para'>
-              NH-58, Delhi - Haridwar Highway, Mansurpur, Uttar Pradesh 251203
+              Update Address: 105 KM Milestone, NH-58 National Capital Region,
+              Mansurpur-251203 , Uttar Pradesh
             </p>
             <hr className='footer-hr' style={{ marginTop: '19px' }} />
             <div
@@ -49,9 +43,9 @@ const Footer = () => {
                 <a className='footer-link'>gallery</a>
               </Link>
 
-              <Link href='/'>
+              {/* <Link href='/'>
                 <a className='footer-link'>Blogs</a>
-              </Link>
+              </Link> */}
 
               <Link href='/'>
                 <a className='footer-link'>Terms & Conditions</a>
@@ -68,11 +62,9 @@ const Footer = () => {
             >
               Contact Us
             </span>
+            <span className='text-center footer-para my-1'>011 407 87477</span>
             <span className='text-center footer-para my-1'>
-              +91 98184 380001
-            </span>
-            <span className='text-center footer-para my-1'>
-              helpdesk@namastedwaar.com
+              reservations@namastedwaar.com
             </span>
             <div className='footer-socials my-3'>
               <div className='d-flex justify-content-center'>

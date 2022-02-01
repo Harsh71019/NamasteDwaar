@@ -5,7 +5,7 @@ import Person from '../../public/images/person.png';
 const Testimonials = () => {
   return (
     <section>
-      <div className='container  d-flex justify-content-center'>
+      <div className='container d-flex justify-content-center'>
         <div className='border-section-4-outer p-2'>
           <div className='border-section-4 p-2'>
             <div className='section-4-row'>

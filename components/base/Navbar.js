@@ -30,7 +30,9 @@ const NavbarTop = () => {
                 </div>
               </Link>
               <div className='sss'>
-                <button className='primary-button-nav'>Book Now</button>
+                <Link href='/booking'>
+                  <button className='primary-button-nav'>Book Now</button>
+                </Link>
               </div>
             </div>
           </Navbar.Brand>
@@ -75,6 +77,9 @@ const NavbarTop = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
+                    <Link href='/experiences'>Experiences</Link>
+                  </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
                     <Link href='/experiences/2'>Fitness & Recreation </Link>
                   </Dropdown.Item>
@@ -161,7 +166,7 @@ const NavbarTop = () => {
                   className='dropdown-button-nav w-100'
                   id='dropdown-basic'
                 >
-                  Accomodation
+                  Accommodation
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>

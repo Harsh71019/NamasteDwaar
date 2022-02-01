@@ -25,10 +25,11 @@ const EnquiryForm = () => {
         <hr className='booking-accroomid__rooms-hr' />
       </div>
       <h1
-        className='enquiry-form__heading d-flex justify-content-center'
+        className='enquiry-form__heading d-flex justify-content-center text-center'
         style={{ marginTop: '72px', marginBottom: '67px' }}
       >
-        Make an enquiry
+        The Time for Wellness is Now.
+        <br /> Redeem Your Free Wellness Consultation
       </h1>
       <form className='p-md-1 p-5'>
         <div className='row'>
