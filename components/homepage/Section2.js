@@ -6,7 +6,7 @@ const Section2 = () => {
       <div className='container px-0 d-flex justify-content-center'>
         <div className='section-2'>
           <p className='section-2-para'>
-            <span className='section-2-para__span'>Namaste Dwaar </span>{' '}
+            <span className='section-2-para__span'>Namaste Dwaar </span>
             believes that being healthy extends beyond the realms of physical
             wellbeing. Hence, we take a holistic approach to total wellbeing
             with our tranformational experiences backed by our renowned experts.

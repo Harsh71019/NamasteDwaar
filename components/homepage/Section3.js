@@ -16,14 +16,16 @@ const Section3 = () => {
             <div className='section3-card'>
               <h1 className='section-3-heading'>Natural Healing </h1>
               <p className='primary-text'>
-                Indulge in exclusive experiences for complete relaxation and
-                rejuvenation. Namaste Dwaar offers many multi-sensory
-                experiences such as Yoga, Meditation and more programmes that
-                are guaranteed to melt away your everyday stress.
+                Namaste Dwaar is a sanctuary which helps people on their unique
+                wellness journeys by providing individualized treatments that
+                combine the most powerful Indian healing systems of Ayurveda,
+                Vedic Acupressure, Naturopathy and Yoga. When combined together,
+                these provide a natural, effective and long lasting impact on
+                the mind and body.
               </p>
               <Link href='experiences/2'>
                 <button className='section-3__button text-uppercase'>
-                  Explore Now
+                  EXPERIENCE
                 </button>
               </Link>
             </div>
@@ -35,17 +37,19 @@ const Section3 = () => {
         <div className='row'>
           <div className='col-md-4 col-12 order-1 order-md-0 align-items-center d-flex column flex-column justify-content-center '>
             <div className='section3-card'>
-              <h1 className='section-3-heading'>Wellness Programmes </h1>
+              <h1 className='section-3-heading'>Ayurveda for Immunity</h1>
               <p className='primary-text'>
-                Experience our unique approach to wellness which combines
-                ancient traditions with Western medical research to achieve
-                life-enhancing results. We believe that every aspect of health
-                is interconnected, hence our wellness approach comprises of
-                Naturopathy, massage, Ayurveda, Yoga and more.
+                The key for a strong immunity is consistency. Ayurveda's
+                extensive knowledge on preventive care is derived from two
+                concepts: “Dinacharya” - daily regimes, and “Ritucharya” -
+                seasonal regimes, both of which are essential for maintaining a
+                healthy life. At Healing Desa, we help and teach you how to
+                enhance the body's natural defence system, so that one can fend
+                off disease while also working towards optimum health.
               </p>
               <Link href='/wellness'>
                 <button className='section-3__button text-uppercase'>
-                  Explore Now
+                  EXPLORE
                 </button>
               </Link>
             </div>
@@ -73,16 +77,18 @@ const Section3 = () => {
             <div className='section3-card'>
               <h1 className='section-3-heading'>Countryside Experiences </h1>
               <p className='primary-text'>
-                Experience the rich Indian heritage and culture in this premium
-                retreat located in the heart of the village. Every corner at the
-                property is adorned with handcrafted objects and decorations,
-                and these traditional elements are paired with modern comforts
-                to provide our guests with the most comfortable and pleasurable
-                stay away from the city.
+                Replenish your energy with mother nature's best offerings.
+                Whether you are looking for a short weekend getaway from the
+                city, natural relief for pain management and illness, or a
+                tranquil and relaxing break from your everyday life, the healing
+                benefits of the countryside are felt almost immediately with
+                mindful and organic cuisine, fresh air, and natural stimulation
+                of your senses to restore the mind and body back to its
+                harmonious state.
               </p>
               <Link href='experiences/4'>
                 <button className='section-3__button text-uppercase'>
-                  Explore Now
+                  DISCOVER
                 </button>
               </Link>
             </div>
