@@ -22,10 +22,9 @@ const NavbarTop = () => {
               </div>
               <Link href='/'>
                 <div className='logo-main-nav ms-2 me-2'>
-                  <Image
+                  <img
+                    className='w-100'
                     src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563677/static/Namaste_Dwaar_Logo_o5h0ky.png'
-                    height='90'
-                    width='158'
                   />
                 </div>
               </Link>
