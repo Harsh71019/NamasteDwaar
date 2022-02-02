@@ -1,11 +1,15 @@
 import React from 'react';
+import ImageSlider from './ImageSlider';
+import { images_gallery_aboutus } from '../../data/galleryaboutus';
 
-const Section5 = () => {
+const Gallery = () => {
   return (
-    <section className='aboutus-section5' id='aboutus-gallery'>
+    <section className='aboutus-section5 mb-5' id='aboutus-gallery'>
       <div className='container'>
         <h1 className='aboutus-section5__heading'>Gallery</h1>
-        <div className='aboutus-section5__carousel'>
+
+        <ImageSlider images={images_gallery_aboutus} />
+        {/* <div className='aboutus-section5__carousel'>
           <div
             id='carouselExampleControls'
             className='carousel slide'
@@ -59,10 +63,10 @@ const Section5 = () => {
               <span className='visually-hidden'>Next</span>
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
 };
 
-export default Section5;
+export default Gallery;

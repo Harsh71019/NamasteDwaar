@@ -1,5 +1,5 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState } from 'react';
+
 const Section4 = () => {
   return (
     <section className='aboutus-section4' id='awards'>

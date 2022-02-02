@@ -1,0 +1,19 @@
+.swiper-slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+.slideWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.imgswiper {
+  width: 100% !important;
+  height: 500px !important;
+}

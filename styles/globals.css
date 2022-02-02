@@ -3,6 +3,23 @@ a {
   text-decoration: none;
 }
 
+/*  */
+
+.swiper-slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+.slideWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
 /* Start of utilities */
 
 :root {

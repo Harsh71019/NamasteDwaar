@@ -66,6 +66,76 @@
   }
 }
 
+.sustain-about {
+  margin-top: 15rem;
+  &__container {
+    padding: 7.2rem 11rem;
+    background: linear-gradient(0deg, #555f31, #555f31), rgba(0, 0, 0, 0.2);
+  }
+  &__heading {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #ffffff;
+  }
+  &__para {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: justified;
+
+    color: #ffffff;
+    max-width: 860px;
+    margin-top: 4rem;
+  }
+}
+
+.vision-about {
+  &__img {
+    width: 100%;
+    height: 452px;
+    object-fit: cover;
+  }
+  &__h1 {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #a64f02;
+    margin-top: 4.8rem;
+  }
+
+  &__para {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 4.4rem;
+  }
+
+  &__container-text {
+    padding: 0 13rem;
+  }
+
+  &__row {
+    margin-top: 8rem;
+  }
+}
+
 // End of Section 1
 .aboutus-section2 {
   &__title {
@@ -222,6 +292,40 @@
   }
 }
 
+.pillars-aboutus {
+  &__heading {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #a7896f;
+    margin-top: 3.4rem;
+  }
+  &__divider {
+    margin-top: 1.6rem;
+  }
+  &__pillars {
+    font-family: Playfair Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 3.6rem;
+    margin-bottom: 0;
+  }
+
+  &__outline {
+    border: 1px solid #a7896f;
+    padding: 0 8rem 4rem 8rem;
+    margin-top: 14rem;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .aboutus-section1 {
@@ -242,6 +346,10 @@
     }
   }
   .aboutus-section2 {
+    &__row {
+      margin-top: 4.8rem;
+    }
+
     &__card {
       &-img {
         width: 100%;
@@ -280,8 +388,90 @@
       }
     }
   }
-  .aboutus-section5 {
+
+  .pillars-aboutus {
+    &__heading {
+      font-family: Playfair Display;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 44px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #a7896f;
+      margin-top: 3.4rem;
+    }
+    &__divider {
+      margin-top: 1.6rem;
+    }
+    &__pillars {
+      font-family: Playfair Display;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 44px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    &__outline {
+      border: 1px solid #a7896f;
+      padding: 0 5rem 5rem 5rem;
+      margin-top: 6.4rem;
+    }
   }
-  .aboutus-section6 {
+
+  .vision-about {
+    &__img {
+      width: 100%;
+      height: 452px;
+      object-fit: cover;
+    }
+    &__h1 {
+    }
+
+    &__para {
+    }
+
+    &__container-text {
+      padding: 0 4rem;
+    }
+
+    &__row {
+      margin-top: 8rem;
+    }
+  }
+
+  .sustain-about {
+    margin-top: 13rem;
+    &__container {
+      padding: 7.2rem 3rem;
+      background: linear-gradient(0deg, #555f31, #555f31), rgba(0, 0, 0, 0.2);
+    }
+    &__heading {
+      font-family: Playfair Display;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      color: #ffffff;
+    }
+    &__para {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: justified;
+
+      color: #ffffff;
+      max-width: 860px;
+      margin-top: 4rem;
+    }
   }
 }

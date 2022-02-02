@@ -25,13 +25,7 @@ const Section2 = () => {
                     practitioners across India. Their award-winning Ayurvedic
                     Healing Village in Palakkad has set the standard for
                     wellness retreats worldwide, and now, with this new
-                    destination, the Healing Village at Namaste Dwaar offers a
-                    novel focus on relieving the negative ailments associated
-                    with modern-day living – some of the main areas of focus
-                    are: stress and its related illnesses, stomach conditions,
-                    migraines, knee pain, back pain, weight issues, and skin
-                    problems, all of which can be properly addressed with
-                    natural methods.
+                    destination.
                   </p>
                 </div>
               </div>
@@ -56,12 +50,7 @@ const Section2 = () => {
                     Indian culture: Dev Sanskriti Vishwavidyalaya (DSVV). DSVV
                     has created a powerful educational system based on
                     scientific spirituality which aims to cultivate a culture of
-                    ethical, moral and spiritual transformation for its
-                    students. The programmes for Yoga and Ayurveda at Namaste
-                    Dwaar are taught by the DSVV faculty to ensure that all of
-                    our students acquire genuine knowledge and complete
-                    understanding of the true tenets and principles of these
-                    ancient bodies of wisdom.
+                    ethical.
                   </p>
                 </div>
               </div>

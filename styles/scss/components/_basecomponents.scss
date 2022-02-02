@@ -77,8 +77,54 @@
   }
 }
 
+.hero-center {
+  &__image {
+    position: relative;
+
+    &-image {
+      width: 100%;
+    }
+
+    &-heading {
+      @include abstracts.heading(
+        $family: Playfair Display,
+        $size: 3.6rem,
+        $style: normal,
+        $weight: 700,
+        $height: 4.4rem,
+        $letterSpacing: 0,
+        $align: left,
+        $color: #fff
+      );
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.para {
+  max-width: 85.7rem;
+
+  &__style {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .para {
+    max-width: 100%;
+    padding: 0 5rem;
+  }
+
   .hero-top {
     &__img {
       width: 100%;
@@ -134,6 +180,24 @@
 
       &-heading {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .hero-center {
+    &__image {
+      position: relative;
+
+      &-image {
+        width: 100%;
+        object-fit: cover !important;
+        height: 70vh !important;
+      }
+
+      &-heading {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
