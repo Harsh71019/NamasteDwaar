@@ -147,8 +147,8 @@
       font-weight: 700;
       line-height: 48px;
       letter-spacing: 0em;
-      text-align: left;
-      color: #fff;
+      text-align: center;
+      color: #a64f02;
     }
 
     &-card {
@@ -173,8 +173,8 @@
       font-weight: 700;
       line-height: 48px;
       letter-spacing: 0em;
-      text-align: left;
-      color: #fff;
+      text-align: center;
+      color: #a64f02;
     }
 
     &-card {
@@ -271,7 +271,7 @@
     }
 
     &__card {
-      max-width: 90%;
+      max-width: 100%;
     }
   }
 
@@ -283,8 +283,12 @@
     }
 
     &__card {
-      max-width: 100%;
+      max-width: 90%;
       padding: 0 2.2rem 2.8rem 2.2rem;
+
+      &-button {
+        margin-top: 2.7rem;
+      }
     }
 
     &__title {
@@ -305,6 +309,23 @@
 
     &__benefits {
       margin-top: 7.6rem;
+
+      &-col {
+        margin-top: -20rem;
+        padding: 3rem;
+      }
+
+      &-title {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 3rem;
+      }
+
+      &-card {
+        background-color: #fff;
+        padding: 4rem;
+      }
+
       &-img {
         width: 100%;
         height: 412px;
@@ -313,6 +334,23 @@
     }
     &__inclusions {
       margin-top: 7.6rem;
+
+      &-col {
+        margin-top: -20rem;
+        padding: 3rem;
+      }
+
+      &-title {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 3rem;
+      }
+
+      &-card {
+        background-color: #fff;
+        padding: 4rem;
+      }
+
       &-img {
         width: 100%;
         height: 412px;

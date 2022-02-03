@@ -173,7 +173,7 @@ const RoomDetails = () => {
                 </span>
               </p>
             </div>
-            <div className='row d-flex justify-content-center align-items-center'>
+            <div className='d-flex justify-content-center align-items-center'>
               <button className='btn-default mb-5'>Book Now</button>
             </div>
           </div>

@@ -46,12 +46,12 @@ const WellDetails = () => {
                   </p>
 
                   <div className='row wellness-details__card-row'>
-                    <div className='col-12 col-md-6  d-flex justify-content-start align-items-center'>
+                    <div className='col-12 col-md-6  d-flex justify-content-md-start  justify-content-center align-items-center'>
                       <p className='wellness-details__duration d-flex  align-items-center'>
                         Duration : {wellness?.duration}
                       </p>
                     </div>
-                    <div className='col-12 col-md-6 d-flex justify-content-end'>
+                    <div className='col-12 col-md-6 d-flex justify-content-md-end justify-content-center wellness-details__card-button'>
                       <button className='btn-default'>Book Now</button>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ const WellDetails = () => {
                       </h1>
                     </div>
                   </div>
-                  <div className='col-12 col-md-4 d-flex flex-column wellness-details__recommendation-col'>
+                  <div className='col-12 col-md-4 d-flex  flex-column wellness-details__recommendation-col'>
                     <div>
                       <div className='d-flex justify-content-center'>
                         <img
@@ -120,7 +120,7 @@ const WellDetails = () => {
                   />
                 </div>
               </div>
-              <div className='col-md-6 col-12'>
+              <div className='col-md-6 col-12 wellness-details__benefits-col d-flex align-items-center'>
                 <div>
                   <h1 className='wellness-details__benefits-title'>Benefits</h1>
                   <div className='wellness-details__benefits-card'>
@@ -138,10 +138,10 @@ const WellDetails = () => {
               </div>
             </div>
             <div className='row wellness-details__inclusions'>
-              <div className='col-md-6 col-12 order-md-0 order-1'>
+              <div className='col-md-6 col-12 order-md-0 order-1 wellness-details__inclusions-col d-flex align-items-center'>
                 <div>
                   <h1 className='wellness-details__inclusions-title'>
-                    Inclusion
+                    Inclusions
                   </h1>
                   <div className='wellness-details__inclusions-card'>
                     <ul>
