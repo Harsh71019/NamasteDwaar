@@ -2,8 +2,6 @@ import Accomodation from '../models/accomodation';
 import ErrorHandler from '../utils/errorHandler';
 import catchAsyncErrors from '../middlewares/catchAsyncErrors';
 import cloudinary from 'cloudinary';
-import absoluteUrl from 'next-absolute-url';
-import crypto from 'crypto';
 import dotenv from 'dotenv';
 dotenv.config();
 

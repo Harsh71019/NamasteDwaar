@@ -1,0 +1,84 @@
+{
+  "title": "Wellness Ayurveda",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgBtZY9T8MwEIaPUnUJEumSLiCCWBg6IBjCVj5mRP8BAxIjTX9BOrAiIXYITKwFFqZWjCwIRqYwMLGkSHTpYnyJW0KxHbtpHslxdPa9lzvHTgAkEEJM2jzaurQF5JeQ2VzabNAFnZiAKr5yIDqxwZ5QF/Rx08Q9kh1P9uTTwuXVfJKyiEAtG7WLLAamZfIy+3hqw6D/BSIq1S0wrKVxM2r5tG3PsEgBz/n5oglv9+eQxu5JB6xqjTdULtBLXeQYBq9c+/LOATjHl1GPfH++iyRcLNE+aICim1R8SNC5lk2vYYA10ABLMej34KG5EfUp2FgiExTBWi86ccKYxepeI83FLoIGyYXEe0ntR2AAnGWDAjf12WhxK1T87mhFxaVXYAHy4gUDPIpGS0YZVCgZ86KhWyzRGcQ7+R/rh6f0TQn/2OYsO+qH64E7ecERbqV2dCV6Z78q/igMyfGwSwZxyfTgf3joQItkpwUySJxJPp/MsTW50hDvkgx/Fy4TSGYVMBuWVHqW/QBjb55SsEqKoQAAAABJRU5ErkJggg==",
+  "detailsImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgBtZY9T8MwEIaPUnUJEumSLiCCWBg6IBjCVj5mRP8BAxIjTX9BOrAiIXYITKwFFqZWjCwIRqYwMLGkSHTpYnyJW0KxHbtpHslxdPa9lzvHTgAkEEJM2jzaurQF5JeQ2VzabNAFnZiAKr5yIDqxwZ5QF/Rx08Q9kh1P9uTTwuXVfJKyiEAtG7WLLAamZfIy+3hqw6D/BSIq1S0wrKVxM2r5tG3PsEgBz/n5oglv9+eQxu5JB6xqjTdULtBLXeQYBq9c+/LOATjHl1GPfH++iyRcLNE+aICim1R8SNC5lk2vYYA10ABLMej34KG5EfUp2FgiExTBWi86ccKYxepeI83FLoIGyYXEe0ntR2AAnGWDAjf12WhxK1T87mhFxaVXYAHy4gUDPIpGS0YZVCgZ86KhWyzRGcQ7+R/rh6f0TQn/2OYsO+qH64E7ecERbqV2dCV6Z78q/igMyfGwSwZxyfTgf3joQItkpwUySJxJPp/MsTW50hDvkgx/Fy4TSGYVMBuWVHqW/QBjb55SsEqKoQAAAABJRU5ErkJggg==",
+  "detailsDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  "detailsTitle": "Wellness Ayurveda Details",
+  "recommendedt1": "lorem ipsum blagh blashh",
+  "recommendedc1": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgBtZY9T8MwEIaPUnUJEumSLiCCWBg6IBjCVj5mRP8BAxIjTX9BOrAiIXYITKwFFqZWjCwIRqYwMLGkSHTpYnyJW0KxHbtpHslxdPa9lzvHTgAkEEJM2jzaurQF5JeQ2VzabNAFnZiAKr5yIDqxwZ5QF/Rx08Q9kh1P9uTTwuXVfJKyiEAtG7WLLAamZfIy+3hqw6D/BSIq1S0wrKVxM2r5tG3PsEgBz/n5oglv9+eQxu5JB6xqjTdULtBLXeQYBq9c+/LOATjHl1GPfH++iyRcLNE+aICim1R8SNC5lk2vYYA10ABLMej34KG5EfUp2FgiExTBWi86ccKYxepeI83FLoIGyYXEe0ntR2AAnGWDAjf12WhxK1T87mhFxaVXYAHy4gUDPIpGS0YZVCgZ86KhWyzRGcQ7+R/rh6f0TQn/2OYsO+qH64E7ecERbqV2dCV6Z78q/igMyfGwSwZxyfTgf3joQItkpwUySJxJPp/MsTW50hDvkgx/Fy4TSGYVMBuWVHqW/QBjb55SsEqKoQAAAABJRU5ErkJggg==",
+  "recommendedt2": "lorem ipsum blagh blashh",
+  "recommendedc2": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgBtZY9T8MwEIaPUnUJEumSLiCCWBg6IBjCVj5mRP8BAxIjTX9BOrAiIXYITKwFFqZWjCwIRqYwMLGkSHTpYnyJW0KxHbtpHslxdPa9lzvHTgAkEEJM2jzaurQF5JeQ2VzabNAFnZiAKr5yIDqxwZ5QF/Rx08Q9kh1P9uTTwuXVfJKyiEAtG7WLLAamZfIy+3hqw6D/BSIq1S0wrKVxM2r5tG3PsEgBz/n5oglv9+eQxu5JB6xqjTdULtBLXeQYBq9c+/LOATjHl1GPfH++iyRcLNE+aICim1R8SNC5lk2vYYA10ABLMej34KG5EfUp2FgiExTBWi86ccKYxepeI83FLoIGyYXEe0ntR2AAnGWDAjf12WhxK1T87mhFxaVXYAHy4gUDPIpGS0YZVCgZ86KhWyzRGcQ7+R/rh6f0TQn/2OYsO+qH64E7ecERbqV2dCV6Z78q/igMyfGwSwZxyfTgf3joQItkpwUySJxJPp/MsTW50hDvkgx/Fy4TSGYVMBuWVHqW/QBjb55SsEqKoQAAAABJRU5ErkJggg==",
+  "recommendedt3": "lorem ipsum blagh blashh",
+  "recommendedc3": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGLSURBVHgBtZY9T8MwEIaPUnUJEumSLiCCWBg6IBjCVj5mRP8BAxIjTX9BOrAiIXYITKwFFqZWjCwIRqYwMLGkSHTpYnyJW0KxHbtpHslxdPa9lzvHTgAkEEJM2jzaurQF5JeQ2VzabNAFnZiAKr5yIDqxwZ5QF/Rx08Q9kh1P9uTTwuXVfJKyiEAtG7WLLAamZfIy+3hqw6D/BSIq1S0wrKVxM2r5tG3PsEgBz/n5oglv9+eQxu5JB6xqjTdULtBLXeQYBq9c+/LOATjHl1GPfH++iyRcLNE+aICim1R8SNC5lk2vYYA10ABLMej34KG5EfUp2FgiExTBWi86ccKYxepeI83FLoIGyYXEe0ntR2AAnGWDAjf12WhxK1T87mhFxaVXYAHy4gUDPIpGS0YZVCgZ86KhWyzRGcQ7+R/rh6f0TQn/2OYsO+qH64E7ecERbqV2dCV6Z78q/igMyfGwSwZxyfTgf3joQItkpwUySJxJPp/MsTW50hDvkgx/Fy4TSGYVMBuWVHqW/QBjb55SsEqKoQAAAABJRU5ErkJggg==",
+  "inclusions": "Hearfeiofho Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+  "benefits": "Lorem Ipsum is simply dummy text of the printing and typesetting industry, ,Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry, ,Lorem Ipsum is simply dummy text of the printing and typesetting industry ,Lorem Ipsum is simply dummy text of the printing and typesetting industry, ,Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "days": [
+    {
+      "noOfDays": 7,
+      "session": [
+        {
+          "name": "ahrsh",
+          "noOfSessions": 1
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 6
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 7
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 9
+        }
+      ],
+      "price": 9000
+    },
+    {
+      "noOfDays": 14,
+      "session": [
+        {
+          "name": "ahrsh",
+          "noOfSessions": 1
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 6
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 7
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 9
+        }
+      ],
+      "price": 12000
+    },
+    {
+      "noOfDays": 21,
+      "session": [
+        {
+          "name": "ahrsh",
+          "noOfSessions": 1
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 6
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 7
+        },
+        {
+          "name": "ahrsh",
+          "noOfSessions": 9
+        }
+      ],
+      "price": 15000
+    }
+  ]
+}

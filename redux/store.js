@@ -34,6 +34,11 @@ import {
 } from './reducers/bookingAccomodationReducer';
 // End of Booking Reducers
 
+import {
+  getWellnessReducer,
+  getWellnessDetailsReducer,
+} from './reducers/wellnessReducer';
+
 const reducerCombined = combineReducers({
   boilerListReducer: boilerReducer,
   accomodationReducer: getAccomodationReducer,
@@ -60,6 +65,12 @@ const reducerCombined = combineReducers({
   getAllAdminAccomodationBookings: getAllAdminAccomodationBookingsReducer,
   getSingleBookAdminAccomodation: getSingleBookAdminAccomodationReducer,
   // End of Booking Accomodation
+
+  // Start of wellness
+
+  // end of wellness
+  getWellness: getWellnessReducer,
+  getWellnessDetails: getWellnessDetailsReducer,
 });
 
 const reducer = (state, action) => {
