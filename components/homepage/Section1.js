@@ -12,7 +12,7 @@ const Section1 = () => {
             />
             <div className='card-container-homes1'>
               <div className='card-homes1'>
-                <h1 className='heading-homes1'>
+                <h1 className='heading-homes1 text-capitalize'>
                   India’s authentic Wellness Retreat
                 </h1>
                 <p className='subheading-homes'>YOUR COUNTRYSIDE GETAWAY</p>
