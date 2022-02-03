@@ -18,6 +18,10 @@ const wellnessSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  duration: {
+    type: String,
+    required: true,
+  },
   img: {
     public_id: {
       type: String,

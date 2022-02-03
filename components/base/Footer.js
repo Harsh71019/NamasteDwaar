@@ -27,8 +27,8 @@ const Footer = () => {
           <div className='row mt-5'>
             <span className='text-center footer-bold my-2'>Namaste Dwaar</span>
             <p className='text-center footer-para'>
-              Update Address: 105 KM Milestone, NH-58 National Capital Region,
-              Mansurpur-251203 , Uttar Pradesh
+              105 KM Milestone, NH-58 National Capital Region, Mansurpur-251203
+              , Uttar Pradesh
             </p>
             <hr className='footer-hr' style={{ marginTop: '19px' }} />
             <div

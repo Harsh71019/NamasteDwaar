@@ -9,11 +9,12 @@ const Section2 = () => {
           <div className='col-md-6 col-12'>
             <div className='d-flex justify-content-center flex-column p-md-5 p-3'>
               <p className='contact-form__para'>
-                NH-58, Delhi - Haridwar Highway, Mansurpur, Uttar Pradesh 251203
+                105 KM Milestone, NH-58 National Capital Region,
+                Mansurpur-251203 , Uttar Pradesh
               </p>
-              <p className='contact-form__para'>Call: +91-9818438001</p>
+              <p className='contact-form__para'>Call: 011 407 87477</p>
               <p className='contact-form__para'>
-                Email: helpdesk@namastedwaar.com
+                Email: reservations@namastedwaar.com
               </p>
               <h1 className='contact-form__heading'>Connect with us on </h1>
 

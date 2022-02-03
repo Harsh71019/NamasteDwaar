@@ -7,15 +7,12 @@
   $bdr,
   $paddingVertical,
   $paddingHorizontal,
-  $height,
-  $width,
   $margintop,
   $marginbottom
 ) {
   background: $backgroundColor;
   color: $textColor;
   text-decoration: none;
-  line-height: $height;
   display: inline-block;
   font-size: $fontSize;
   font-weight: 400;
@@ -25,7 +22,6 @@
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
-  width: $width;
   font-family: Montserrat;
   margin-top: $margintop;
   margin-bottom: $marginbottom;

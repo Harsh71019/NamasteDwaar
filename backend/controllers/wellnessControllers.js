@@ -17,6 +17,7 @@ const newWellness = catchAsyncErrors(async (req, res) => {
     title,
     description,
     img,
+    duration,
     detailsDescription,
     detailsTitle,
     detailsImage,
@@ -93,6 +94,7 @@ const newWellness = catchAsyncErrors(async (req, res) => {
     benefitsImage: benefitImage,
     noData: noData,
     days: days,
+    duration: duration,
   });
   res.status(200).json({
     success: true,
