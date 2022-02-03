@@ -194,10 +194,11 @@ a {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
   color: #fff;
+  margin-top: 2.4rem;
 }
 
 /* End */
@@ -531,7 +532,7 @@ a {
   }
 
   .section-2 {
-    padding: 50px 30px;
+    padding: 5rem 3.2rem;
   }
   .section-2-para {
     font-family: Montserrat;

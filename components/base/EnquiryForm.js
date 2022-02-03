@@ -25,7 +25,7 @@ const EnquiryForm = () => {
         <hr className='booking-accroomid__rooms-hr' />
       </div>
       <h1
-        className='enquiry-form__heading d-flex justify-content-center text-center'
+        className='enquiry-form__heading d-flex justify-content-center text-center p-md-1 px-5 py-0'
         style={{ marginTop: '72px', marginBottom: '67px' }}
       >
         The Time for Wellness is Now.
