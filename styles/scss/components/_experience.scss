@@ -68,99 +68,80 @@
 }
 
 .experience-top {
-  &__margin {
-    margin-top: 10.4rem;
+  &__cardcontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: -11rem;
+    margin-bottom: 6.5rem;
   }
 
-  &__row {
-    padding: 0 70px;
+  &__cardstart {
+    margin-top: 7rem;
+    margin-bottom: 8.4rem;
   }
 
-  &__col {
-    position: relative;
+  &__card {
+    max-width: 1080px;
+    padding: 0 3.2rem;
 
     &-image {
       width: 100%;
       height: 40rem;
       object-fit: cover;
+      margin-top: 8.4rem;
     }
-  }
 
-  &__card {
-    background: #fff;
-    padding: 3rem 3.5rem;
-    z-index: 2;
-    &-heading {
-      @include abstracts.heading(
-        $family: Playfair Display,
-        $size: 2.4rem,
-        $style: normal,
-        $weight: 400,
-        $height: 3.2rem,
-        $letterSpacing: 0,
-        $align: left,
-        $color: #a64f02
-      );
+    &-h1 {
+      font-family: Playfair Display;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #a64f02;
+      margin-top: 4.8rem;
     }
 
     &-desc {
-      width: 26.8rem;
-
-      @include abstracts.heading(
-        $family: Montserrat,
-        $size: 1.4rem,
-        $style: normal,
-        $weight: 400,
-        $height: 2.4rem,
-        $letterSpacing: 0,
-        $align: justified,
-        $color: #000
-      );
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-top: 3.2rem;
     }
   }
 
   &__image {
-    position: relative;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+  }
 
-    &-image {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-    }
+  &__mainheading {
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0em;
+    color: #a64f02;
+    text-align: center;
+    margin-top: 4.8rem;
+  }
 
-    &-heading {
-      @include abstracts.heading(
-        $family: Playfair Display,
-        $size: 3.6rem,
-        $style: normal,
-        $weight: 700,
-        $height: 4.4rem,
-        $letterSpacing: 0,
-        $align: left,
-        $color: #fff
-      );
-      position: absolute;
-      top: 45%;
-      left: 23%;
-    }
-
-    &-desc {
-      @include abstracts.heading(
-        $family: Montserrat,
-        $size: 1.4rem,
-        $style: normal,
-        $weight: 500,
-        $height: 2.4rem,
-        $letterSpacing: 0,
-        $align: left,
-        $color: #fff
-      );
-
-      position: absolute;
-      top: 54%;
-      left: 23%;
-      max-width: 757px;
-    }
+  &__maindesc {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 5.5rem;
   }
 }
 
@@ -195,52 +176,80 @@
   }
 
   .experience-top {
-    &__margin {
-      margin-top: 4rem;
+    &__image {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
     }
 
-    &__col {
-      position: relative;
+    &__mainheading {
+      font-family: Playfair Display;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 44px;
+      letter-spacing: 0em;
+      color: #a64f02;
+      text-align: center;
+      margin-top: 2.9rem;
+    }
 
-      &-image {
-        height: 40rem;
-      }
+    &__maindesc {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-top: 3.2rem;
+    }
+
+    &__cardcontainer {
+      display: flex;
+      justify-content: center;
+      margin-top: -5.7rem;
+      padding: 0 1rem;
+      margin-bottom: 3.2rem;
+    }
+
+    &__cardstart {
+      margin-top: 7rem;
+      margin-bottom: 8.4rem;
     }
 
     &__card {
-      background: #fff;
-
-      padding: 3rem 3.5rem;
-      margin-top: -15rem;
-      z-index: 2;
-
-      &-desc {
-        margin-top: 1.2rem;
-      }
-    }
-
-    &__row {
-      padding: 0 0;
-      display: flex;
-    }
-    &__image {
-      position: relative;
+      max-width: 1080px;
+      padding: 0 1.5rem;
 
       &-image {
         width: 100%;
-        object-fit: cover !important;
-        height: 70vh !important;
+        height: 40rem;
+        object-fit: cover;
+        margin-top: 6.4rem;
       }
 
-      &-heading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      &-h1 {
+        font-family: Playfair Display;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #a64f02;
+        margin-top: 3.2rem;
       }
 
       &-desc {
-        display: none;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 3.2rem;
       }
     }
   }

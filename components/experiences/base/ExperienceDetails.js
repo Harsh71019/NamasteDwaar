@@ -20,37 +20,39 @@ const ExperienceDetails = ({ expId }) => {
   return (
     <>
       {exp && exp ? (
-        <section className='experience-top container mb-5'>
+        <section className='experience-top container'>
           <div className=''>
-            <Hero
+            {/* <Hero
               image={exp.imageDetails}
               heading={exp.mainTitle}
               para={exp.mainDescription}
+            /> */}
+            <img
+              className='experience-top__image'
+              src={exp.imageDetails}
+              alt={exp.mainTitle}
             />
-            {/* <div className='experiences-top__image'>
-              <img src={exp.image} className='experience-top__image-image' />
-              <h1 className='experience-top__image-heading'>{exp.mainTitle}</h1>
-              <p className='experience-top__image-desc'>
-                {exp.mainDescription}
-              </p>
-            </div> */}
           </div>
-          <div>
-            {exp &&
-              exp.cards.map((card) => {
-                return Number(card.id) % 2 === 0 ? (
-                  <div key={card.id} className='experience-top__margin'>
-                    <div className='row experience-top__row'>
-                      <div className='col-md-9 col-12 order-md-1 order-1 experience-top__col'>
-                        <img
-                          src={card.image}
-                          className='w-100 experience-top__col-image'
-                        />
-                      </div>
-                      <div className='experience-top__col order-md-2 order-2 col-md-3 col-12 d-flex justify-content-center align-items-center'>
-                        <div className='experience-top__card d-flex justify-content-center align-items-center'>
-                          <div>
-                            <h1 className='experience-top__card-heading'>
+          <div className='experience-top__cardcontainer'>
+            <div className='bg-white experience-top__card'>
+              <div>
+                <h1 className='experience-top__mainheading'>{exp.mainTitle}</h1>
+                <p className='experience-top__maindesc'>
+                  {exp.mainDescription}
+                </p>
+              </div>
+              <div className='experience-top__cardstart'>
+                {exp &&
+                  exp.cards.map((card) => {
+                    return (
+                      <div key={card.id} className='experience-top'>
+                        <div className='row experience-top'>
+                          <div className='col-md-12 col-12 experience-top__col'>
+                            <img
+                              src={card.image}
+                              className='w-100 experience-top__card-image'
+                            />
+                            <h1 className='experience-top__card-h1'>
                               {card.title}
                             </h1>
                             <p className='experience-top__card-desc'>
@@ -59,35 +61,12 @@ const ExperienceDetails = ({ expId }) => {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div key={card.id} className='experience-top__margin'>
-                    <div className='row experience-top__row'>
-                      <div className='experience-top__col order-md-1 order-2 col-md-3 col-12 d-flex justify-content-center align-items-center'>
-                        <div className='experience-top__card d-flex justify-content-center align-items-center'>
-                          <div>
-                            <h1 className='experience-top__card-heading'>
-                              {card.title}
-                            </h1>
-                            <p className='experience-top__card-desc'>
-                              {card.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-md-9 col-12 order-md-2 order-1 experience-top__col'>
-                        <img
-                          src={card.image}
-                          className='w-100 experience-top__col-image'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  })}
+              </div>
+            </div>
           </div>
-          <div className='d-flex justify-content-center'>
+          <div className='d-flex justify-content-center mb-5'>
             <EnquiryForm />
           </div>
         </section>
