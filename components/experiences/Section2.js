@@ -21,7 +21,7 @@ const Section2 = () => {
                     <p className='experiences-types__card-desc'>
                       {exp.mainDescription}
                     </p>
-                    <Link href={`/experience/${exp.id}`}>
+                    <Link href={`/experiences/${exp.id}`}>
                       <a className='experiences-types__card-link'>Explore</a>
                     </Link>
                   </div>
