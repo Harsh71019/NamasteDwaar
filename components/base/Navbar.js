@@ -17,11 +17,11 @@ const NavbarTop = () => {
           </Navbar.Toggle>
           <Navbar.Brand className='logo-brand-nav  mx-auto d-flex align-items-center justify-content-around'>
             <div className='d-flex  align-items-center justify-content-center'>
-              <div className='sss logo-phone-nav '>
+              <div className='sss ms-3 logo-phone-nav '>
                 <Image src={Phone} height='24' width='24' />
               </div>
               <Link href='/'>
-                <div className='logo-main-nav ms-2 me-2'>
+                <div className='logo-main-nav ms-2 me-2 cursor-pointer'>
                   <img
                     className='w-100'
                     src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563677/static/Namaste_Dwaar_Logo_o5h0ky.png'

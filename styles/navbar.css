@@ -268,13 +268,6 @@
     color: var(--secondary-color);
   }
 
-  .primary-text {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 20px;
-  }
   /*End of Utilities */
 
   .logo-main-nav {

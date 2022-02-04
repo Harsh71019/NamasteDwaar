@@ -35,6 +35,17 @@ const newWellness = catchAsyncErrors(async (req, res) => {
     days,
   } = req.body;
 
+  let reformattedArray = days.map((sessionss) => {
+    const result = sessionss.session.reduce(function (acc, obj) {
+      return acc + obj.noOfSessions;
+    }, 0);
+
+    sessionss['totalSession'] = result;
+    return sessionss;
+  });
+
+  console.log(reformattedArray);
+
   let benefitsHighlights = benefits.split(',').map((skill) => skill.trim());
   let inclusionsHighlights = inclusions.split(',').map((skill) => skill.trim());
 
@@ -89,17 +100,24 @@ const newWellness = catchAsyncErrors(async (req, res) => {
       url: c3.secure_url,
     },
     inclusions: inclusionsHighlights,
-    inclusionsImage: inclusionImage,
+    inclusionsImage: {
+      public_id: inclusionImage.public_id,
+      url: inclusionImage.secure_url,
+    },
     benefits: benefitsHighlights,
-    benefitsImage: benefitImage,
+    benefitsImage: {
+      public_id: benefitImage.public_id,
+      url: benefitImage.secure_url,
+    },
     noData: noData,
     days: days,
     duration: duration,
   });
+
   res.status(200).json({
     success: true,
     message: 'Wellness created successfully',
-    accomodation: newWellness,
+    wellness: newWellness,
   });
 });
 

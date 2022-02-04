@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const CovidSection = () => {
@@ -33,9 +34,17 @@ const CovidSection = () => {
                   restaurants and lounges, we have introduced a number of
                   enhanced hygiene measures for disinfecting our hotel rooms.
                 </p>
-                <p className='covid-protocol__containerpara-para2'>
-                  View COVID-19 safety measures at Namaste Dwaar
-                </p>{' '}
+                <Link
+                  href='https://pdfhost.io/v/yulKvDm0Q_wwwnamastedwaarcom'
+                  download
+                >
+                  <a
+                    className='covid-protocol__containerpara-para2'
+                    target='_blank'
+                  >
+                    View COVID-19 safety measures at Namaste Dwaar
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ const wellnessSchema = new mongoose.Schema({
       required: true,
     },
   },
-  recommendedt1: { type: String, required: true },
+  recommendedt1: { type: String },
   recommendedc1: {
     public_id: {
       type: String,
@@ -53,7 +53,7 @@ const wellnessSchema = new mongoose.Schema({
       required: true,
     },
   },
-  recommendedt2: { type: String, required: true },
+  recommendedt2: { type: String },
   recommendedc2: {
     public_id: {
       type: String,
@@ -64,7 +64,7 @@ const wellnessSchema = new mongoose.Schema({
       required: true,
     },
   },
-  recommendedt3: { type: String, required: true },
+  recommendedt3: { type: String },
   recommendedc3: {
     public_id: {
       type: String,
@@ -128,6 +128,10 @@ const wellnessSchema = new mongoose.Schema({
       price: {
         type: Number,
         required: [true, 'Please enter the price for each'],
+        default: 0.0,
+      },
+      totalSession: {
+        type: Number,
         default: 0.0,
       },
     },
