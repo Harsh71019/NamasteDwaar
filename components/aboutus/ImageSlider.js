@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/Slider.module.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, A11y } from 'swiper';
