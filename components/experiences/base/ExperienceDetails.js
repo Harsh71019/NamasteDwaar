@@ -67,7 +67,7 @@ const ExperienceDetails = ({ expId }) => {
             </div>
           </div>
           <div className='d-flex justify-content-center mb-5'>
-            <EnquiryForm />
+            <EnquiryForm heading='Make an enquiry' />
           </div>
         </section>
       ) : (

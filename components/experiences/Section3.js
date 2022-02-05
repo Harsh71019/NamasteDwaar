@@ -5,7 +5,7 @@ const Section3 = () => {
   return (
     <div className='container mb-5'>
       <div className='d-flex justify-content-center'>
-        <EnquiryForm />
+        <EnquiryForm heading='Make an enquiry' />
       </div>
     </div>
   );

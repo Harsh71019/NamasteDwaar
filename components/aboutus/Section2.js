@@ -11,7 +11,7 @@ const Section2 = () => {
               <div className='aboutus-section2__card-body'>
                 <div className='aboutus-section2__card-imgcont d-flex justify-content-center'>
                   <img
-                    src='https://res.cloudinary.com/harsh710/image/upload/v1642228840/namastedwaar/aupartners_dszd1k.png'
+                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643709494/static/About%20us/About_Us_Our_Partners_Healing_Desa_Logo_waubzd.png'
                     className='aboutus-section2__card-img'
                   />
                 </div>
@@ -25,7 +25,13 @@ const Section2 = () => {
                     practitioners across India. Their award-winning Ayurvedic
                     Healing Village in Palakkad has set the standard for
                     wellness retreats worldwide, and now, with this new
-                    destination.
+                    destination, the Healing Village at Namaste Dwaar offers a
+                    novel focus on relieving the negative ailments associated
+                    with modern-day living – some of the main areas of focus
+                    are: stress and its related illnesses, stomach conditions,
+                    migraines, knee pain, back pain, weight issues, and skin
+                    problems, all of which can be properly addressed with
+                    natural methods.
                   </p>
                 </div>
               </div>
@@ -36,7 +42,7 @@ const Section2 = () => {
               <div className='aboutus-section2__card-body'>
                 <div className='aboutus-section2__card-imgcont d-flex justify-content-center'>
                   <img
-                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563400/static/About%20us/About_Us_Our_Partners_DSVV_Logo_bdj6rs.jpg'
+                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643968309/static/About%20us/About_Us_Our_Partners_DSVV_Logo_xr3m6g.png'
                     className='aboutus-section2__card-img'
                   />
                 </div>{' '}
@@ -50,7 +56,13 @@ const Section2 = () => {
                     Indian culture: Dev Sanskriti Vishwavidyalaya (DSVV). DSVV
                     has created a powerful educational system based on
                     scientific spirituality which aims to cultivate a culture of
-                    ethical.
+                    ethical, moral and spiritual transformation for its
+                    students. The programmes for Yoga and Ayurveda at Namaste
+                    Dwaar are taught by the DSVV faculty to ensure that all of
+                    our students acquire complete understanding of the true
+                    tenets and principles of these ancient bodies of wisdom.
+                    With its natural surroundings, Namaste Dwaar makes for a
+                    great place to learn and grow.
                   </p>
                 </div>
               </div>
@@ -61,10 +73,10 @@ const Section2 = () => {
               <div className='aboutus-section2__card-body'>
                 <div className='aboutus-section2__card-imgcont d-flex justify-content-center'>
                   <img
-                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563400/static/About%20us/About_Us_Our_Partners_UP_Logo_ijo2z0.jpg'
+                    src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643717773/static/About%20us/About_Us_Our_Partners_UP_Logo_wkroy0.png'
                     className='aboutus-section2__card-img'
                   />
-                </div>{' '}
+                </div>
                 <h1 className='text-center mt-3 aboutus-section2__title fs16'>
                   Uttar Pradesh Government
                 </h1>
@@ -75,7 +87,11 @@ const Section2 = () => {
                     personal mission to create and sustain livelihoods, our
                     property ensures minimum exploitation of the ecosystem and
                     maximum involvement of locals to encourage the prosperity of
-                    the rural sectors of Northern India.
+                    the rural sectors of Northern India. The property places a
+                    key focus on highlighting the art and culture of the locals,
+                    giving people a chance to experience the lifestyle in the
+                    true form. People staying at the property can also partake
+                    in local excursions, workshops, displays, etc.
                   </p>
                 </div>
               </div>

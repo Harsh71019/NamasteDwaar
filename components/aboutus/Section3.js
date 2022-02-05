@@ -16,10 +16,10 @@ const Section3 = () => {
             <p className='aboutus-section3__image-desc'>
               One of the most gifted architects India has had, the late Mr.
               Pradeep Sachdeva is the mastermind behind some of India’s most
-              inspiring architectural works including the Garden of Five Senses,
-              the famous Dilli Haat Buildings, and now Namaste Dwaar. With a key
-              focus on sustainable architecture, the infrastructure of Namaste
-              Dwaar was designed so that it could coexist with the ecosystem.
+              inspiring architectural works. With a key focus on sustainable
+              architecture, the infrastructure of Namaste Dwaar was designed so
+              that it could coexist with the ecosystem, while simultaneously
+              complementing the aesthetic of the surrounding regions.
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ const Section3 = () => {
     <section className='corporate-section3'>
       <div className='container'>
         <div className='d-flex justify-content-center'>
-          <EnquiryForm />
+          <EnquiryForm heading='Make an enquiry' />
         </div>
       </div>
     </section>

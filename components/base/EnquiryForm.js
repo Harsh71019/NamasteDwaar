@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 
-const EnquiryForm = () => {
+const EnquiryForm = ({ heading }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
@@ -28,8 +28,14 @@ const EnquiryForm = () => {
         className='enquiry-form__heading d-flex justify-content-center text-center p-md-1 px-5 py-0'
         style={{ marginTop: '72px', marginBottom: '67px' }}
       >
-        The Time for Wellness is Now.
-        <br /> Redeem Your Free Wellness Consultation
+        {heading ? (
+          heading
+        ) : (
+          <span>
+            The Time for Wellness is Now.
+            <br /> Redeem Your Free Wellness Consultation
+          </span>
+        )}
       </h1>
       <form className='p-md-1 p-5'>
         <div className='row'>
@@ -96,7 +102,7 @@ const EnquiryForm = () => {
                 rows='8'
                 cols='50'
                 required
-                placeholder='Enter your message here <span>* </span>'
+                placeholder='Enter your message here'
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>

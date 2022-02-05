@@ -4,7 +4,7 @@ import { images_gallery_aboutus } from '../../data/galleryaboutus';
 
 const Gallery = () => {
   return (
-    <section className='aboutus-section5 mb-5' id='aboutus-gallery'>
+    <section className='aboutus-section5' id='aboutus-gallery'>
       <div className='container'>
         <h1 className='aboutus-section5__heading'>Gallery</h1>
 

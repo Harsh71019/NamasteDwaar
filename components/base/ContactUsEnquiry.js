@@ -31,7 +31,7 @@ const ContactUsEnquiry = () => {
         <div className='row'>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Name*
+              Name<span className='text-danger'>* </span>
             </label>
             <input
               className='enquiry-form__input'
@@ -46,7 +46,7 @@ const ContactUsEnquiry = () => {
           </div>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Mobile Number*
+              Mobile Number<span className='text-danger'>* </span>
             </label>
             <input
               className='enquiry-form__input'
@@ -63,7 +63,7 @@ const ContactUsEnquiry = () => {
           </div>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Email Id*
+              Email Id<span className='text-danger'>* </span>
             </label>
             <input
               className='enquiry-form__input'
@@ -78,7 +78,7 @@ const ContactUsEnquiry = () => {
           </div>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Message*
+              Message<span className='text-danger'>* </span>
             </label>
             <textarea
               className='enquiry-form__textarea'
@@ -88,7 +88,7 @@ const ContactUsEnquiry = () => {
               value={message}
               rows='6'
               cols='50'
-              placeholder='Enter your message here*'
+              placeholder='Enter your message here'
               onChange={(e) => setMessage(e.target.value)}
               required
             />

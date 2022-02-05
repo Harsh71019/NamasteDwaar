@@ -9,7 +9,7 @@ const CovidSection = () => {
           <div className='col-md-7 col-12 px-0 order-1 order-md-0'>
             <div className='covid-protocol__containerimage'>
               <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643735139/static/home/CovidProtocol_spddus.png'
+                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643872271/static/Homepage%20New/Homepage_Covid_Protocol_h6u3ue.jpg'
                 alt=''
                 className='w-100 covid-protocol__containerimage-image'
               />
@@ -35,7 +35,7 @@ const CovidSection = () => {
                   enhanced hygiene measures for disinfecting our hotel rooms.
                 </p>
                 <Link
-                  href='https://pdfhost.io/v/yulKvDm0Q_wwwnamastedwaarcom'
+                  href='https://drive.google.com/file/d/1nqyUrFAXglpOWJim9zz4KTbwD67Q7Src/view?usp=drivesdk'
                   download
                 >
                   <a

@@ -69,32 +69,32 @@ const Footer = () => {
             <div className='footer-socials my-3'>
               <div className='d-flex justify-content-center'>
                 <div className='mx-3'>
-                  <Link href='/'>
+                  <Link href='https://www.facebook.com/NamasteDwaar'>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/facebook_ojo3na.png'
-                      alt='linkedin'
+                      alt='facebook'
                     />
                   </Link>
                 </div>
                 <div className='mx-3'>
-                  <Link href='/'>
+                  <Link href='https://wa.me/9818388090'>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/watsapp_vwgauj.png'
-                      alt='linkedin'
+                      alt='whatsapp'
                     />
                   </Link>
                 </div>
                 <div className='mx-3'>
-                  <Link href='/'>
+                  <Link href='https://www.instagram.com/namaste_dwaar/?hl=en'>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/instagramm_nqu4je.png'
-                      alt='linkedin'
+                      alt='instagram'
                     />
                   </Link>
                 </div>
 
                 <div className='mx-3'>
-                  <Link href='/'>
+                  <Link href='https://in.linkedin.com/company/namaste-dwaar'>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/linkedin_w8hmpp.png'
                       alt='linkedin'

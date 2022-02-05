@@ -77,7 +77,7 @@ const NavbarTop = () => {
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
-                    <Link href='/experiences'>Experiences</Link>
+                    <Link href='/experiences'>All Experiences</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi2'>
                     <Link href='/experiences/2'>Fitness & Recreation </Link>
@@ -147,7 +147,7 @@ const NavbarTop = () => {
 
                 <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item className='dropdown-item-position ddi4'>
-                    <Link href='/events'>Events</Link>
+                    <Link href='/events'>All Events</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi4'>
                     <Link href='/events/personal'>Personal</Link>

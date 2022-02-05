@@ -7,7 +7,7 @@ const Section1 = () => {
         <div className='container'>
           <div className='container-homes1'>
             <img
-              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643520629/static/home/Homepage_ex0jf9.jpg'
+              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Header_kstmx5.jpg'
               className='image-homes1'
             />
             <div className='card-container-homes1'>

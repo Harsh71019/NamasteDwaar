@@ -90,7 +90,8 @@
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
-    text-align: justified;
+    text-align: justify;
+    text-justify: inter-word;
 
     color: #ffffff;
     max-width: 860px;
@@ -305,7 +306,8 @@
     margin-top: 3.4rem;
   }
   &__divider {
-    margin-top: 1.6rem;
+    border: 1px solid #a7896f;
+    width: 280px;
   }
   &__pillars {
     font-family: Playfair Display;
@@ -322,8 +324,13 @@
   &__outline {
     border: 1px solid #a7896f;
     padding: 0 8rem 4rem 8rem;
-    margin-top: 14rem;
+    margin-top: 8rem;
   }
+}
+
+.aboutus-sect6 {
+  margin-top: 9.4rem;
+  margin-bottom: 7.6rem;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -473,5 +480,10 @@
       max-width: 860px;
       margin-top: 4rem;
     }
+  }
+
+  .aboutus-sect6 {
+    margin-top: 8.8rem;
+    margin-bottom: 17.6rem;
   }
 }

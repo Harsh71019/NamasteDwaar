@@ -8,9 +8,9 @@ const Pillars = () => {
           <div>
             <h1 className='pillars-aboutus__heading'>Our Pillars</h1>
           </div>
-
-          <hr className='pillars-aboutus__divider' />
-
+          <div className='d-flex justify-content-center'>
+            <hr className='pillars-aboutus__divider' />
+          </div>
           <div className='row'>
             <div className='col-md-2 col-12'>
               <p className='pillars-aboutus__pillars'>Ayurveda</p>

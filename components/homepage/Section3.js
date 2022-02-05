@@ -9,7 +9,7 @@ const Section3 = () => {
           <div className='col-md-8 col-12 order-1 order-md-0 d-flex align-items-center justify-content-md-center justify-content-end '>
             <img
               className='w-100 section-3-home-image'
-              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643489615/static/home/Homepage_Experiences_Natural_Healing_g2pa8e.jpg'
+              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Experiences_Natural_Healing_feafuu.jpg'
             />
           </div>
           <div className='col-md-4 col-12 align-items-center d-flex flex-column justify-content-center order-1 order-md-0'>
@@ -57,7 +57,7 @@ const Section3 = () => {
           <div className='col-md-8 col-12 order-0 order-md-1 d-flex align-items-center justify-content-center'>
             <img
               className='w-100 section-3-home-image'
-              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643489615/static/home/Homepage_Experiences_Wellness_Programmes_gmkixx.jpg'
+              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Experiences_Ayurveda_for_Immunity_iibl07.jpg'
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ const Section3 = () => {
           <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
             <img
               className='w-100 section-3-home-image'
-              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643489615/static/home/Homepage_Experiences_Countryside_Getaway_k4nhn3.jpg'
+              src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871828/static/Homepage%20New/Homepage_Experiences_Countryside_Getaway_hc4fwr.jpg'
             />
           </div>
           <div className='col-md-4 col-12 align-items-center d-flex column flex-column justify-content-center '>
