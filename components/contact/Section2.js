@@ -1,5 +1,12 @@
 import React from 'react';
 import ContactUsEnquiry from '../base/ContactUsEnquiry';
+import {
+  linkedinRoute,
+  instagramRoute,
+  facebookRoute,
+  whatsappRoute,
+} from '../../helpers/routes';
+import Link from 'next/link';
 
 const Section2 = () => {
   return (
@@ -19,30 +26,30 @@ const Section2 = () => {
               <h1 className='contact-form__heading'>Connect with us on </h1>
 
               <div className='contact-form__social'>
-                <a className='contact-form__social-link'>
+                <Link href={facebookRoute}>
                   <i
                     aria-hidden
-                    className='fab contact-form__social-icon fa-facebook'
+                    className='fab contact-form__social-icon fa-facebook me-4 cursor-pointer'
                   ></i>
-                </a>
-                <a className='contact-form__social-link'>
+                </Link>
+                <Link href={linkedinRoute}>
                   <i
                     aria-hidden
-                    className='fab contact-form__social-icon fa-linkedin-in'
-                  ></i>{' '}
-                </a>
-                <a className='contact-form__social-link'>
-                  <i
-                    aria-hidden
-                    className='fab contact-form__social-icon fa-whatsapp'
+                    className='fab contact-form__social-icon fa-linkedin-in me-4 cursor-pointer'
                   ></i>
-                </a>
-                <a className='contact-form__social-link'>
+                </Link>
+                <Link href={whatsappRoute}>
                   <i
                     aria-hidden
-                    className='fab contact-form__social-icon fa-instagram'
+                    className='fab contact-form__social-icon fa-whatsapp me-4 cursor-pointer'
                   ></i>
-                </a>
+                </Link>
+                <Link href={instagramRoute}>
+                  <i
+                    aria-hidden
+                    className='fab contact-form__social-icon fa-instagram me-4 cursor-pointer'
+                  ></i>
+                </Link>
               </div>
             </div>
           </div>

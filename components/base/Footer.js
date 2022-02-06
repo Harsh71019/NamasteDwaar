@@ -1,5 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import {
+  linkedinRoute,
+  instagramRoute,
+  facebookRoute,
+  whatsappRoute,
+} from '../../helpers/routes';
 
 const Footer = () => {
   return (
@@ -69,7 +75,7 @@ const Footer = () => {
             <div className='footer-socials my-3'>
               <div className='d-flex justify-content-center'>
                 <div className='mx-3'>
-                  <Link href='https://www.facebook.com/NamasteDwaar'>
+                  <Link href={facebookRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/facebook_ojo3na.png'
                       alt='facebook'
@@ -77,7 +83,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className='mx-3'>
-                  <Link href='https://wa.me/9818388090'>
+                  <Link href={whatsappRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/watsapp_vwgauj.png'
                       alt='whatsapp'
@@ -85,7 +91,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className='mx-3'>
-                  <Link href='https://www.instagram.com/namaste_dwaar/?hl=en'>
+                  <Link href={instagramRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/instagramm_nqu4je.png'
                       alt='instagram'
@@ -94,7 +100,7 @@ const Footer = () => {
                 </div>
 
                 <div className='mx-3'>
-                  <Link href='https://in.linkedin.com/company/namaste-dwaar'>
+                  <Link href={linkedinRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/linkedin_w8hmpp.png'
                       alt='linkedin'
