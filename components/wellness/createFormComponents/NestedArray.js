@@ -11,23 +11,29 @@ const NestedArray = ({ nestIndex, control, register }) => {
       {fields.map((item, k) => {
         return (
           <div key={item.id} style={{ marginLeft: 20 }}>
-            <label>Add Session</label>
-            <input
-              name={`days[${nestIndex}].session[${k}].name`}
-              placeholder='Add number of days'
-              ref={register({ required: true })}
-              defaultValue={item.name}
-              style={{ marginRight: '25px' }}
-            />
-
-            <input
-              name={`days[${nestIndex}].session[${k}].noOfSessions`}
-              placeholder='Add Price'
-              ref={register()}
-              defaultValue={item.noOfSessions}
-            />
+            <div className='form-group mt-3'>
+              <label className='fs16'>Add Session</label>
+              <input
+                name={`days[${nestIndex}].session[${k}].name`}
+                placeholder='Add number of days'
+                ref={register({ required: true })}
+                defaultValue={item.name}
+                className='form-control fs16'
+              />
+            </div>{' '}
+            <div className='form-group mt-3'>
+              {' '}
+              <label className='fs16'>Add No of Sessions</label>
+              <input
+                name={`days[${nestIndex}].session[${k}].noOfSessions`}
+                placeholder='Add Price'
+                ref={register()}
+                defaultValue={item.noOfSessions}
+                className='form-control fs16'
+              />
+            </div>
             <button
-              className='btn btn-danger'
+              className='btn btn-danger fs16 mt-3'
               type='button'
               onClick={() => remove(k)}
             >
@@ -38,7 +44,7 @@ const NestedArray = ({ nestIndex, control, register }) => {
       })}
 
       <button
-        className='btn btn-success'
+        className='btn btn-success fs16 mt-3'
         type='button'
         onClick={() =>
           append({

@@ -22,11 +22,6 @@ const ExperienceDetails = ({ expId }) => {
       {exp && exp ? (
         <section className='experience-top container'>
           <div className=''>
-            {/* <Hero
-              image={exp.imageDetails}
-              heading={exp.mainTitle}
-              para={exp.mainDescription}
-            /> */}
             <img
               className='experience-top__image'
               src={exp.imageDetails}
@@ -75,7 +70,6 @@ const ExperienceDetails = ({ expId }) => {
       )}
     </>
   );
-  // return <>{exp && exp ? <section>{expId}</section> : <Loader />}</>;
 };
 
 export default ExperienceDetails;

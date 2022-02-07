@@ -1,7 +1,4 @@
 import React from 'react';
-import Mobile from '../../public/images/accomodationmobile.png';
-import Desktop from '../../public/images/accomodationdesktop.png';
-import Image from 'next/image';
 import Hero from '../base/Hero';
 const Section1 = () => {
   return (

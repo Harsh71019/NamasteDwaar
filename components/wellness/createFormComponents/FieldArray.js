@@ -18,23 +18,29 @@ const FieldArray = ({ control, register, setValue, getValues }) => {
           {fields.map((item, index) => {
             return (
               <li key={item.id}>
-                <label>No of Days</label>
-                <input
-                  name={`days[${index}].noOfDays`}
-                  ref={register()}
-                  defaultValue={item.noOfDays}
-                  placeholder='Please enter no of Days'
-                />
-                <label>Price</label>
-                <input
-                  name={`days[${index}].price`}
-                  ref={register()}
-                  defaultValue={item.price}
-                  placeholder='Please enter no of Price '
-                />
-
+                {' '}
+                <div className='form-group mt-3'>
+                  <label>No of Days</label>
+                  <input
+                    name={`days[${index}].noOfDays`}
+                    ref={register()}
+                    defaultValue={item.noOfDays}
+                    className='form-control adminform_input'
+                    placeholder='Please enter no of Days'
+                  />{' '}
+                </div>{' '}
+                <div className='form-group mt-3'>
+                  <label>Price</label>
+                  <input
+                    name={`days[${index}].price`}
+                    ref={register()}
+                    defaultValue={item.price}
+                    placeholder='Please enter no of Price '
+                    className='form-control adminform_input'
+                  />
+                </div>
                 <button
-                  className='btn-danger btn fs16'
+                  className='btn-danger btn fs16 mt-3'
                   type='button'
                   onClick={() => remove(index)}
                 >
@@ -48,15 +54,16 @@ const FieldArray = ({ control, register, setValue, getValues }) => {
 
         <section>
           <button
+            className='btn-primary btn fs16 mt-3'
             type='button'
             onClick={() => {
               append({ name: 'append' });
             }}
           >
-            append
+            Add more Days
           </button>
 
-          <button
+          {/* <button
             type='button'
             onClick={() => {
               setValue('days', [
@@ -69,7 +76,7 @@ const FieldArray = ({ control, register, setValue, getValues }) => {
             }}
           >
             Append Nested
-          </button>
+          </button> */}
           {/* 
           <button
             type='button'
@@ -96,7 +103,7 @@ const FieldArray = ({ control, register, setValue, getValues }) => {
           </button> */}
         </section>
 
-        <span className='counter'>Render Count: {renderCount}</span>
+        {/* <span className='counter'>Render Count: {renderCount}</span> */}
       </>
     </div>
   );

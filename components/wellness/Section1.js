@@ -15,8 +15,6 @@ const Section1 = () => {
     wellness: { wellness },
   } = getWellness;
 
-  console.log(loading, error, wellness);
-
   useEffect(() => {
     dispatch(getWellnessAction());
   }, [dispatch]);

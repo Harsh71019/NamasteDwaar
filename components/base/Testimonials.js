@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import Person from '../../public/images/person.png';
 
 const Testimonials = () => {
   return (

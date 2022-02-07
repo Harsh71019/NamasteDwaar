@@ -1,28 +1,19 @@
 import nc from 'next-connect';
 import {
-  isAuthenticatedUser,
-  authorizeRoles,
-} from '../../../../backend/middlewares/auth';
-import {
-  newWellness,
-  getAllWellness,
+  deleteWellness,
+  getSingleWellness,
 } from '../../../../backend/controllers/wellnessControllers';
 import dbConnect from '../../../../backend/config/dbConnect';
 import onError from '../../../../backend/middlewares/errors';
-
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb',
-    },
-  },
-};
-
+import {
+  isAuthenticatedUser,
+  authorizeRoles,
+} from '../../../../backend/middlewares/auth';
 const handler = nc({ onError });
-
 dbConnect();
 
-handler.post(newWellness);
-handler.get(getAllWellness);
+handler.get(getSingleWellness);
+
+handler.delete(deleteWellness);
 
 export default handler;

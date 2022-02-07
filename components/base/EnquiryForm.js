@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { enquiryUserAction } from '../../redux/actions/enquiryActions';
+import { useForm } from 'react-hook-form';
 
 const EnquiryForm = ({ heading }) => {
   const [name, setName] = useState('');
@@ -8,16 +9,21 @@ const EnquiryForm = ({ heading }) => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
+  const onSubmit = (data) => {
+    const { name, email, mobile, message } = data;
+    dispatch(enquiryUserAction(name, email, mobile, message));
+  };
+  const { register, handleSubmit, watch, errors } = useForm();
   const dispatch = useDispatch();
 
-  const submitForm = (e) => {
-    e.preventDefault();
-    dispatch(enquiryUserAction(name, email, mobile, message));
-    setName('');
-    setEmail('');
-    setMobile('');
-    setMessage('');
-  };
+  // const submitForm = (e) => {
+  //   e.preventDefault();
+  //   dispatch(enquiryUserAction(name, email, mobile, message));
+  //   setName('');
+  //   setEmail('');
+  //   setMobile('');
+  //   setMessage('');
+  // };
 
   return (
     <div className='enquiry-form'>
@@ -37,7 +43,7 @@ const EnquiryForm = ({ heading }) => {
           </span>
         )}
       </h1>
-      <form className='p-md-1 p-5'>
+      <form className='p-md-1 p-5' onSubmit={handleSubmit(onSubmit)}>
         <div className='row'>
           <div className='col-md-6 col-12'>
             <div className='col-12 d-flex flex-column'>
@@ -46,14 +52,18 @@ const EnquiryForm = ({ heading }) => {
               </label>
               <input
                 className='enquiry-form__input'
-                id='name'
                 type='text'
                 name='name'
-                value={name}
                 placeholder='Enter your name'
-                onChange={(e) => setName(e.target.value)}
                 required
+                ref={register({
+                  required: true,
+                  maxLength: 20,
+                })}
               />
+              <span className='text-danger'>
+                {errors.name && 'Name is required'}
+              </span>
             </div>
             <div className='col-12 d-flex flex-column'>
               <label className='enquiry-form__label' htmlFor='name'>
@@ -61,16 +71,17 @@ const EnquiryForm = ({ heading }) => {
               </label>
               <input
                 className='enquiry-form__input'
-                id='mobile'
-                type='number'
-                min={10}
-                max={10}
-                value={mobile}
+                type='tel'
                 name='mobile'
                 placeholder='Enter your mobile number here'
-                onChange={(e) => setMobile(e.target.value)}
-                required
-              />
+                ref={register({
+                  required: true,
+                  maxLength: 10,
+                })}
+              />{' '}
+              <span className='text-danger'>
+                {errors.mobile && 'Mobile is required'}
+              </span>
             </div>
             <div className='col-12 d-flex flex-column'>
               <label className='enquiry-form__label' htmlFor='name'>
@@ -78,14 +89,14 @@ const EnquiryForm = ({ heading }) => {
               </label>
               <input
                 className='enquiry-form__input'
-                id='email'
                 type='email'
                 name='email'
-                value={email}
                 placeholder='Enter your email Id here'
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+                ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+              />{' '}
+              <span className='text-danger'>
+                {errors.email && `Email is required `}
+              </span>
             </div>
           </div>
           <div className='col-md-6 col-12'>
@@ -95,21 +106,19 @@ const EnquiryForm = ({ heading }) => {
               </label>
               <textarea
                 className='enquiry-form__textarea'
-                id='Message'
                 type='text'
-                name='Message'
-                value={message}
+                name='message'
                 rows='8'
                 cols='50'
-                required
                 placeholder='Enter your message here'
-                onChange={(e) => setMessage(e.target.value)}
-              />
+                ref={register({ required: true, maxLength: 500 })}
+              />{' '}
+              {errors.message && 'Message is required'}
             </div>
           </div>
 
           <div className='col-12 d-flex justify-content-center enquiry-form__button'>
-            <button className='btn-default' onClick={submitForm}>
+            <button className='btn-default' type='submit'>
               Submit
             </button>
           </div>

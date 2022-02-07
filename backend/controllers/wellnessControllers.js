@@ -44,8 +44,6 @@ const newWellness = catchAsyncErrors(async (req, res) => {
     return sessionss;
   });
 
-  console.log(reformattedArray);
-
   let benefitsHighlights = benefits.split(',').map((skill) => skill.trim());
   let inclusionsHighlights = inclusions.split(',').map((skill) => skill.trim());
 
@@ -145,4 +143,40 @@ const getSingleWellness = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-export { newWellness, getAllWellness, getSingleWellness };
+const deleteWellness = catchAsyncErrors(async (req, res, next) => {
+  const wellness = await Wellness.findById(req.query.id);
+  console.log(wellness);
+
+  const {
+    inclusionsImage,
+    recommendedc1,
+    recommendedc2,
+    recommendedc3,
+    img,
+    detailsImage,
+    benefitsImage,
+  } = wellness;
+
+  if (!wellness) {
+    return next(
+      new ErrorHandler('Wellness Package not found with this ID', 404)
+    );
+  }
+
+  await cloudinary.v2.uploader.destroy(inclusionsImage.public_id);
+  await cloudinary.v2.uploader.destroy(recommendedc1.public_id);
+  await cloudinary.v2.uploader.destroy(recommendedc2.public_id);
+  await cloudinary.v2.uploader.destroy(recommendedc3.public_id);
+  await cloudinary.v2.uploader.destroy(img.public_id);
+  await cloudinary.v2.uploader.destroy(detailsImage.public_id);
+  await cloudinary.v2.uploader.destroy(benefitsImage.public_id);
+
+  await wellness.remove();
+
+  res.status(200).json({
+    success: true,
+    message: 'Wellness Deleted Successfully',
+  });
+});
+
+export { newWellness, getAllWellness, getSingleWellness, deleteWellness };

@@ -9,6 +9,7 @@ import {
   ADMIN_GET_DETAILS_WELLNESS_REQUEST,
   ADMIN_GET_DETAILS_WELLNESS_SUCCESS,
   ADMIN_GET_DETAILS_WELLNESS_FAIL,
+  CLEAR_ERRORS,
 } from '../../constants/admin/wellnessConstants';
 
 export const getAllWellnessAdminReducer = (

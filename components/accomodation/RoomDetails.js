@@ -7,12 +7,6 @@ import { useRouter } from 'next/router';
 const RoomDetails = () => {
   const router = useRouter();
   const { id } = router.query;
-  // const [accomodation, setaccomodation] = useState({});
-
-  // function getRoomDetails() {
-  //   const room = roomDetails.find((x) => x.id === roomID);
-  //   setaccomodation(room);
-  // }
 
   const dispatch = useDispatch();
   const {
@@ -26,10 +20,6 @@ const RoomDetails = () => {
       dispatch(getAccomodationDetailsAction(id));
     }
   }, [id]);
-
-  // useEffect(() => {
-  //   getRoomDetails();
-  // }, [roomID]);
 
   return (
     <>

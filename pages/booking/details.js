@@ -14,6 +14,7 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/router';
 import moment from 'moment';
 import * as yup from 'yup';
+import ButtonLoader from '../../components/base/ButtonLoader';
 
 // let schema = yup.object().shape({
 //   firstname: yup
@@ -47,6 +48,7 @@ const details = () => {
   const [daysOfStay, setDaysOfStay] = useState(0);
   const [isFormValid, setIsFormValid] = useState(false);
   const [roomCount, setRoomCount] = useState(0);
+  const [isRazorPayProccessing, setIsRazorPayProccessing] = useState(false);
 
   const router = useRouter();
   const dispatch = useDispatch();
@@ -165,6 +167,8 @@ const details = () => {
   }
 
   async function displayRazorpay() {
+    setIsRazorPayProccessing(true);
+
     const res = await loadScript(
       'https://checkout.razorpay.com/v1/checkout.js'
     );
@@ -247,14 +251,17 @@ const details = () => {
       const paymentObject = new window.Razorpay(options);
       paymentObject.open();
 
+      setIsRazorPayProccessing(false);
+
       if (!result) {
         alert('Server error. Are you online?');
         return;
+        setIsRazorPayProccessing(false);
       }
     } catch (error) {
       router.push(`/booking/fail`);
-      console.log(error);
       toast.error('Internal server error');
+      setIsRazorPayProccessing(false);
     }
   }
 
@@ -523,7 +530,14 @@ const details = () => {
                         : 'btn-default booking-accroomid__rooms-btn-disabled '
                     }
                   >
-                    Proceed to Pay
+                    {isRazorPayProccessing ? (
+                      <div className='d-flex justify-content-center align-items-center'>
+                        <ButtonLoader />
+                        Loading Razorpay.....
+                      </div>
+                    ) : (
+                      <>Proceed to Pay</>
+                    )}
                   </button>
                 </div>
               </div>

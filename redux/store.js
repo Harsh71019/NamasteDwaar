@@ -39,6 +39,12 @@ import {
   getWellnessDetailsReducer,
 } from './reducers/wellnessReducer';
 
+import {
+  createWellnessAdminReducer,
+  getAllWellnessAdminReducer,
+  getAllWellnessDetailsAdminReducer,
+} from './reducers/admin/wellnessAdminReducer';
+
 const reducerCombined = combineReducers({
   boilerListReducer: boilerReducer,
   accomodationReducer: getAccomodationReducer,
@@ -71,6 +77,11 @@ const reducerCombined = combineReducers({
   // end of wellness
   getWellness: getWellnessReducer,
   getWellnessDetails: getWellnessDetailsReducer,
+
+  //Start of wellness admin reducers
+  createWellnessAdmin: createWellnessAdminReducer,
+  getAllWellnessAdmin: getAllWellnessAdminReducer,
+  // end of wellness admin reducers
 });
 
 const reducer = (state, action) => {

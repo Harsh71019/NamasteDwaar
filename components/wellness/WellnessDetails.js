@@ -16,8 +16,6 @@ const WellDetails = () => {
     wellnessDetails: { wellness },
   } = useSelector((state) => state.getWellnessDetails);
 
-  console.log(wellness, loading, error);
-
   useEffect(() => {
     if (id) {
       dispatch(getWellnessDetailsAction(id));

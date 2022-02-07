@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import NavbarAdmin from '../../../../components/admin/base/NavbarAdmin';
-import { createWellness } from '../../../../redux/actions/admin/wellnessAdminAction';
+import {
+  createWellnessAdminAction,
+  clearErrors,
+} from '../../../../redux/actions/admin/wellnessAdminAction';
 import { ADMIN_CREATE_ALL_WELLNESS_RESET } from '../../../../redux/constants/admin/wellnessConstants';
 import ButtonLoader from '../../../../components/base/ButtonLoader';
 import { useRouter } from 'next/router';
@@ -72,7 +75,46 @@ const createWellnessPage = () => {
   } = useForm({
     defaultValues,
   });
-  const onSubmit = (data) => console.log('data', data);
+  const onSubmit = (data) => {
+    const {
+      title,
+      description,
+      detailsTitle,
+      detailsDescription,
+      duration,
+      recommendedt1,
+      recommendedt2,
+      recommendedt3,
+      inclusions,
+      benefits,
+      noData,
+      days,
+    } = data;
+
+    const dataToSubmit = {
+      title: title,
+      description: description,
+      img: imgLp,
+      detailsTitle: detailsTitle,
+      detailsDescription: detailsDescription,
+      detailsImage: imgDetailsLp,
+      duration: duration,
+      recommendedt1: recommendedt1,
+      recommendedt2: recommendedt2,
+      recommendedt3: recommendedt3,
+      recommendedc1: imgC1,
+      recommendedc2: imgC2,
+      recommendedc3: imgC3,
+      benefitsImage: benefitsImage,
+      inclusions: inclusions,
+      inclusionsImage: inclusionsImage,
+      benefits: benefits,
+      noData: noData,
+      days: days,
+    };
+
+    dispatch(createWellnessAdminAction(dataToSubmit));
+  };
 
   const dispatch = useDispatch();
   const router = useRouter();
@@ -150,32 +192,32 @@ const createWellnessPage = () => {
     }
   };
 
-  // const { loading, error, success } = useSelector(
-  //   (state) => state.createAccomodationAdmin
-  // );
+  const { loading, error, success } = useSelector(
+    (state) => state.createWellnessAdmin
+  );
 
-  // useEffect(() => {
-  //   if (error) {
-  //     toast.error(error);
-  //     dispatch(clearErrors());
-  //   }
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+      dispatch(clearErrors());
+    }
 
-  //   if (success) {
-  //     router.push('/admin/accomodation');
-  //     dispatch({ type: ADMIN_CREATE_ACCOMODATIONS_RESET });
-  //   }
-  // }, [dispatch, error, success]);
+    if (success) {
+      router.push('/admin/wellness');
+      dispatch({ type: ADMIN_CREATE_ALL_WELLNESS_RESET });
+    }
+  }, [dispatch, error, success]);
 
   return (
     <>
-      <section className='bg-white'>
+      <section className='bg-white pb-5'>
         <NavbarAdmin />
 
         <div className='container fs16 mt-5'>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1>Create New Wellness Package</h1>
             <div className='row'>
-              <div className='col-12 col-md-6'>
+              <div className='col-12 col-md-6 px-5'>
                 <div className='form-group mt-3'>
                   <label className='adminform_label' htmlFor='name_field'>
                     Wellness Package Title
@@ -432,7 +474,7 @@ const createWellnessPage = () => {
                 </div>
               </div>
 
-              <div className='col-12 col-md-6'>
+              <div className='col-12 col-md-6 px-5'>
                 <div className='form-group mt-3'>
                   <label className='adminform_label' htmlFor='name_field'>
                     Benefits Points (Comma Seperated)
@@ -520,6 +562,17 @@ const createWellnessPage = () => {
                     </div>
                   </div>
                 </div>{' '}
+                <div className='form-check mt-3'>
+                  <input
+                    className='form-check-input adminform_checkbox'
+                    type='checkbox'
+                    ref={register()}
+                    name='noData'
+                  />
+                  <label className='adminform_label' htmlFor='breakfast_field'>
+                    No Data
+                  </label>
+                </div>
                 <FieldArray
                   {...{
                     control,
@@ -533,14 +586,34 @@ const createWellnessPage = () => {
               </div>
             </div>
 
-            <div className='d-flex justify-content-center'>
-              <input className='btn-primary btn fs16 me-5' type='submit' />{' '}
+            <div className='d-flex justify-content-center mt-5 '>
+              <button
+                className='btn btn-primary fs16 me-5'
+                disabled={loading ? true : false}
+              >
+                {loading ? (
+                  <div className='d-flex justify-content-center align-items-center'>
+                    <ButtonLoader />
+                    Creating.....
+                  </div>
+                ) : (
+                  <>Create Wellness</>
+                )}
+              </button>
               <button
                 className='btn-warning btn fs16'
                 type='button'
+                disabled={loading ? true : false}
                 onClick={() => reset(defaultValues)}
               >
-                Reset
+                {loading ? (
+                  <div className='d-flex justify-content-center align-items-center'>
+                    <ButtonLoader />
+                    Creating.....
+                  </div>
+                ) : (
+                  <>Reset Form</>
+                )}
               </button>
             </div>
           </form>

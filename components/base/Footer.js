@@ -49,10 +49,6 @@ const Footer = () => {
                 <a className='footer-link'>gallery</a>
               </Link>
 
-              {/* <Link href='/'>
-                <a className='footer-link'>Blogs</a>
-              </Link> */}
-
               <Link href='/'>
                 <a className='footer-link'>Terms & Conditions</a>
               </Link>
