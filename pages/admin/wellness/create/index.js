@@ -48,6 +48,18 @@ const defaultValues = {
 const createWellnessPage = () => {
   const [imgLp, setImgLp] = useState('');
   const [imgLpPreview, setImgLpPreview] = useState('');
+  const [imgDetailsLp, setImgDetailsLp] = useState('');
+  const [imgLpDetailsPreview, setImgLpDetailsPreview] = useState('');
+  const [imgC1, setImgC1] = useState('');
+  const [imgC1Preview, setImgC1Preview] = useState('');
+  const [imgC2, setImgC2] = useState('');
+  const [imgC2Preview, setImgC2Preview] = useState('');
+  const [imgC3, setImgC3] = useState('');
+  const [imgC3Preview, setImgC3Preview] = useState('');
+  const [benefitsImage, setBenefitsImage] = useState('');
+  const [benefitsPreviewImage, setBenefitsPreviewImage] = useState('');
+  const [inclusionsPreviewImage, setInclusionsPreviewImage] = useState('');
+  const [inclusionsImage, setInclusionsImage] = useState('');
 
   const {
     control,
@@ -66,13 +78,72 @@ const createWellnessPage = () => {
   const router = useRouter();
 
   const onChange = (e) => {
-    if (e.target.name === 'imgLp') {
+    if (e.target.name === 'img') {
       const reader = new FileReader();
       reader.onload = () => {
         if (reader.readyState === 2) {
-          setValue('img', { img: reader.result }, { shouldDirty: true });
           setImgLp(reader.result);
           setImgLpPreview(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    if (e.target.name === 'imgDetails') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setImgDetailsLp(reader.result);
+          setImgLpDetailsPreview(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    if (e.target.name === 'imgC1') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setImgC1(reader.result);
+          setImgC1Preview(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    if (e.target.name === 'imgC2') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setImgC2(reader.result);
+          setImgC2Preview(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    if (e.target.name === 'imgC3') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setImgC3(reader.result);
+          setImgC3Preview(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    if (e.target.name === 'benefitsImage') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setBenefitsImage(reader.result);
+          setBenefitsPreviewImage(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+    if (e.target.name === 'inclusionsImage') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setInclusionsImage(reader.result);
+          setInclusionsPreviewImage(reader.result);
         }
       };
       reader.readAsDataURL(e.target.files[0]);
@@ -130,28 +201,325 @@ const createWellnessPage = () => {
                   />
                 </div>
                 <div className='form-group mt-3'>
+                  <label className='fs16'>Wellness Package Landing</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='img'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={imgLpPreview}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div className='form-group mt-3'>
                   <label className='adminform_label' htmlFor='name_field'>
-                    Wellness Package Image
+                    Wellness Package Details Title
                   </label>
                   <input
-                    type='file'
-                    name='imgLp'
-                    className='custom-file-input form-control fs16'
-                    id='customFile'
-                    accept='images/*'
-                    onChange={onChange}
+                    type='text'
+                    className='form-control adminform_input'
                     required
+                    ref={register()}
+                    name='detailsTitle'
                   />
-                  <label
-                    className='custom-file-label fs16'
-                    htmlFor='customFile'
-                  >
-                    Choose Panorama
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Wellness Package Details Description
                   </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='detailsDescription'
+                  />
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='fs16'>Wellness Package Details Image</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='imgDetails'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={imgLpDetailsPreview}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Duration for eg.(7D /14D /21D)
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='duration'
+                  />
+                </div>{' '}
+                <hr />
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Recommended Title 1
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='recommendedt1'
+                  />
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='fs16'>Recommended Circle 1</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='imgC1'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={imgC1Preview}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>{' '}
+                <hr />
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Recommended Title 2
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='recommendedt2'
+                  />
+                </div>{' '}
+                <div className='form-group mt-3'>
+                  <label className='fs16'>Recommended Circle 2</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='imgC2'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={imgC2Preview}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Recommended Title 3
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='recommendedt3'
+                  />
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='fs16'>Recommended Circle 3</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='imgC3'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={imgC3Preview}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div className='col-12 col-md-6'>
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Benefits Points (Comma Seperated)
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='benefits'
+                  />
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='fs16'>Benefits Image</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='benefitsImage'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={benefitsPreviewImage}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='name_field'>
+                    Inclusions Points (Comma Seperated)
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control adminform_input'
+                    required
+                    ref={register()}
+                    name='inclusions'
+                  />
+                </div>{' '}
+                <div className='form-group mt-3'>
+                  <label className='fs16'>Inclusions Image</label>
+                  <div className='row d-flex align-items-center'>
+                    <div className='custom-file col-12'>
+                      <input
+                        type='file'
+                        name='inclusionsImage'
+                        className='form-control fs16'
+                        id='customFile'
+                        accept='images/*'
+                        onChange={onChange}
+                        required
+                      />
+                      <label
+                        className='custom-file-label fs16'
+                        htmlFor='customFile'
+                      >
+                        Choose Image
+                      </label>
+                    </div>{' '}
+                    <div className='col-12'>
+                      <figure className='avatar '>
+                        <img
+                          className='w-100 adminform-img fs16'
+                          src={inclusionsPreviewImage}
+                          alt='image'
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>{' '}
                 <FieldArray
                   {...{
                     control,
@@ -165,389 +533,18 @@ const createWellnessPage = () => {
               </div>
             </div>
 
-            <button type='button' onClick={() => reset(defaultValues)}>
-              Reset
-            </button>
-
-            <input type='submit' />
-          </form>
-        </div>
-        {/* <div className='container '>
-          <div className='d-flex justify-content-between mt-5'>
-            <h1 className='text-center'>Create New Wellness Package</h1>
-            <button className='btn btn-primary fs16'>
-              <Link href='/admin/accomodation'>Go Back</Link>
-            </button>
-          </div>
-          <form onSubmit={submitHandler}>
-            <div className='row d-flex justify-content-center'>
-              <div className='col-md-6 col-12'>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='name_field'>
-                    Wellness Package Name
-                  </label>
-                  <input
-                    type='text'
-                    id='name_field'
-                    className='form-control adminform_input'
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='name_field'>
-                    Wellness Package on details page name
-                  </label>
-                  <input
-                    type='text'
-                    id='name_field'
-                    className='form-control adminform_input'
-                    value={detailsTitle}
-                    onChange={(e) => setDetailsTitle(e.target.value)}
-                    required
-                  />
-                </div>
-
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='name_field'>
-                    Description
-                  </label>
-                  <textarea
-                    type='text'
-                    id='name_field'
-                    className='form-control adminform_input'
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='name_field'>
-                    Description Details Page
-                  </label>
-                  <textarea
-                    type='text'
-                    id='name_field'
-                    className='form-control adminform_input'
-                    value={detailsDescription}
-                    onChange={(e) => setDetailsDescription(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='price_field'>
-                    Room Size
-                  </label>
-                  <input
-                    type='text'
-                    id='price_field'
-                    className='form-control adminform_input'
-                    value={roomSize}
-                    onChange={(e) => setRoomSize(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='price_field'>
-                    Occupancy
-                  </label>
-                  <input
-                    type='text'
-                    id='price_field'
-                    className='form-control adminform_input'
-                    value={occupancy}
-                    onChange={(e) => setOccupancy(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='price_field'>
-                    Description
-                  </label>
-                  <textarea
-                    type='text'
-                    id='price_field'
-                    className='form-control adminform_input'
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-group mt-3'>
-                  <label className='adminform_label' htmlFor='price_field'>
-                    Highlights{' '}
-                    <small>(Please enter points comma seperated)</small>
-                  </label>
-                  <input
-                    type='text'
-                    id='price_field'
-                    className='form-control adminform_input'
-                    value={highlights}
-                    onChange={(e) => setHighlights(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='breakfast_field'
-                    value={breakfast}
-                    onChange={(e) => setBreakfast(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='breakfast_field'>
-                    Breakfast
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='breakfast_field'
-                    value={airConditioning}
-                    onChange={(e) => setAirConditioning(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='breakfast_field'>
-                    Air Conditioning
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='wifi_field'
-                    value={wifi}
-                    onChange={(e) => setWifi(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='wifi_field'>
-                    Wifi
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='shower_field'
-                    value={shower}
-                    onChange={(e) => setShower(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='shower_field'>
-                    Shower
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='minibar_field'
-                    value={minibar}
-                    onChange={(e) => setMinibar(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='minibar_field'>
-                    Minibar
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='tv_field'
-                    value={tv}
-                    onChange={(e) => setTv(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='tv_field'>
-                    TV
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox adminform_checkbox'
-                    type='checkbox'
-                    id='teacoffeeSet_field'
-                    value={teacoffeeSet}
-                    onChange={(e) => setTeacoffeeSet(e.target.checked)}
-                  />
-                  <label
-                    className='adminform_label'
-                    htmlFor='teacoffeeSet_field'
-                  >
-                    Tea Coffee Set
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='swimmingPool_field'
-                    value={swimmingPool}
-                    onChange={(e) => setSwimmingPool(e.target.checked)}
-                  />
-                  <label
-                    className='adminform_label'
-                    htmlFor='swimmingPool_field'
-                  >
-                    Swimming Pool
-                  </label>
-                </div>
-                <div className='form-check mt-3'>
-                  <input
-                    className='form-check-input adminform_checkbox'
-                    type='checkbox'
-                    id='hairDryer_field'
-                    value={hairDryer}
-                    onChange={(e) => setHairDryer(e.target.checked)}
-                  />
-                  <label className='adminform_label' htmlFor='hairDryer_field'>
-                    hair Dryer
-                  </label>
-                </div>
-              </div>
-              <div className='col-md-6 col-12'>
-                <div className='form-group mt-3'>
-                  <label className=' fs16'>Panorama</label>
-                  <div className='d-flex align-items-center'>
-                    <div className='col-6'>
-                      <figure className='avatar '>
-                        <img
-                          className='w-100 adminform-img fs16'
-                          src={panoramaPreview}
-                          alt='image'
-                        />
-                      </figure>
-                    </div>
-                    <div className='custom-file col-6'>
-                      <input
-                        type='file'
-                        name='panorama'
-                        className='custom-file-input fs16'
-                        id='customFile'
-                        accept='images/*'
-                        onChange={onChange}
-                        required
-                      />
-                      <label
-                        className='custom-file-label fs16'
-                        htmlFor='customFile'
-                      >
-                        Choose Panorama
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className='form-group mt-3'>
-                  <label className=' fs16'>Mobile</label>
-                  <div className='d-flex align-items-center'>
-                    <div className='col-6'>
-                      <figure className='avatar  '>
-                        <img
-                          className='w-100 adminform-img fs16'
-                          src={mobilePreview}
-                          alt='image'
-                        />
-                      </figure>
-                    </div>
-                    <div className='custom-file col-6'>
-                      <input
-                        type='file'
-                        name='mobile'
-                        required
-                        className='custom-file-input fs16'
-                        id='customFile'
-                        accept='images/*'
-                        onChange={onChange}
-                      />
-                      <label
-                        className='custom-file-label fs16'
-                        htmlFor='customFile'
-                      >
-                        Choose Mobile
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className='form-group mt-3'>
-                  <label className=' fs16'>Room details 1</label>
-                  <div className='d-flex align-items-center'>
-                    <div className='col-6'>
-                      <figure className='avatar  '>
-                        <img
-                          className='w-100 adminform-img fs16'
-                          src={roomdetails1Preview}
-                          alt='image'
-                        />
-                      </figure>
-                    </div>
-                    <div className='custom-file col-6'>
-                      <input
-                        type='file'
-                        name='roomdetails1'
-                        className='custom-file-input fs16'
-                        id='customFile'
-                        accept='images/*'
-                        onChange={onChange}
-                        required
-                      />
-                      <label
-                        className='custom-file-label fs16'
-                        htmlFor='customFile'
-                      >
-                        Choose Room Details 1
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className='form-group mt-3'>
-                  <label className=' fs16'>Room Details 2 </label>
-                  <div className='d-flex align-items-center'>
-                    <div className='col-6'>
-                      <figure className='avatar  '>
-                        <img
-                          className='w-100 adminform-img fs16'
-                          src={roomdetails2Preview}
-                          alt='image'
-                        />
-                      </figure>
-                    </div>
-                    <div className='custom-file col-6'>
-                      <input
-                        type='file'
-                        name='roomdetails2'
-                        className='custom-file-input fs16 fs16'
-                        id='customFile'
-                        accept='images/*'
-                        onChange={onChange}
-                        required
-                      />
-                      <label
-                        className='custom-file-label fs16'
-                        htmlFor='customFile'
-                      >
-                        Choose Room Details 2
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className='d-flex justify-content-center align-items-center'>
-                <button
-                  className='btn btn-primary fs16  mt-5'
-                  disabled={loading ? true : false}
-                >
-                  {loading ? (
-                    <div className='d-flex justify-content-center align-items-center'>
-                      <ButtonLoader />
-                      Creating.....
-                    </div>
-                  ) : (
-                    <>Create Accomodation</>
-                  )}
-                </button>
-              </div>
+            <div className='d-flex justify-content-center'>
+              <input className='btn-primary btn fs16 me-5' type='submit' />{' '}
+              <button
+                className='btn-warning btn fs16'
+                type='button'
+                onClick={() => reset(defaultValues)}
+              >
+                Reset
+              </button>
             </div>
           </form>
-        </div> */}
+        </div>
       </section>
     </>
   );
