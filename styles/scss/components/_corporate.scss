@@ -7,13 +7,12 @@
     padding: 0 15rem;
 
     &-desc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: justified;
+      @include abstracts.para(
+        $color: #000,
+        $lh: 2.4rem,
+        $fw: 400,
+        $ta: justified
+      );
     }
   }
 
@@ -42,13 +41,7 @@
     }
 
     &-text {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
+      @include abstracts.para($color: #000, $lh: 2.4rem, $fw: 400, $ta: left);
     }
   }
 }
@@ -66,13 +59,12 @@
       padding: 0 1rem;
 
       &-desc {
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: justified;
+        @include abstracts.para(
+          $color: #000,
+          $lh: 2.4rem,
+          $fw: 400,
+          $ta: justified
+        );
       }
     }
 
@@ -101,13 +93,7 @@
       }
 
       &-text {
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
+        @include abstracts.para($color: #000, $lh: 2.4rem, $fw: 400, $ta: left);
       }
     }
   }

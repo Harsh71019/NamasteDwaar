@@ -1,3 +1,4 @@
+@use '../abstracts';
 .events-section1 {
   &__container {
     position: relative;
@@ -26,14 +27,7 @@
   }
 
   &__desc {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #fff;
+    @include abstracts.para($color: #fff, $lh: 2.4rem, $fw: 400, $ta: left);
   }
 
   &__card {
@@ -71,14 +65,12 @@
     }
 
     &-para {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: justified;
-      color: #000000;
+      @include abstracts.para(
+        $color: #000,
+        $lh: 2.4rem,
+        $fw: 400,
+        $ta: justified
+      );
     }
 
     &-link {
@@ -122,14 +114,7 @@
     }
 
     &__desc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: center;
-      color: #fff;
+      @include abstracts.para($color: #fff, $lh: 2.4rem, $fw: 400, $ta: center);
     }
 
     &__card {

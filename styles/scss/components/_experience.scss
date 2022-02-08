@@ -38,15 +38,11 @@
     }
 
     &-desc {
-      @include abstracts.heading(
-        $family: Montserrat,
-        $size: 1.4rem,
-        $style: normal,
-        $weight: 400,
-        $height: 2.4rem,
-        $letterSpacing: 0,
-        $align: justified,
-        $color: #000
+      @include abstracts.para(
+        $color: #000,
+        $lh: 2.4rem,
+        $fw: 400,
+        $ta: justified
       );
       margin-bottom: 1.2rem;
     }
@@ -104,13 +100,7 @@
     }
 
     &-desc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
+      @include abstracts.para($color: #000, $lh: 2.4rem, $fw: 400, $ta: left);
       margin-top: 3.2rem;
     }
   }
@@ -134,13 +124,7 @@
   }
 
   &__maindesc {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
+    @include abstracts.para($color: #000, $lh: 2.4rem, $fw: 400, $ta: center);
     margin-top: 5.5rem;
   }
 }
@@ -195,13 +179,6 @@
     }
 
     &__maindesc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: center;
       margin-top: 3.2rem;
     }
 
@@ -242,13 +219,6 @@
       }
 
       &-desc {
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
         margin-top: 3.2rem;
       }
     }

@@ -1,31 +1,4 @@
 @use '../abstracts';
-.personal-section1 {
-  &__image {
-    position: relative;
-
-    &-image {
-      width: 100%;
-      height: 52rem;
-      object-fit: cover;
-    }
-
-    &-heading {
-      @include abstracts.heading(
-        $family: Playfair Display,
-        $size: 3.6rem,
-        $style: normal,
-        $weight: 700,
-        $height: 4.4rem,
-        $letterSpacing: 0,
-        $align: left,
-        $color: #fff
-      );
-      position: absolute;
-      top: 70%;
-      left: 3%;
-    }
-  }
-}
 
 .personal-section2 {
   &__heading {
@@ -44,13 +17,12 @@
     padding: 0 15rem;
 
     &-desc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: justified;
+      @include abstracts.para(
+        $color: #000,
+        $lh: 2.4rem,
+        $fw: 400,
+        $ta: justified
+      );
     }
   }
 
@@ -79,13 +51,7 @@
     }
 
     &-text {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
+      @include abstracts.para($color: #000, $lh: 2.4rem, $fw: 400, $ta: left);
     }
   }
 }
@@ -96,36 +62,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .personal-section1 {
-    &__image {
-      position: relative;
-
-      &-image {
-        width: 100%;
-        object-fit: cover !important;
-        height: 70vh !important;
-      }
-
-      &-heading {
-        width: 100%;
-        @include abstracts.heading(
-          $family: Playfair Display,
-          $size: 3rem,
-          $style: normal,
-          $weight: 700,
-          $height: 4.4,
-          $letterSpacing: 0,
-          $align: center,
-          $color: #fff
-        );
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
   .personal-section2 {
     &__para {
       margin-top: 9rem;
@@ -133,13 +69,12 @@
       padding: 0 1rem;
 
       &-desc {
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: justified;
+        @include abstracts.para(
+          $color: #000,
+          $lh: 2.4rem,
+          $fw: 400,
+          $ta: justified
+        );
       }
     }
 
@@ -168,13 +103,7 @@
       }
 
       &-text {
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
+        @include abstracts.para($color: #000, $lh: 2.4rem, $fw: 400, $ta: left);
       }
     }
   }
