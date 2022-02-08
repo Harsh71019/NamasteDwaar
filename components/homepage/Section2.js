@@ -5,7 +5,7 @@ const Section2 = () => {
     <section className='homesection-2'>
       <div className='container px-0 d-flex justify-content-center'>
         <div className='section-2'>
-          <p className='section-2-para'>
+          <p className='section-2-para text-para'>
             <span className='section-2-para__span'>Namaste Dwaar </span>
             believes that being healthy extends beyond the realms of physical
             wellbeing. Hence, we take a holistic approach to total wellbeing

@@ -8,7 +8,7 @@ const VisionPhilosophy = () => {
           <div className='col-md-6 col-12  px-md-1 px-0'>
             <div className=''>
               <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643564422/static/Homepage%20New/Homepage_Experiences_Wellness_Programmes_aizwx1.jpg'
+                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644082901/static/About%20us/About_Us_Our_Mission_pqfvvj.jpg'
                 alt=''
                 className='vision-about__img'
               />
@@ -17,7 +17,7 @@ const VisionPhilosophy = () => {
           <div className='col-md-6 col-12 d-flex align-items-center'>
             <div className='vision-about__container-text'>
               <h1 className='vision-about__h1'>Our Mission</h1>
-              <p className='vision-about__para'>
+              <p className='vision-about__para text-para'>
                 The village has preserved the most fundamental aspects of our
                 culture and Our mission with Namaste Dwaar is to preserve the
                 authenticity of two of India’s most powerful components, both of
@@ -36,7 +36,7 @@ const VisionPhilosophy = () => {
           <div className='col-md-6 col-12 d-flex align-items-center order-1 order-md-0'>
             <div className='vision-about__container-text'>
               <h1 className='vision-about__h1'>Our Philosophy</h1>
-              <p className='vision-about__para'>
+              <p className='vision-about__para text-para'>
                 To heal the seemingly endless ailments associated with
                 modern-day living, we must return to the place which has
                 preserved the prosperity of our past, which now harbours the
@@ -50,7 +50,7 @@ const VisionPhilosophy = () => {
           <div className='col-md-6 col-12 order-0 order-md-1 px-md-1 px-0'>
             <div className=''>
               <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643564422/static/Homepage%20New/Homepage_Experiences_Wellness_Programmes_aizwx1.jpg'
+                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644082901/static/About%20us/About_Us_Our_Philosophy_i5bfip.jpg'
                 alt=''
                 className='vision-about__img'
               />

@@ -13,7 +13,7 @@ const Section3 = () => {
             <h1 className='aboutus-section3__image-heading'>
               Meet the Architect
             </h1>
-            <p className='aboutus-section3__image-desc'>
+            <p className='aboutus-section3__image-desc text-para'>
               One of the most gifted architects India has had, the late Mr.
               Pradeep Sachdeva is the mastermind behind some of India’s most
               inspiring architectural works. With a key focus on sustainable

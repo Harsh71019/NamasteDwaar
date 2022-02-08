@@ -1,101 +1,110 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { enquiryUserAction } from '../../redux/actions/enquiryActions';
+import { useForm } from 'react-hook-form';
+import ButtonLoader from './ButtonLoader';
 
 const ContactUsEnquiry = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [mobile, setMobile] = useState('');
-  const [message, setMessage] = useState('');
-
+  const { register, handleSubmit, watch, errors, reset } = useForm();
   const dispatch = useDispatch();
 
-  const submitForm = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
+    const { name, email, mobile, message } = data;
     dispatch(enquiryUserAction(name, email, mobile, message));
-    setName('');
-    setEmail('');
-    setMobile('');
-    setMessage('');
+    reset();
   };
 
+  const { loading } = useSelector((state) => state.userEnquiry);
+
+  useEffect(() => {}, [errors]);
   return (
     <div className='enquiry-form'>
-      <h1 className='enquiry-form__heading'>
-        The Time for Wellness is Now. Redeem Your Free Wellness Consultation
-      </h1>
+      <h1 className='enquiry-form__heading'>Make an Enquiry</h1>
       <form
-        onSubmit={submitForm}
+        onSubmit={handleSubmit(onSubmit)}
         className='d-flex justify-content-center align-items-center p-md-1 p-5'
       >
         <div className='row'>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Name<span className='text-danger'>* </span>
+              Name <span className='text-danger'>* </span>
             </label>
             <input
               className='enquiry-form__input'
-              id='name'
               type='text'
               name='name'
-              value={name}
               placeholder='Enter your name'
-              onChange={(e) => setName(e.target.value)}
               required
+              ref={register({
+                required: true,
+                maxLength: 20,
+              })}
             />
+            <span className='text-danger '>
+              {errors.name && 'Name is required'}
+            </span>
           </div>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Mobile Number<span className='text-danger'>* </span>
+              Mobile Number <span className='text-danger'>* </span>
             </label>
             <input
               className='enquiry-form__input'
-              id='mobile'
-              type='number'
-              min={10}
-              max={10}
-              value={mobile}
+              type='tel'
               name='mobile'
               placeholder='Enter your mobile number here'
-              onChange={(e) => setMobile(e.target.value)}
-              required
+              ref={register({
+                required: true,
+                min: 10,
+                maxLength: 10,
+              })}
             />
+            <span className='text-danger '>
+              {errors.mobile && 'Mobile is required'}
+            </span>
           </div>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Email Id<span className='text-danger'>* </span>
+              Email Id <span className='text-danger'>* </span>
             </label>
             <input
               className='enquiry-form__input'
-              id='email'
               type='email'
               name='email'
-              value={email}
               placeholder='Enter your email Id here'
-              required
-              onChange={(e) => setEmail(e.target.value)}
+              ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             />
+            <span className='text-danger '>
+              {errors.email && `Email is required `}
+            </span>
           </div>
           <div className='col-12 d-flex flex-column'>
             <label className='enquiry-form__label' htmlFor='name'>
-              Message<span className='text-danger'>* </span>
+              Message <span className='text-danger'>* </span>
             </label>
             <textarea
               className='enquiry-form__textarea'
-              id='Message'
               type='text'
-              name='Message'
-              value={message}
-              rows='6'
+              name='message'
+              rows='8'
               cols='50'
               placeholder='Enter your message here'
-              onChange={(e) => setMessage(e.target.value)}
-              required
+              ref={register({ required: true, maxLength: 500 })}
             />
+            <span className='text-danger '>
+              {errors.message && 'Message is required'}
+            </span>
           </div>
           <div className='col-12 enquiry-form__button'>
-            <button className='btn-default' onClick={submitForm}>
-              Submit
+            <button className='btn-default' type='submit'>
+              {loading ? (
+                <div className='d-flex justify-content-center align-items-center'>
+                  <ButtonLoader />
+                  Creating.....
+                </div>
+              ) : (
+                <>Submit</>
+              )}
             </button>
           </div>
         </div>

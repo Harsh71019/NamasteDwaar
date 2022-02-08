@@ -36,8 +36,7 @@ function MyApp({ Component, pageProps }) {
           reverseOrder={false}
           toastOptions={{
             style: {
-              marginTop: '80px',
-              marginRight: '30px',
+              fontSize: '16px',
             },
           }}
         />

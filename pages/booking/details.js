@@ -13,27 +13,7 @@ import Loader from '../../components/base/Loader';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/router';
 import moment from 'moment';
-import * as yup from 'yup';
 import ButtonLoader from '../../components/base/ButtonLoader';
-
-// let schema = yup.object().shape({
-//   firstname: yup
-//     .string('This field is mandatory')
-//     .required('This field is mandatory'),
-//   lastname: yup
-//     .string('This field is mandatory')
-//     .required('This field is mandatory'),
-//   mobile: yup
-//     .number('This field is mandatory')
-//     .required('This field is mandatory')
-//     .positive()
-//     .integer()
-//     .max(10)
-//     .min(10),
-//   email: yup
-//     .string('This field is mandatory')
-//     .email('Please enter valid email'),
-// });
 
 const details = () => {
   const [firstname, setFirstname] = useState('');
@@ -49,6 +29,8 @@ const details = () => {
   const [isFormValid, setIsFormValid] = useState(false);
   const [roomCount, setRoomCount] = useState(0);
   const [isRazorPayProccessing, setIsRazorPayProccessing] = useState(false);
+  const [roomName, setRoomName] = useState('');
+  const [errors, setErrors] = useState({});
 
   const router = useRouter();
   const dispatch = useDispatch();
@@ -69,16 +51,7 @@ const details = () => {
   }
 
   function checkForm() {
-    // schema
-    //   .isValid({
-    //     firstname: firstname,
-    //     lastname: lastname,
-    //     mobile: mobile,
-    //     email: email,
-    //   })
-    //   .then({});
-
-    if (firstname === '' || null || undefined) {
+    if (firstname === '' || null || undefined || firstname.match()) {
       toast.error('Please select firstname');
       return false;
     }
@@ -128,6 +101,9 @@ const details = () => {
       bookingDetails?.adult,
       accomodation?.occupancy
     );
+
+    setRoomName(accomodation?.name);
+
     setRoomCount(roomCountMax);
     const amountGenerated =
       Number(Difference_In_Days * pricePerNight) * Number(roomCountMax);
@@ -319,21 +295,24 @@ const details = () => {
                       </p>
                     </div>
                   </div>
-                  <p className='booking-accroomid__cardtop-header'>
-                    Room Details
-                  </p>
 
-                  <p className=''>
+                  <div className=''>
+                    {/* <p className='booking-accroomid__cardtop-header'>
+                    Room Details
+                  </p> */}
+
+                    {/* <p className=''>
                     <span className='booking-accroomid__cardtop-text'>
-                      Premium room{' '}
-                    </span>{' '}
+                      Premium room
+                    </span>
                     <span className='bookad-details__pills p-1 ms-3'>
                       Breakfast Included
-                    </span>{' '}
+                    </span>
                     <span className='bookad-details__pills p-1 ms-3'>
                       40 sq mt
                     </span>
-                  </p>
+                  </p> */}
+                  </div>
                 </div>
                 <div className='booking-accroomid__rooms mt-5 row d-flex justify-content-center align-items-center'>
                   <div className='p-md-5 p-3'>
@@ -402,7 +381,7 @@ const details = () => {
                               onChange={(e) => setMobile(e.target.value)}
                               required
                             />
-                          </div>{' '}
+                          </div>
                         </div>
                         <div className='col-12'>
                           <div className='d-flex flex-column'>
@@ -490,7 +469,7 @@ const details = () => {
                     <div className='row'>
                       <div className='col-6'>
                         <p className='booking-accroomid__cardtop-text'>
-                          Premium Room X {daysOfStay} nights
+                          {roomName} X {daysOfStay} nights
                         </p>
                       </div>
                       <div className='col-6 d-flex justify-content-end'>

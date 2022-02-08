@@ -19,7 +19,7 @@ const Section2 = () => {
                   Namaste Kairali{' '}
                 </h1>
                 <div className='aboutus-section2__card-desccont'>
-                  <p className='aboutus-section2__card-desc'>
+                  <p className='aboutus-section2__card-desc text-para'>
                     Namaste Group is proud to partner with Kairali Ayurvedic
                     Group (Estd. 1908), one of the most reputed wellness
                     practitioners across India. Their award-winning Ayurvedic
@@ -50,7 +50,7 @@ const Section2 = () => {
                   The Art of Living by DSVV
                 </h1>
                 <div className='aboutus-section2__card-desccont'>
-                  <p className='aboutus-section2__card-desc'>
+                  <p className='aboutus-section2__card-desc text-para'>
                     At Namaste Dwaar, one can learn pure yoga from one of
                     India’s most esteemed institutions for preserving ancient
                     Indian culture: Dev Sanskriti Vishwavidyalaya (DSVV). DSVV
@@ -81,7 +81,7 @@ const Section2 = () => {
                   Uttar Pradesh Government
                 </h1>
                 <div className='aboutus-section2__card-desccont'>
-                  <p className='aboutus-section2__card-desc'>
+                  <p className='aboutus-section2__card-desc text-para'>
                     Namaste Dwaar is dedicated to the preservation of the
                     environment and communities where it operates. With a
                     personal mission to create and sustain livelihoods, our

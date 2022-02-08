@@ -6,7 +6,6 @@ import Section4 from '../components/homepage/Section4';
 import Section5 from '../components/homepage/Section5';
 import Section6 from '../components/homepage/Section6';
 import CovidSection from '../components/homepage/CovidSection';
-import Heading from '../components/homepage/Heading';
 import Footer from '../components/base/Footer';
 
 export default function Home() {

@@ -48,3 +48,14 @@
   text-align: $align;
   color: $color;
 }
+
+@mixin para($color, $lh, $fw, $ta) {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: $color;
+  line-height: $lh;
+  font-weight: $fw;
+  text-align: $ta;
+}

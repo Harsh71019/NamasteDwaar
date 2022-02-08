@@ -42,20 +42,6 @@ a {
   cursor: pointer;
 }
 
-.primary-heading {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 24px;
-  color: var(--secondary-color);
-  margin-top: 96px;
-  margin-bottom: 60px;
-}
-
 .primary-text {
   font-family: Montserrat;
   font-style: normal;
@@ -214,10 +200,7 @@ a {
 }
 
 .section-2-para {
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 20px;
   text-align: center;
   color: #000000;
@@ -454,27 +437,6 @@ a {
     max-width: 100%;
   }
 
-  .primary-heading {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 24px;
-    color: var(--secondary-color);
-    margin-top: 30px;
-    margin-bottom: 48px;
-  }
-
-  .primary-text {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-  }
   /*End of Utilities */
 
   /* Start of Section 1 */
@@ -536,12 +498,8 @@ a {
     padding: 5rem 3.2rem;
   }
   .section-2-para {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0em;
     text-align: center;
   }
 

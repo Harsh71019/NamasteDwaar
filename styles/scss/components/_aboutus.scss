@@ -1,70 +1,4 @@
-.aboutus-section1 {
-  &__container {
-    position: relative;
-  }
-
-  &__img {
-    width: 100%;
-  }
-
-  &__title {
-    text-align: center;
-    color: #fff;
-    padding-top: 3.6rem;
-    padding-bottom: 4rem;
-    font-family: Playfair Display;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 0em;
-  }
-  &__desc {
-    color: #fff;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    padding-bottom: 4.1rem;
-  }
-  &__subtitle {
-    color: #fff;
-    text-align: center;
-    font-family: Playfair Display;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 44px;
-    letter-spacing: 0em;
-    text-align: center;
-    padding-bottom: 1.4rem;
-  }
-  &__tag {
-    color: #fff;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 275;
-    line-height: 44px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 1.3rem;
-  }
-
-  &__card {
-    background: #a7896f;
-    max-width: 1080px;
-    margin-top: -7rem;
-
-    &-body {
-      padding: 0 110px;
-    }
-  }
-}
+@use '../abstracts';
 
 .sustain-about {
   margin-top: 15rem;
@@ -84,16 +18,13 @@
     color: #ffffff;
   }
   &__para {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: justify;
+    @include abstracts.para(
+      $color: #ffffff,
+      $lh: 2.4rem,
+      $fw: 500,
+      $ta: justify
+    );
     text-justify: inter-word;
-
-    color: #ffffff;
     margin-top: 4rem;
   }
 }
@@ -117,13 +48,7 @@
   }
 
   &__para {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
+    @include abstracts.para($color: #000000, $lh: 2.4rem, $fw: 400, $ta: left);
     margin-top: 4.4rem;
   }
 
@@ -161,13 +86,12 @@
     }
 
     &-desc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: justified;
+      @include abstracts.para(
+        $color: #000000,
+        $lh: 2.4rem,
+        $fw: 400,
+        $ta: justified
+      );
       margin-top: 2.4rem;
     }
   }
@@ -203,14 +127,12 @@
     }
 
     &-desc {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: justified;
-      color: #fff;
+      @include abstracts.para(
+        $color: #fff,
+        $lh: 2.4rem,
+        $fw: 500,
+        $ta: justified
+      );
     }
   }
 }
@@ -335,23 +257,6 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .aboutus-section1 {
-    &__img {
-      width: 100%;
-      object-fit: cover !important;
-      height: 70vh !important;
-    }
-
-    &__card {
-      background: #a7896f;
-      max-width: 85%;
-      margin-top: -20rem;
-
-      &-body {
-        padding: 0 20px;
-      }
-    }
-  }
   .aboutus-section2 {
     &__row {
       margin-top: 4.8rem;
@@ -434,11 +339,6 @@
       width: 100%;
       height: 452px;
       object-fit: cover;
-    }
-    &__h1 {
-    }
-
-    &__para {
     }
 
     &__container-text {

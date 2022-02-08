@@ -1,20 +1,27 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 import { useForm } from 'react-hook-form';
+import ButtonLoader from './ButtonLoader';
 
 const EnquiryForm = ({ heading }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [mobile, setMobile] = useState('');
-  const [message, setMessage] = useState('');
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [mobile, setMobile] = useState('');
+  // const [message, setMessage] = useState('');
+
+  const { register, handleSubmit, watch, errors, reset } = useForm();
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
     const { name, email, mobile, message } = data;
     dispatch(enquiryUserAction(name, email, mobile, message));
+    reset();
   };
-  const { register, handleSubmit, watch, errors } = useForm();
-  const dispatch = useDispatch();
+
+  const { loading } = useSelector((state) => state.userEnquiry);
+
+  useEffect(() => {}, [errors]);
 
   // const submitForm = (e) => {
   //   e.preventDefault();
@@ -61,7 +68,7 @@ const EnquiryForm = ({ heading }) => {
                   maxLength: 20,
                 })}
               />
-              <span className='text-danger'>
+              <span className='text-danger '>
                 {errors.name && 'Name is required'}
               </span>
             </div>
@@ -76,10 +83,13 @@ const EnquiryForm = ({ heading }) => {
                 placeholder='Enter your mobile number here'
                 ref={register({
                   required: true,
+                  min: 10,
                   maxLength: 10,
+                  max: 10,
+                  pattern: /^[0-9]*$/,
                 })}
-              />{' '}
-              <span className='text-danger'>
+              />
+              <span className='text-danger '>
                 {errors.mobile && 'Mobile is required'}
               </span>
             </div>
@@ -93,8 +103,8 @@ const EnquiryForm = ({ heading }) => {
                 name='email'
                 placeholder='Enter your email Id here'
                 ref={register({ required: true, pattern: /^\S+@\S+$/i })}
-              />{' '}
-              <span className='text-danger'>
+              />
+              <span className='text-danger '>
                 {errors.email && `Email is required `}
               </span>
             </div>
@@ -113,13 +123,22 @@ const EnquiryForm = ({ heading }) => {
                 placeholder='Enter your message here'
                 ref={register({ required: true, maxLength: 500 })}
               />{' '}
-              {errors.message && 'Message is required'}
+              <span className='text-danger '>
+                {errors.message && 'Message is required'}
+              </span>
             </div>
           </div>
 
           <div className='col-12 d-flex justify-content-center enquiry-form__button'>
             <button className='btn-default' type='submit'>
-              Submit
+              {loading ? (
+                <div className='d-flex justify-content-center align-items-center'>
+                  <ButtonLoader />
+                  Creating.....
+                </div>
+              ) : (
+                <>Submit</>
+              )}
             </button>
           </div>
         </div>
