@@ -1,11 +1,45 @@
-import React, { useState } from 'react';
-import { Container, Navbar, Nav, Dropdown } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Navbar, Nav, Dropdown, NavDropdown } from 'react-bootstrap';
 import Image from 'next/image';
 import Logo from '../../public/images/logo.png';
 import Phone from '../../public/images/phone.svg';
 import Link from 'next/link';
+import { isMobile } from 'react-device-detect';
+import { useRouter } from 'next/router';
+import { set } from 'mongoose';
 
 const NavbarTop = () => {
+  const [show, setShow] = useState(false);
+  const [accomodation, setAccomodation] = useState(false);
+  const [wellness, setWellness] = useState(false);
+  const [events, setEvents] = useState(false);
+  const [exp, setExp] = useState(false);
+
+  const router = useRouter();
+
+  function toggleAU(state) {
+    setShow(state);
+  }
+
+  function toggleExp() {
+    const stateExp = exp;
+    setExp(!stateExp);
+  }
+  function toggleWell() {
+    const stateWellness = wellness;
+    setWellness(!stateWellness);
+  }
+  function toggleAcc() {
+    const stateAccomodation = accomodation;
+    setAccomodation(!stateAccomodation);
+  }
+  function toggleEvents() {
+    const stateEvents = events;
+    setEvents(!stateEvents);
+  }
+
+  useEffect(() => {}, [show]);
+
   return (
     <Container fluid className='nav-container'>
       <div className='container px-0'>
@@ -35,17 +69,57 @@ const NavbarTop = () => {
               </div>
             </div>
           </Navbar.Brand>
-          <Navbar.Collapse className=''>
+          <Navbar.Collapse>
             <Nav className='ms-lg-auto my-lg-0'>
-              <Dropdown className='position-static ms-md-3 ms-0'>
-                <Dropdown.Toggle
-                  className='dropdown-button-nav w-100 d-flex align-items-center'
-                  id='dropdown-basic'
-                >
-                  About Us
-                </Dropdown.Toggle>
+              <Dropdown
+                className='position-static ms-md-3 ms-0'
+                show={show}
+                onMouseEnter={(e) => {
+                  if (!isMobile) {
+                    setShow(true);
+                    setExp(false);
+                    setAccomodation(false);
+                    setEvents(false);
+                    setWellness(false);
+                  }
+                }}
+                onClick={(e) => {
+                  if (!isMobile) {
+                    setShow(false);
+                  }
+                  if (isMobile) {
+                    if (show) {
+                      setShow(false);
+                    } else {
+                      setShow(true);
+                    }
+                  }
+                }}
+              >
+                {isMobile ? (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    About Us
+                  </Dropdown.Toggle>
+                ) : (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    <Link href='/aboutus'> About Us</Link>
+                  </Dropdown.Toggle>
+                )}
 
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                <Dropdown.Menu
+                  onMouseLeave={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setShow(false);
+                  }}
+                  className='w-100 dropdown-button-nav-menu'
+                >
                   <Dropdown.Item className='dropdown-item-position ddi1'>
                     <Link href='/aboutus'>Our Vision</Link>
                   </Dropdown.Item>
@@ -67,15 +141,51 @@ const NavbarTop = () => {
                 </Dropdown.Menu>
               </Dropdown>
 
-              <Dropdown className='position-static ms-md-3 ms-0'>
-                <Dropdown.Toggle
-                  className='dropdown-button-nav w-100'
-                  id='dropdown-basic'
-                >
-                  Experiences
-                </Dropdown.Toggle>
+              <Dropdown
+                show={exp}
+                onMouseEnter={(e) => {
+                  if (!isMobile) {
+                    setExp(true);
+                    setShow(false);
+                    setAccomodation(false);
+                    setEvents(false);
+                    setWellness(false);
+                  }
+                }}
+                onClick={() => {
+                  if (!isMobile) {
+                    setExp(false);
+                  }
+                  if (isMobile) {
+                    toggleExp();
+                  }
+                }}
+                className='position-static ms-md-3 ms-0'
+              >
+                {isMobile ? (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    Experiences
+                  </Dropdown.Toggle>
+                ) : (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    <Link href='/experiences'>Experiences</Link>
+                  </Dropdown.Toggle>
+                )}
 
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                <Dropdown.Menu
+                  onMouseLeave={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setExp(false);
+                  }}
+                  className='w-100 dropdown-button-nav-menu'
+                >
                   <Dropdown.Item className='dropdown-item-position ddi2'>
                     <Link href='/experiences'>All Experiences</Link>
                   </Dropdown.Item>
@@ -97,15 +207,53 @@ const NavbarTop = () => {
                 </Dropdown.Menu>
               </Dropdown>
 
-              <Dropdown className='position-static ms-md-3 ms-0'>
-                <Dropdown.Toggle
-                  className='dropdown-button-nav w-100'
-                  id='dropdown-basic'
-                >
-                  Programmes
-                </Dropdown.Toggle>
+              <Dropdown
+                className='position-static ms-md-3 ms-0'
+                show={wellness}
+                onMouseEnter={(e) => {
+                  if (!isMobile) {
+                    setExp(false);
+                    setWellness(true);
+                    setAccomodation(false);
+                    setEvents(false);
+                    setShow(false);
+                  }
+                }}
+                onClick={() => {
+                  if (!isMobile) {
+                    setExp(false);
+                  }
+                  if (isMobile) {
+                    toggleWell();
+                  }
+                }}
+              >
+                {isMobile ? (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    Programmes
+                  </Dropdown.Toggle>
+                ) : (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    <Link href='/wellness'>Programmes</Link>
+                  </Dropdown.Toggle>
+                )}
 
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                <Dropdown.Menu
+                  onMouseLeave={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (!isMobile) {
+                      setWellness(false);
+                    }
+                  }}
+                  className='w-100 dropdown-button-nav-menu'
+                >
                   <Dropdown.Item className='dropdown-item-position ddi3'>
                     <Link href='/wellness'>All Treatments</Link>
                   </Dropdown.Item>
@@ -137,15 +285,50 @@ const NavbarTop = () => {
                 </Dropdown.Menu>
               </Dropdown>
 
-              <Dropdown className='position-static ms-md-3 ms-0'>
-                <Dropdown.Toggle
-                  className='dropdown-button-nav w-100'
-                  id='dropdown-basic'
+              <Dropdown
+                show={events}
+                onMouseEnter={(e) => {
+                  if (!isMobile) {
+                    setExp(false);
+                    setShow(false);
+                    setAccomodation(false);
+                    setEvents(true);
+                    setWellness(false);
+                  }
+                }}
+                onClick={() => {
+                  if (!isMobile) {
+                    setEvents(false);
+                  }
+                  if (isMobile) {
+                    toggleEvents();
+                  }
+                }}
+                className='position-static ms-md-3 ms-0'
+              >
+                {isMobile ? (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    Events
+                  </Dropdown.Toggle>
+                ) : (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    <Link href='/events'>Events</Link>
+                  </Dropdown.Toggle>
+                )}
+                <Dropdown.Menu
+                  onMouseLeave={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setWellness(false);
+                  }}
+                  className='w-100 dropdown-button-nav-menu'
                 >
-                  Events
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item className='dropdown-item-position ddi4'>
                     <Link href='/events'>All Events</Link>
                   </Dropdown.Item>
@@ -160,15 +343,50 @@ const NavbarTop = () => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <Dropdown className='position-static ms-md-3 ms-0'>
-                <Dropdown.Toggle
-                  className='dropdown-button-nav w-100'
-                  id='dropdown-basic'
+              <Dropdown
+                show={accomodation}
+                onMouseEnter={(e) => {
+                  if (!isMobile) {
+                    setExp(false);
+                    setShow(false);
+                    setAccomodation(true);
+                    setEvents(false);
+                    setWellness(false);
+                  }
+                }}
+                onClick={() => {
+                  if (!isMobile) {
+                    setAccomodation(false);
+                  }
+                  if (isMobile) {
+                    toggleAcc();
+                  }
+                }}
+                className='position-static ms-md-3 ms-0'
+              >
+                {isMobile ? (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    Accommodation
+                  </Dropdown.Toggle>
+                ) : (
+                  <Dropdown.Toggle
+                    className='dropdown-button-nav w-100 d-flex align-items-center'
+                    id='dropdown-basic'
+                  >
+                    <Link href='/accomodation'>Accommodation</Link>
+                  </Dropdown.Toggle>
+                )}
+                <Dropdown.Menu
+                  onMouseLeave={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setAccomodation(false);
+                  }}
+                  className='w-100 dropdown-button-nav-menu'
                 >
-                  Accommodation
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
                   <Dropdown.Item className='dropdown-item-position ddi5'>
                     <Link href='/accomodation'>All Rooms </Link>
                   </Dropdown.Item>

@@ -3,6 +3,7 @@ import { getAccomodationDetailsAction } from '../../redux/actions/accomodationAc
 import Loader from '../base/Loader';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const RoomDetails = () => {
   const router = useRouter();
@@ -164,7 +165,9 @@ const RoomDetails = () => {
               </p>
             </div>
             <div className='d-flex justify-content-center align-items-center'>
-              <button className='btn-default mb-5'>Book Now</button>
+              <Link href='/booking'>
+                <button className='btn-default mb-5'>Book Now</button>
+              </Link>
             </div>
           </div>
         </section>
