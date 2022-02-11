@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sustainability = () => {
   return (
-    <section className='sustain-about'>
+    <section className='sustain-about' id='aboutus-sustainability'>
       <div className='container'>
         <div className='sustain-about__container'>
           <h1 className='sustain-about__heading'>Sustainability</h1>

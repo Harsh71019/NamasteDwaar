@@ -76,10 +76,20 @@
     margin-bottom: 2rem;
   }
 
+  &__row:hover {
+    transform: scale(1.05);
+  }
+
+  &__row {
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
   &__card {
     margin-top: 4rem;
     background-color: #fff;
     padding: 3.6rem 2rem 2.4rem 2rem;
+
     &-img {
       width: 276px;
       height: 136px;

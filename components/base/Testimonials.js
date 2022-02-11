@@ -12,7 +12,7 @@ const Testimonials = () => {
               Namaste Dwaar has a wide range of ayurvedic treataments to cater
               to all your needs.
             </p>
-            <p className='section-4-name'>– Mrs Verma </p>
+            <p className='section-4-review'>– Mrs Verma </p>
             <p className='section-4-google'>
               &#9733;&#9733;&#9733;&#9733;&#9733; -Google review
             </p>

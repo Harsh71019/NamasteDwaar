@@ -37,7 +37,7 @@ const newWellness = catchAsyncErrors(async (req, res) => {
 
   let reformattedArray = days.map((sessionss) => {
     const result = sessionss.session.reduce(function (acc, obj) {
-      return acc + obj.noOfSessions;
+      return Number(acc) + Number(obj.noOfSessions);
     }, 0);
 
     sessionss['totalSession'] = result;

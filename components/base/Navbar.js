@@ -121,10 +121,12 @@ const NavbarTop = () => {
                   className='w-100 dropdown-button-nav-menu'
                 >
                   <Dropdown.Item className='dropdown-item-position ddi1'>
-                    <Link href='/aboutus'>Our Vision</Link>
+                    <Link href='/aboutus#aboutus-our-mission'>Our Mission</Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
-                    <Link href='/aboutus'>Our Philosophy </Link>
+                    <Link href='/aboutus#aboutus-our-philosophy'>
+                      Our Philosophy
+                    </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
                     <Link href='/aboutus#our-partners'>Our Partners </Link>
@@ -132,12 +134,20 @@ const NavbarTop = () => {
                   <Dropdown.Item className='dropdown-item-position ddi1'>
                     <Link href='/aboutus#architect'>About the Architect </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus#aboutus-sustainability'>
+                      Sustainability
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className='dropdown-item-position ddi1'>
+                    <Link href='/aboutus#aboutus-gallery'>Gallery</Link>
+                  </Dropdown.Item>
+                  {/* <Dropdown.Item
                     className='dropdown-item-position ddi1'
                     style={{ marginBottom: '16px' }}
                   >
                     <Link href='/aboutus#awards'>Awards and Recognition </Link>
-                  </Dropdown.Item>
+                  </Dropdown.Item> */}
                 </Dropdown.Menu>
               </Dropdown>
 

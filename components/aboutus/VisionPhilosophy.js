@@ -4,7 +4,7 @@ const VisionPhilosophy = () => {
   return (
     <section className='vision-about'>
       <div className='container'>
-        <div className='row vision-about__row'>
+        <div className='row vision-about__row' id='aboutus-our-mission'>
           <div className='col-md-6 col-12  px-md-1 px-0'>
             <div className=''>
               <img
@@ -32,7 +32,7 @@ const VisionPhilosophy = () => {
             </div>
           </div>
         </div>
-        <div className='row vision-about__row'>
+        <div className='row vision-about__row' id='aboutus-our-philosophy'>
           <div className='col-md-6 col-12 d-flex align-items-center order-1 order-md-0'>
             <div className='vision-about__container-text'>
               <h1 className='vision-about__h1'>Our Philosophy</h1>

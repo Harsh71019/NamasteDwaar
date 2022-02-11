@@ -204,7 +204,7 @@ const WellDetails = () => {
                               </div>
                               <div className='col-md-6 col-6'>
                                 <li className='wellness-details__listsessionname'>
-                                  54
+                                  {day?.totalSession}
                                 </li>
                                 {day?.session.map((sessions) => (
                                   <>

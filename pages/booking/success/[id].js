@@ -76,7 +76,12 @@ const success = () => {
                   We hope to make your stay safe here at Namaste Dwaar.{' '}
                 </span>
                 <span className='success-accomodation__green'>
-                  Read about our Covid protocols.
+                  <Link
+                    href='https://drive.google.com/file/d/1nqyUrFAXglpOWJim9zz4KTbwD67Q7Src/view?usp=drivesdk'
+                    download
+                  >
+                    Read about our Covid protocols.
+                  </Link>
                 </span>
               </p>
               <p>

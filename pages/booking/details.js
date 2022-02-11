@@ -51,7 +51,7 @@ const details = () => {
   }
 
   function checkForm() {
-    if (firstname === '' || null || undefined || firstname.match()) {
+    if (firstname === '' || null || undefined) {
       toast.error('Please select firstname');
       return false;
     }

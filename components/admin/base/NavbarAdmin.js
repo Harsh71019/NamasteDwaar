@@ -39,9 +39,9 @@ const NavbarAdmin = () => {
             <Link href='/admin/wellness'>
               <a className='nav-link ms-5'>Wellness</a>
             </Link>
-            <Link href='/admin/wellness/booking'>
+            {/* <Link href='/admin/wellness/booking'>
               <a className='nav-link ms-5'>Wellness Booking</a>
-            </Link>
+            </Link> */}
 
             <Link href='/admin/enquiries'>
               <a className='nav-link ms-5'>Enquiries</a>

@@ -9,6 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Auth({ children }) {
   const router = useRouter();
@@ -26,8 +27,14 @@ function Auth({ children }) {
   // If no user, useEffect() will redirect.
   return <div>Loading...</div>;
 }
+const spring = {
+  type: 'spring',
+  damping: 20,
+  stiffness: 100,
+  when: 'afterChildren',
+};
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <SSRProvider>
@@ -41,13 +48,25 @@ function MyApp({ Component, pageProps }) {
           }}
         />
         <SessionProvider session={pageProps.session}>
-          {Component.auth ? (
-            <Auth>
-              <Component {...pageProps} />
-            </Auth>
-          ) : (
-            <Component {...pageProps} />
-          )}
+          {' '}
+          <AnimatePresence>
+            <motion.div
+              key={router.route}
+              exit={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              id='page-transition-container'
+            >
+              {Component.auth ? (
+                <Auth>
+                  <Component {...pageProps} />
+                </Auth>
+              ) : (
+                <Component {...pageProps} />
+              )}{' '}
+            </motion.div>{' '}
+          </AnimatePresence>
         </SessionProvider>
       </SSRProvider>
     </>
