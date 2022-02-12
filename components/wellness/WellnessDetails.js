@@ -10,6 +10,8 @@ const WellDetails = () => {
   const { id } = router.query;
   const dispatch = useDispatch();
 
+  const [keyDefault, setKeyDefault] = useState('');
+
   const {
     loading,
     error,
@@ -126,7 +128,10 @@ const WellDetails = () => {
                       {wellness &&
                         wellness?.benefits &&
                         wellness?.benefits.map((benefit) => (
-                          <li className='wellness-details__para' key={benefit}>
+                          <li
+                            className='wellness-details__parabein'
+                            key={benefit}
+                          >
                             {benefit}
                           </li>
                         ))}
@@ -147,7 +152,7 @@ const WellDetails = () => {
                         wellness?.inclusions &&
                         wellness?.inclusions.map((inclusion) => (
                           <li
-                            className='wellness-details__para'
+                            className='wellness-details__parabein'
                             key={inclusion}
                           >
                             {inclusion}
@@ -174,7 +179,7 @@ const WellDetails = () => {
               <div className='d-flex justify-content-center'>
                 <div className='wellness-details__sessions-max'>
                   <Tabs
-                    defaultActiveKey={7}
+                    defaultActiveKey={wellness?.days[0].noOfDays}
                     id='uncontrolled-tab-example'
                     className='d-flex w-100 justify-content-md-end justify-content-end wellness-details__tab'
                   >

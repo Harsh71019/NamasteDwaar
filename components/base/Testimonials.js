@@ -9,10 +9,10 @@ const Testimonials = () => {
           <div className='section-4-row'>
             <p className='section-4-review'>
               An immersive wellness experience few hours away from Delhi.
-              Namaste Dwaar has a wide range of ayurvedic treataments to cater
-              to all your needs.
+              Namaste Dwaar has a wide range of ayurvedic treatments to cater to
+              all your needs.
             </p>
-            <p className='section-4-review'>– Mrs Verma </p>
+            <p className='section-4-review'>– Mrs. Verma </p>
             <p className='section-4-google'>
               &#9733;&#9733;&#9733;&#9733;&#9733; -Google review
             </p>

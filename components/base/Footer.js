@@ -70,7 +70,7 @@ const Footer = () => {
             </span>
             <div className='footer-socials my-3'>
               <div className='d-flex justify-content-center'>
-                <div className='mx-3'>
+                <div className='mx-3 cursor-pointer'>
                   <Link href={facebookRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/facebook_ojo3na.png'
@@ -78,7 +78,7 @@ const Footer = () => {
                     />
                   </Link>
                 </div>
-                <div className='mx-3'>
+                <div className='mx-3 cursor-pointer'>
                   <Link href={whatsappRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/watsapp_vwgauj.png'
@@ -86,7 +86,7 @@ const Footer = () => {
                     />
                   </Link>
                 </div>
-                <div className='mx-3'>
+                <div className='mx-3 cursor-pointer'>
                   <Link href={instagramRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/instagramm_nqu4je.png'
@@ -95,7 +95,7 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                <div className='mx-3'>
+                <div className='mx-3 cursor-pointer'>
                   <Link href={linkedinRoute}>
                     <img
                       src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643656732/static/Footer/linkedin_w8hmpp.png'
