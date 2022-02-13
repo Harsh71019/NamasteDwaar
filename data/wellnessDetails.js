@@ -5,28 +5,6 @@ export const wellnessDetails = [
     description:
       'Being the only property in the North of India to offer the true essence of Ayurveda to its guests, our Ayurvedic treatments are performed by therapists and doctors who are specially brought in from the South to share their in-depth knowledge and ancient techniques. These sacred practices harness the strength of nature to revitalize the very essence of your being.In addition to preventative therapies, Namaste Kairali offers a novel focus on relieving the negative ailments associated with modern-day living so that wellness becomes a part of your life.',
     img: 'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643534506/static/Wellness/wellness1_ifq4mw.png',
-    // duration: '',
-    // inclusions: [],
-    // benefits: [],
-    // recommended: [
-    //   {
-    //     icon: '',
-    //     point: '',
-    //   },
-    // ],
-    // days: [
-    //   {
-    //     noOfDays: 3,
-    //     session: [
-    //       {
-    //         name: '',
-    //         noOfSessions: '',
-    //       },
-    //     ],
-    //     price,
-    //   },
-    // ],
-    // noData: true,
   },
   {
     id: 2,

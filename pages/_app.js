@@ -10,8 +10,13 @@ import { SessionProvider, useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 function Auth({ children }) {
+  if (typeof document === 'undefined') {
+    React.useLayoutEffect = React.useEffect;
+  }
+
   const router = useRouter();
   const { data: session, status, token } = useSession();
   const isAdmin = session?.user?.role;
@@ -27,12 +32,6 @@ function Auth({ children }) {
   // If no user, useEffect() will redirect.
   return <div>Loading...</div>;
 }
-const spring = {
-  type: 'spring',
-  damping: 20,
-  stiffness: 100,
-  when: 'afterChildren',
-};
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -48,7 +47,6 @@ function MyApp({ Component, pageProps, router }) {
           }}
         />
         <SessionProvider session={pageProps.session}>
-          {' '}
           <AnimatePresence>
             <motion.div
               key={router.route}
@@ -64,8 +62,8 @@ function MyApp({ Component, pageProps, router }) {
                 </Auth>
               ) : (
                 <Component {...pageProps} />
-              )}{' '}
-            </motion.div>{' '}
+              )}
+            </motion.div>
           </AnimatePresence>
         </SessionProvider>
       </SSRProvider>

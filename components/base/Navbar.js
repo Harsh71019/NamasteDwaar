@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Navbar, Nav, Dropdown, NavDropdown } from 'react-bootstrap';
 import Image from 'next/image';
-import Logo from '../../public/images/logo.png';
 import Phone from '../../public/images/phone.svg';
 import Link from 'next/link';
 import { isMobile } from 'react-device-detect';
 import { useRouter } from 'next/router';
-import { set } from 'mongoose';
 
 const NavbarTop = () => {
   const [show, setShow] = useState(false);
@@ -14,8 +12,6 @@ const NavbarTop = () => {
   const [wellness, setWellness] = useState(false);
   const [events, setEvents] = useState(false);
   const [exp, setExp] = useState(false);
-
-  const router = useRouter();
 
   function toggleAU(state) {
     setShow(state);
@@ -267,9 +263,7 @@ const NavbarTop = () => {
                   <Dropdown.Item className='dropdown-item-position ddi3'>
                     <Link href='/wellness'>All Treatments</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/wellness'>Ayurvedic Treatments</Link>
-                  </Dropdown.Item>
+
                   <Dropdown.Item className='dropdown-item-position ddi3'>
                     <Link href='/wellness'>Ayurvedic Treatments</Link>
                   </Dropdown.Item>
