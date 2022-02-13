@@ -21,6 +21,10 @@ import {
   enquiryListReducer,
   userEnquiryReducer,
 } from './reducers/enquiryReducers';
+import {
+  userWellnessEnquiryReducer,
+  enquiryWellnessReducer,
+} from './reducers/wellnessEnquiries';
 
 // Start of Booking Reducers
 import {
@@ -82,6 +86,10 @@ const reducerCombined = combineReducers({
   createWellnessAdmin: createWellnessAdminReducer,
   getAllWellnessAdmin: getAllWellnessAdminReducer,
   // end of wellness admin reducers
+
+  //Start of wellness enquiry
+  userWellnessEnquiry: userWellnessEnquiryReducer,
+  enquiryWellness: enquiryWellnessReducer,
 });
 
 const reducer = (state, action) => {

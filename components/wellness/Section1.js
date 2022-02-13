@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getWellnessAction } from '../../redux/actions/wellnessAction';
 import Loader from '../base/Loader';
-import { wellnessDetails } from '../../data/wellnessDetails';
 import Link from 'next/link';
 
 const Section1 = () => {

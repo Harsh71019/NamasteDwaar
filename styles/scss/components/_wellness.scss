@@ -69,6 +69,31 @@
       margin-bottom: 3rem;
     }
 
+    &-executive {
+      font-family: Playfair Display;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 37px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #c09209;
+    }
+
+    &-touch {
+      font-family: Montserrat;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    &-contact {
+      margin-top: 12.5rem;
+    }
+
     &-row {
       max-width: 63rem;
     }
