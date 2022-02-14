@@ -3,6 +3,8 @@ import { experiencesDetails } from '../../../data/experiencesDetails';
 import Loader from '../../base/Loader';
 import Hero from '../../base/Hero';
 import EnquiryForm from '../../../components/base/EnquiryForm';
+import Image from 'next/image';
+import LineBreak from '../../../public/images/linebreak.svg';
 
 const ExperienceDetails = ({ expId }) => {
   const [exp, setExp] = useState(undefined);
@@ -35,6 +37,9 @@ const ExperienceDetails = ({ expId }) => {
                 <p className='experience-top__maindesc'>
                   {exp.mainDescription}
                 </p>
+                <div className='d-flex justify-content-center mt-md-5 mt-1'>
+                  <Image src={LineBreak} />
+                </div>
               </div>
               <div className='experience-top__cardstart'>
                 {exp &&
@@ -54,6 +59,9 @@ const ExperienceDetails = ({ expId }) => {
                               {card.description}
                             </p>
                           </div>
+                        </div>
+                        <div className='d-flex justify-content-center mt-md-5 mt-1'>
+                          <Image src={LineBreak} />
                         </div>
                       </div>
                     );
