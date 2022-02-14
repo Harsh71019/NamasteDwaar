@@ -17,7 +17,7 @@ const Section2 = () => {
         </div>
         <div className='personal-section2__img'>
           <img
-            src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643486766/static/events/Events_Personal_PDP_2jpg_rlc8qg.jpg'
+            src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644834194/static/events/Events_LP_Personal_vq14my.jpg'
             alt='personal'
             className='personal-section2__img-img'
           />

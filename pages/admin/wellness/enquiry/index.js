@@ -26,7 +26,7 @@ const WellnessEnquiry = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className='container'>
+        <div className='container bg-white'>
           <section>
             <div className='my-5 d-flex justify-content-between'>
               <h1 className='text-center'>Enquiries</h1>

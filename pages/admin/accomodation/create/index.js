@@ -132,13 +132,13 @@ const CreateAccomodation = () => {
   return (
     <>
       <NavbarAdmin />
-      <section>
+      <section className='bg-white py-5'>
         <div className='container '>
           <div className='d-flex justify-content-between mt-5'>
             <h1 className='text-center'>Create New Accomodation</h1>
-            <button className='btn btn-primary fs16'>
-              <Link href='/admin/accomodation'>Go Back</Link>
-            </button>
+            <Link href='/admin/accomodation'>
+              <button className='btn btn-primary fs16'>Go Back</button>
+            </Link>
           </div>
           <form onSubmit={submitHandler}>
             <div className='row d-flex justify-content-center'>
@@ -210,7 +210,7 @@ const CreateAccomodation = () => {
                 </div>
                 <div className='form-group mt-3'>
                   <label className='adminform_label' htmlFor='price_field'>
-                    Highlights{' '}
+                    Highlights
                     <small>(Please enter points comma seperated)</small>
                   </label>
                   <input

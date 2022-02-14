@@ -5,7 +5,7 @@ const Section1 = () => {
   return (
     <>
       <HeroHeading
-        image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643286428/static/contactus/contactus_iq3i3a.png'
+        image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644834392/static/contactus/Contact_Us-Header_p5ve6a.jpg'
         heading='Contact Us'
       />
     </>

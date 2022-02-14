@@ -16,7 +16,7 @@ const Section2 = () => {
                   />
                 </div>
                 <h1 className='text-center mt-3 aboutus-section2__title fs16'>
-                  Namaste Kairali{' '}
+                  Managed by Kairali
                 </h1>
                 <div className='aboutus-section2__card-desccont'>
                   <p className='aboutus-section2__card-desc text-para'>

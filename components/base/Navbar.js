@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Navbar, Nav, Dropdown, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav, Dropdown } from 'react-bootstrap';
 import Image from 'next/image';
 import Phone from '../../public/images/phone.svg';
 import Link from 'next/link';
 import { isMobile } from 'react-device-detect';
-import { useRouter } from 'next/router';
 
 const NavbarTop = () => {
   const [show, setShow] = useState(false);

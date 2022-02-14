@@ -29,7 +29,7 @@ const detailsbookingaccomodation = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className='py-3'>
+        <section className='py-3 bg-white'>
           <div className='container py-5 bg-white'>
             <h1>Booking Details</h1>
             <div className='row py-3'>

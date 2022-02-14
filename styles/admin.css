@@ -33,3 +33,7 @@
   transform: scale(0.8);
   transition: 1s ease;
 }
+
+.dashboard-card {
+  border-radius: 15px;
+}

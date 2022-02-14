@@ -5,7 +5,7 @@ export const experiencesDetails = [
     mainDescription:
       '	The Wellness Kitchen is our special undertaking which promotes mindful eating. It is the traditions of our villages combined with the culinary experience of our world-travelled chefs, which has brought into existence a unique menu that will satisfy your taste buds while completely nourishing you from within.',
     image:
-      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643915436/static/Experiences/Experiences%20LP%2003-02-22/Experiences_LP_Signature_Dining_ukvkje.jpg',
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1644834017/static/Experiences/Experiences%20LP%2003-02-22/Experiences_LP_Signature_Dining_legqcr.jpg',
 
     imageDetails:
       'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643914414/static/Experiences/Signature%20Dining%2003-02-22/Experiences_PDP_Signature_Dining_Header_eloxh4.jpg',
@@ -110,7 +110,7 @@ export const experiencesDetails = [
     id: 3,
     mainTitle: 'Art at Dwaar',
     mainDescription:
-      'Immerse yourself in inspiring surroundings inside and outside. From traditional interiors to picturesque outdoors and creative workshops, connect with your inner artist.',
+      'Immerse yourself in inspiring surroundings inside and outside. From traditional interiors to picturesque outdoors and creative workshops, connecting with your inner artist is great for your wellbeing.',
     image:
       'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643915529/static/Experiences/Experiences%20LP%2003-02-22/Experiences_LP_Art_at_Dwaar_vsmgds.jpg',
     imageDetails:
@@ -119,7 +119,7 @@ export const experiencesDetails = [
     cards: [
       {
         id: 1,
-        title: 'Interiors',
+        title: 'The property',
         description:
           '	The architecture of Namaste Dwaar draws inspiration from the older buildings of Uttar Pradesh, Haryana, and Rajasthan. The brickwork uses Lakhori Bricks - a smaller brick used in historic buildings, with lime mortar or chuna that allows the building skin to breathe. Since this type of brick is no longer in distribution, all bricks made for this property were specially recreated based on bricks which had been preserved within the family. The brick architecture has been complemented with elements typical of the surrounding region including cement jaalis, ornamental pillars and arches. Furthermore, traditional art from Madhubani, Rajasthan, and Gujarat have been used to enhance indoor spaces, and exquisite stone carved statues from Odisha have been curated to adorn the blossoming landscapes. In addition to this, we have collected and incorporated items from all over rural India for your viewing – our guest rooms have glazed tiles from Khurja, wood carvings and furniture from Saharanpur, as well as mirrors and lights from Firozabad. For our reception lobby, we received exclusive permission to showcase framed photography showcasing life style and visual-scapes from 19th century photographer Raja Deen Dayal. He was named the Prince of Photographers and to further emphasize the importance of his work, we have taken inspiration from his photographs of luxurious palaces when designing the layouts of the lobby and lounge at Namaste Dwaar.',
         image:
@@ -157,9 +157,9 @@ export const experiencesDetails = [
     mainDescription:
       'Disconnect from the daily humdrum and drive out to Namaste Dwaar which is tucked in the middle of lush greenlands amongst the locals rich in Indian culture and heritage.    ',
     image:
-      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643915452/static/Experiences/Experiences%20LP%2003-02-22/Experiences_LP_Countryside_getaway_c1baeu.jpg',
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1644834016/static/Experiences/Experiences%20LP%2003-02-22/Experiences_LP_Countryside_getaway_gqgl11.jpg',
     imageDetails:
-      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643565934/static/Experiences/Countryside%20Getaway/Experiences_PDP_Countryside_Getaway_Header_gqggq0.jpg',
+      'https://res.cloudinary.com/namaste-dwaar/image/upload/v1644833938/static/Experiences/Countryside%20Getaway/Experiences_PDP_Countryside_Getaway_Header_lxxx53.jpg',
 
     cards: [
       {

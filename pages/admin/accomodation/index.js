@@ -55,7 +55,7 @@ const AdminAccomodation = () => {
       ) : (
         <>
           <NavbarAdmin />
-          <div className='container'>
+          <div className='container bg-white p-5'>
             <div className='d-flex justify-content-between mt-5'>
               <h1>Accomodation</h1>
               <button className='btn btn-primary fs16'>

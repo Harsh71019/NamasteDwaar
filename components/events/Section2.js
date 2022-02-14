@@ -42,7 +42,7 @@ const Section2 = () => {
           <div className='col-md-8 col-12 order-md-1 order-2'>
             <div className='events-section2__card-imgcontainer'>
               <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643486766/static/events/Events_Corporate_PDP_header_f9t01m.jpg'
+                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644834192/static/events/Events_LP_Corporate_iiacim.jpg'
                 alt=''
                 className='events-section2__card-img'
               />

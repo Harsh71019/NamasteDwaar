@@ -54,47 +54,49 @@ const AdminWellness = () => {
       ) : (
         <>
           <NavbarAdmin />
-          <div className='container'>
-            <div className='d-flex justify-content-between mt-5'>
-              <h1>Wellness Packages</h1>
-              <Link href='/admin/wellness/create'>
-                <button className='btn btn-primary fs16'>Create New</button>
-              </Link>
-            </div>
+          <div className='bg-white vh-100 py-5'>
+            <div className='container'>
+              <div className='d-flex justify-content-between mt-5'>
+                <h1>Wellness Packages</h1>
+                <Link href='/admin/wellness/create'>
+                  <button className='btn btn-primary fs16'>Create New</button>
+                </Link>
+              </div>
 
-            <table className='table mt-5'>
-              <thead>
-                <tr className='fs-3'>
-                  <th scope='col'>#</th>
-                  <th scope='col'>Title</th>
-                  <th scope='col'>Duration</th>
+              <table className='table mt-5'>
+                <thead>
+                  <tr className='fs-3'>
+                    <th scope='col'>#</th>
+                    <th scope='col'>Title</th>
+                    <th scope='col'>Duration</th>
 
-                  <th scope='col'>Delete</th>
-                </tr>
-              </thead>
-              <tbody>
-                {wellness &&
-                  wellness.map((packages, index) => (
-                    <tr key={packages._id} className='fs-3'>
-                      <th scope='row'>{index + 1}</th>
-                      <td>{packages.title}</td>
-                      <td>{packages.duration}</td>
-                      {/* <td>
+                    <th scope='col'>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {wellness &&
+                    wellness.map((packages, index) => (
+                      <tr key={packages._id} className='fs-3'>
+                        <th scope='row'>{index + 1}</th>
+                        <td>{packages.title}</td>
+                        <td>{packages.duration}</td>
+                        {/* <td>
                         <Link href={`accomodation/edit/${packages._id}`}>
                           <i className='cursor-pointer fas fa-edit'></i>
                         </Link>
                       </td> */}
-                      <td>
-                        <div
-                          onClick={() => deleteWellnessPackage(packages._id)}
-                        >
-                          <i className='cursor-pointer fas fa-trash'></i>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
+                        <td>
+                          <div
+                            onClick={() => deleteWellnessPackage(packages._id)}
+                          >
+                            <i className='cursor-pointer fas fa-trash'></i>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>{' '}
           </div>
         </>
       )}

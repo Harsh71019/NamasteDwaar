@@ -11,7 +11,7 @@ const WellnessMain = () => {
       <Navbar />
       <div className='container mb-5  '>
         <Hero
-          image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643534032/static/Wellness/wellness_emmwcj.png'
+          image='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644834423/static/Wellness/Wellness_LP_header_r6q6zd.jpg'
           heading='Wellness Programmes'
           para='Our private living spaces have been carefully designed to integrate luxury 
           with wellness. Our rustic interiors have been crafted with natural materials and thoughtful lighting, adorned with handcrafted objects, and set with furniture and bedding of exceptional comfort. '
