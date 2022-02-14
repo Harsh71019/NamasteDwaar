@@ -1,24 +1,22 @@
-import React, { useEffect } from 'react';
-import Link from 'next/link';
-import NavbarAdmin from '../../../components/admin/base/NavbarAdmin';
+import React, { useEffect, useState } from 'react';
+import NavbarAdmin from '../../../../components/admin/base/NavbarAdmin';
 import { useDispatch, useSelector } from 'react-redux';
-import { getEnquiriesAction } from '../../../redux/actions/enquiryActions';
-import Loader from '../../../components/base/Loader';
-import { toast } from 'react-hot-toast';
+import { getWellnessEnquiriesAction } from '../../../../redux/actions/wellnessEnquiryActions';
+import Loader from '../../../../components/base/Loader';
 import moment from 'moment-timezone';
-import ErrorOccured from '../../../components/base/ErrorOccured';
+import ErrorOccured from '../../../../components/base/ErrorOccured';
 import CsvDownload from 'react-json-to-csv';
 
-const Enquiry = () => {
+const WellnessEnquiry = () => {
   const dispatch = useDispatch();
   const {
     loading,
     error,
     enquiries: { enquiry },
-  } = useSelector((state) => state.enquiryList);
+  } = useSelector((state) => state.enquiryWellness);
 
   useEffect(() => {
-    dispatch(getEnquiriesAction());
+    dispatch(getWellnessEnquiriesAction());
   }, [dispatch]);
 
   return (
@@ -44,6 +42,7 @@ const Enquiry = () => {
                 </>
               )}
             </div>
+
             <div className='row mt-5'>
               {enquiry &&
                 enquiry.map((customer) => (
@@ -56,11 +55,15 @@ const Enquiry = () => {
                         </h1>
                         <p className='fs16'>
                           <i class='me-3 fs16 fas fa-envelope-square'></i>
-                          {customer.email}
+                          {customer.age}
                         </p>
                         <p className='fs16'>
                           <i class='me-3 fs16 fas fa-mobile-alt'></i>
                           {customer.mobile}
+                        </p>
+                        <p className='fs16'>
+                          <i class='fa-solid fa-ballot-check me-3 fs16'></i>
+                          {customer.program}
                         </p>
                         <p className='fs16'>
                           <i class='me-3 fs16 far fa-sticky-note'></i>
@@ -88,5 +91,5 @@ const Enquiry = () => {
   );
 };
 
-Enquiry.auth = true;
-export default Enquiry;
+WellnessEnquiry.auth = true;
+export default WellnessEnquiry;

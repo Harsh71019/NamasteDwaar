@@ -9,9 +9,9 @@ import {
 
 const handler = nc({ onError });
 
-handler.get(getAllWellnessEnquiry);
-
-//   .use(isAuthenticatedUser, authorizeRoles('admin'))
+handler
+  .use(isAuthenticatedUser, authorizeRoles('admin'))
+  .get(getAllWellnessEnquiry);
 
 dbConnect();
 export default handler;

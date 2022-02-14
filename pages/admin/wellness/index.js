@@ -57,9 +57,9 @@ const AdminWellness = () => {
           <div className='container'>
             <div className='d-flex justify-content-between mt-5'>
               <h1>Wellness Packages</h1>
-              <button className='btn btn-primary fs16'>
-                <Link href='/admin/wellness/create'>Create New</Link>
-              </button>
+              <Link href='/admin/wellness/create'>
+                <button className='btn btn-primary fs16'>Create New</button>
+              </Link>
             </div>
 
             <table className='table mt-5'>
@@ -68,7 +68,7 @@ const AdminWellness = () => {
                   <th scope='col'>#</th>
                   <th scope='col'>Title</th>
                   <th scope='col'>Duration</th>
-                  <th scope='col'>Edit</th>
+
                   <th scope='col'>Delete</th>
                 </tr>
               </thead>
@@ -79,11 +79,11 @@ const AdminWellness = () => {
                       <th scope='row'>{index + 1}</th>
                       <td>{packages.title}</td>
                       <td>{packages.duration}</td>
-                      <td>
+                      {/* <td>
                         <Link href={`accomodation/edit/${packages._id}`}>
                           <i className='cursor-pointer fas fa-edit'></i>
                         </Link>
-                      </td>
+                      </td> */}
                       <td>
                         <div
                           onClick={() => deleteWellnessPackage(packages._id)}

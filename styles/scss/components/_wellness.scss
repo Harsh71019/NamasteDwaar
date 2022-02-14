@@ -360,6 +360,63 @@
   }
 
   .wellness-details {
+    &__modal {
+      &-btn {
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+      }
+
+      &-title {
+        font-family: Playfair Display;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 37px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #a64f02;
+        margin-bottom: 1rem;
+      }
+
+      &-executive {
+        font-family: Playfair Display;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 37px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #c09209;
+      }
+
+      &-touch {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      &-contact {
+        margin-top: 12.5rem;
+      }
+
+      &-row {
+        max-width: 63rem;
+      }
+    }
+
+    &__modal-header {
+      border-bottom: none !important;
+
+      .btn-close {
+        font-size: 16px;
+        padding: 1rem;
+      }
+    }
+
     &__img {
       width: 100%;
       object-fit: cover !important;

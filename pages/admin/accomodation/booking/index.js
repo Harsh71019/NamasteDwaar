@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import NavbarAdmin from '../../../../components/admin/base/NavbarAdmin';
 import { getAllAccomodationBookingAdminAction } from '../../../../redux/actions/bookingAccomodationActions';
-
+import CsvDownload from 'react-json-to-csv';
 import Loader from '../../../../components/base/Loader';
 import ErrorOccured from '../../../../components/base/ErrorOccured';
 
@@ -27,10 +27,24 @@ const SeeBookingsAll = () => {
       ) : (
         <>
           <NavbarAdmin />
-          <div className='container bg-white'>
-            <div className='d-flex justify-content-between mt-5'>
-              <h1>See all Accomodation Bookings</h1>
+          <div className='container bg-white py-3 my-5'>
+            <div className='my-5 d-flex justify-content-between'>
+              <h1 className='text-center'>See all Accomodation Bookings</h1>
+              {!loading && booking !== [] && (
+                <>
+                  <CsvDownload
+                    className='btn btn-primary fs16'
+                    filename='data.csv'
+                    data={booking}
+                  >
+                    Download Excel
+                  </CsvDownload>
+                </>
+              )}
             </div>
+            {/* <div className='d-flex justify-content-between mt-5'>
+              <h1>See all Accomodation Bookings</h1>
+            </div> */}
 
             <table className='table mt-5'>
               <thead>

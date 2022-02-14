@@ -22,7 +22,7 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.post(newWellness);
-handler.get(getAllWellness);
+handler.use(isAuthenticatedUser, authorizeRoles('admin')).post(newWellness);
+handler.use(isAuthenticatedUser, authorizeRoles('admin')).get(getAllWellness);
 
 export default handler;
