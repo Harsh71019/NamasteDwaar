@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Phone from '../../public/images/phone.svg';
 import Link from 'next/link';
 import { isMobile } from 'react-device-detect';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAccomodationsAction } from '../../redux/actions/accomodationActions';
 
 const NavbarTop = () => {
   const [show, setShow] = useState(false);
@@ -11,6 +13,18 @@ const NavbarTop = () => {
   const [wellness, setWellness] = useState(false);
   const [events, setEvents] = useState(false);
   const [exp, setExp] = useState(false);
+
+  const dispatch = useDispatch();
+  const accomodationReducer = useSelector((state) => state.accomodationReducer);
+  const {
+    loading,
+    error,
+    accomodation: { accomodation: accomodationList },
+  } = accomodationReducer;
+
+  useEffect(() => {
+    dispatch(getAccomodationsAction());
+  }, [dispatch]);
 
   function toggleAU(state) {
     setShow(state);
@@ -393,11 +407,20 @@ const NavbarTop = () => {
                   <Dropdown.Item className='dropdown-item-position ddi5'>
                     <Link href='/accomodation'>All Rooms </Link>
                   </Dropdown.Item>
+
+                  {accomodationList &&
+                    accomodationList.map((accomodate) => (
+                      <Dropdown.Item className='dropdown-item-position ddi5'>
+                        <Link href={`/accomodation/${accomodate._id}`}>
+                          {accomodate?.name}
+                        </Link>
+                      </Dropdown.Item>
+                    ))}
+                  {/* 
                   <Dropdown.Item className='dropdown-item-position ddi5'>
-                    <Link href='/accomodation'>Premium Rooms </Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi5'>
-                    <Link href='/accomodation'>Deluxe Wellness </Link>
+                    <Link href={`/accomodation/${accomodate._id}`}>
+                      Deluxe Wellness
+                    </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi5'>
                     <Link href='/accomodation'>Ayurveda Rooms </Link>
@@ -413,7 +436,7 @@ const NavbarTop = () => {
                     style={{ marginBottom: '16px' }}
                   >
                     <Link href='/accomodation'>Guest House </Link>
-                  </Dropdown.Item>
+                  </Dropdown.Item> */}
                 </Dropdown.Menu>
               </Dropdown>
 

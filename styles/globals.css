@@ -374,6 +374,15 @@ a {
 /* -----------------------------------------------------End of home styles --------------------------------------------------------------------*/
 
 /* Start of footer */
+.footer-logos {
+  height: 90px;
+}
+
+.footer-logos2 {
+  width: 162px;
+  height: 162px;
+}
+
 .footer {
   background: var(--footer-brown);
 }
