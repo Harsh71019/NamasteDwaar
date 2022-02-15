@@ -53,7 +53,7 @@ const Section1 = () => {
                               <div className='row'>
                                 <div className='col-6 d-flex justify-content-start align-items-center'>
                                   <p className='wellness-lp__card-duration'>
-                                    Duration: 10 D / 21D / 30D
+                                    Duration: {well.duration}
                                   </p>
                                 </div>
                                 <div className='col-6 d-flex justify-content-end align-items-center'>

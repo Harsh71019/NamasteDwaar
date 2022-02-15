@@ -17,10 +17,9 @@ const Dashboard = () => {
           <section>
             <h1 className='mt-5 px-5'>Dashboard</h1>
             <div class='row'>
-              {' '}
               <div className='col-md-4 col-12 mt-5 px-5'>
                 <Link href='admin/enquiries'>
-                  <div className='card dashboard-card border-0 p-3 shadow-lg'>
+                  <div className='card dashboard-card border-0 p-3 shadow-lg cursor-pointer'>
                     <div className='card-body'>
                       <h3 className='d-flex align-items-center '>
                         <p className='mb-0 me-3'>
@@ -34,7 +33,7 @@ const Dashboard = () => {
               </div>
               <div className='col-md-4 col-12 mt-5 px-5'>
                 <Link href='admin/accomodation'>
-                  <div className='card dashboard-card border-0 p-3 shadow-lg'>
+                  <div className='card dashboard-card border-0 p-3 shadow-lg cursor-pointer'>
                     <div className='card-body'>
                       <h3 className='d-flex align-items-center '>
                         <p className='mb-0 me-3'>
@@ -48,7 +47,7 @@ const Dashboard = () => {
               </div>
               <div className='col-md-4 col-12 mt-5 px-5'>
                 <Link href='admin/accomodation/booking'>
-                  <div className='card dashboard-card border-0 p-3 shadow-lg'>
+                  <div className='card dashboard-card border-0 p-3 shadow-lg cursor-pointer'>
                     <div className='card-body'>
                       <h3 className='d-flex align-items-center '>
                         <p className='mb-0 me-3'>
@@ -62,7 +61,7 @@ const Dashboard = () => {
               </div>
               <div className='col-md-4 col-12 mt-5 px-5'>
                 <Link href='admin/wellness'>
-                  <div className='card dashboard-card border-0 p-3 shadow-lg'>
+                  <div className='card dashboard-card border-0 p-3 shadow-lg cursor-pointer'>
                     <div className='card-body'>
                       <h3 className='d-flex align-items-center '>
                         <p className='mb-0 me-3'>
@@ -76,7 +75,7 @@ const Dashboard = () => {
               </div>
               <div className='col-md-4 col-12 mt-5 px-5'>
                 <Link href='admin/accomodation'>
-                  <div className='card dashboard-card border-0 p-3 shadow-lg'>
+                  <div className='card dashboard-card border-0 p-3 shadow-lg cursor-pointer'>
                     <div className='card-body'>
                       <h3 className='d-flex align-items-center '>
                         <p className='mb-0 me-3'>
@@ -89,6 +88,9 @@ const Dashboard = () => {
                 </Link>
               </div>
             </div>
+          </section>
+          <section>
+            <h1 className='px-5 mt-5'>Performance Metrics</h1>
           </section>
         </div>
       </div>

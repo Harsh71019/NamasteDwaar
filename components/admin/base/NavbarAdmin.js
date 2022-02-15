@@ -9,7 +9,7 @@ const NavbarAdmin = () => {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+    <nav className='navbar navbar-expand-lg navbar-light bg-white shadow-lg'>
       <div className='container'>
         <Link href='/admin'>
           {/* <a className='navbar-brand fs-1' href='#'>
@@ -18,6 +18,7 @@ const NavbarAdmin = () => {
           <div className='logo-brand-nav ms-2 me-2 cursor-pointer'>
             <img
               className='w-100'
+              style={{ height: '80px' }}
               src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643563677/static/Namaste_Dwaar_Logo_o5h0ky.png'
             />
           </div>
