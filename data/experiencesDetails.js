@@ -168,7 +168,7 @@ export const experiencesDetails = [
         description:
           'Namaste Dwaar offers you a visit to the luring charms of Haridwar and Rishikesh along with the wildlife sanctuary at Hastinapur. There are also walking paths for you to use and a Buddha corner for morning meditation. For those who wish to venture out, we offer yoga in the farmlands, nature walks into the sugarcane fields, and bullock cart rides on rustic roads.	',
         image:
-          'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643569255/static/Experiences/Countryside%20Getaway/Experiences_Countryside_Getaway_Excursions_lf7ct4.jpg',
+          'https://res.cloudinary.com/namaste-dwaar/image/upload/v1644945284/static/Experiences/Countryside%20Getaway/Experiences_Countryside_Getaway_Excursions_h8ph0s.jpg',
       },
     ],
   },
