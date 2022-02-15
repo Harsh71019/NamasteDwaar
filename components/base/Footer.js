@@ -6,52 +6,55 @@ import {
   facebookRoute,
   whatsappRoute,
 } from '../../helpers/routes';
+import Slide from 'react-reveal/Slide';
 
 const Footer = () => {
   return (
     <>
-      <div className='bg-white'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
-              <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839276/static/Footer/UPT_logo_m3sjdp.png'
-                alt='Healing Desa'
-                className='footer-logos'
-              />
-            </div>
-            <div className='col-md-2  col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
-              <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839336/static/Footer/nabbh_1_x9dn49.png'
-                alt='Healing Desa'
-                className='footer-logos'
-              />
-            </div>
-            <div className='col-md-4  col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
-              <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839336/static/Footer/YCB_1_wnhigt.png'
-                alt='Healing Desa'
-                className='footer-logos w-100'
-              />
-            </div>
-            <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
-              <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839276/static/Footer/Yoga-Alliance_1_dwzkjr.png'
-                alt='Healing Desa'
-                className='footer-logos'
-              />
-            </div>
+      <Slide top>
+        <div className='bg-white'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839276/static/Footer/UPT_logo_m3sjdp.png'
+                  alt='Healing Desa'
+                  className='footer-logos'
+                />
+              </div>
+              <div className='col-md-2  col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839336/static/Footer/nabbh_1_x9dn49.png'
+                  alt='Healing Desa'
+                  className='footer-logos'
+                />
+              </div>
+              <div className='col-md-4  col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839336/static/Footer/YCB_1_wnhigt.png'
+                  alt='Healing Desa'
+                  className='footer-logos w-100'
+                />
+              </div>
+              <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839276/static/Footer/Yoga-Alliance_1_dwzkjr.png'
+                  alt='Healing Desa'
+                  className='footer-logos'
+                />
+              </div>
 
-            <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3 '>
-              <img
-                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839276/static/Footer/incredible-india-vector-logo_kf9ylk.png'
-                alt='Healing Desa'
-                className='footer-logos'
-              />
+              <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3 '>
+                <img
+                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1644839276/static/Footer/incredible-india-vector-logo_kf9ylk.png'
+                  alt='Healing Desa'
+                  className='footer-logos'
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>{' '}
+      </Slide>
       <footer className='footer'>
         <div className='container d-flex justify-content-center'>
           <div className='footer-container'>

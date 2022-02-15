@@ -47,6 +47,7 @@
     "react-json-to-csv": "^1.0.4",
     "react-modal": "^3.14.4",
     "react-redux": "^7.2.6",
+    "react-reveal": "^1.2.2",
     "react-slick": "^0.28.1",
     "react-spring": "^8.0.27",
     "react-spring-3d-carousel": "^1.2.1",
