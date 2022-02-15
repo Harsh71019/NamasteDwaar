@@ -11,8 +11,8 @@ import Slide from 'react-reveal/Slide';
 const Footer = () => {
   return (
     <>
-      <Slide top>
-        <div className='bg-white'>
+      <Slide left>
+        <div className='bg-white' style={{ marginTop: '100px' }}>
           <div className='container'>
             <div className='row'>
               <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>
