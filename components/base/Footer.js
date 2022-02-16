@@ -6,12 +6,12 @@ import {
   facebookRoute,
   whatsappRoute,
 } from '../../helpers/routes';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
   return (
     <>
-      <Slide left>
+      <Fade>
         <div className='bg-white' style={{ marginTop: '100px' }}>
           <div className='container'>
             <div className='row'>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
         </div>{' '}
-      </Slide>
+      </Fade>
       <footer className='footer'>
         <div className='container d-flex justify-content-center'>
           <div className='footer-container'>

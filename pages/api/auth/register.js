@@ -10,6 +10,6 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler.use(isAuthenticatedUser, authorizeRoles('admin')).post(registerUser);
+handler.post(registerUser);
 
 export default handler;

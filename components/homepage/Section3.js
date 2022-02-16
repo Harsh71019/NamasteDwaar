@@ -7,16 +7,17 @@ const Section3 = () => {
     <section className='section-3'>
       <div className='container'>
         <div className='row '>
-          <Fade left>
-            <div className='col-md-8 col-12 order-1 order-md-0 d-flex align-items-center justify-content-md-center justify-content-end '>
+          <div className='col-md-8 col-12 order-1 order-md-0 d-flex align-items-center justify-content-md-center justify-content-end '>
+            <Fade left>
               <img
                 className='w-100 section-3-home-image'
                 src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Experiences_Natural_Healing_feafuu.jpg'
               />
-            </div>
-          </Fade>
-          <Fade right>
-            <div className='col-md-4 col-12 align-items-center d-flex flex-column justify-content-center order-1 order-md-0'>
+            </Fade>
+          </div>
+
+          <div className='col-md-4 col-12 align-items-center d-flex flex-column justify-content-center order-1 order-md-0'>
+            <Fade right>
               <div className='section3-card'>
                 <h1 className='section-3-heading'>Natural Healing </h1>
                 <p className='primary-text'>
@@ -33,15 +34,15 @@ const Section3 = () => {
                   </button>
                 </Link>
               </div>
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </div>
         <div className='d-flex justify-content-center w-100'>
           <hr className='hr-section-3' />
         </div>
         <div className='row'>
-          <Fade right>
-            <div className='col-md-4 col-12 order-1 order-md-0 align-items-center d-flex column flex-column justify-content-center '>
+          <div className='col-md-4 col-12 order-1 order-md-0 align-items-center d-flex column flex-column justify-content-center '>
+            <Fade left>
               <div className='section3-card'>
                 <h1 className='section-3-heading'>Ayurveda for Immunity</h1>
                 <p className='primary-text'>
@@ -59,16 +60,17 @@ const Section3 = () => {
                   </button>
                 </Link>
               </div>
-            </div>
-          </Fade>
-          <Fade left>
-            <div className='col-md-8 col-12 order-0 order-md-1 d-flex align-items-center justify-content-center'>
+            </Fade>
+          </div>
+
+          <div className='col-md-8 col-12 order-0 order-md-1 d-flex align-items-center justify-content-center'>
+            <Fade right>
               <img
                 className='w-100 section-3-home-image'
                 src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Experiences_Ayurveda_for_Immunity_iibl07.jpg'
               />
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </div>
         {/* Reverse Start */}
         <div className='d-flex justify-content-center w-100'>
@@ -76,16 +78,17 @@ const Section3 = () => {
         </div>
         {/* Reverse end */}
         <div className='row'>
-          <Fade right>
-            <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
+          <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
+            <Fade left>
               <img
                 className='w-100 section-3-home-image'
                 src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871828/static/Homepage%20New/Homepage_Experiences_Countryside_Getaway_hc4fwr.jpg'
               />
-            </div>
-          </Fade>
-          <Fade left>
-            <div className='col-md-4 col-12 align-items-center d-flex column flex-column justify-content-center '>
+            </Fade>
+          </div>
+
+          <div className='col-md-4 col-12 align-items-center d-flex column flex-column justify-content-center '>
+            <Fade right>
               <div className='section3-card'>
                 <h1 className='section-3-heading'>Countryside Experiences </h1>
                 <p className='primary-text'>
@@ -104,8 +107,8 @@ const Section3 = () => {
                   </button>
                 </Link>
               </div>
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </div>
       </div>
     </section>

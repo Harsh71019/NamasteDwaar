@@ -7,20 +7,19 @@ const CovidSection = () => {
     <section className='covid-protocol'>
       <div className='container'>
         <div className='row'>
-          <Fade left>
-            <div className='col-md-7 col-12 px-0 order-1 order-md-0'>
-              <div className='covid-protocol__containerimage'>
-                <img
-                  src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643872271/static/Homepage%20New/Homepage_Covid_Protocol_h6u3ue.jpg'
-                  alt=''
-                  className='w-100 covid-protocol__containerimage-image'
-                />
-              </div>
+          <div className='col-md-7 col-12 px-0 order-1 order-md-0'>
+            <div className='covid-protocol__containerimage'>
+              <img
+                src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643872271/static/Homepage%20New/Homepage_Covid_Protocol_h6u3ue.jpg'
+                alt=''
+                className='w-100 covid-protocol__containerimage-image'
+              />
             </div>
-          </Fade>{' '}
-          <Fade right>
-            <div className='col-md-5 col-12 px-0 order-0 order-md-1'>
-              <div className='covid-protocol__containerpara d-flex h-100 align-items-center'>
+          </div>
+
+          <div className='col-md-5 col-12 px-0 order-0 order-md-1'>
+            <div className='covid-protocol__containerpara d-flex h-100 align-items-center'>
+              <Fade top>
                 <div>
                   <h1>
                     <span className='covid-protocol__containerpara-heading1'>
@@ -51,9 +50,9 @@ const CovidSection = () => {
                     </a>
                   </Link>
                 </div>
-              </div>
+              </Fade>
             </div>
-          </Fade>
+          </div>
         </div>
       </div>
     </section>

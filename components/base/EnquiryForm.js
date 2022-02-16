@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 import { useForm } from 'react-hook-form';
 import ButtonLoader from './ButtonLoader';
-import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 
 const EnquiryForm = ({ heading }) => {
@@ -39,7 +38,7 @@ const EnquiryForm = ({ heading }) => {
       <div className='d-flex justify-content-center'>
         <hr className='booking-accroomid__rooms-hr' />
       </div>
-      <Slide left>
+      <Fade>
         <h1
           className='enquiry-form__heading d-flex justify-content-center text-center p-md-1 px-5 py-0'
           style={{ marginTop: '72px', marginBottom: '67px' }}
@@ -53,8 +52,8 @@ const EnquiryForm = ({ heading }) => {
             </span>
           )}
         </h1>
-      </Slide>
-      <Fade top>
+      </Fade>
+      <Fade>
         <form className='p-md-1 p-5' onSubmit={handleSubmit(onSubmit)}>
           <div className='row'>
             <div className='col-md-6 col-12'>
