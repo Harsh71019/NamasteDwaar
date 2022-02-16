@@ -34,7 +34,7 @@ const EnquiryForm = ({ heading }) => {
   // };
 
   return (
-    <div className='enquiry-form'>
+    <div className='enquiry-form' style={{ marginBottom: '100px' }}>
       <div className='d-flex justify-content-center'>
         <hr className='booking-accroomid__rooms-hr' />
       </div>

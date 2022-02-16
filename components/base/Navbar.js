@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { isMobile } from 'react-device-detect';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAccomodationsAction } from '../../redux/actions/accomodationActions';
+import { getWellnessAction } from '../../redux/actions/wellnessAction';
 
 const NavbarTop = () => {
   const [show, setShow] = useState(false);
@@ -16,14 +17,19 @@ const NavbarTop = () => {
 
   const dispatch = useDispatch();
   const accomodationReducer = useSelector((state) => state.accomodationReducer);
+  const getWellness = useSelector((state) => state.getWellness);
+  const {
+    accomodation: { accomodation: accomodationList },
+  } = accomodationReducer;
   const {
     loading,
     error,
-    accomodation: { accomodation: accomodationList },
-  } = accomodationReducer;
+    wellness: { wellness: wellnessAlias },
+  } = getWellness;
 
   useEffect(() => {
     dispatch(getAccomodationsAction());
+    dispatch(getWellnessAction());
   }, [dispatch]);
 
   function toggleAU(state) {
@@ -128,6 +134,7 @@ const NavbarTop = () => {
                     setShow(false);
                   }}
                   className='w-100 dropdown-button-nav-menu'
+                  style={{ paddingBottom: '16px' }}
                 >
                   <Dropdown.Item className='dropdown-item-position ddi1'>
                     <Link href='/aboutus#aboutus-our-mission'>Our Mission</Link>
@@ -171,12 +178,16 @@ const NavbarTop = () => {
                     setWellness(false);
                   }
                 }}
-                onClick={() => {
+                onClick={(e) => {
                   if (!isMobile) {
                     setExp(false);
                   }
                   if (isMobile) {
-                    toggleExp();
+                    if (show) {
+                      setExp(false);
+                    } else {
+                      setExp(true);
+                    }
                   }
                 }}
                 className='position-static ms-md-3 ms-0'
@@ -204,6 +215,7 @@ const NavbarTop = () => {
                     setExp(false);
                   }}
                   className='w-100 dropdown-button-nav-menu'
+                  style={{ paddingBottom: '16px' }}
                 >
                   <Dropdown.Item className='dropdown-item-position ddi2'>
                     <Link href='/experiences'>All Experiences</Link>
@@ -217,10 +229,7 @@ const NavbarTop = () => {
                   <Dropdown.Item className='dropdown-item-position ddi2'>
                     <Link href='/experiences/1'>Signature Dining </Link>
                   </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi2'
-                    style={{ marginBottom: '16px' }}
-                  >
+                  <Dropdown.Item className='dropdown-item-position ddi2'>
                     <Link href='/experiences/3'>Art at Dwaar </Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
@@ -272,33 +281,18 @@ const NavbarTop = () => {
                     }
                   }}
                   className='w-100 dropdown-button-nav-menu'
+                  style={{ paddingBottom: '16px' }}
                 >
                   <Dropdown.Item className='dropdown-item-position ddi3'>
                     <Link href='/wellness'>All Treatments</Link>
                   </Dropdown.Item>
 
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/wellness'>Ayurvedic Treatments</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/wellness'>Pain Management</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/wellness'>Weight Management</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/wellness'> De-stress & Relaxation</Link>
-                    Packages
-                  </Dropdown.Item>
-                  <Dropdown.Item className='dropdown-item-position ddi3'>
-                    <Link href='/wellness'> Arthritis Management</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    className='dropdown-item-position ddi3'
-                    style={{ marginBottom: '16px' }}
-                  >
-                    <Link href='/wellness'>Diabetes Management</Link>
-                  </Dropdown.Item>
+                  {wellnessAlias &&
+                    wellnessAlias.map((well) => (
+                      <Dropdown.Item className='dropdown-item-position ddi3'>
+                        <Link href={`/wellness/${well._id}`}>{well.title}</Link>
+                      </Dropdown.Item>
+                    ))}
                 </Dropdown.Menu>
               </Dropdown>
 
@@ -345,6 +339,7 @@ const NavbarTop = () => {
                     setWellness(false);
                   }}
                   className='w-100 dropdown-button-nav-menu'
+                  style={{ paddingBottom: '16px' }}
                 >
                   <Dropdown.Item className='dropdown-item-position ddi4'>
                     <Link href='/events'>All Events</Link>
@@ -403,6 +398,7 @@ const NavbarTop = () => {
                     setAccomodation(false);
                   }}
                   className='w-100 dropdown-button-nav-menu'
+                  style={{ paddingBottom: '16px' }}
                 >
                   <Dropdown.Item className='dropdown-item-position ddi5'>
                     <Link href='/accomodation'>All Rooms </Link>
@@ -453,7 +449,7 @@ const NavbarTop = () => {
                   Acommodation
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu className='w-100 dropdown-button-nav-menu'>
+                <Dropdown.Menu className='w-100 dropdown-button-nav-menu' style={{ paddingBottom: '16px' }}>
                   <Dropdown.Item
                     className='dropdown-item-position ddi5'
                     

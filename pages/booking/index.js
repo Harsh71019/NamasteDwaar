@@ -115,7 +115,7 @@ const booking = () => {
                           Check In
                         </label>
                         <input
-                          className='booking-accomodation__input'
+                          className='booking-accomodation__input w-100'
                           id='checkin'
                           type='date'
                           value={checkin}
@@ -137,7 +137,7 @@ const booking = () => {
                           Check Out
                         </label>
                         <input
-                          className='booking-accomodation__input'
+                          className='booking-accomodation__input w-100'
                           id='checkin'
                           type='date'
                           value={checkout}

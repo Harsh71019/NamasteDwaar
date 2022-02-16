@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <Fade>
-        <div className='bg-white' style={{ marginTop: '100px' }}>
+        <div className='bg-white'>
           <div className='container'>
             <div className='row'>
               <div className='col-md-2 col-12 d-flex justify-content-center pt-md-5 pt-5 pb-md-5 pb-3'>

@@ -74,7 +74,7 @@ const Dashboard = () => {
                 </Link>
               </div>
               <div className='col-md-4 col-12 mt-5 px-5'>
-                <Link href='admin/accomodation'>
+                <Link href='admin/wellness/enquiry'>
                   <div className='card dashboard-card border-0 p-3 shadow-lg cursor-pointer'>
                     <div className='card-body'>
                       <h3 className='d-flex align-items-center '>
