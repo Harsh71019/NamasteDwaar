@@ -79,7 +79,7 @@ const Section3 = () => {
         {/* Reverse end */}
         <div className='row'>
           <div className='col-md-8 col-12 d-flex align-items-center justify-content-center'>
-            <Fade left>
+            <Fade>
               <img
                 className='w-100 section-3-home-image'
                 src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871828/static/Homepage%20New/Homepage_Experiences_Countryside_Getaway_hc4fwr.jpg'
@@ -88,7 +88,7 @@ const Section3 = () => {
           </div>
 
           <div className='col-md-4 col-12 align-items-center d-flex column flex-column justify-content-center '>
-            <Fade right>
+            <Fade>
               <div className='section3-card'>
                 <h1 className='section-3-heading'>Countryside Experiences </h1>
                 <p className='primary-text'>
