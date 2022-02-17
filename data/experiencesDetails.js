@@ -136,8 +136,7 @@ export const experiencesDetails = [
       {
         id: 3,
         title: 'Painting	',
-        description:
-          'lorem fweifgwei fhweif geiwgfi fewgfuiegwifu fgeyugfeyugfyueg wufeugfyegyfg fgewyu fguweg ugfegyewg fyugyufg yu egfyueg u',
+        description: `Art tends to a powerful impact on an environment and on our experience of the environment. It has always been a great medium to express one's emotions, to go with the flow. It's about healing, being creative and insightful. Our painting workshops aim to to relieve stress and clear the mind. In addition to learning the fundamentals of shape and color, our painting classes help our guests learn how to focus on the present moment which is a powerful grounding tool.`,
         image:
           'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643914323/static/Experiences/Art%20at%20Dwaar%2003-03-22/Experiences_PDP_Art_at_Dwaar_Painting_n2gcpc.jpg',
       },
@@ -145,7 +144,7 @@ export const experiencesDetails = [
         id: 4,
         title: 'Pottery',
         description:
-          'lorem fweifgwei fhweif geiwgfi fewgfuiegwifu fgeyugfeyugfyueg wufeugfyegyfg fgewyu fguweg ugfegyewg fyugyufg yu egfyueg u',
+          'Our pottery workshops allow for our guests to fully immerse themselves in the creative experience and to construct something unique and personalized. To compliment this, we encourage our guests to try making pots which can then be used for seeding their own plants.',
         image:
           'https://res.cloudinary.com/namaste-dwaar/image/upload/v1643914325/static/Experiences/Art%20at%20Dwaar%2003-03-22/Experiences_PDP_Art_at_Dwaar_Pottery_ty6he1.jpg',
       },
