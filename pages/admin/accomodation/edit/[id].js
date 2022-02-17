@@ -17,6 +17,12 @@ const EditAccomodation = () => {
   const router = useRouter();
   const { id } = router.query;
 
+  const {
+    loading: loadingDetails,
+    error: errorDetails,
+    accomodation: { accomodation },
+  } = useSelector((state) => state.getAllAccomodationDetailsAdmin);
+
   const [name, setName] = useState('');
   const [roomSize, setRoomSize] = useState(0);
   const [pricePerNight, setPricePerNight] = useState(0);
@@ -45,17 +51,7 @@ const EditAccomodation = () => {
     (state) => state.editAccomodationAdmin
   );
 
-  const {
-    loading: loadingDetails,
-    error: errorDetails,
-    accomodation: { accomodation },
-  } = useSelector((state) => state.getAllAccomodationDetailsAdmin);
-
   useEffect(() => {
-    if (id) {
-      dispatch(getAllAccomodationsDetailsAdminAction(id));
-    }
-
     if (error) {
       toast.error(error);
       dispatch(clearErrors());
@@ -65,7 +61,27 @@ const EditAccomodation = () => {
       router.push('/admin/accomodation');
       dispatch({ type: ADMIN_CREATE_ACCOMODATIONS_RESET });
     }
-  }, [id, dispatch, error, success]);
+
+    if (!accomodation?.name || accomodation?._id !== id) {
+      dispatch(getAllAccomodationsDetailsAdminAction(id));
+    } else {
+      setName(accomodation?.name);
+      setRoomSize(accomodation?.roomSize);
+      setPricePerNight(accomodation?.pricePerNight);
+      setOccupancy(accomodation?.occupancy);
+      setDescription(accomodation?.description);
+      setHighlights(accomodation?.highlights.join());
+      setBreakfast(accomodation?.breakfast);
+      setAirConditioning(accomodation?.airConditioning);
+      setWifi(accomodation?.wifi);
+      setShower(accomodation?.shower);
+      setMinibar(accomodation?.minibar);
+      setTv(accomodation?.tv);
+      setTeacoffeeSet(accomodation?.teacoffeeSet);
+      setSwimmingPool(accomodation?.swimmingPool);
+      setHairDryer(accomodation?.hairDryer);
+    }
+  }, [dispatch, id, success, accomodation]);
 
   const onChange = (e) => {
     if (e.target.name === 'panorama') {
@@ -110,14 +126,27 @@ const EditAccomodation = () => {
     }
   };
 
-  let gallery = {
-    panorama: panorama,
-    mobile: mobile,
-    roomdetails1: roomdetails1,
-    roomdetails2: roomdetails2,
-  };
-
   const submitHandler = (e) => {
+    let gallery = {};
+
+    if (panorama) {
+      gallery.panorama = panorama;
+    }
+
+    if (mobile) {
+      gallery.mobile = mobile;
+    }
+
+    if (roomdetails1) {
+      gallery.roomdetails1 = roomdetails1;
+    }
+
+    if (roomdetails2) {
+      gallery.roomdetails2 = roomdetails2;
+    }
+
+    const isEmpty = Object.keys(gallery).length === 0;
+
     e.preventDefault();
     const accomodationData = {
       name,
@@ -135,8 +164,12 @@ const EditAccomodation = () => {
       teacoffeeSet,
       swimmingPool,
       hairDryer,
-      gallery,
     };
+
+    if (!isEmpty) {
+      console.log;
+      accomodationData.gallery = gallery;
+    }
 
     dispatch(editAccomodationsAdminAction(id, accomodationData));
   };
@@ -147,9 +180,9 @@ const EditAccomodation = () => {
       <div className='container'>
         <div className='d-flex justify-content-between mt-5'>
           <h1 className='text-center'>Edit Accomodation</h1>
-          <button className='btn btn-primary fs16'>
-            <Link href='/admin/accomodation'>Go Back</Link>
-          </button>
+          <Link href='/admin/accomodation'>
+            <button className='btn btn-primary fs16'>Go Back</button>
+          </Link>
         </div>
         {loadingDetails ? (
           <Loader />
@@ -356,7 +389,7 @@ const EditAccomodation = () => {
                         <img
                           className='w-100 adminform-img fs16'
                           src={panoramaPreview}
-                          alt='image'
+                          alt='image existing'
                         />
                       </figure>
                     </div>
@@ -386,7 +419,7 @@ const EditAccomodation = () => {
                         <img
                           className='w-100 adminform-img fs16'
                           src={mobilePreview}
-                          alt='image'
+                          alt='image existing'
                         />
                       </figure>
                     </div>

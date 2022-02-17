@@ -89,9 +89,9 @@ const Dashboard = () => {
               </div>
             </div>
           </section>
-          <section>
+          {/* <section>
             <h1 className='px-5 mt-5'>Performance Metrics</h1>
-          </section>
+          </section> */}
         </div>
       </div>
     </>

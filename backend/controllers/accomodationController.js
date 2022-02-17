@@ -128,72 +128,73 @@ const updateAccomodation = catchAsyncErrors(async (req, res, next) => {
   let roomdetails1Result;
   let roomdetails2Result;
 
-  if (req.body.gallery.panorama) {
-    await cloudinary.v2.uploader.destroy(panorama.public_id, {
-      folder: 'nd/accomodation',
-    });
-
-    panoramaResult = await cloudinary.v2.uploader.upload(
-      req.body.gallery.panorama,
-      {
+  if (req.body.gallery) {
+    if (req.body.gallery.panorama) {
+      await cloudinary.v2.uploader.destroy(panorama.public_id, {
         folder: 'nd/accomodation',
-      }
-    );
-  }
-  if (req.body.gallery.mobile) {
-    await cloudinary.v2.uploader.destroy(mobile.public_id, {
-      folder: 'nd/accomodation',
-    });
+      });
 
-    mobileResult = await cloudinary.v2.uploader.upload(
-      req.body.gallery.mobile,
-      {
+      panoramaResult = await cloudinary.v2.uploader.upload(
+        req.body.gallery.panorama,
+        {
+          folder: 'nd/accomodation',
+        }
+      );
+
+      req.body.gallery.panorama = {
+        public_id: panoramaResult.public_id,
+        url: panoramaResult.secure_url,
+      };
+    }
+    if (req.body.gallery.mobile) {
+      await cloudinary.v2.uploader.destroy(mobile.public_id, {
         folder: 'nd/accomodation',
-      }
-    );
-  }
+      });
 
-  if (req.body.gallery.roomdetails1) {
-    await cloudinary.v2.uploader.destroy(roomdetails1.public_id, {
-      folder: 'nd/accomodation',
-    });
+      mobileResult = await cloudinary.v2.uploader.upload(
+        req.body.gallery.mobile,
+        {
+          folder: 'nd/accomodation',
+        }
+      );
+      req.body.gallery.mobile = {
+        public_id: mobileResult.public_id,
+        url: mobileResult.secure_url,
+      };
+    }
 
-    roomdetails1Result = await cloudinary.v2.uploader.upload(
-      req.body.gallery.roomdetails1,
-      {
+    if (req.body.gallery.roomdetails1) {
+      await cloudinary.v2.uploader.destroy(roomdetails1.public_id, {
         folder: 'nd/accomodation',
-      }
-    );
-  }
-  if (req.body.gallery.roomdetails2) {
-    await cloudinary.v2.uploader.destroy(roomdetails2.public_id, {
-      folder: 'nd/accomodation',
-    });
-    roomdetails2Result = await cloudinary.v2.uploader.upload(
-      req.body.gallery.roomdetails2,
-      {
+      });
+
+      roomdetails1Result = await cloudinary.v2.uploader.upload(
+        req.body.gallery.roomdetails1,
+        {
+          folder: 'nd/accomodation',
+        }
+      );
+      req.body.gallery.roomdetails1 = {
+        public_id: roomdetails1Result.public_id,
+        url: roomdetails1Result.secure_url,
+      };
+    }
+    if (req.body.gallery.roomdetails2) {
+      await cloudinary.v2.uploader.destroy(roomdetails2.public_id, {
         folder: 'nd/accomodation',
-      }
-    );
+      });
+      roomdetails2Result = await cloudinary.v2.uploader.upload(
+        req.body.gallery.roomdetails2,
+        {
+          folder: 'nd/accomodation',
+        }
+      );
+      req.body.gallery.roomdetails2 = {
+        public_id: roomdetails2Result.public_id,
+        url: roomdetails2Result.secure_url,
+      };
+    }
   }
-
-  req.body.gallery.panorama = {
-    public_id: panoramaResult.public_id,
-    url: panoramaResult.secure_url,
-  };
-  req.body.gallery.mobile = {
-    public_id: mobileResult.public_id,
-    url: mobileResult.secure_url,
-  };
-
-  req.body.gallery.roomdetails1 = {
-    public_id: roomdetails1Result.public_id,
-    url: roomdetails1Result.secure_url,
-  };
-  req.body.gallery.roomdetails2 = {
-    public_id: roomdetails2Result.public_id,
-    url: roomdetails2Result.secure_url,
-  };
 
   if (!accomodation) {
     return next(new ErrorHandler('Accomodation not found with this ID', 404));
