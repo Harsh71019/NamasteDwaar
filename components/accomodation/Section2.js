@@ -36,7 +36,7 @@ const Section2 = () => {
                       <img
                         src={accomodate.gallery.mobile.url}
                         alt={accomodate.name}
-                        className='w-100'
+                        className='w-100 section-1-accomodation-image'
                       />
                       <div className='section-1-text-acc-container'>
                         {/* Desktop */}

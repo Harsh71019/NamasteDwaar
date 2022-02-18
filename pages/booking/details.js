@@ -280,7 +280,7 @@ const details = () => {
                       </p>
                       <p className='booking-accroomid__cardtop-text'>
                         {bookingDetails && bookingDetails.adult}&nbsp;
-                        Adult's,&nbsp;&nbsp;
+                        Adults,&nbsp;&nbsp;
                         {bookingDetails && bookingDetails.child}&nbsp;Children
                       </p>
                     </div>
@@ -314,7 +314,10 @@ const details = () => {
                   </p> */}
                   </div>
                 </div>
-                <div className='booking-accroomid__rooms mt-5 row d-flex justify-content-center align-items-center'>
+                <div
+                  className='booking-accroomid__rooms mt-5 row d-flex justify-content-center align-items-center'
+                  id='#bookingdetailsbox'
+                >
                   <div className='p-md-5 p-3'>
                     <h1 className='booking-accroomid__rooms-select-header mb-3'>
                       Enter Details

@@ -149,10 +149,9 @@ const booking = () => {
                           max='2022-12-12'
                         />
                       </div>
-                    </div>{' '}
+                    </div>
                     <div className='col-md-3 col-12 px-md-5 px-1'>
                       <div className='d-flex flex-column'>
-                        {' '}
                         <div></div>
                         <label
                           className='booking-accomodation__label'
@@ -179,11 +178,10 @@ const booking = () => {
                             );
                           })}
                         </select>
-                      </div>{' '}
-                    </div>{' '}
+                      </div>
+                    </div>
                     <div className='col-md-3 col-12 px-md-5 px-1'>
                       <div className='d-flex flex-column'>
-                        {' '}
                         <label
                           className='booking-accomodation__label'
                           htmlFor='adult'
@@ -211,11 +209,11 @@ const booking = () => {
                             );
                           })}
                         </select>
-                      </div>{' '}
-                    </div>{' '}
+                      </div>
+                    </div>
                     {/* <div className='col-md-2 col-12 px-md-5 px-1'>
                       <div className='d-flex flex-column'>
-                        {' '}
+                        
                         <div></div>
                         <label
                           className='booking-accomodation__label'
@@ -231,7 +229,7 @@ const booking = () => {
                           onChange={(e) => setRoomCount(e.target.value)}
                           required
                         >
-                          {' '}
+                          
                           <option defaultValue='' value=''>
                             Room
                           </option>
@@ -245,16 +243,18 @@ const booking = () => {
                             );
                           })}
                         </select>
-                      </div>{' '}
+                      </div>
                     </div> */}
                   </div>
                   <div className='d-flex justify-content-center mt-5'>
                     <button onClick={submitForm} className=' mx-3 btn-default '>
                       Book Now
                     </button>
-                    <button className=' mx-3 btn-default'>
-                      <Link href='/'> Book Program</Link>
-                    </button>
+                    <Link href='/wellness'>
+                      <button className=' mx-3 btn-default'>
+                        Book Program
+                      </button>
+                    </Link>
                   </div>
                 </form>
               </div>

@@ -70,8 +70,6 @@ export const addRoomIDAccomodationBookingAction =
       let obj = JSON.parse(localStorage.getItem('accomodationBooking')) || {};
       obj.accomodation = data;
       localStorage.setItem('accomodationBooking', JSON.stringify(obj));
-
-      toast.success('Selected Room Successfully');
     } catch (error) {
       dispatch({
         type: BOOKING_ROOMID_ACCOMODATION_FAIL,

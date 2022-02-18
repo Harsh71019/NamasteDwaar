@@ -35,9 +35,16 @@ const newBooking = catchAsyncErrors(async (req, res) => {
   } = req.body;
 
   const accomodationDetails = await Accomodation.findById(accomodation);
-  const { pricePerNight, name, occupancy } = accomodationDetails;
+  const {
+    pricePerNight,
+    name,
+    occupancy,
+    roomCount: roomTotalAvailable,
+  } = accomodationDetails;
 
   const noOfRooms = getMaxRooms(adult, occupancy);
+
+  const roomsLeftAfterBooking = roomTotalAvailable - noOfRooms;
 
   const date1 = new Date(checkInDate);
   const date2 = new Date(checkOutDate);
@@ -84,12 +91,66 @@ const newBooking = catchAsyncErrors(async (req, res) => {
     orderID,
     roomName: name,
     roomPrice: pricePerNight,
+    roomsLeftToBook: roomsLeftAfterBooking,
   });
 
   res.status(200).json({
     success: true,
     booking,
   });
+});
+
+// Create new booking   =>   /api/bookings/check
+const checkRoomBookingAvailability = catchAsyncErrors(async (req, res) => {
+  let { checkInDate, checkOutDate, adult, roomId } = req.body;
+
+  const accomodationDetails = await Accomodation.findById(roomId);
+  const { occupancy, roomCount: roomTotalAvailable } = accomodationDetails;
+  const noOfRooms = getMaxRooms(adult, occupancy);
+  let isAvailable;
+
+  const roomsLeftToBook = roomTotalAvailable - noOfRooms;
+
+  if (roomsLeftToBook <= 0) {
+    isAvailable = false;
+    res.status(200).json({
+      success: true,
+      isAvailable,
+    });
+  } else {
+    const minRoomAvailable = 0;
+    const bookings = await Booking.find({
+      room: roomId,
+      $and: [
+        {
+          checkInDate: {
+            $lte: checkOutDate,
+          },
+        },
+        {
+          checkOutDate: {
+            $gte: checkInDate,
+          },
+        },
+        {
+          roomsLeftToBook: {
+            $lte: minRoomAvailable,
+          },
+        },
+      ],
+    });
+
+    if (bookings && bookings.length === 0) {
+      isAvailable = true;
+    } else {
+      isAvailable = false;
+    }
+
+    res.status(200).json({
+      success: true,
+      isAvailable,
+    });
+  }
 });
 
 const verifyPaymentAccomodation = catchAsyncErrors(async (req, res, next) => {
@@ -166,4 +227,5 @@ export {
   getAllBookingsAdmin,
   verifyPaymentAccomodation,
   getSingleBookingAccomodation,
+  checkRoomBookingAvailability,
 };

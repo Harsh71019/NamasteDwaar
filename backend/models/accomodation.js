@@ -66,34 +66,7 @@ const accomodationSchema = new mongoose.Schema({
   pdfBrochure: {
     type: String,
   },
-  // address: {
-  //   type: String,
-  //   required: [true, 'Please enter room address'],
-  // },
-  // guestCapacity: {
-  //   type: Number,
-  //   required: [true, 'Please enter room guest capacity'],
-  // },
-  // numOfBeds: {
-  //   type: Number,
-  //   required: [true, 'Please enter number of beds in room'],
-  // },
-  // petsAllowed: {
-  //   type: Boolean,
-  //   default: false,
-  // },
-  // roomCleaning: {
-  //   type: Boolean,
-  //   default: false,
-  // },
-  // ratings: {
-  //   type: Number,
-  //   default: 0,
-  // },
-  // numOfReviews: {
-  //   type: Number,
-  //   default: 0,
-  // },
+
   gallery: {
     panorama: {
       public_id: {
@@ -137,35 +110,12 @@ const accomodationSchema = new mongoose.Schema({
     },
   },
 
-  //   category: {
-  //     type: String,
-  //     required: [true, 'Please enter room category'],
-  //     enum: {
-  //       values: ['King', 'Single', 'Twins'],
-  //       message: 'Please select correct category for room',
-  //     },
-  //   },
-  // reviews: [
-  //   {
-  //     user: {
-  //       type: mongoose.Schema.ObjectId,
-  //       ref: 'User',
-  //       required: true,
-  //     },
-  //     name: {
-  //       type: String,
-  //       required: true,
-  //     },
-  //     rating: {
-  //       type: Number,
-  //       required: true,
-  //     },
-  //     comment: {
-  //       type: String,
-  //       required: true,
-  //     },
-  //   },
-  // ],
+  roomCount: {
+    type: Number,
+    default: 0,
+    required: true,
+  },
+
   user: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',

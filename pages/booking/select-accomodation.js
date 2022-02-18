@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../../components/base/Loader';
 import { getAccomodationsAction } from '../../redux/actions/accomodationActions';
 import { addRoomIDAccomodationBookingAction } from '../../redux/actions/bookingAccomodationActions';
+import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const selectaccomodation = () => {
   const dispatch = useDispatch();
@@ -34,33 +36,53 @@ const selectaccomodation = () => {
     }
   }
 
-  const selectRoom = (id) => {
+  const selectRoom = async (id) => {
     dispatch(addRoomIDAccomodationBookingAction(id));
     setRoom(id);
     let roomDetails = accomodationList.find((rd) => rd._id === id);
-    const pricePerNight = roomDetails?.pricePerNight;
-    const tax = 0.18;
-    const date1 = new Date(bookingDetails.checkin);
-    const date2 = new Date(bookingDetails.checkout);
-    const Difference_In_Time = date2.getTime() - date1.getTime();
-    const Difference_In_Days = Number(Difference_In_Time / (1000 * 3600 * 24));
+    const date1 = new Date(bookingDetails?.checkin);
+    const date2 = new Date(bookingDetails?.checkout);
 
-    setDaysOfStay(Difference_In_Days);
-    const roomCountMax = getMaxRooms(
-      bookingDetails.adult,
-      roomDetails?.occupancy
-    );
-    setRoomCount(roomCountMax);
-    const amountGenerated =
-      Number(Difference_In_Days * pricePerNight) * Number(roomCountMax);
+    const data = {
+      roomId: id,
+      checkIn: date1,
+      checkOut: date2,
+      adult: bookingDetails?.adult,
+    };
 
-    const gstPrice = amountGenerated * tax;
-    const totalPriceAfterGST = Math.round(
-      amountGenerated + amountGenerated * tax
-    );
-    setPrice(amountGenerated);
-    setFinalAmount(totalPriceAfterGST);
-    setGst(gstPrice);
+    const response = await axios.post('/api/booking/check-availability', data);
+
+    const { isAvailable, success } = response?.data;
+
+    if (isAvailable === true && success === true) {
+      toast.success('Selected Room Successfully');
+      const pricePerNight = roomDetails?.pricePerNight;
+      const tax = 0.18;
+      const Difference_In_Time = date2.getTime() - date1.getTime();
+      const Difference_In_Days = Number(
+        Difference_In_Time / (1000 * 3600 * 24)
+      );
+
+      setDaysOfStay(Difference_In_Days);
+      const roomCountMax = getMaxRooms(
+        bookingDetails.adult,
+        roomDetails?.occupancy
+      );
+      setRoomCount(roomCountMax);
+      const amountGenerated =
+        Number(Difference_In_Days * pricePerNight) * Number(roomCountMax);
+
+      const gstPrice = amountGenerated * tax;
+      const totalPriceAfterGST = Math.round(
+        amountGenerated + amountGenerated * tax
+      );
+      setPrice(amountGenerated);
+      setFinalAmount(totalPriceAfterGST);
+      setGst(gstPrice);
+    } else {
+      toast.error('Booking not available for these dates please try again');
+      setRoom(false);
+    }
   };
 
   useEffect(() => {
@@ -111,7 +133,7 @@ const selectaccomodation = () => {
                       </p>
                       <p className='booking-accroomid__cardtop-text'>
                         {bookingDetails && bookingDetails.adult}&nbsp;
-                        Adult's,&nbsp;&nbsp;
+                        Adults,&nbsp;&nbsp;
                         {bookingDetails && bookingDetails.child}&nbsp;Children
                       </p>
                     </div>
@@ -134,7 +156,7 @@ const selectaccomodation = () => {
                   {accomodationList &&
                     accomodationList.map((accomodate) => (
                       <>
-                        <div className='card border-0'>
+                        <div className='card border-0' key={accomodate._id}>
                           <div className='card-body'>
                             <div className='row'>
                               <div className='col-md-5 col-12 d-flex align-items-center'>
@@ -169,7 +191,7 @@ const selectaccomodation = () => {
                                       <p>
                                         <span className='booking-accroomid__rooms-features'>
                                           Rate for 1 night
-                                        </span>{' '}
+                                        </span>
                                         <br />
                                         <p className='booking-accroomid__rooms-price'>
                                           ₹{accomodate.pricePerNight}
@@ -282,7 +304,7 @@ const selectaccomodation = () => {
                   </div>
                 </div>
                 <div className='d-flex justify-content-end mt-3'>
-                  <Link href='/booking/details'>
+                  <Link href='/booking/details#bookingdetailsbox'>
                     <button
                       disabled={!room}
                       className={
