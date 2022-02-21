@@ -35,6 +35,7 @@ import {
   getSingleBookAccomodationReducer,
   getAllAdminAccomodationBookingsReducer,
   getSingleBookAdminAccomodationReducer,
+  deleteBookingAdminReducer,
 } from './reducers/bookingAccomodationReducer';
 // End of Booking Reducers
 
@@ -74,6 +75,7 @@ const reducerCombined = combineReducers({
   getSingleBookAccomodation: getSingleBookAccomodationReducer,
   getAllAdminAccomodationBookings: getAllAdminAccomodationBookingsReducer,
   getSingleBookAdminAccomodation: getSingleBookAdminAccomodationReducer,
+  deleteBookingAdmin: deleteBookingAdminReducer,
   // End of Booking Accomodation
 
   // Start of wellness

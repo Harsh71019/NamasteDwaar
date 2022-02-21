@@ -428,6 +428,14 @@ a {
   text-transform: capitalize;
 }
 
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-link:focus {
+  text-decoration: underline;
+}
+
 /* End of footer */
 
 /* Start of media queries */

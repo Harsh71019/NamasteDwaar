@@ -19,6 +19,9 @@ const enquirySchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please enter your message'],
   },
+  path: {
+    type: String,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

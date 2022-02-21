@@ -20,6 +20,10 @@ import {
   GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_REQUEST,
   GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
   GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_FAIL,
+  ADMIN_DELETE_BOOKING_REQUEST,
+  ADMIN_DELETE_BOOKING_SUCCESS,
+  ADMIN_DELETE_BOOKING_FAIL,
+  ADMIN_DELETE_BOOKING_RESET,
 } from '../constants/bookingAccomdationConstants';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
@@ -206,6 +210,24 @@ export const getAllAccomodationBookingAdminAction = () => async (dispatch) => {
         error.response && error.response.data && error.response.data.message
           ? error.response.data.message
           : error.message,
+    });
+  }
+};
+
+export const deleteBookingAdminAction = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: ADMIN_DELETE_BOOKING_REQUEST });
+    const { data } = await axios.delete(`/api/admin/booking/${id}`);
+    dispatch({
+      type: ADMIN_DELETE_BOOKING_SUCCESS,
+      payload: data.success,
+    });
+    toast.success('Deleted accomodation successfully');
+  } catch (error) {
+    toast.error('Internal Server Error');
+    dispatch({
+      type: ADMIN_DELETE_BOOKING_FAIL,
+      payload: error.response.data.message,
     });
   }
 };

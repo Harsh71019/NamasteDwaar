@@ -7,8 +7,10 @@ const Hero = ({ image, heading, para }) => {
         <div className='hero-top__container'>
           <img src={image} alt='events' className='hero-top__img' />
           <div className='hbs hero-top__desktop'>
-            <h1 className='hero-top__title'>{heading}</h1>
-            <p className='hero-top__desc'>{para}</p>
+            <div className='hero-top__desktop-container'>
+              <h1 className='hero-top__title'>{heading}</h1>
+              <p className='hero-top__desc'>{para}</p>
+            </div>
           </div>
           <div className='d-flex justify-content-center'>
             <div className='sss hero-top__card'>

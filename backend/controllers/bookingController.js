@@ -106,12 +106,15 @@ const checkRoomBookingAvailability = catchAsyncErrors(async (req, res) => {
 
   const accomodationDetails = await Accomodation.findById(roomId);
   const { occupancy, roomCount: roomTotalAvailable } = accomodationDetails;
+
   const noOfRooms = getMaxRooms(adult, occupancy);
   let isAvailable;
-
+  console.log(occupancy);
   const roomsLeftToBook = roomTotalAvailable - noOfRooms;
 
-  if (roomsLeftToBook <= 0) {
+  console.log(roomsLeftToBook);
+
+  if (roomsLeftToBook < 0) {
     isAvailable = false;
     res.status(200).json({
       success: true,
@@ -222,10 +225,26 @@ const getSingleBookingAccomodation = catchAsyncErrors(
   }
 );
 
+const deleteBooking = catchAsyncErrors(async (req, res, next) => {
+  const booking = await Booking.findById(req.query.id);
+
+  if (!booking) {
+    return next(new ErrorHandler('Booking not found with this ID', 404));
+  }
+
+  await booking.remove();
+
+  res.status(200).json({
+    success: true,
+    message: 'Booking Deleted Successfully',
+  });
+});
+
 export {
   newBooking,
   getAllBookingsAdmin,
   verifyPaymentAccomodation,
   getSingleBookingAccomodation,
   checkRoomBookingAvailability,
+  deleteBooking,
 };

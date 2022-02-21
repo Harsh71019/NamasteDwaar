@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import { SessionProvider, useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 import React from 'react';
 
 function Auth({ children }) {
@@ -47,22 +47,22 @@ function MyApp({ Component, pageProps, router }) {
           }}
         />
         <SessionProvider session={pageProps.session}>
-          <motion.div
+          {/* <motion.div
             key={router.route}
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             id='page-transition-container'
-          >
-            {Component.auth ? (
-              <Auth>
-                <Component {...pageProps} />
-              </Auth>
-            ) : (
+          > */}
+          {Component.auth ? (
+            <Auth>
               <Component {...pageProps} />
-            )}
-          </motion.div>
+            </Auth>
+          ) : (
+            <Component {...pageProps} />
+          )}
+          {/* </motion.div> */}
         </SessionProvider>
       </SSRProvider>
     </>

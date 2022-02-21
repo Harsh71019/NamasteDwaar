@@ -32,30 +32,48 @@ const NavbarAdmin = () => {
           aria-expanded='false'
           aria-label='Toggle navigation'
         >
-          <span className='navbar-toggler-icon'></span>
+          <span className='navbar-toggler-icon fs-16'></span>
         </button>
         <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
           <div className='navbar-nav fs-4 ms-auto'>
             <Link href='/admin'>
-              <a className='nav-link ms-5'>Home</a>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>
+                Home
+              </a>
             </Link>
             <Link href='/admin/accomodation'>
-              <a className='nav-link ms-5'>Accomodation</a>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>
+                Accomodation
+              </a>
             </Link>
             <Link href='/admin/accomodation/booking'>
-              <a className='nav-link ms-5'>Accomodation Booking</a>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>
+                Accomodation Booking
+              </a>
             </Link>
             <Link href='/admin/wellness'>
-              <a className='nav-link ms-5'>Wellness</a>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>
+                Wellness
+              </a>
+            </Link>
+            <Link href='/admin/wellness/enquiry'>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>
+                Wellness Enquiries
+              </a>
             </Link>
             {/* <Link href='/admin/wellness/booking'>
-              <a className='nav-link ms-5'>Wellness Booking</a>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>Wellness Booking</a>
             </Link> */}
 
             <Link href='/admin/enquiries'>
-              <a className='nav-link ms-5'>Enquiries</a>
+              <a className='nav-link fs-3 text-dark font-weight-bold ms-5'>
+                Enquiries
+              </a>
             </Link>
-            <a className='nav-link ms-5 cursor-pointer' onClick={logOut}>
+            <a
+              className='nav-link fs-3 text-dark font-weight-bold ms-5 cursor-pointer'
+              onClick={logOut}
+            >
               Logout
             </a>
           </div>

@@ -38,6 +38,7 @@ const CreateAccomodation = () => {
   const [roomdetails1Preview, setRoomdetails1Preview] = useState('');
   const [roomdetails2, setRoomdetails2] = useState('');
   const [roomdetails2Preview, setRoomdetails2Preview] = useState('');
+  const [roomCount, setRoomCount] = useState('');
 
   const { loading, error, success } = useSelector(
     (state) => state.createAccomodationAdmin
@@ -112,6 +113,7 @@ const CreateAccomodation = () => {
       roomSize,
       pricePerNight,
       occupancy,
+      roomCount,
       description,
       highlights,
       breakfast,
@@ -179,6 +181,19 @@ const CreateAccomodation = () => {
                     className='form-control adminform_input'
                     value={roomSize}
                     onChange={(e) => setRoomSize(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className='form-group mt-3'>
+                  <label className='adminform_label' htmlFor='price_field'>
+                    Room Count
+                  </label>
+                  <input
+                    type='text'
+                    id='price_field'
+                    className='form-control adminform_input'
+                    value={roomCount}
+                    onChange={(e) => setRoomCount(e.target.value)}
                     required
                   />
                 </div>

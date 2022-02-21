@@ -12,10 +12,15 @@
   }
 
   &__desktop {
-    position: absolute;
-    top: 42.1%;
-    left: 13.1%;
-    max-width: 50rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+
+    &-container {
+      background: #a7896f;
+      padding-bottom: 44px;
+      max-width: 1080px;
+    }
   }
 
   &__title {
@@ -25,12 +30,20 @@
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     color: #fff;
+    margin-top: 36px;
   }
 
   &__desc {
-    @include abstracts.para($color: #ffffff, $lh: 2.4rem, $fw: 400, $ta: left);
+    @include abstracts.para(
+      $color: #ffffff,
+      $lh: 2.4rem,
+      $fw: 400,
+      $ta: center
+    );
+    margin-top: 24px;
+    padding: 0 110px;
   }
 
   &__card {
@@ -120,6 +133,10 @@
   }
 
   .hero-top {
+    &__desktop {
+      display: none;
+    }
+
     &__img {
       width: 100%;
       object-fit: cover !important;

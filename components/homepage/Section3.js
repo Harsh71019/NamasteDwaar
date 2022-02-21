@@ -8,7 +8,7 @@ const Section3 = () => {
       <div className='container'>
         <div className='row '>
           <div className='col-md-8 col-12 order-1 order-md-0 d-flex align-items-center justify-content-md-center justify-content-end '>
-            <Fade left>
+            <Fade>
               <img
                 className='w-100 section-3-home-image'
                 src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Experiences_Natural_Healing_feafuu.jpg'
@@ -17,7 +17,7 @@ const Section3 = () => {
           </div>
 
           <div className='col-md-4 col-12 align-items-center d-flex flex-column justify-content-center order-1 order-md-0'>
-            <Fade right>
+            <Fade>
               <div className='section3-card'>
                 <h1 className='section-3-heading'>Natural Healing </h1>
                 <p className='primary-text'>
@@ -42,7 +42,7 @@ const Section3 = () => {
         </div>
         <div className='row'>
           <div className='col-md-4 col-12 order-1 order-md-0 align-items-center d-flex column flex-column justify-content-center '>
-            <Fade left>
+            <Fade>
               <div className='section3-card'>
                 <h1 className='section-3-heading'>Ayurveda for Immunity</h1>
                 <p className='primary-text'>
@@ -64,7 +64,7 @@ const Section3 = () => {
           </div>
 
           <div className='col-md-8 col-12 order-0 order-md-1 d-flex align-items-center justify-content-center'>
-            <Fade right>
+            <Fade>
               <img
                 className='w-100 section-3-home-image'
                 src='https://res.cloudinary.com/namaste-dwaar/image/upload/v1643871827/static/Homepage%20New/Homepage_Experiences_Ayurveda_for_Immunity_iibl07.jpg'

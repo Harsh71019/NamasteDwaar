@@ -39,7 +39,7 @@ const Dashboard = () => {
                         <p className='mb-0 me-3'>
                           <Image src={HomeIcon} />
                         </p>
-                        <p className='mb-0'> Booking Accomodation</p>
+                        <p className='mb-0'> Manage Accomodation</p>
                       </h3>
                     </div>
                   </div>

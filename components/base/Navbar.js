@@ -123,7 +123,9 @@ const NavbarTop = () => {
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    <Link href='/aboutus'> About Us</Link>
+                    <Link href='/aboutus'>
+                      <a className='nav-main-link-header'>About Us</a>
+                    </Link>
                   </Dropdown.Toggle>
                 )}
 
@@ -137,26 +139,34 @@ const NavbarTop = () => {
                   style={{ paddingBottom: '16px' }}
                 >
                   <Dropdown.Item className='dropdown-item-position ddi1'>
-                    <Link href='/aboutus#aboutus-our-mission'>Our Mission</Link>
+                    <Link href='/aboutus#aboutus-our-mission'>
+                      <a className='nav-link-main'>Our Mission</a>
+                    </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
                     <Link href='/aboutus#aboutus-our-philosophy'>
-                      Our Philosophy
+                      <a className='nav-link-main'>Our Philosophy</a>
                     </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
-                    <Link href='/aboutus#our-partners'>Our Partners </Link>
+                    <Link href='/aboutus#our-partners'>
+                      <a className='nav-link-main'>Our Partners</a>
+                    </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
-                    <Link href='/aboutus#architect'>About the Architect </Link>
+                    <Link href='/aboutus#architect'>
+                      <a className='nav-link-main'>About the Architect</a>
+                    </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
                     <Link href='/aboutus#aboutus-sustainability'>
-                      Sustainability
+                      <a className='nav-link-main'>Sustainability</a>
                     </Link>
                   </Dropdown.Item>
                   <Dropdown.Item className='dropdown-item-position ddi1'>
-                    <Link href='/aboutus#aboutus-gallery'>Gallery</Link>
+                    <Link href='/aboutus#aboutus-gallery'>
+                      <a className='nav-link-main'>Gallery</a>
+                    </Link>
                   </Dropdown.Item>
                   {/* <Dropdown.Item
                     className='dropdown-item-position ddi1'
@@ -197,14 +207,16 @@ const NavbarTop = () => {
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    Experiences
+                    <a className='nav-main-link-header'> Experiences</a>
                   </Dropdown.Toggle>
                 ) : (
                   <Dropdown.Toggle
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    <Link href='/experiences'>Experiences</Link>
+                    <Link href='/experiences'>
+                      <a className='nav-main-link-header'>Experiences</a>
+                    </Link>
                   </Dropdown.Toggle>
                 )}
 
@@ -261,14 +273,16 @@ const NavbarTop = () => {
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    Programmes
+                    <a className='nav-main-link-header'>Programmes</a>
                   </Dropdown.Toggle>
                 ) : (
                   <Dropdown.Toggle
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    <Link href='/wellness'>Programmes</Link>
+                    <Link href='/wellness'>
+                      <a className='nav-main-link-header'>Programmes</a>
+                    </Link>
                   </Dropdown.Toggle>
                 )}
 
@@ -322,14 +336,16 @@ const NavbarTop = () => {
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    Events
+                    <a className='nav-main-link-header'> Events</a>
                   </Dropdown.Toggle>
                 ) : (
                   <Dropdown.Toggle
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    <Link href='/events'>Events</Link>
+                    <Link href='/events'>
+                      <a className='nav-main-link-header'>Events </a>
+                    </Link>
                   </Dropdown.Toggle>
                 )}
                 <Dropdown.Menu
@@ -381,14 +397,16 @@ const NavbarTop = () => {
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    Accommodation
+                    <a className='nav-main-link-header'> Accommodation</a>
                   </Dropdown.Toggle>
                 ) : (
                   <Dropdown.Toggle
                     className='dropdown-button-nav w-100 d-flex align-items-center'
                     id='dropdown-basic'
                   >
-                    <Link href='/accomodation'>Accommodation</Link>
+                    <Link href='/accomodation'>
+                      <a className='nav-main-link-header'>Accommodation</a>
+                    </Link>
                   </Dropdown.Toggle>
                 )}
                 <Dropdown.Menu
@@ -437,7 +455,7 @@ const NavbarTop = () => {
               </Dropdown>
 
               <Link href='/contactus'>
-                <a className='d-flex position-static justify-content-md-center justify-content-start align-items-center dropdown-button-nav'>
+                <a className='nav-main-link-header d-flex position-static justify-content-md-center justify-content-start align-items-center dropdown-button-nav'>
                   Contact Us
                 </a>
               </Link>

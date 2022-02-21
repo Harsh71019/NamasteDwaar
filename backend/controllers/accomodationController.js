@@ -41,6 +41,7 @@ const newAccomodation = catchAsyncErrors(async (req, res) => {
     teacoffeeSet,
     swimmingPool,
     hairDryer,
+    roomCount,
     gallery: { panorama, mobile, roomdetails1, roomdetails2 },
   } = req.body;
 
@@ -65,6 +66,7 @@ const newAccomodation = catchAsyncErrors(async (req, res) => {
     occupancy: Number(occupancy),
     description: description,
     highlights: splitHighlights,
+    roomCount: roomCount,
     pricePerNight: Number(pricePerNight),
     breakfast: breakfast,
     airConditioning: airConditioning,

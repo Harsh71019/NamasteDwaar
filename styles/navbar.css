@@ -1,5 +1,17 @@
 /* Start of navbar styles */
 
+.nav-main-link-header:hover {
+  color: #000000;
+}
+
+.nav-link-main:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.nav-link-main:focus {
+  text-decoration: underline;
+}
+
 .dropdown-button-nav {
   color: #000 !important;
   background: transparent;

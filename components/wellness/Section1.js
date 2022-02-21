@@ -38,7 +38,7 @@ const Section1 = () => {
                           <img
                             src={well?.img?.url}
                             alt=''
-                            className='w-100 wellness-lp__image'
+                            className='wellness-lp__image'
                           />
                         </div>
                         <div className='p-md-5 p-3 wellness-lp__cardcontainer'>

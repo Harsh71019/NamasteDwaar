@@ -1,8 +1,5 @@
 import nc from 'next-connect';
-import {
-  getAllBookingsAdmin,
-  deleteBooking,
-} from '../../../../backend/controllers/bookingController';
+import { getDashboardMetrics } from '../../../../backend/controllers/dashboardControllers';
 import dbConnect from '../../../../backend/config/dbConnect';
 import onError from '../../../../backend/middlewares/errors';
 import {
@@ -14,8 +11,6 @@ const handler = nc({ onError });
 
 dbConnect();
 
-handler
-  .use(isAuthenticatedUser, authorizeRoles('admin'))
-  .get(getAllBookingsAdmin);
+handler.get(getDashboardMetrics);
 
 export default handler;

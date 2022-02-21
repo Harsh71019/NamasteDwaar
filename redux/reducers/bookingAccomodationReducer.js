@@ -20,6 +20,11 @@ import {
   GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_REQUEST,
   GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_SUCCESS,
   GET_SINGLE_ADMIN_ACCOMODATION_BOOKING_FAIL,
+  ADMIN_DELETE_BOOKING_REQUEST,
+  ADMIN_DELETE_BOOKING_SUCCESS,
+  ADMIN_DELETE_BOOKING_FAIL,
+  ADMIN_DELETE_BOOKING_RESET,
+  CLEAR_ERRORS,
 } from '../constants/bookingAccomdationConstants';
 
 export const bookingAccomodationReducer = (
@@ -178,6 +183,32 @@ export const getAllAdminAccomodationBookingsReducer = (
       };
     case GET_ALL_ADMIN_ACCOMODATION_BOOKING_FAIL:
       return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const deleteBookingAdminReducer = (state = {}, action) => {
+  switch (action.type) {
+    case ADMIN_DELETE_BOOKING_REQUEST:
+      return { loading: true, success: false };
+
+    case ADMIN_DELETE_BOOKING_SUCCESS:
+      return {
+        loading: false,
+        isDeleted: action.payload,
+        success: true,
+      };
+
+    case ADMIN_DELETE_BOOKING_FAIL:
+      return { loading: false, error: action.payload, success: false };
+
+    case CLEAR_ERRORS:
+      return {
+        ...state,
+        error: null,
+      };
+
     default:
       return state;
   }

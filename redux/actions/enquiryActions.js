@@ -27,7 +27,7 @@ export const getEnquiriesAction = () => async (dispatch) => {
 };
 
 export const enquiryUserAction =
-  (name, email, mobile, message) => async (dispatch) => {
+  (name, email, mobile, message, path) => async (dispatch) => {
     try {
       dispatch({
         type: USER_ENQUIRY_REQUEST,
@@ -38,6 +38,7 @@ export const enquiryUserAction =
         email,
         mobile,
         message,
+        path,
       });
 
       toast.success(data.message);

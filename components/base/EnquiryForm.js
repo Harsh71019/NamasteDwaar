@@ -4,19 +4,23 @@ import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 import { useForm } from 'react-hook-form';
 import ButtonLoader from './ButtonLoader';
 import Fade from 'react-reveal/Fade';
+import { useRouter } from 'next/router';
 
 const EnquiryForm = ({ heading }) => {
   // const [name, setName] = useState('');
   // const [email, setEmail] = useState('');
   // const [mobile, setMobile] = useState('');
   // const [message, setMessage] = useState('');
+  const router = useRouter();
 
   const { register, handleSubmit, watch, errors, reset } = useForm();
   const dispatch = useDispatch();
 
+  const path = router.pathname;
+
   const onSubmit = (data) => {
     const { name, email, mobile, message } = data;
-    dispatch(enquiryUserAction(name, email, mobile, message));
+    dispatch(enquiryUserAction(name, email, mobile, message, path));
     reset();
   };
 
@@ -82,15 +86,11 @@ const EnquiryForm = ({ heading }) => {
                 </label>
                 <input
                   className='enquiry-form__input'
-                  type='tel'
+                  type='text'
                   name='mobile'
                   placeholder='Enter your mobile number here'
                   ref={register({
                     required: true,
-                    min: 10,
-                    maxLength: 10,
-                    max: 10,
-                    pattern: /^[0-9]*$/,
                   })}
                 />
                 <span className='text-danger '>

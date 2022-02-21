@@ -3,14 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { enquiryUserAction } from '../../redux/actions/enquiryActions';
 import { useForm } from 'react-hook-form';
 import ButtonLoader from './ButtonLoader';
+import { useRouter } from 'next/router';
 
 const ContactUsEnquiry = () => {
   const { register, handleSubmit, watch, errors, reset } = useForm();
   const dispatch = useDispatch();
+  const router = useRouter();
+  const path = router.pathname;
 
   const onSubmit = (data) => {
     const { name, email, mobile, message } = data;
-    dispatch(enquiryUserAction(name, email, mobile, message));
+    dispatch(enquiryUserAction(name, email, mobile, message, path));
     reset();
   };
 
