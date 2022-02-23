@@ -99,7 +99,7 @@ const RoomDetails = () => {
                     src={
                       accomodation &&
                       accomodation.gallery &&
-                      accomodation.gallery.roomdetails2.url
+                      accomodation.gallery.roomdetails1.url
                     }
                     className='room-details__desc2-image'
                   />
@@ -113,7 +113,7 @@ const RoomDetails = () => {
                     src={
                       accomodation &&
                       accomodation.gallery &&
-                      accomodation.gallery.roomdetails1.url
+                      accomodation.gallery.roomdetails2.url
                     }
                     className='room-details__desc3-image'
                   />
